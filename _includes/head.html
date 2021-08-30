@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+    </title>
+
+    <meta
+        name="description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+    />
+
+    <meta
+        name="keywords"
+        content="{% if page.keywords %}{{ page.keywords | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.keywords }}{% endif %}"
+    />
+
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl
+    }}"> <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend:
+    site.baseurl }}">
+
+    <link
+        rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
+
+    <link
+        rel="search"
+        href="//gitops.ru/open-search.xml"
+        type="application/opensearchdescription+xml"
+        title="gitops.ru"
+    />
+</head>

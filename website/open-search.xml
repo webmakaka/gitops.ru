@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /open-search.xml
+---
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+ <ShortName>gitops.ru</ShortName>
+ <Description>Use Google to search gitops.ru</Description>
+ <Tags>gitops.ru</Tags>
+ <Url type="text/html"
+      template="http://www.google.com/search?as_sitesearch=gitops.ru&amp;q={searchTerms}"/>
+</OpenSearchDescription>

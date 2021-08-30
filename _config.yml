@@ -1,0 +1,15 @@
+# Site settings
+title: gitops.ru
+
+description: Открытый проект, где собираются материалы по администрированию серверов и рабочих станций. Если в наполнении и обновлении материалов будет участвовать больше админов, качество материалов будет увеличиваться. Приглашаю принять участие всем интересующимся
+
+keywords: Системное администрирование, Сисадмин, Linux, Базы данных, Виртуализация и контейнеры, Cisco, Devops, Kubernetes, Docker, Ansible, Jenkins, GitLab, AWS, GCP, Azure
+
+baseurl: '' # the subpath of your site, e.g. /blog/
+url: 'https://gitops.ru' # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+plugins:
+    - jekyll-sitemap

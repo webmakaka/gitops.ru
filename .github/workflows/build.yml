@@ -1,0 +1,17 @@
+name: Build
+on:
+    pull_request:
+        branches:
+            - master
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@master
+            - name: Build the Docker container image
+              run: docker build ./ -f ./Dockerfile -t marley/gitops.ru:latest

@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: robots.txt
+---
+
+User-agent: *
+Allow: /
+Host: https://gitops.ru
+Sitemap: https://gitops.ru/sitemap.xml
