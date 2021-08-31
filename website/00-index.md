@@ -16,13 +16,13 @@ permalink: /
 
 ### Наиболее интересные OpenSource проекты, которые можно посмотреть
 
-https://github.com/webmakaka/TinyHouse-A-Fullstack-React-Masterclass-with-TypeScript-and-GraphQL
+[[NewLine] TinyHouse: A Fullstack React Masterclass with TypeScript and GraphQL [ENG, 2020]](https://github.com/webmakaka/TinyHouse-A-Fullstack-React-Masterclass-with-TypeScript-and-GraphQL)
 
-https://github.com/webmakaka/Microservices-with-Node-JS-and-React-Improved
+[[Stephen Grider] Microservices with Node JS and React [ENG, 2021]](https://github.com/webmakaka/Microservices-with-Node-JS-and-React-Improved)
 
-https://github.com/webmakaka/MERN-Stack-Front-To-Back-v2.0
+[[Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux & Node.js [ENG, 2019]](https://github.com/webmakaka/MERN-Stack-Front-To-Back-v2.0)
 
-https://microservices-demo.github.io/
+[[microservices-demo]](https://microservices-demo.github.io/)
 
 <br/>
 
