@@ -1,9 +1,9 @@
 # Site settings
 title: gitops.ru
 
-description: Открытый проект, где собираются материалы связанные с разработкой и развертыванием приложений
+description: Собираем материалы связанные с разработкой и развертыванием приложений вокруг экосистемы Git
 
-keywords: GitOps, Clouds, Linux, Docker, Kubernetes
+keywords: GitOps, Clouds, Linux, Docker, Kubernetes, GitHub Actions, FluxCD
 
 baseurl: '' # the subpath of your site, e.g. /blog/
 url: 'https://gitops.ru' # the base hostname & protocol for your site
