@@ -8,13 +8,16 @@
 
         <!-- Google Analitics -->
 
+        {% if page.keywords %}
+
         <div align="center">
-            {% if page.keywords %}
             <p>
                 <strong>Tags:</strong> {{ page.keywords | strip_html |
-                strip_newlines | truncate: 160 }} {% endif %}
+                strip_newlines | truncate: 160 }}
             </p>
         </div>
+
+        {% endif %}
 
         <h2 class="footer-heading">{{ site.title }}</h2>
     </div>
