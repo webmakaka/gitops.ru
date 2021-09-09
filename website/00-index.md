@@ -8,9 +8,23 @@ permalink: /
 
 <br/>
 
-### Все материалы в настоящее время лежат на сайте [sysadm.ru](//sysadm.ru)
+### Почти все материалы в настоящее время лежат на сайте [sysadm.ru](//sysadm.ru)
 
 Если будет что добавить, задать вопрос или обсудить, пишите в телеграм, что указан на сайте sysadm.ru
+
+<br/>
+
+[Docker / Kubernetes](/containers/)
+
+[CI/CD](/ci-cd/)
+
+[Deploy](/deploy/)
+
+<br/>
+
+### Идеальная CI-CD на базе GitLab, Docker, Kubernetes для современных javascript проектов
+
+[Здесь](/ci-cd/gitlab-kubernetes/)
 
 <br/>
 
