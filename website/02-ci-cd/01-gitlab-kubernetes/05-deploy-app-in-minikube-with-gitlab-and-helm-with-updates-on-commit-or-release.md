@@ -244,7 +244,7 @@ $ kubectl describe pod frontend-66ddd4f57-fltvq | grep Image
 
 <br/>
 
-![Application](/img/ci-cd/gitlab-kubernetes/pic-lecture03-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture03-pic01.png?raw=true)
 
 <br/>
 

@@ -135,7 +135,7 @@ mongodb-746c86846c-v4wd6    1/1     Running   0          46s
 
 frontend.minikube.local
 
-![Application](/img/ci-cd/gitlab-kubernetes/pic-lecture02-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture02-pic01.png?raw=true)
 
 <br/>
 

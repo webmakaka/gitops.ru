@@ -18,7 +18,7 @@ Variables - не Protected
 
 <br/>
 
-![Devops](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic01.png 'Devops'){: .center-image }
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic01.png 'Devops'){: .center-image }
 
 <br/>
 
@@ -111,20 +111,20 @@ frontend-release:
 
 **Commit**
 
-![Devops](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic02.png 'Devops'){: .center-image }
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic02.png 'Devops'){: .center-image }
 
 <br/>
 
 **Release**
 
-![Devops](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic03.png 'Devops'){: .center-image }
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic03.png 'Devops'){: .center-image }
 
 <br/>
 
 **Результат на hub.docker.com**
 
-![Devops](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic04.png 'Devops'){: .center-image }
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic04.png 'Devops'){: .center-image }
 
 <br/>
 
-![Devops](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic05.png 'Devops'){: .center-image }
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture01-pic05.png 'Devops'){: .center-image }

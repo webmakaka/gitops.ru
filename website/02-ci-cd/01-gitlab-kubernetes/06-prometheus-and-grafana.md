@@ -104,13 +104,13 @@ http://localhost:9090/config
 
 <br/>
 
-![Application](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic01.png?raw=true)
 
 <br/>
 
 И в Targets
 
-![Application](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic02.png?raw=true)
+![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic02.png?raw=true)
 
 <br/>
 
