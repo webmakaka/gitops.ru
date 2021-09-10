@@ -80,7 +80,7 @@ docker-compose version 1.29.2, build 5becea4c
 ### Предоставить пользователю права для работы с docker
 
     // Добавить текущего пользоателя в группу для работы с docker
-    $ sudo usermod -aG docker ${USER}
+    $ sudo usermod -aG docker ${USERNAME}
 
 в группе docker должен появиться этот пользователь
 
