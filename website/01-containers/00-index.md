@@ -10,8 +10,6 @@ permalink: /containers/
 
 <br/>
 
-<br/>
-
 ### Docker
 
 [Docker](/containers/docker/)
