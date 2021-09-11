@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes в Linux
 description: Kubernetes в Linux
-keywords: gitops, kubernetes
+keywords: gitops, containers, kubernetes
 permalink: /containers/kubernetes/
 ---
 
@@ -10,8 +10,4 @@ permalink: /containers/kubernetes/
 
 <br/>
 
-### Скрипты для развертывания локального kubernetes кластера
-
-[Ubuntu](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-ubuntu-20.04)
-
-[Centos](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
+### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)
