@@ -8,7 +8,9 @@ permalink: /containers/kubernetes/setup/minikube/
 
 # Инсталляция и подготовка minikube для работы в ubuntu 20.04
 
-## Инсталляция minikube в ubuntu 20.04.1
+<br/>
+
+## Инсталляция minikube в ubuntu 20.04
 
 <br/>
 
@@ -18,13 +20,13 @@ permalink: /containers/kubernetes/setup/minikube/
 <br/>
 
 Делаю:  
-28.09.2020
+12.09.2021
 
 ```shell
--- Последняя версия (v1.13.1):
+// Узнать последнюю версию (v1.23.0):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
--- Установка
+// Установка
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 ```
@@ -33,8 +35,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.16.0
-commit: 9f1e482427589ff8451c4723b6ba53bb9742fbb1
+minikube version: v1.23.0
+commit: 5931455374810b1bbeb222a9713ae2c756daee10
 ```
 
 <br/>
@@ -43,10 +45,8 @@ commit: 9f1e482427589ff8451c4723b6ba53bb9742fbb1
 
 <br/>
 
-Делаю:  
-21.02.2021
-
-Можно использовать VirtualBox или Docker. Для всех случаев, когда нужно работать не с каким-то выделенным сервером на виртуалке с minikube, стоит использовать docker.
+Можно использовать VirtualBox или Docker.
+Для всех случаев, когда нужно работать не с каким-то выделенным сервером на виртуалке с minikube, стоит использовать docker.
 
 <br/>
 
@@ -56,27 +56,48 @@ commit: 9f1e482427589ff8451c4723b6ba53bb9742fbb1
 
 ```
 $ {
-    minikube --profile my-profile config set memory 8192
-    minikube --profile my-profile config set cpus 4
-    minikube --profile my-profile config set disk-size 20g
+    minikube --profile marley-minikube config set memory 8192
+    minikube --profile marley-minikube config set cpus 4
+    minikube --profile marley-minikube config set disk-size 20g
 
-    // minikube --profile my-profile config set vm-driver virtualbox
-    minikube --profile my-profile config set vm-driver docker
+    // minikube --profile marley-minikube config set vm-driver virtualbox
+    minikube --profile marley-minikube config set vm-driver docker
 
-    minikube --profile my-profile config set kubernetes-version v1.20.4
-    minikube start --profile my-profile --embed-certs
+    minikube --profile marley-minikube config set kubernetes-version v1.22.1
+    minikube start --profile marley-minikube --embed-certs
 }
 ```
 
 <br/>
 
-    // Удалить
-    // $ minikube --profile my-profile stop && minikube --profile my-profile delete
+    // При необходимости можно будет удалить профиль и все созданное следующей командой.
+    // $ minikube --profile marley-minikube stop && minikube --profile marley-minikube delete
 
 <br/>
 
     // Enable ingress
-    $ minikube addons --profile my-profile enable ingress
+    $ minikube addons --profile marley-minikube enable ingress
+
+
+     $ minikube addons --profile marley-minikube list
+
+<br/>
+
+Далее нужно установить [kubectl](/containers/kubernetes/setup/kubectl/)
+
+<br/>
+
+```
+// Подключиться к dashboard можно следующей командой
+$ minikube --profile marley-minikube dashboard
+```
+
+<br/>
+
+```
+// Получаем токен для авторизации в kuberntes dashboard
+$ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | grep admin-user | awk '{print $1}')
+```
 
 <br/>
 
@@ -106,7 +127,7 @@ $ kubectl create secret generic -n metallb-system memberlist --from-literal=secr
 <br/>
 
 ```
-$ minikube --profile my-profile ip
+$ minikube --profile marley-minikube ip
 192.168.49.2
 ```
 
@@ -153,12 +174,13 @@ $ kubectl get pods --all-namespaces
 
 <br/>
 
-### Дополнительная инфа
+### Дополнительная инфа по развернутому kuberntes кластеру
 
 ```
-$ minikube --profile my-profile config view
+$ minikube --profile marley-minikube config view
 - cpus: 4
-- kubernetes-version: v1.20.2
+- disk-size: 20g
+- kubernetes-version: v1.22.1
 - memory: 8192
 - vm-driver: docker
 ```
@@ -167,15 +189,15 @@ $ minikube --profile my-profile config view
 
 ```
 // Подключиться к minikube по ssh
-$ minikube --profile my-profile ssh
+$ minikube --profile marley-minikube ssh
 ```
 
 Или еще вариант
 
 ```
-$ minikube --profile my-profile ip
+$ minikube --profile marley-minikube ip
 $ export MINIKUBE_IP=192.168.99.100
-$ ssh -i ~/.minikube/machines/my-profile/id_rsa docker@${MINIKUBE_IP}
+$ ssh -i ~/.minikube/machines/marley-minikube/id_rsa docker@${MINIKUBE_IP}
 ```
 
 <br/>
@@ -188,7 +210,7 @@ $ kubectl get events --sort-by=.metadata.creationTimestamp
 <br/>
 
 ```
-// Editor по умолчанию vscode
+// Установить vscode как editor по умолчанию
 $ export KUBE_EDITOR="code -w"
 ```
 

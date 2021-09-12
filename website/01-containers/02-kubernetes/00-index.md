@@ -11,3 +11,5 @@ permalink: /containers/kubernetes/
 <br/>
 
 ### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)
+
+### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)

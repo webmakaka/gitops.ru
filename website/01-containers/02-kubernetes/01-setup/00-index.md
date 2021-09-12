@@ -19,3 +19,7 @@ permalink: /containers/kubernetes/setup/
 [Ubuntu](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-ubuntu-20.04)
 
 [Centos](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
+
+<br/>
+
+### [Инсталляция kubectl в ubuntu 20.04](/containers/kubernetes/setup/kubectl/)
