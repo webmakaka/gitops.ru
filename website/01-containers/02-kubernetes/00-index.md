@@ -12,4 +12,10 @@ permalink: /containers/kubernetes/
 
 ### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)
 
-### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)
+### [Kubernetes сервисы](/containers/kubernetes/svc/)
+
+<br/>
+
+### Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]
+
+https://www.youtube.com/watch?v=X48VuDVv0do
