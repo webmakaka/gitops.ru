@@ -30,7 +30,7 @@ permalink: /
 
 ### Идеальная CI-CD на базе GitLab, Docker, Kubernetes для современных javascript проектов
 
-[Здесь](/ci-cd/gitlab-kubernetes/)
+[Здесь](/ci-cd/gitlab/kubernetes/)
 
 <br/>
 

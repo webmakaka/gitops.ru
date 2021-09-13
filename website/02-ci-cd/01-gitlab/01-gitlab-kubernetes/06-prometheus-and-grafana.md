@@ -3,7 +3,7 @@ layout: page
 title: 06. Prometheus & Grafana
 description: 06. Prometheus & Grafana
 keywords: devops, ci-cd, gitlab, kubernetes, docker, prometheus, grafana
-permalink: /ci-cd/gitlab-kubernetes/prometheus-and-grafana/
+permalink: /ci-cd/gitlab/kubernetes/prometheus-and-grafana/
 ---
 
 # 06. Prometheus & Grafana
@@ -104,13 +104,13 @@ http://localhost:9090/config
 
 <br/>
 
-![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture04-pic01.png?raw=true)
 
 <br/>
 
 И в Targets
 
-![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture04-pic02.png?raw=true)
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture04-pic02.png?raw=true)
 
 <br/>
 

@@ -1,20 +1,16 @@
 ---
 layout: page
-title: 04. Deploy приложения с помощью GitLab и Helm в MiniKube
-description: 04. Deploy приложения с помощью GitLab и Helm в MiniKube
-keywords: devops, ci-cd, gitlab, kubernetes, docker, gitlab
-permalink: /ci-cd/gitlab-kubernetes/deploy-app-in-minikube-with-gitlab-and-helm/
+title: 01. Сборка и push контейнеров в registry
+description: 01. Сборка и push контейнеров в registry
+keywords: devops, ci-cd, gitlab, kubernetes, docker, built and push
+permalink: /ci-cd/gitlab/kubernetes/build-and-push/
 ---
 
-# 04. Deploy приложения с помощью GitLab и Helm в MiniKube
+# 01. Сборка и push контейнеров в registry
 
 <br/>
 
-    $ cat ~/.kube/config | base64
-
-<br/>
-
-**GitLab -> Project -> Settings -> CI/CD -> Variables**
+GitLab -> Project -> Settings -> CI/CD -> Variables
 
 <br/>
 
@@ -22,7 +18,19 @@ Variables - не Protected
 
 <br/>
 
-KUBE_CONFIG -> результат выполнения cat.
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture01-pic01.png 'Devops'){: .center-image }
+
+<br/>
+
+Планируется использовать registry, что на hub.docker.com
+
+<br/>
+
+```
+CI_REGISTRY -> docker.io
+REGISTRY_USER -> <Your Username>
+REGISTRY_PASSWORD -> <Your Password>
+```
 
 <br/>
 
@@ -52,7 +60,6 @@ before_script:
 stages:
     - build
     - release
-    - deploy
 
 backend-build:
     stage: build
@@ -87,34 +94,37 @@ frontend-release:
         - docker pull webmakaka/devops-frontend:$CI_COMMIT_SHORT_SHA
         - docker tag webmakaka/devops-frontend:$CI_COMMIT_SHORT_SHA webmakaka/devops-frontend:$CI_COMMIT_TAG
         - docker push webmakaka/devops-frontend:$CI_COMMIT_TAG
-
-deploy-app:
-    stage: deploy
-    script:
-        - apk add -U openssl curl tar gzip bash ca-certificates git
-        - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && mv ./kubectl /usr/local/bin/
-        - mkdir -p ~/.kube/ && echo $KUBE_CONFIG | base64 -d > ~/.kube/config
-        - kubectl cluster-info
-        - curl -L https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-        - helm upgrade myguestbook -i apps/v2/chart/guestbook
 ```
 
 <br/>
 
-Отработало норм.
+Как минимум "webmakaka" нужно изменить на свой логин.
 
 <br/>
 
-```
-$ kubectl get pods
-NAME                                    READY   STATUS    RESTARTS   AGE
-myguestbook-backend-6b467894d6-kcz4p    1/1     Running   2          4m2s
-myguestbook-database-684cfff8-gs66g     1/1     Running   0          4m2s
-myguestbook-frontend-7f77554fc4-rc7pv   1/1     Running   0          4m2s
-```
+    $ git commit -am 'Add release stage'
+    $ git push origin master
+    $ git tag v0.0.1
+    $ git push origin master --tags
 
 <br/>
 
-Приложение запускается на:
+**Commit**
 
-frontend.minikube.local
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture01-pic02.png 'Devops'){: .center-image }
+
+<br/>
+
+**Release**
+
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture01-pic03.png 'Devops'){: .center-image }
+
+<br/>
+
+**Результат на hub.docker.com**
+
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture01-pic04.png 'Devops'){: .center-image }
+
+<br/>
+
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture01-pic05.png 'Devops'){: .center-image }

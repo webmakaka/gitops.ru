@@ -3,7 +3,7 @@ layout: page
 title: Сборка и деплой js приложения из GitLab в Kubernetes
 description: Сборка и деплой js приложения из GitLab в Kubernetes
 keywords: devops, ci-cd, gitlab, kubernetes, docker
-permalink: /ci-cd/gitlab-kubernetes/
+permalink: /ci-cd/gitlab/kubernetes/
 ---
 
 # Сборка и деплой js приложения из GitLab в Kubernetes
@@ -32,16 +32,16 @@ permalink: /ci-cd/gitlab-kubernetes/
 
 <br/>
 
-### [01. Сборка и push контейнеров в registry](/ci-cd/gitlab-kubernetes/build-and-push/)
+### [01. Сборка и push контейнеров в registry](/ci-cd/gitlab/kubernetes/build-and-push/)
 
-### [02. Запуск приложения в MiniKube с помощью Helm](/ci-cd/gitlab-kubernetes/run-app-in-minikube/)
+### [02. Запуск приложения в MiniKube с помощью Helm](/ci-cd/gitlab/kubernetes/run-app-in-minikube/)
 
-### [03. Настрока хоста с GitLab для работы с MiniKube](/ci-cd/gitlab-kubernetes/prepare-gitlab-host-to-work-with-minikube/)
+### [03. Настрока хоста с GitLab для работы с MiniKube](/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/)
 
-### [04. Deploy приложения с помощью GitLab и Helm в MiniKube](/ci-cd/gitlab-kubernetes/deploy-app-in-minikube-with-gitlab-and-helm/)
+### [04. Deploy приложения с помощью GitLab и Helm в MiniKube](/ci-cd/gitlab/kubernetes/deploy-app-in-minikube-with-gitlab-and-helm/)
 
-### [05. Deploy приложения с помощью GitLab и Helm в MiniKube, обновляющегося при коммите или релизе](/ci-cd/gitlab-kubernetes/deploy-app-in-minikube-with-gitlab-and-helm-with-updates-on-commit-or-release/)
+### [05. Deploy приложения с помощью GitLab и Helm в MiniKube, обновляющегося при коммите или релизе](/ci-cd/gitlab/kubernetes/deploy-app-in-minikube-with-gitlab-and-helm-with-updates-on-commit-or-release/)
 
-### [06. Prometheus & Grafana](/ci-cd/gitlab-kubernetes/prometheus-and-grafana/)
+### [06. Prometheus & Grafana](/ci-cd/gitlab/kubernetes/prometheus-and-grafana/)
 
-### [07. ELK & KIBANA](/ci-cd/gitlab-kubernetes/elastic/)
+### [07. ELK & KIBANA](/ci-cd/gitlab/kubernetes/elastic/)

@@ -3,7 +3,7 @@ layout: page
 title: 02. Запуск приложения в MiniKube с помощью Helm
 description: 02. Запуск приложения в MiniKube с помощью Helm
 keywords: devops, ci-cd, gitlab, kubernetes, docker, run app in minikube with helm
-permalink: /ci-cd/gitlab-kubernetes/run-app-in-minikube/
+permalink: /ci-cd/gitlab/kubernetes/run-app-in-minikube/
 ---
 
 # 02. Запуск приложения в MiniKube с помощью Helm
@@ -135,7 +135,7 @@ mongodb-746c86846c-v4wd6    1/1     Running   0          46s
 
 frontend.minikube.local
 
-![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture02-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture02-pic01.png?raw=true)
 
 <br/>
 

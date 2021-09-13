@@ -3,7 +3,7 @@ layout: page
 title: 05. Deploy приложения с помощью GitLab и Helm в MiniKube, обновляющегося при коммите или релизе
 description: 05. Deploy приложения с помощью GitLab и Helm в MiniKube, обновляющегося при коммите или релизе
 keywords: devops, ci-cd, gitlab, kubernetes, docker, helm, templates, minikube
-permalink: /ci-cd/gitlab-kubernetes/deploy-app-in-minikube-with-gitlab-and-helm-with-updates-on-commit-or-release/
+permalink: /ci-cd/gitlab/kubernetes/deploy-app-in-minikube-with-gitlab-and-helm-with-updates-on-commit-or-release/
 ---
 
 # 05. Deploy приложения с помощью GitLab и Helm в MiniKube, обновляющегося при коммите или релизе
@@ -244,7 +244,7 @@ $ kubectl describe pod frontend-66ddd4f57-fltvq | grep Image
 
 <br/>
 
-![GitOps](/img/ci-cd/gitlab-kubernetes/pic-lecture03-pic01.png?raw=true)
+![GitOps](/img/ci-cd/gitlab/kubernetes/pic-lecture03-pic01.png?raw=true)
 
 <br/>
 

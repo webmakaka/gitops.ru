@@ -8,4 +8,4 @@ permalink: /ci-cd/
 
 # CI/CD
 
-[Сборка и деплой js приложения из GitLab в Kubernetes](/ci-cd/gitlab-kubernetes/)
+[Сборка и деплой js приложения из GitLab в Kubernetes](/ci-cd/gitlab/kubernetes/)

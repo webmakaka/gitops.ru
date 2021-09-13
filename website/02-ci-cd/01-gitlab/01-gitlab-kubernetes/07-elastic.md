@@ -3,7 +3,7 @@ layout: page
 title: 06. Prometheus & Grafaran
 description: 06. Prometheus & Grafaran
 keywords: devops, ci-cd, gitlab, kubernetes, docker, elastic search, kibana
-permalink: /ci-cd/gitlab-kubernetes/elastic/
+permalink: /ci-cd/gitlab/kubernetes/elastic/
 ---
 
 # 07. ELK & KIBANA

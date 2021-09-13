@@ -3,7 +3,7 @@ layout: page
 title: 03. Настрока хоста с GitLab для работы с MiniKube
 description: 03. Настрока хоста с GitLab для работы с MiniKube
 keywords: devops, ci-cd, gitlab, kubernetes, docker, run app in minikube with helm
-permalink: /ci-cd/gitlab-kubernetes/prepare-gitlab-host-to-work-with-minikube/
+permalink: /ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/
 ---
 
 # 03. Настрока хоста с GitLab для работы с MiniKube
