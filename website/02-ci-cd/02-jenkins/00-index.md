@@ -13,10 +13,22 @@ permalink: /ci-cd/jenkins/
 
 <br/>
 
+### Запуск Jenkins с помощью docker-compose
+
+<br/>
+
     $ cd ~/projects/
     $ mkdir -p ./ci-cd/jenkins/jenkins_home
     $ cd ci-cd/jenkins/
     $ vi docker-compose.yml
+
+<!--
+
+    Можент быть нужно создать локального пользователя jenkins и назначить ему права.
+
+    $ sudo chown -R 1000:1000 jenkins_home
+
+-->
 
 <br/>
 

@@ -73,13 +73,18 @@ $ {
     // При необходимости можно будет удалить профиль и все созданное следующей командой.
     // $ minikube --profile marley-minikube stop && minikube --profile marley-minikube delete
 
+    // Стартовать остановленный minikube
+    // $ minikube --profile marley-minikube start
+
 <br/>
 
     // Enable ingress
     $ minikube addons --profile marley-minikube enable ingress
 
+<br/>
 
-     $ minikube addons --profile marley-minikube list
+    // Получить список установленных расширений
+    $ minikube addons --profile marley-minikube list
 
 <br/>
 

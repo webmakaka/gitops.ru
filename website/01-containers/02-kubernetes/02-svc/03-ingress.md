@@ -9,7 +9,7 @@ permalink: /containers/kubernetes/svc/ingress/
 # Создание службы Ingress
 
 Делаю:  
-12.09.2021
+13.09.2021
 
 <br/>
 
@@ -135,7 +135,7 @@ http://nodejs-cats-app.example.com
 
 <br/>
 
-Все работает!
+**OK!**
 
 <br/>
 
@@ -157,3 +157,57 @@ http://nodejs-cats-app.example.com
 ### Дополнительно
 
 https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
+<br/>
+
+### Тоже самое но с использованием nip.io
+
+<br/>
+
+nip.io позволит не заморачиваться на добавлении всяких DNS, hosts etc.
+
+<br/>
+
+```yaml
+$ cat <<EOF | kubectl apply -f -
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nodejs-cats-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/default-backend: ingress-nginx-controller
+    kubernetes.io/ingress.class: nginx
+    ## tells ingress to check for regex in the config file
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - host: 192.168.49.2.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nodejs-cats-app-nodeport
+            port:
+              number: 80
+EOF
+```
+
+<br/>
+
+    $ kubectl get ingresses
+
+<br/>
+
+```
+$ kubectl get ingresses
+NAME                      CLASS    HOSTS                 ADDRESS   PORTS   AGE
+nodejs-cats-app-ingress   <none>   192.168.49.2.nip.io             80      11s
+```
+
+<br/>
+
+http://192.168.49.2.nip.io/
+
+**OK!**
