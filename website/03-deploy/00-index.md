@@ -10,6 +10,4 @@ permalink: /deploy/
 
 <br/>
 
-[Локально (kubernetes)](/deploy/local/kubernetes/)
-
 [Облака](/deploy/clouds/)
