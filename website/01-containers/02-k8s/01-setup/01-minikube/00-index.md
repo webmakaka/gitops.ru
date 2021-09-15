@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция и подготовка minikube для работы в ubuntu 20.04
 description: Инсталляция и подготовка minikube для работы в ubuntu 20.04
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu
-permalink: /containers/kubernetes/setup/minikube/
+permalink: /containers/k8s/setup/minikube/
 ---
 
 # Инсталляция и подготовка minikube для работы в ubuntu 20.04
@@ -65,21 +65,19 @@ $ {
 
     minikube --profile marley-minikube config set kubernetes-version v1.22.1
     minikube start --profile marley-minikube --embed-certs
+
+    // Enable ingress
+    $ minikube addons --profile marley-minikube enable ingress
 }
 ```
 
 <br/>
 
-    // При необходимости можно будет удалить профиль и все созданное следующей командой.
+    // При необходимости можно будет удалить профиль и все созданное в профиле следующей командой.
     // $ minikube --profile marley-minikube stop && minikube --profile marley-minikube delete
 
     // Стартовать остановленный minikube
     // $ minikube --profile marley-minikube start
-
-<br/>
-
-    // Enable ingress
-    $ minikube addons --profile marley-minikube enable ingress
 
 <br/>
 
@@ -88,7 +86,7 @@ $ {
 
 <br/>
 
-Далее нужно установить [kubectl](/containers/kubernetes/setup/kubectl/)
+Далее нужно установить [kubectl](/containers/k8s/setup/tools/kubectl/)
 
 <br/>
 
@@ -100,13 +98,13 @@ $ minikube --profile marley-minikube dashboard
 <br/>
 
 ```
-// Получаем токен для авторизации в kuberntes dashboard
+// Получить токен для авторизации в kuberntes dashboard
 $ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
 
 <br/>
 
-### Добавляю "Metal LB"
+### Добавить "Metal LB" (При необходимости)
 
 Metal LB позволит получить внешний IP в миникубе на локалхосте. Аналогично тому, как это происходит в облаках, когда облачный сервис выделяет ip адрес, к котому можно будет подключиться извне.
 
