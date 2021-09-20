@@ -8,6 +8,8 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
 
+<br/>
+
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
 <br/>
@@ -127,7 +129,6 @@ https://github.com/linuxacademy/
 
     $ mkdir ~/projects/dev/devops
     $ cd ~/projects/dev/devops
-    $ git clone https://github.com/webmak1/cicd-pipeline-train-schedule-git
 
 <br/>
 
