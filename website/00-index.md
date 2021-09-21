@@ -78,6 +78,9 @@ https://www.youtube.com/watch?v=0v5bjysXTL8
 
 https://www.youtube.com/watch?v=Yz2v_p7GTsg
 
+**Free GitOps Workshop with Weave GitOps Core**  
+https://www.youtube.com/watch?v=euggUTPJzro
+
 **Intro to Kubernetes and GitOps + Free GitOps Workshop!**  
 https://www.youtube.com/watch?v=PE3yuEXmr40
 
