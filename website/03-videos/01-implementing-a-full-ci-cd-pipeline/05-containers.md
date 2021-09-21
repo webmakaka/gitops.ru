@@ -14,7 +14,7 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/containers/
 
 <br/>
 
-Устанавливаю <a href="//sysadm.ru/devops/containers/docker/setup/ubuntu/">Docker</a> на хосте, на котором уже уснановлен Jenkis и на хост, где будет запускаться приложение.
+Устанавливаю <a href="/containers/docker/setup/ubuntu/">Docker</a> на хосте, на котором уже уснановлен Jenkis и на хост, где будет запускаться приложение.
 
 <br/>
 

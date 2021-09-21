@@ -67,7 +67,7 @@ $ {
     minikube start --profile marley-minikube --embed-certs
 
     // Enable ingress
-    $ minikube addons --profile marley-minikube enable ingress
+    minikube addons --profile marley-minikube enable ingress
 }
 ```
 

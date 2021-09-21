@@ -16,15 +16,15 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/continuous-integrat
 
 ### 15. Установка Jenkins
 
-Устанавливаю <a href="//javadev.org/devtools/cicd/jenkins/setup/ubuntu/20.04/">Jenkins</a>
+Устанавливаю <a href="/ci-cd/jenkins/">Jenkins в ubuntu</a>
+
+<br/>
+
+Manange Jenkins -> Global Tool Configuration -> JDK -> 1.8
 
 <br/>
 
 ### 16. Настройка проектов Jenkins
-
-Клонируем к себе в репозиторий:
-
-https://github.com/linuxacademy/cicd-pipeline-train-schedule-jenkins
 
 <br/>
 
@@ -60,13 +60,21 @@ Files to archive -> dist/trainSchedule.zip
 
 <br/>
 
-Buil Now
+**Build Now**
 
 <br/>
 
 ### 17. Запуск сборок с хуками в Git
 
+<br/>
+
+Не заработало, т.к. Нужен публичный сервер jenkins.
+
+<br/>
+
 **GitHub**
+
+<br/>
 
 GitHub -> Settings -> Developer settings -> Personal access tokens -> Generate new token
 
@@ -74,7 +82,9 @@ GitHub -> Settings -> Developer settings -> Personal access tokens -> Generate n
 
 Token description: jenkins
 
--   admin:repo-hook
+```
+admin:repo_hook
+```
 
 <br/>
 
@@ -88,18 +98,24 @@ Copy Api Key
 
 **Jenkins**
 
+<br/>
+
 Manage Jenkins -> Configure System
 
 Github -> GitHub Server
 
 Name: GitHub
 
+<br/>
+
 Credentials -> Add -> Jenkins
 
 Kind: Secret Text
 
+<br/>
+
 ```
-Secret: API_key
+Secret: <API_KEY>
 ID: gihtub_key
 Description: GitHubKey
 ```
@@ -112,19 +128,25 @@ Add
 
 Credentials -> GitHubKey
 
+<br/>
+
 -   Manage hooks
+
+<br/>
 
 Save
 
 <br/>
 
-Выбираем созданные ранее проект train-schedule
+**Выбираем созданные ранее проект train-schedule**
 
 Configure
 
 Source Code Management
 
-Git -> https://github.com/webmak1/cicd-pipeline-train-schedule-jenkins
+<br/>
+
+Git (Форкнутый репо) -> https://github.com/webmak1/cicd-pipeline-train-schedule-jenkins
 
 <br/>
 
@@ -132,7 +154,9 @@ Build Trigger
 
 -   GitHub hook trigger for GITScm polling
 
-SAVE
+<br/>
+
+**SAVE**
 
 <br/>
 

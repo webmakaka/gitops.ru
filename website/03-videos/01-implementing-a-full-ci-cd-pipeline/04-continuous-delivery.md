@@ -14,6 +14,16 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/continuous-delivery
 
 <br/>
 
+### Этапы (stages) и шаги (steps)
+
+<br/>
+
+**Пример:**
+
+https://github.com/linuxacademy/cicd-pipeline-train-schedule-pipelines/blob/example-solution/Jenkinsfile
+
+<br/>
+
 Стартую Vagrant с 2 виртуалками <a href="https://github.com/webmakaka/cats-app-ansible/">как здесь</a>.
 
 <br/>
@@ -59,6 +69,8 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/continuous-delivery
 
 Убеждаюсь, что могу подключиться по SSH
 
+<br/>
+
     $ ssh deploy@192.168.0.11
     $ ssh deploy@192.168.0.12
 
@@ -66,26 +78,37 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/continuous-delivery
 
 Запускаю приложение на серверах
 
-    $ sudo mkdir -p /opt/train-schedule/
-    $ cd /opt/train-schedule/
-    $ sudo git clone https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd .
+<br/>
+
+```
+$ sudo mkdir -p /opt/train-schedule/
+$ cd /opt/train-schedule/
+$ sudo git clone https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd .
+```
 
 <br/>
 
 **Устанавливаю Node**
 
-    $ sudo apt install -y nodejs npm
-    $ sudo apt install -y unzip
+<br/>
+
+```
+$ sudo apt install -y nodejs npm
+$ sudo apt install -y unzip
+```
 
 <br/>
 
-    $ cd /opt/train-schedule/
-    $ sudo npm install
-    $ sudo npm start
+```
+$ cd /opt/train-schedule/
+$ sudo npm install
+$ sudo npm start
+```
 
 <br/>
 
 http://192.168.0.11:3000/
+
 OK
 
 <br/>
@@ -117,28 +140,37 @@ WantedBy=multi-user.target
 
 <br/>
 
-    $ sudo systemctl enable train-schedule.service
-    $ sudo systemctl start train-schedule.service
-    $ sudo systemctl status train-schedule.service
+```
+$ sudo systemctl enable train-schedule.service
+$ sudo systemctl start train-schedule.service
+$ sudo systemctl status train-schedule.service
+```
 
 <br/>
 
-    // Выгрузить если что-то пошло не так
-    // # systemctl stop train-schedule.service
-    // # systemctl disable train-schedule.service
+```
+// Выгрузить если что-то пошло не так
+// # systemctl stop train-schedule.service
+// # systemctl disable train-schedule.service
+```
 
 <br/>
 
 http://192.168.0.11:3000/
+
 OK
 
 <br/>
 
-    $ sudo chown -R deploy /opt/train-schedule/
+```
+$ sudo chown -R deploy /opt/train-schedule/
+```
 
 <br/>
 
 **Нужно, чтобы отрабатывала:**
+
+<br/>
 
 ```
 $ sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule
@@ -164,7 +196,9 @@ Publish over SSH
 
 SSH Servers -> Add
 
-Server1
+<br/>
+
+**Server1**
 
 ```
 Name: staging
@@ -174,7 +208,9 @@ Username:
 Remote Directory: /
 ```
 
-Server2
+<br/>
+
+**Server2**
 
 ```
 Name: production

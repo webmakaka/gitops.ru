@@ -54,8 +54,16 @@ networks:
 
 <br/>
 
-    $ docker-compose up
+```
+$ docker-compose up
+```
 
 <br/>
 
 localhost:8080
+
+<br/>
+
+### Возможно, понадобится указать правильную версию jDK
+
+Manange Jenkins -> Global Tool Configuration -> JDK -> 1.8
