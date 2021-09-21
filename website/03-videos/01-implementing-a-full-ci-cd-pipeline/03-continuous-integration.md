@@ -32,9 +32,10 @@ Manange Jenkins -> Global Tool Configuration -> JDK -> 1.8
 
 New Item
 
+```
 Name: train-schedule
-
-Freestyle project
+Type: Freestyle project
+```
 
 OK
 
@@ -64,11 +65,7 @@ Files to archive -> dist/trainSchedule.zip
 
 <br/>
 
-### 17. Запуск сборок с хуками в Git
-
-<br/>
-
-Не заработало, т.к. Нужен публичный сервер jenkins.
+### 17. Запуск сборок с хуками в Git (Не заработало, т.к. Нужен публичный сервер jenkins)
 
 <br/>
 
@@ -116,8 +113,8 @@ Kind: Secret Text
 
 ```
 Secret: <API_KEY>
-ID: gihtub_key
-Description: GitHubKey
+ID: github_api_key
+Description: GitHub API Key
 ```
 
 <br/>

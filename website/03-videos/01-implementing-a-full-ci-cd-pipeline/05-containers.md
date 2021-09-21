@@ -24,6 +24,8 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/containers/
 
 **На хосте, где установлен jenkns**
 
+<br/>
+
 Устанавливаю Jenkins плагин: Docker Pipeline
 
 <br/>

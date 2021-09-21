@@ -18,17 +18,13 @@ permalink: /ci-cd/jenkins/
 <br/>
 
     $ cd ~/projects/
-    $ mkdir -p ./ci-cd/jenkins/jenkins_home
+    $ mkdir -p ./ci-cd/jenkins/
     $ cd ci-cd/jenkins/
-    $ vi docker-compose.yml
 
-<!--
-
-    Можент быть нужно создать локального пользователя jenkins и назначить ему права.
-
+    $ mkdir jenkins_home
     $ sudo chown -R 1000:1000 jenkins_home
 
--->
+    $ vi docker-compose.yml
 
 <br/>
 
@@ -64,6 +60,22 @@ localhost:8080
 
 <br/>
 
-### Возможно, понадобится указать правильную версию jDK
+### Указать правильную версию jDK
 
-Manange Jenkins -> Global Tool Configuration -> JDK -> 1.8
+Скорее всего, нужно указать версию JDK 1.8
+
+Нужна учетка на сайте oracle.com
+
+<br/>
+
+Manange Jenkins -> Global Tool Configuration -> JDK
+
+Name: JDK8
+
+Version 8u221
+
+-   I agree to the Java SE Development Kit License Agreement
+
+<br/>
+
+**Save**

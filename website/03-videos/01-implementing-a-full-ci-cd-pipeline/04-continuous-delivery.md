@@ -24,6 +24,10 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-pipelines/blob/exam
 
 <br/>
 
+## Подготовка окружения для тестов
+
+<br/>
+
 Стартую Vagrant с 2 виртуалками <a href="https://github.com/webmakaka/cats-app-ansible/">как здесь</a>.
 
 <br/>
@@ -36,10 +40,14 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-pipelines/blob/exam
 
 **Создаю пользователя "deploy"**
 
+<br/>
+
     $ sudo su  -
     # adduser --disabled-password --gecos "" deploy
     # usermod -aG sudo deploy
     # passwd deploy
+
+<br/>
 
     # sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
     # service sshd reload
@@ -50,15 +58,17 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-pipelines/blob/exam
 
 <br/>
 
-    $ sudo su -
-
     # vi /etc/sudoers
 
 <br/>
 
     %sudo   ALL=(ALL:ALL) ALL
 
+<br/>
+
 меняю на:
+
+<br/>
 
 ```shell
 #%sudo   ALL=(ALL:ALL) ALL
@@ -76,7 +86,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-pipelines/blob/exam
 
 <br/>
 
-Запускаю приложение на серверах
+**Запускаю приложение на серверах**
 
 <br/>
 
@@ -107,9 +117,15 @@ $ sudo npm start
 
 <br/>
 
+Попробовали, что запускается
+
 http://192.168.0.11:3000/
 
-OK
+http://192.168.0.12:3000/
+
+<br/>
+
+**OK**
 
 <br/>
 
@@ -166,15 +182,25 @@ OK
 $ sudo chown -R deploy /opt/train-schedule/
 ```
 
+<!--
+
 <br/>
 
-**Нужно, чтобы отрабатывала:**
+**Нужно, чтобы отрабатывал команда:**
 
 <br/>
 
 ```
 $ sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule
 ```
+
+-->
+
+<br/>
+
+## Развертывание с Jenkins Pipelines
+
+https://stackoverflow.com/questions/61105368/how-to-use-github-personal-access-token-in-jenkins/61105369#61105369
 
 <br/>
 
@@ -220,9 +246,27 @@ Username:
 Remote Directory: /
 ```
 
-SAVE
+<br/>
+
+**SAVE**
 
 <br/>
+
+### Подготовка проекта на GitHub
+
+**Fork:**
+
+https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd
+
+В
+
+https://github.com/webmak1/cicd-pipeline-train-schedule-cd
+
+Удалить все бранчи кроме мастер.
+
+<br/>
+
+### Setup Jenkins
 
 Jenkins -> Manage Jenkins -> Manage Credentials
 
@@ -230,40 +274,64 @@ Stores scoped to Jenkins -> Jenkins
 
 Global credentials (unrestricted) -> Add Credentials
 
+<br/>
+
+```
 Username: deploy
 Password: deploy
 ID: webserver_login
 Description: Webserver Login
+```
 
-OK
+<br/>
+
+**OK**
+
+<br/>
+
+### Создание нового задания
 
 <br/>
 
 Jenkins -> New Item
 
+```
 Name: train-schedule
-Multibranch Pipeline
-
-Branch Sources -> Github -> Add Jenkins
-
-Kind: Username with password
-
-Username: GithubUserName
-Password: GithubAPIKey
-ID: github_api_key
-Description: GitHub API Key
-
-Add
+Type: Multibranch Pipeline
+```
 
 <br/>
 
-Gredentials: GitHub API Key
+Branch Sources -> Github -> Credentials -> Add Jenkins
 
-Repostitory HTTPS URL: cicd-pipeline-train-schedule-cd
+Kind: Username with password
 
-Validate
+<br/>
 
-Save
+```
+Username: <Github-User-Name>
+Password: <Github-API-Key>
+ID: github_api_key_2
+Description: GitHub API Key 2
+```
+
+<br/>
+
+**Add**
+
+<br/>
+
+Credentials: GitHub API Key 2
+
+Repostitory HTTPS URL: https://github.com/webmak1/cicd-pipeline-train-schedule-cd
+
+<br/>
+
+**Validate**
+
+<br/>
+
+**Save**
 
 <br/>
 
@@ -281,12 +349,14 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd/blob/example-sol
 
 <br/>
 
-Меняю текст
+**Меняю текст**
 
-https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd/blob/master/views/index.jade
+https://github.com/webmak1/cicd-pipeline-train-schedule-cd/blob/master/views/index.jade
 
 <br/>
 
 Запускаю jenkins job.
+
+<br/>
 
 Все ок.

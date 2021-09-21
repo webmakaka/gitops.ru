@@ -24,6 +24,8 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/orchestration/
 
 ### 02. Поднимаю в виртуалке Jenkis
 
+<br/>
+
     $ mkdir ~/vagrant-jenkins && cd ~/vagrant-jenkins
 
 <br/>
@@ -105,6 +107,8 @@ EOF
 
     %sudo   ALL=(ALL:ALL) ALL
 
+<br/>
+
 меняю на:
 
 ```shell
@@ -116,9 +120,9 @@ EOF
 
 Устанавливаю <a href="//javadev.org/devtools/jdk/setup/linux/">JDK8</a>
 
-Устанавливаю <a href="//javadev.org/devtools/assembly-tools/gradle/linux/ubuntu/">Gradle</a>
+Устанавливаю <a href="//javadev.org/devtools/assembly/gradle/linux/ubuntu/">Gradle</a>
 
-Устанавливаю <a href="//sysadm.ru/devops/containers/docker/setup/ubuntu/">Docker</a>
+Устанавливаю <a href="/containers/docker/setup/ubuntu/">Docker</a>
 
 Устанавливаю <a href="//javadev.org/devtools/cicd/jenkins/setup/ubuntu/20.04/">Jenkins</a>
 
@@ -186,7 +190,11 @@ github_token -> github_api_key (Думаю, нужен только для ху�
 
     $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 
+<br/>
+
     $ mkdir -p ~/.kube
+
+<br/>
 
     // root password: kubeadmin
     $ scp root@192.168.0.10:/etc/kubernetes/admin.conf ~/.kube/config

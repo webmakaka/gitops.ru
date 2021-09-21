@@ -18,7 +18,7 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/build-automation/
 
 Устанавливаю <a href="//javadev.org/devtools/jdk/setup/linux/">JDK8</a>
 
-Устанавливаю <a href="//javadev.org/devtools/assembly-tools/gradle/linux/ubuntu/">Gradle</a>
+Устанавливаю <a href="//javadev.org/devtools/assembly/gradle/linux/ubuntu/">Gradle</a>
 
 <br/>
 
@@ -40,13 +40,3 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/build-automation/
 <br/>
 
     $ ./gradlew build
-
-<!--
-
-<br/>
-
-### 12. Основы Gradle
-
-    $ gradle init
-
--->
