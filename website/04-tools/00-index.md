@@ -1,13 +1,25 @@
 ---
 layout: page
-title: Tools
-description: Tools
-keywords: Tools
+title: Автоматизация Ansible, Puppet, Chef, Terraform
+description: Автоматизация Ansible, Puppet, Chef, Terraform
+keywords: DevOps, Автоматизация Ansible, Puppet, Chef, Terraform
 permalink: /tools/
 ---
 
-# Tools
+# Автоматизация Ansible, Puppet, Chef, Terraform
 
 <br/>
 
-[Ansible](/tools/ansible/)
+### [Ansible](/tools/ansible/)
+
+<br/>
+
+### [Puppet](/tools/puppet/)
+
+<br/>
+
+### Chef
+
+<br/>
+
+### [Terraform](/tools/terraform/)
