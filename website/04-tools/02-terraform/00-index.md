@@ -2,7 +2,7 @@
 layout: page
 title: Terraform
 description: Изучаем terraform
-keywords: devops, tools, terraform
+keywords: tools, terraform
 permalink: /tools/terraform/
 ---
 
@@ -26,6 +26,7 @@ https://www.terraform.io/docs/providers/index.html
 
 ### Основные команды
 
+```
 $ terraform init
 
 $ terraform plan
@@ -33,7 +34,8 @@ $ terraform plan -out example.tfplan
 
 $ terraform apply
 $ teffaform apply example.tfplan
+```
 
 <br/>
 
-### [[Webinar] Using Infrastructure as Code to Build Reproducible Systems with Terraform on DigitalOcean](/devops/clouds/do/terraform/)
+### [[Webinar] Using Infrastructure as Code to Build Reproducible Systems with Terraform on DigitalOcean](//sysadm.ru/devops/clouds/do/terraform/)

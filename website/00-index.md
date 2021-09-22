@@ -20,13 +20,15 @@ permalink: /
 
 [Deploy](/deploy/)
 
+[Tools](/tools/)
+
 <br/>
 
 ## [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
 
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
-[Подробнее](//gitops.ru/videos/devops/implementing-a-full-ci-cd-pipeline/)
+[Подробнее](/videos/devops/implementing-a-full-ci-cd-pipeline/)
 
 <br/>
 
