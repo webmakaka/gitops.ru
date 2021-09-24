@@ -8,6 +8,16 @@ permalink: /
 
 <br/>
 
+### Предлагаю коллективно поичать книгу, если она окажется интересной
+
+Но, чтобы это проверить, нужно начать.
+
+Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers English | 2021 | ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
+
+https://t.me/devops_community
+
+<br/>
+
 ### Почти все материалы в настоящее время лежат на сайте [sysadm.ru](//sysadm.ru)
 
 Если будет что добавить, задать вопрос или обсудить, пишите в телеграм, что указан на сайте sysadm.ru
