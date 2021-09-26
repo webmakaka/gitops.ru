@@ -15,6 +15,10 @@ permalink: /tools/terraform/setup/
 
 **v1.0.5**
 
+(Последняя на сегодня 1.0.7)
+
+<br/>
+
     $ echo LATEST_VERSION=$(curl --silent "https://api.github.com/repos/hashicorp/terraform/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
     $ wget https://releases.hashicorp.com/terraform/1.0.5/terraform_1.0.5_linux_amd64.zip

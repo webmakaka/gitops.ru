@@ -98,7 +98,7 @@ $ minikube --profile marley-minikube dashboard
 <br/>
 
 ```
-// Получить токен для авторизации в kuberntes dashboard
+// Получить токен для авторизации в kubernetes dashboard
 $ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
 
