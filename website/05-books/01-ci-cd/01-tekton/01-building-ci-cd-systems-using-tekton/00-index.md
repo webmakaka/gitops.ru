@@ -12,11 +12,6 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/
 
 ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 
-<br/>
-
-**Обсуждение:**  
-https://t.me/devops_community
-
 **GitHub:**  
 https://
 github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
@@ -34,9 +29,11 @@ files/downloads/9781801078214_ColorImages.pdf
 
 https://shell.cloud.google.com/
 
-https://cloud.google.com/sdk/docs/install
+<br/>
 
-https://cloud.google.com/shell/docs/accessing-cloud-shell-with-gcloud
+**Инсталлим google-cloud-sdk**
+
+https://cloud.google.com/sdk/docs/install
 
 <br/>
 

@@ -13,19 +13,6 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 1. Инсталляция [MiniKube](/containers/k8s/setup/minikube/) (Ingress и остальное можно не устанавливать)
 2. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
 
-3. ??? Инсталляция Git
-4. ??? Инсталляция Docker
-5. ??? Инсталляция Node.js
-
-6. ??? Инсталляция VSCode
-
-**Extensions:**
-
-• Kubernetes ( ms-kubernetes-tools.vscode-kubernetes-tools ) by
-Microsoft
-• YAML ( redhat.vscode-yaml ) by Red Hat
-• Tekton Pipelines ( redhat.vscode-tekton-pipelines ) by Red Hat
-
 <br/>
 
 #### Инсталляция Tekton CLI
@@ -37,6 +24,7 @@ Microsoft
 $ cd ~/tmp/
 
 $ export LATEST_VERSION=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+
 $ export LATEST_VERSION_SHORT=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c 2-)
 
 $ curl -LO "https://github.com/tektoncd/cli/releases/download/${LATEST_VERSION}/tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz"
@@ -59,7 +47,7 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeli
 
 <br/>
 
-#### Tekton Dashboard
+#### Добавление Tekton Dashboard
 
 <br/>
 
@@ -67,8 +55,9 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeli
 $ kubectl apply --filename https://github.com/tektoncd/dashboard/releases/latest/download/tekton-dashboard-release.yaml
 
 $ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 8080:9097
-
 ```
+
+<br/>
 
 https://shell.cloud.google.com/
 
