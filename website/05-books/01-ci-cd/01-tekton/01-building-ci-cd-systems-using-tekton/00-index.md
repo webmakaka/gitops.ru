@@ -51,10 +51,10 @@ $ gcloud cloud-shell ssh
 
 The following chapters are included in this section:
 
-• [Chapter 3, Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)
-• [Chapter 4, Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)
-• Chapter 5, Jumping into Pipelines
-• Chapter 6, Debugging and Cleaning Up Pipelines and Tasks
-• Chapter 7, Sharing Data with Workspaces
-• Chapter 8, Adding when Expressions
+• [Chapter 3, Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)  
+• [Chapter 4, Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)  
+• Chapter 5, Jumping into Pipelines  
+• Chapter 6, Debugging and Cleaning Up Pipelines and Tasks  
+• Chapter 7, Sharing Data with Workspaces  
+• Chapter 8, Adding when Expressions  
 • Chapter 9, Securing Authentication

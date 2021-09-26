@@ -10,13 +10,14 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 
 <br/>
 
-1. Инсталляция Git
-2. Инсталляция Docker
-3. Инсталляция Node.js
-4. Инсталляция [MiniKube](/containers/k8s/setup/minikube/) (Ingress и остальное можно не устанавливать)
-5. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
+1. Инсталляция [MiniKube](/containers/k8s/setup/minikube/) (Ingress и остальное можно не устанавливать)
+2. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
 
-6. Инсталляция VSCode
+3. ??? Инсталляция Git
+4. ??? Инсталляция Docker
+5. ??? Инсталляция Node.js
+
+6. ??? Инсталляция VSCode
 
 **Extensions:**
 
