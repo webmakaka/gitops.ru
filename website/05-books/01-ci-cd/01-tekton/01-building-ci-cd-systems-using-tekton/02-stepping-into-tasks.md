@@ -43,9 +43,6 @@ hello                 5 seconds ago
 
 ```
 $ tkn task start hello --showlog
-TaskRun started: hello-run-6gwtx
-Waiting for logs to be available...
-[unnamed-0] Hello World
 ```
 
 <br/>
@@ -81,12 +78,6 @@ EOF
 
 ```
 $ tkn task start multiple-steps --showlog
-TaskRun started: multiple-steps-run-nsxsl
-Waiting for logs to be available...
-[first] First step running
-
-[second] Second step running
-
 ```
 
 <br/>

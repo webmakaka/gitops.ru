@@ -12,6 +12,8 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/
 
 ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 
+<br/>
+
 **GitHub:**  
 https://
 github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
@@ -19,7 +21,7 @@ github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
 **YouTube:**  
 https://www.youtube.com/playlist?list=PLeLcvrwLe185j54ZV-CoPjeixY8GjEwVB
 
-**Цветные картинки**
+**Цветные картинки**  
 http://www.packtpub.com/sites/default/
 files/downloads/9781801078214_ColorImages.pdf
 
@@ -48,10 +50,10 @@ $ gcloud cloud-shell ssh
 
 The following chapters are included in this section:
 
-• [Chapter 3, Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)  
-• [Chapter 4, Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)  
-• Chapter 5, Jumping into Pipelines  
-• Chapter 6, Debugging and Cleaning Up Pipelines and Tasks  
-• Chapter 7, Sharing Data with Workspaces  
-• Chapter 8, Adding when Expressions  
-• Chapter 9, Securing Authentication
+• [Chapter 3. Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)  
+• [Chapter 4. Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)  
+• [Chapter 5. Jumping into Pipelines](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)  
+• Chapter 6. Debugging and Cleaning Up Pipelines and Tasks  
+• Chapter 7. Sharing Data with Workspaces  
+• Chapter 8. Adding when Expressions  
+• Chapter 9. Securing Authentication

@@ -17,19 +17,34 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 
 #### Инсталляция Tekton CLI
 
+```
+$ cd ~/tmp/
+```
+
 <br/>
 
 ```
+$ vi tekton-setup.sh
+```
 
-$ cd ~/tmp/
+<br/>
 
-$ export LATEST_VERSION=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+```
+#!/bin/bash
 
-$ export LATEST_VERSION_SHORT=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c 2-)
+export LATEST_VERSION=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
-$ curl -LO "https://github.com/tektoncd/cli/releases/download/${LATEST_VERSION}/tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz"
+export LATEST_VERSION_SHORT=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c 2-)
 
-$ sudo tar xvzf tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz -C /usr/local/bin/ tkn
+curl -LO "https://github.com/tektoncd/cli/releases/download/${LATEST_VERSION}/tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz"
+
+sudo tar xvzf tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz -C /usr/local/bin/ tkn
+```
+
+<br/>
+
+```
+$ chmod +x tekton-setup.sh
 ```
 
 <br/>
@@ -37,9 +52,12 @@ $ sudo tar xvzf tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz -C /u
 ```
 $ tkn version
 Client version: 0.20.0
+Pipeline version: v0.28.0
 ```
 
 <br/>
+
+#### Добавление Tekton в MiniKube
 
 ```
 $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
@@ -47,13 +65,21 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeli
 
 <br/>
 
-#### Добавление Tekton Dashboard
+#### Добавление Tekton Dashboard в MiniKube
 
 <br/>
 
 ```
 $ kubectl apply --filename https://github.com/tektoncd/dashboard/releases/latest/download/tekton-dashboard-release.yaml
+```
 
+<br/>
+
+**Подключиться к dashboard**
+
+<br/>
+
+```
 $ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 8080:9097
 ```
 
