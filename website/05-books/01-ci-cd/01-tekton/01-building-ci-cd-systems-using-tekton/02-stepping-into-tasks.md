@@ -142,12 +142,10 @@ $ tkn task start script-node --showlog
 
 ### Adding task parameters
 
-(Не передался параметр)
-
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -181,12 +179,10 @@ $ tkn task start hello-param --showlog -p who=Marley
 
 ### Using array type parameters
 
-(Не передались параметры)
-
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -218,14 +214,10 @@ $ tkn task start groceries --showlog
 
 ### Adding a default value
 
-(Не отработало)
-
-Надо как-то экранировать $(params.who)
-
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -259,7 +251,7 @@ $ tkn task start hello-param --showlog --use-param-defaults
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -294,12 +286,8 @@ Results can be used in tasks to store the output from a task in a single file. U
 
 <br/>
 
-Надо как-то экранировать $(results.message.path)
-
-<br/>
-
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -336,13 +324,10 @@ $ tkn task start using-results --showlog
 
 ### Using Kubernetes volumes
 
-1 не работает
-2 непонятно, как должно работать
-
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat <<'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
 metadata:

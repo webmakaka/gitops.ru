@@ -94,7 +94,8 @@ Topic: Orders	PartitionCount: 3	ReplicationFactor: 1	Configs:
 // Получать сообщения и выводить их в консоль:
 # /kafka/bin/kafka-console-consumer.sh \
     --bootstrap-server kafka-1:9092,kafka-2:9092,kafka-3:9092 \
-    --topic Orders --from-beginning
+    --topic Orders \
+    --from-beginning
 ```
 
 <br/>

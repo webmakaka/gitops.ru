@@ -10,6 +10,25 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 
 <br/>
 
+### Подключение к бесплатному облаку от Google
+
+https://shell.cloud.google.com/
+
+<br/>
+
+**Инсталлим google-cloud-sdk**
+
+https://cloud.google.com/sdk/docs/install
+
+<br/>
+
+```
+$ gcloud auth login
+$ gcloud cloud-shell ssh
+```
+
+<br/>
+
 1. Инсталляция [MiniKube](/containers/k8s/setup/minikube/) (Ingress и остальное можно не устанавливать)
 2. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
 
@@ -45,6 +64,7 @@ sudo tar xvzf tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz -C /usr
 
 ```
 $ chmod +x tekton-setup.sh
+$ ./tekton-setup.sh
 ```
 
 <br/>

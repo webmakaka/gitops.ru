@@ -35,8 +35,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.23.0
-commit: 5931455374810b1bbeb222a9713ae2c756daee10
+minikube version: v1.23.2
+commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 ```
 
 <br/>
