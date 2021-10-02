@@ -118,3 +118,36 @@ docker:x:126:username
 
     # ps auxwww | grep docker
     root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk1/docker
+
+<br/>
+
+### Настроить рабосу с
+
+```
+# vi /etc/docker/daemon.json
+```
+
+<br/>
+
+```
+{
+      "insecure-registries": ["localhost:5000"]
+}
+```
+
+<br/>
+
+```
+# systemctl daemon-reload
+# systemctl restart docker
+```
+
+<br/>
+
+```
+$ docker info
+***
+Insecure Registries:
+localhost:5000
+127.0.0.0/8
+```

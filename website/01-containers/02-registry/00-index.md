@@ -10,6 +10,6 @@ permalink: /containers/registry/
 
 <br/>
 
-### Harbor
+### [Docker](/containers/registry/docker/)
 
-[Harbor](/containers/registry/harbor/setup/)
+### [Harbor](/containers/registry/harbor/setup/)
