@@ -14,6 +14,11 @@ ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 
 <br/>
 
+Делаю:  
+02.10.2021
+
+<br/>
+
 **GitHub:**  
 https://
 github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton

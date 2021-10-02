@@ -145,7 +145,7 @@ $ tkn task start script-node --showlog
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -182,7 +182,7 @@ $ tkn task start hello-param --showlog -p who=Marley
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -217,7 +217,7 @@ $ tkn task start groceries --showlog
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -251,7 +251,7 @@ $ tkn task start hello-param --showlog --use-param-defaults
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -287,7 +287,7 @@ Results can be used in tasks to store the output from a task in a single file. U
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -327,7 +327,7 @@ $ tkn task start using-results --showlog
 <br/>
 
 ```yaml
-$ cat <<'EOF' | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
 metadata:

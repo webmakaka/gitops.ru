@@ -26,4 +26,4 @@ permalink: /containers/k8s/tools/skaffold/
 
 https://www.youtube.com/watch?v=9S1-69Rp1vQ
 
-https://github.com/gkleiman/dcos-k8s-rust-skaffold-demo
+https://github.com/webmakaka/dcos-k8s-rust-skaffold-demo

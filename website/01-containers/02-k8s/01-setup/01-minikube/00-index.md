@@ -55,37 +55,38 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 <br/>
 
 ```
+$ export PROFILE=marley-minikube
 $ {
-    minikube --profile marley-minikube config set memory 8192
-    minikube --profile marley-minikube config set cpus 4
-    minikube --profile marley-minikube config set disk-size 20g
+    minikube --profile ${PROFILE} config set memory 8192
+    minikube --profile ${PROFILE} config set cpus 4
+    minikube --profile ${PROFILE} config set disk-size 20g
 
-    // minikube --profile marley-minikube config set vm-driver virtualbox
-    minikube --profile marley-minikube config set vm-driver docker
+    // minikube --profile ${PROFILE} config set vm-driver virtualbox
+    minikube --profile ${PROFILE} config set vm-driver docker
 
-    minikube --profile marley-minikube config set kubernetes-version v1.22.1
-    minikube start --profile marley-minikube --embed-certs
+    minikube --profile ${PROFILE} config set kubernetes-version v1.22.2
+    minikube start --profile ${PROFILE} --embed-certs
 
     // Enable ingress
-    minikube addons --profile marley-minikube enable ingress
+    minikube addons --profile ${PROFILE} enable ingress
 
     // Enable registry
-    // minikube addons --profile marley-minikube enable registry
+    // minikube addons --profile ${PROFILE} enable registry
 }
 ```
 
 <br/>
 
     // При необходимости можно будет удалить профиль и все созданное в профиле следующей командой.
-    // $ minikube --profile marley-minikube stop && minikube --profile marley-minikube delete
+    // $ minikube --profile ${PROFILE} stop && minikube --profile ${PROFILE} delete
 
     // Стартовать остановленный minikube
-    // $ minikube --profile marley-minikube start
+    // $ minikube --profile ${PROFILE} start
 
 <br/>
 
     // Получить список установленных расширений
-    $ minikube addons --profile marley-minikube list
+    $ minikube addons --profile ${PROFILE} list
 
 <br/>
 
@@ -95,7 +96,7 @@ $ {
 
 ```
 // Подключиться к dashboard можно следующей командой
-$ minikube --profile marley-minikube dashboard
+$ minikube --profile ${PROFILE} dashboard
 ```
 
 <br/>
@@ -133,7 +134,7 @@ $ kubectl create secret generic -n metallb-system memberlist --from-literal=secr
 <br/>
 
 ```
-$ minikube --profile marley-minikube ip
+$ minikube --profile ${PROFILE} ip
 192.168.49.2
 ```
 
@@ -183,7 +184,7 @@ $ kubectl get pods --all-namespaces
 ### Дополнительная инфа по развернутому kuberntes кластеру
 
 ```
-$ minikube --profile marley-minikube config view
+$ minikube --profile ${PROFILE} config view
 - cpus: 4
 - disk-size: 20g
 - kubernetes-version: v1.22.1
@@ -195,13 +196,13 @@ $ minikube --profile marley-minikube config view
 
 ```
 // Подключиться к minikube по ssh
-$ minikube --profile marley-minikube ssh
+$ minikube --profile ${PROFILE} ssh
 ```
 
 Или еще вариант
 
 ```
-$ minikube --profile marley-minikube ip
+$ minikube --profile ${PROFILE} ip
 $ export MINIKUBE_IP=192.168.99.100
 $ ssh -i ~/.minikube/machines/marley-minikube/id_rsa docker@${MINIKUBE_IP}
 ```
@@ -265,7 +266,7 @@ https://developers.redhat.com/blog/2019/07/11/deploying-an-internal-container-re
 <br/>
 
 ```
-$ minikube start --profile marley-minikube
+$ minikube start --profile ${PROFILE}
 $ minikube start --profile addons enable registry
 ```
 
@@ -308,7 +309,7 @@ $ cd minikube-registry-aliases-demo
 <br/>
 
 ```
-eval $(minikube --profile marley-minikube docker-env)
+eval $(minikube --profile ${PROFILE} docker-env)
 ```
 
 <br/>
