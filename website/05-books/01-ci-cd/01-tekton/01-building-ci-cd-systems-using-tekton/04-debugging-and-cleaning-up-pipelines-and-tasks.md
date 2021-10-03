@@ -2,7 +2,7 @@
 layout: page
 title: Building CI/CD Systems Using Tekton - Debugging and Cleaning Up Pipelines and Tasks
 description: Building CI/CD Systems Using Tekton - Debugging and Cleaning Up Pipelines and Tasks
-keywords: books, ci-cd, tekton, Chapter 6. Debugging and Cleaning Up Pipelines and Tasks
+keywords: books, ci-cd, tekton, Debugging and Cleaning Up Pipelines and Tasks
 permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/debugging-and-cleaning-up-pipelines-and-tasks/
 ---
 

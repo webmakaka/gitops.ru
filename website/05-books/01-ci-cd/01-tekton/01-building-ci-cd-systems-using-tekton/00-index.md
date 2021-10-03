@@ -15,7 +15,7 @@ ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 <br/>
 
 Делаю:  
-02.10.2021
+04.10.2021
 
 <br/>
 
@@ -41,5 +41,7 @@ The following chapters are included in this section:
 • [Chapter 5. Jumping into Pipelines](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)  
 • [Chapter 6. Debugging and Cleaning Up Pipelines and Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)
 • [Chapter 7. Sharing Data with Workspaces](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/sharing-data-with-workspaces/)
-• Chapter 8. Adding when Expressions  
+• [Chapter 8. Adding when Expressions](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/adding-when-expressions/)
+
+•  
 • Chapter 9. Securing Authentication
