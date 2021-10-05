@@ -35,7 +35,7 @@ permalink: /videos/devops/implementing-a-full-ci-cd-pipeline/orchestration/
 <br/>
 
 ```
-$ cat <<EOF >> Vagrantfile
+$ cat << EOF >> Vagrantfile
 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :

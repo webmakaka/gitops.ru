@@ -12,6 +12,8 @@ permalink: /containers/k8s/setup/
 
 ### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/containers/k8s/setup/minikube/)
 
+### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/containers/k8s/setup/minikube/remote-connection/)
+
 <br/>
 
 ### Подготовленные скрипты для развертывания локального kubernetes кластера на виртуальных машинах virtualbox

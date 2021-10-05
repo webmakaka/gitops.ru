@@ -16,6 +16,8 @@ permalink: /containers/k8s/tools/skaffold/
 
 ## Примеры с реализацией
 
+### [Example: hot-reload with Node and Python](https://github.com/GoogleContainerTools/skaffold/tree/main/examples/hot-reload)
+
 ### [[NewLine] TinyHouse: A Fullstack React Masterclass with TypeScript and GraphQL [ENG, 2020]](https://github.com/webmakaka/TinyHouse-A-Fullstack-React-Masterclass-with-TypeScript-and-GraphQL)
 
 ### [[Stephen Grider] Microservices with Node JS and React [ENG, 2021]](https://github.com/webmakaka/Microservices-with-Node-JS-and-React-Improved)

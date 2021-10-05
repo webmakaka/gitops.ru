@@ -19,16 +19,15 @@ permalink: /containers/k8s/setup/minikube/
 
 <br/>
 
-Делаю:  
-12.09.2021
+**Делаю:**  
+04.10.2021
 
 ```shell
-// Узнать последнюю версию (v1.23.0):
+// Узнать последнюю версию (v1.23.2):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 // Установка
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-
 ```
 
 <br/>
@@ -54,17 +53,34 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 
 <br/>
 
+**vm-driver может быть:**
+
+-   docker
+-   virtualbox
+-   kvm2
+
+<br/>
+
 ```
-$ export PROFILE=marley-minikube
+$ export \
+  PROFILE=marley-minikube \
+  MEMORY=8192 \
+  CPUS=4 \
+  DRIVER=docker \
+  KUBERNETES_VERSION=v1.22.2
+```
+
+<br/>
+
+```
 $ {
-    minikube --profile ${PROFILE} config set memory 8192
-    minikube --profile ${PROFILE} config set cpus 4
+    minikube --profile ${PROFILE} config set memory ${MEMORY}
+    minikube --profile ${PROFILE} config set cpus ${CPUS}
     minikube --profile ${PROFILE} config set disk-size 20g
 
-    // minikube --profile ${PROFILE} config set vm-driver virtualbox
-    minikube --profile ${PROFILE} config set vm-driver docker
+    minikube --profile ${PROFILE} config set vm-driver ${DRIVER}
 
-    minikube --profile ${PROFILE} config set kubernetes-version v1.22.2
+    minikube --profile ${PROFILE} config set kubernetes-version ${KUBERNETES_VERSION}
     minikube start --profile ${PROFILE} --embed-certs
 
     // Enable ingress
@@ -321,5 +337,5 @@ skaffold dev --port-forward
 <br/>
 
 ```
-curl localhost:8080
+$ curl localhost:8080
 ```

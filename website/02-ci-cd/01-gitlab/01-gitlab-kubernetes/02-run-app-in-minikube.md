@@ -19,14 +19,9 @@ Docker version 20.10.0, build 7287ab3
 
 <br/>
 
-### Minikube installation
+### [Minikube installation](/containers/k8s/setup/minikube/)
 
-```
-$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-
-```
-
-<br/>
+Последний раз делалось на:
 
 ```
 $ minikube version
@@ -35,19 +30,17 @@ minikube version: v1.16.0
 
 <br/>
 
-### Kubectl installation
-
-```
-$ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
-
-$ kubectl version --client --short
-Client Version: v1.20.2
-
-```
+### [Kubectl installation](/containers/k8s/setup/tools/kubectl/)
 
 <br/>
 
 ### Run minikube
+
+**Здесь используется драйвер vm-driver virtualbox**
+
+Если использовать docker или kvm, можно посмотреть [здесь](/containers/k8s/setup/minikube/remote-connection/)
+
+<br/>
 
 ```
 $ {
@@ -76,6 +69,8 @@ $ {
 
     $ sudo vi /etc/hosts
 
+<br/>
+
 ```
 #---------------------------------------------------------------------
 # Minikube
@@ -87,6 +82,8 @@ $ {
 <br/>
 
 ### Helm installation
+
+<br/>
 
     $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 

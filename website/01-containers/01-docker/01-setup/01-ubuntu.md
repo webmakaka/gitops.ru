@@ -9,11 +9,13 @@ permalink: /containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04
 
 Делаю:  
-01.09.2021
+04.10.2021
 
 <br/>
 
 ### Инсталляция Docker версии 19.x
+
+<br/>
 
 ```
 $ mkdir ~/tmp
@@ -24,7 +26,6 @@ $ cd ~/tmp
 
 ```
 $ vi install-docker-and-docker-compose.sh
-
 ```
 
 <br/>
@@ -80,7 +81,9 @@ docker-compose version 1.29.2, build 5becea4c
 ### Предоставить пользователю права для работы с docker
 
     // Добавить текущего пользоателя в группу для работы с docker
-    $ sudo usermod -aG docker ${USERNAME}
+    $ sudo usermod -aG docker ${USER}
+
+<br/>
 
 в группе docker должен появиться этот пользователь
 
@@ -96,6 +99,8 @@ docker:x:126:username
     $ logout
 
 Лучше даже сделать reboot.
+
+    $ sudo reboot
 
 <br/>
 
@@ -131,7 +136,7 @@ docker:x:126:username
 
 ```
 {
-      "insecure-registries": ["localhost:5000"]
+    "insecure-registries": ["localhost:5000"]
 }
 ```
 

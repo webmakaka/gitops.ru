@@ -10,13 +10,17 @@ permalink: /ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/
 
 <br/>
 
+**[Upd: Есть мысль, что можно сделать проще с использованием nginx.](/containers/k8s/setup/minikube/remote-connection/)**
+
+<br/>
+
 <!--
 
 $ minikube --profile devops-app start --apiserver-ips=192.168.0.5
 
 -->
 
-### На хост машине
+### С хост машины c minikube
 
 ```
 $ cd ~/.minikube/
@@ -105,8 +109,6 @@ devops-app   Ready    control-plane,master   84m   v1.20.2
 
 OK
 
-<!--
-
 <br/>
 
 ### Инструкции
@@ -114,35 +116,3 @@ OK
 https://www.systemcodegeeks.com/devops/remote-access-to-minikube-with-kubectl/
 
 https://dzone.com/articles/access-minikube-using-kubectl-from-remote-machine
-
-<br/>
-
-### Проверки
-
-```
-$ minikube --profile devops-app ip
-$ export MINIKUBE_IP=192.168.99.100
-$ ssh -i ~/.minikube/machines/devops-app/id_rsa docker@${MINIKUBE_IP}
-
-
-$ telnet localhost 8443
-Connected to localhost
-```
-
-<br/>
-
-Извне тоже OK
-
-```
-$ telnet 192.168.99.100 8443
-```
-
-<br/>
-
-```
-$ telnet 192.168.99.100 51928
-Trying 192.168.99.100...
-telnet: Unable to connect to remote host: Connection refused
-```
-
--->
