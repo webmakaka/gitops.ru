@@ -47,3 +47,6 @@ The following chapters are included in this section:
 <br/>
 
 ## Section 3: Tekton Triggers
+
+• Chapter 10. Getting Started with Triggers
+• Chapter 11. Triggering Tekton
