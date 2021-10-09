@@ -54,6 +54,5 @@ The following chapters are included in this section:
 
 ## Section 4: Putting It All Together
 
-
-• Chapter 12, Preparing for a New Pipeline
-• Chapter 13, Building a Deployment Pipeline
+• [Chapter 12. Preparing for a New Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/preparing-for-a-new-pipeline/)
+• [Chapter 13. Building a Deployment Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/building-a-deployment-pipeline/)
