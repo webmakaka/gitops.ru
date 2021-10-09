@@ -126,10 +126,12 @@ docker:x:126:username
 
 <br/>
 
-### Настроить рабосу с
+### Разрешить работы с определенными registry по HTTP
+
+<br/>
 
 ```
-# vi /etc/docker/daemon.json
+$ sudo vi /etc/docker/daemon.json
 ```
 
 <br/>
@@ -143,8 +145,8 @@ docker:x:126:username
 <br/>
 
 ```
-# systemctl daemon-reload
-# systemctl restart docker
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
 ```
 
 <br/>

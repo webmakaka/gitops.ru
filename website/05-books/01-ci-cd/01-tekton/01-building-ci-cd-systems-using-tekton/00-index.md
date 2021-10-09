@@ -20,8 +20,7 @@ ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 <br/>
 
 **GitHub:**  
-https://
-github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
+https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
 
 **YouTube:**  
 https://www.youtube.com/playlist?list=PLeLcvrwLe185j54ZV-CoPjeixY8GjEwVB
@@ -48,5 +47,13 @@ The following chapters are included in this section:
 
 ## Section 3: Tekton Triggers
 
-• Chapter 10. Getting Started with Triggers
-• Chapter 11. Triggering Tekton
+• [Chapter 10. Getting Started with Triggers](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securing-authentication/)
+• [Chapter 11. Triggering Tekton](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/triggering-tekton/)
+
+<br/>
+
+## Section 4: Putting It All Together
+
+
+• Chapter 12, Preparing for a New Pipeline
+• Chapter 13, Building a Deployment Pipeline

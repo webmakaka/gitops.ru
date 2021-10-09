@@ -20,7 +20,7 @@ permalink: /containers/k8s/setup/minikube/
 <br/>
 
 **Делаю:**  
-04.10.2021
+09.10.2021
 
 ```shell
 // Узнать последнюю версию (v1.23.2):
@@ -49,7 +49,7 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 
 <br/>
 
-### Запуск по умолчанию для своих примеров:
+### Запуск:
 
 <br/>
 
@@ -271,7 +271,7 @@ https://github.com/burrsutter/9stepsawesome/
 
 <br/>
 
-### Local registry
+### Registry в Minikube
 
 // Установка настройка  
 https://github.com/kameshsampath/minikube-helpers/tree/master/registry

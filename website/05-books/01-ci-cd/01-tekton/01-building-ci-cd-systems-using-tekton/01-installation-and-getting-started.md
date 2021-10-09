@@ -36,6 +36,8 @@ $ gcloud cloud-shell ssh
 
 #### Инсталляция Tekton CLI
 
+<br/>
+
 ```
 $ cd ~/tmp/
 ```
@@ -71,8 +73,7 @@ $ ./tekton-setup.sh
 
 ```
 $ tkn version
-Client version: 0.20.0
-Pipeline version: v0.28.0
+Client version: 0.21.0
 ```
 
 <br/>

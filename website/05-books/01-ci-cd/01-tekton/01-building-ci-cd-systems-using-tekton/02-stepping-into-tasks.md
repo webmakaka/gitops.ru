@@ -36,7 +36,6 @@ EOF
 $  tkn task ls
 NAME    DESCRIPTION   AGE
 hello                 5 seconds ago
-
 ```
 
 <br/>
