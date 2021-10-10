@@ -38,6 +38,9 @@ $ kubectl create clusterrolebinding \
 
 ```
 $ tkn version
+Client version: 0.21.0
+Pipeline version: v0.28.1
+Triggers version: v0.16.0
 ```
 
 <br/>
@@ -55,7 +58,11 @@ https://github.com/PacktPublishing/tekton-book-app
 <br/>
 
 ```
-$ git clone git@github.com:<YOUR_USERNAME>/tekton-book-app .
+$ cd ~/tmp/
+
+// По https нужно еще и key настраивать
+// $ git clone git@github.com:<YOUR_USERNAME>/tekton-book-app
+$ git clone https://github.com/<YOUR_USERNAME>/tekton-book-app
 ```
 
 <br/>
@@ -69,6 +76,14 @@ $ cd tekton-book-app
 ```
 $ npm install
 $ npm start
+```
+
+<br/>
+
+Подключаемся еще 1 терминалом
+
+```
+$ gcloud cloud-shell ssh
 ```
 
 <br/>
@@ -90,10 +105,13 @@ $ npm run test
 
 ### Building and deploying the application
 
+<br/>
+
 ```
-$ docker build -t <YOUR_USERNAME>/tekton-lab-app .
+$ export DOCKER_USERNAME=<YOUR_USERNAME>
+$ docker build -t ${DOCKER_USERNAME}/tekton-lab-app .
 $ docker login docker.io
-$ docker push <YOUR_USERNAME>/tekton-lab-app
+$ docker push ${DOCKER_USERNAME}/tekton-lab-app
 ```
 
 <br/>
@@ -102,7 +120,7 @@ $ docker push <YOUR_USERNAME>/tekton-lab-app
 
 <br/>
 
-Не забыть заменить <YOUR_USERNAME> на свой.
+**Не забыть заменить <YOUR_USERNAME> на свой.**
 
 <br/>
 
@@ -159,9 +177,23 @@ EOF
 <br/>
 
 ```
-$ curl $(minikube ip)
+$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+tekton-deployment-5d5d5fd747-9dcn4   1/1     Running   0          78s
 ```
 
 <br/>
 
-Далее нужная процедура по изменению кода и обновлению всего и вся.
+```
+// Убеждаемся, что значение профиля установлено
+$ echo ${PROFILE}
+$ curl $(minikube --profile ${PROFILE} ip)
+```
+
+<br/>
+
+OK!
+
+<br/>
+
+Далее нудная процедура по изменению кода и обновлению всего и вся, чтобы показать нам как все это нудно делать руками.

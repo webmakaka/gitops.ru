@@ -164,8 +164,11 @@ EOF
 
 #### Creating a secret
 
+<br/>
+
 ```
-$ export TEKTON_SECRET_TOKEN=${TEKTON_SECRET_TOKEN-$(head -c 24 /dev/random | base64)}
+$ export TEKTON_SECRET_TOKEN=$(head -c 24 /dev/random | base64)
+$ echo ${TEKTON_SECRET_TOKEN}
 $ kubectl create secret generic git-secret --from-literal=secretToken=${TEKTON_SECRET_TOKEN}
 ```
 
@@ -185,6 +188,8 @@ kubernetes    ClusterIP   10.96.0.1        <none>        443/TCP             9m2
 <br/>
 
 You now need to ensure that this service can be reached from outside of your cluster.
+
+<br/>
 
 ```
 $ kubectl port-forward svc/el-listener 8080
@@ -220,6 +225,8 @@ $ curl localhost:8080
 
 Any incoming requests on your computer are redirected to the event listener, but you need to expose this port to the outside world so that GitHub can access this route.
 
+<br/>
+
 ```
 $ cd ~/tmp
 $ ./ngrok http 8080
@@ -232,7 +239,7 @@ $ ./ngrok http 8080
 
 ### Configuring your GitHub repository
 
-Github -> MyProject -> Settings -> Webhooks -> Add webhook.
+Github -> MyProject -> Settings -> Webhooks -> Add webhook
 
 <br/>
 

@@ -20,7 +20,7 @@ permalink: /containers/k8s/setup/minikube/
 <br/>
 
 **Делаю:**  
-09.10.2021
+10.10.2021
 
 ```shell
 // Узнать последнюю версию (v1.23.2):
@@ -53,11 +53,11 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 
 <br/>
 
-**vm-driver может быть:**
+**vm-driver может быть из популярных:**
 
 -   docker
--   virtualbox
 -   kvm2
+-   virtualbox
 
 <br/>
 
@@ -67,7 +67,7 @@ $ export \
   MEMORY=8192 \
   CPUS=4 \
   DRIVER=docker \
-  KUBERNETES_VERSION=v1.22.2
+  KUBERNETES_VERSION=v1.23.2
 ```
 
 <br/>
@@ -200,12 +200,20 @@ $ kubectl get pods --all-namespaces
 ### Дополнительная инфа по развернутому kuberntes кластеру
 
 ```
+$ kubectl cluster-info
+Kubernetes control plane is running at https://192.168.49.2:8443
+CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
+
+<br/>
+
+```
 $ minikube --profile ${PROFILE} config view
+- vm-driver: docker
 - cpus: 4
 - disk-size: 20g
-- kubernetes-version: v1.22.1
+- kubernetes-version: v1.23.2
 - memory: 8192
-- vm-driver: docker
 ```
 
 <br/>
@@ -220,7 +228,7 @@ $ minikube --profile ${PROFILE} ssh
 ```
 $ minikube --profile ${PROFILE} ip
 $ export MINIKUBE_IP=192.168.99.100
-$ ssh -i ~/.minikube/machines/marley-minikube/id_rsa docker@${MINIKUBE_IP}
+$ ssh -i ~/.minikube/machines/${PROFILE}/id_rsa docker@${MINIKUBE_IP}
 ```
 
 <br/>
