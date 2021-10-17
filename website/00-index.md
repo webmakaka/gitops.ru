@@ -8,6 +8,10 @@ permalink: /
 
 <br/>
 
+### Предлагайте интересные материалы для коллективного разбора
+
+<br/>
+
 ### Предлагаю покопать язык программирования rust
 
 И на основе изученных материалов, развернуть [приложение](https://github.com/webmakaka/k8s-rust-skaffold-demo) на языке rust в minikube на бесплатных облаках google - https://shell.cloud.google.com/
