@@ -18,6 +18,14 @@ permalink: /
 
 С использованием skaffold, tekton и д.р.
 
+Есть книга на русском:
+
+[Book] Стив Клабник, Кэрол Никол | Программирование на Rust (2021) [RUS, 2021]
+
+-   видео:
+
+https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
+
 <br/>
 
 ### Предлагаю коллективно поичать книгу Effortless Cloud-Native App Development Using Skaffold
