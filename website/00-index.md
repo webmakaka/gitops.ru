@@ -32,7 +32,7 @@ Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelin
 
 <br/>
 
-[Разбор](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
+[Разбор](/study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
 
 <br/>
 
@@ -56,7 +56,7 @@ Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelin
 
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
-[Подробнее](/videos/devops/implementing-a-full-ci-cd-pipeline/)
+[Подробнее](/study/videos/devops/implementing-a-full-ci-cd-pipeline/)
 
 <br/>
 
