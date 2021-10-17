@@ -8,11 +8,23 @@ permalink: /
 
 <br/>
 
-### Предлагаю коллективно поичать книгу, если она окажется интересной
+### Предлагаю покопать язык программирования rust
 
-Но, чтобы это проверить, нужно начать.
+И на основе изученных материалов, развернуть [приложение](https://github.com/webmakaka/k8s-rust-skaffold-demo) на языке rust в minikube на бесплатных облаках google - https://shell.cloud.google.com/
 
-Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers English | 2021 | ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
+С использованием skaffold, tekton и д.р.
+
+<br/>
+
+### Предлагаю коллективно поичать книгу Effortless Cloud-Native App Development Using Skaffold
+
+Effortless Cloud-Native App Development Using Skaffold: Simplify the development and deployment of cloud-native Spring Boot applications on Kubernetes with Skaffold [English | 2021 | ISBN: 978-1801077118 | 272 Pages | PDF, EPUB | 20 MB]
+
+<br/>
+
+### Предлагаю коллективно поичать книгу Building CI/CD Systems Using Tekton
+
+Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [English | 2021 | ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB]
 
 <br/>
 
