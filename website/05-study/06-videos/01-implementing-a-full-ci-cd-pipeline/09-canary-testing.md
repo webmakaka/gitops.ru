@@ -17,7 +17,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-canary
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 kind: Service
 apiVersion: v1
 metadata:
@@ -73,7 +73,7 @@ EOF
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 kind: Service
 apiVersion: v1
 metadata:

@@ -24,7 +24,7 @@ permalink: /containers/k8s/svc/nodeport/
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,7 +52,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:

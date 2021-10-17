@@ -62,7 +62,7 @@ nodejs-cats-app-nodeport   NodePort   10.111.195.73   <none>        80:30123/TCP
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -90,7 +90,7 @@ EOF
 <!-- <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -169,7 +169,7 @@ nip.io позволит не заморачиваться на добавлен�
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

@@ -134,7 +134,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-monitoring
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:

@@ -19,6 +19,12 @@ ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
 
 <br/>
 
+Осталось попробовать 7, 8:
+
+https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton/tree/main/assessments
+
+<br/>
+
 **GitHub:**  
 https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
 

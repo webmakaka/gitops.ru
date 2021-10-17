@@ -422,7 +422,7 @@ Jenkins -> Plugins -> Advanced -> Upload
 <br/>
 
 ```
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 kind: Service
 apiVersion: v1
 metadata:

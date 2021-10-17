@@ -18,7 +18,7 @@ Deployment создан как<a href="/containers/k8s/svc/nodeport/">здесь
 <br/>
 
 ```yaml
-$ cat <<EOF | kubectl apply -f -
+$ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: Service
 metadata:

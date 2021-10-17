@@ -93,7 +93,7 @@ resource "google_compute_instance" "default" {
 <br/>
 
 ```
-$ cat > terraform.tfvars <<EOF
+$ cat > terraform.tfvars << 'EOF'
 gke_username = "admin"
 gke_password = "$(openssl rand -base64 16)"
 EOF
