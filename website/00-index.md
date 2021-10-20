@@ -20,7 +20,7 @@ permalink: /
 
 Есть книга на русском:
 
-[Book] Стив Клабник, Кэрол Никол | Программирование на Rust (2021) [RUS, 2021]
+[Book] Стив Клабник, Кэрол Никол | Программирование на Rust [RUS, 2021]
 
 -   видео:
 
@@ -31,6 +31,10 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 ### Предлагаю коллективно поичать книгу Effortless Cloud-Native App Development Using Skaffold
 
 Effortless Cloud-Native App Development Using Skaffold: Simplify the development and deployment of cloud-native Spring Boot applications on Kubernetes with Skaffold [English | 2021 | ISBN: 978-1801077118 | 272 Pages | PDF, EPUB | 20 MB]
+
+<br/>
+
+[Разбор](/study/books/tools/skaffold/effortless-cloud-native-development-skaffold/)
 
 <br/>
 
