@@ -28,16 +28,27 @@ v1.33.0
 
 <br/>
 
-### Добавление insecure-registries (не работает)
+### Skaffold config
 
 ```
-$ skaffold config set --global insecure-registries localhost:5000
+$ skaffold config
+```
+
+<br/>
+
+```
 $ cat ~/.skaffold/config
 ```
 
 <br/>
 
-### Local Cluster (не работает)
+### Объяснить skaffold, что используется local Kubernetes cluster
+
+<br/>
+
+If your Kubernetes context is set to a local Kubernetes cluster, then there is no need to push an image to a remote Kubernetes cluster. Instead, Skaffold will move the image to the local Docker daemon to speed up the development cycle.
+
+<br/>
 
 https://skaffold.dev/docs/environment/local-cluster/
 
@@ -62,3 +73,14 @@ marley-minikube
 $ source minikube docker-env -p marley-minikube
 $ skaffold config set --kube-context marley-minikube local-cluster true
 ```
+
+<br/>
+
+### Добавление insecure-registries (не работает)
+
+```
+$ skaffold config set --global insecure-registries localhost:5000
+$ cat ~/.skaffold/config
+```
+
+Можно посмотреть работающий вариант в доке по инсталляции.
