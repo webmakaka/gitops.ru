@@ -20,7 +20,7 @@ permalink: /containers/k8s/setup/minikube/
 <br/>
 
 **Делаю:**  
-10.10.2021
+21.10.2021
 
 ```shell
 // Узнать последнюю версию (v1.23.2):
@@ -62,12 +62,22 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 <br/>
 
 ```
+KUBERNETES_VERSION=v1.23.2 - так пока не работает!
+
+// Error response from daemon: manifest for k8s.gcr.io/kube-proxy:v1.23.2 not found
+// $ docker pull k8s.gcr.io/kube-proxy:v1.23.2
+
+```
+
+<br/>
+
+```
 $ export \
   PROFILE=marley-minikube \
   MEMORY=8192 \
   CPUS=4 \
   DRIVER=docker \
-  KUBERNETES_VERSION=v1.23.2
+  KUBERNETES_VERSION=v1.22.2
 ```
 
 <br/>

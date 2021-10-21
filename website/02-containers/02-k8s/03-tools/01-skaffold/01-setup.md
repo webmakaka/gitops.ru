@@ -9,7 +9,7 @@ permalink: /containers/k8s/tools/scaffold/setup/
 # Инсталляция scaffold в ubuntu 20.04
 
 Делаю:  
-15.09.2021
+21.09.2021
 
 <br/>
 
@@ -18,11 +18,12 @@ permalink: /containers/k8s/tools/scaffold/setup/
 ```
 $ curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
 
-$ chmod +x skaffold
 $ sudo mv skaffold /usr/local/bin
+$ chmod +x /usr/local/bin/skaffold
+
 
 $ skaffold version
-v1.31.0
+v1.33.0
 ```
 
 <br/>
