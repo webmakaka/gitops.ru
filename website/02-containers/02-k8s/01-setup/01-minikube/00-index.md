@@ -73,11 +73,11 @@ KUBERNETES_VERSION=v1.23.2 - так пока не работает!
 
 ```
 $ export \
-  PROFILE=marley-minikube \
-  MEMORY=8192 \
-  CPUS=4 \
-  DRIVER=docker \
-  KUBERNETES_VERSION=v1.22.2
+    PROFILE=marley-minikube \
+    MEMORY=8192 \
+    CPUS=4 \
+    DRIVER=docker \
+    KUBERNETES_VERSION=v1.22.2
 ```
 
 <br/>

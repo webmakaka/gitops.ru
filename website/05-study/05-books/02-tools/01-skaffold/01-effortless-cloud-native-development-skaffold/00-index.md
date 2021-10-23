@@ -27,7 +27,7 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 
 <br/>
 
-### [Подготовка окружения](/study/books/tools/skaffold/setup/)
+### [Подготовка стенда](/study/books/tools/skaffold/setup/)
 
 <br/>
 
@@ -44,4 +44,4 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 
 • Chapter 4. Understanding Skaffold's Features and Architecture
 • Chapter 5. Installing Skaffold and Demystifying Its Pipeline Stages
-• Chapter 6. Working with Skaffold Container Image Builders and Deployers
+• [Chapter 6. Working with Skaffold Container Image Builders and Deployers](/study/books/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/)

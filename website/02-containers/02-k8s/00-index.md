@@ -14,6 +14,8 @@ permalink: /containers/k8s/
 
 ### [Kubernetes сервисы](/containers/k8s/svc/)
 
+### [Инструменты для работы с Kubernetes](/containers/k8s/tools/)
+
 <br/>
 
 ### Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]

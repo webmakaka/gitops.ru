@@ -1,12 +1,17 @@
 ---
 layout: page
-title: Building CI/CD Systems Using Tekton - Подготовка окружения
-description: Building CI/CD Systems Using Tekton - Подготовка окружения
-keywords: books, ci-cd, tekton, Подготовка окружения
+title: Building CI/CD Systems Using Tekton - Подготовка стенда
+description: Building CI/CD Systems Using Tekton - Подготовка стенда
+keywords: books, ci-cd, tekton, Подготовка стенда
 permalink: /study/books/tools/skaffold/setup/
 ---
 
-# Подготовка окружения
+# Подготовка стенда
+
+<br/>
+
+Делаю:  
+23.10.2021
 
 <br/>
 
@@ -65,4 +70,11 @@ $ export \
 
 ```
 $ skaffold config set --kube-context ${PROFILE} local-cluster true
+```
+
+<br/>
+
+```
+$ cd ~/tmp/
+$ git clone https://github.com/PacktPublishing/Effortless-Cloud-Native-App-Development-Using-Skaffold
 ```

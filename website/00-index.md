@@ -28,7 +28,13 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-### Предлагаю коллективно поичать книгу Effortless Cloud-Native App Development Using Skaffold
+### [Предлагаю коллективно поичать книгу] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters
+
+English | 2021 | ISBN: 978-1800202450 | 292 Pages | PDF, EPUB, MOBI | 23 MB
+
+<br/>
+
+### [Предлагаю коллективно поичать книгу] Effortless Cloud-Native App Development Using Skaffold
 
 Effortless Cloud-Native App Development Using Skaffold: Simplify the development and deployment of cloud-native Spring Boot applications on Kubernetes with Skaffold [English | 2021 | ISBN: 978-1801077118 | 272 Pages | PDF, EPUB | 20 MB]
 
@@ -38,7 +44,7 @@ Effortless Cloud-Native App Development Using Skaffold: Simplify the development
 
 <br/>
 
-### Предлагаю коллективно поичать книгу Building CI/CD Systems Using Tekton
+### [Предлагаю коллективно поичать книгу] Building CI/CD Systems Using Tekton
 
 Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [English | 2021 | ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB]
 

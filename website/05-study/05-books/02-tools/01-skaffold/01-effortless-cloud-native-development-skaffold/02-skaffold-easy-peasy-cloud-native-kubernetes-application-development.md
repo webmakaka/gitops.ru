@@ -11,9 +11,7 @@ permalink: /study/books/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernet
 <br/>
 
 ```
-$ cd ~/tmp/
-$ git clone https://github.com/PacktPublishing/Effortless-Cloud-Native-App-Development-Using-Skaffold
-$ cd Effortless-Cloud-Native-App-Development-Using-Skaffold/Chapter03/
+$ cd ~/tmp/Effortless-Cloud-Native-App-Development-Using-Skaffold/Chapter03/
 ```
 
 <br/>
