@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция kubectl в ubuntu 20.04
 description: Инсталляция kubectl в ubuntu 20.04
 keywords: gitops, containers, kubernetes, setup, kubectl
-permalink: /containers/k8s/setup/tools/kubectl/
+permalink: /containers/k8s/tools/kubectl/
 ---
 
 # Инсталляция kubectl в ubuntu 20.04

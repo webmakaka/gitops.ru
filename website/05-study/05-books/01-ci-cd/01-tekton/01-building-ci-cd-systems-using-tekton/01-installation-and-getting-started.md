@@ -10,6 +10,11 @@ permalink: /study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/install
 
 <br/>
 
+Делаю:  
+24.10.2021
+
+<br/>
+
 ### Подключение к бесплатному облаку от Google
 
 https://shell.cloud.google.com/
@@ -33,7 +38,7 @@ $ gcloud cloud-shell ssh
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
+2. Инсталляция [Kubectl](/containers/k8s/tools/kubectl/)
 
 <br/>
 

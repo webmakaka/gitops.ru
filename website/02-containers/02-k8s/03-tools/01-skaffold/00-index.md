@@ -10,7 +10,7 @@ permalink: /containers/k8s/tools/skaffold/
 
 <br/>
 
-### [Инсталляция Skaffold в linux](/containers/k8s/tools/scaffold/setup/)
+### [Инсталляция Skaffold в linux](/containers/k8s/tools/scaffold/)
 
 <br/>
 

@@ -24,10 +24,4 @@ permalink: /containers/k8s/setup/
 
 <br/>
 
-## Инструменты для работы с кластером
-
-### [Инсталляция kubectl в ubuntu 20.04](/containers/k8s/setup/tools/kubectl/)
-
-### [k9s - инструмент для визуальной работы с кластером](/containers/k8s/setup/tools/k9s/)
-
-### [scaffold - инструмент для разработки в kubernetes](/containers/k8s/tools/scaffold/setup/)
+## [Инструменты для работы с кластером](/containers/k8s/tools/)

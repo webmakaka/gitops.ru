@@ -260,6 +260,8 @@ $ tkn pipeline start clone-and-list \
   --showlog
 ```
 
+<br/>
+
 Если выполнить второй раз - будет ошибка, т.к. данные из pvc не были удалены.
 
 <br/>
@@ -441,3 +443,292 @@ $ tkn pr logs -f clone-and-ls-pr-xwsnd
 <br/>
 
 This volume claim template creates a new PVC for each pipeline execution.
+
+<br/>
+
+## Assessments
+
+<br/>
+
+### Write and read
+
+<br/>
+
+Create a task that uses a workspace to share information across its two steps. The first step will write a message, specified in a parameter, to a file in the workspace. The second step will output the content of the file in the logs.
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: write-read-workspace
+spec:
+  workspaces:
+    - name: data
+  params:
+    - name: message
+      default: "Hello World"
+      type: string
+      description: "Message to write in the workspace"
+  steps:
+    - name: write
+      image: registry.access.redhat.com/ubi8/ubi
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - echo "$(params.message)" > $(workspaces.data.path)/message.txt
+    - name: read
+      image: registry.access.redhat.com/ubi8/ubi
+      command:
+        - /bin/bash
+      args:
+        - -c
+        - cat $(workspaces.data.path)/message.txt
+EOF
+```
+
+<br/>
+
+```
+$ tkn task start write-read-workspace --showlog
+? Value for param `message` of type `string`? (Default is `Hello World`) Hello World
+Please give specifications for the workspace: data
+? Name for the workspace : data
+? Value of the Sub Path :
+? Type of the Workspace : emptyDir
+? Type of EmptyDir :
+TaskRun started: write-read-workspace-run-sg2b5
+Waiting for logs to be available...
+
+[read] Hello World
+```
+
+<br/>
+
+### Pick a card
+
+Using the Deck of Cards API available at http://deckofcardsapi.com/, create a pipeline that will generate a new deck of cards and then pick a single card from it. The first call will generate a deck identifier (ID) that you can then use in the next task to pick a card. Output the card value and suit in the second task.
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: deck-api-create
+spec:
+  workspaces:
+    - name: deck
+  steps:
+    - name: create-deck
+      image: registry.access.redhat.com/ubi8/ubi
+      script: |
+        curl https://deckofcardsapi.com/api/deck/new/shuffle/ -o $(workspaces.deck.path)/deck-id.txt
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: deck-api-draw
+spec:
+  workspaces:
+    - name: deck
+  steps:
+    - name: draw
+      image: node:14
+      script: |
+        #!/usr/bin/env node
+        const fs = require("fs");
+        const https = require("https");
+        const deck = fs.readFileSync("$(workspaces.deck.path)/deck-id.txt");
+        const deckId = JSON.parse(deck).deck_id;
+        const URL = `https://deckofcardsapi.com/api/deck/${deckId}/draw/`;
+        console.log(URL);
+        https.get(URL, response => {
+          response.on("data", data => {
+            let card = JSON.parse(data).cards[0];
+            console.log("Card was drawn from the deck");
+            console.log(`${card.value} of ${card.suit}`);
+          })
+        });
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: pick-a-card
+spec:
+  workspaces:
+    - name: api-data
+  tasks:
+    - name: create-deck
+      taskRef:
+        name: deck-api-create
+      workspaces:
+        - name: deck
+          workspace: api-data
+    - name: pick-card
+      taskRef:
+        name: deck-api-draw
+      workspaces:
+        - name: deck
+          workspace: api-data
+      runAfter:
+        - create-deck
+EOF
+```
+
+<br/>
+
+```
+$ tkn pipeline start pick-a-card --showlog
+Please give specifications for the workspace: api-data
+? Name for the workspace : api-data
+? Value of the Sub Path :
+? Type of the Workspace : emptyDir
+? Type of EmptyDir :
+PipelineRun started: pick-a-card-run-5kmmq
+Waiting for logs to be available...
+[create-deck : create-deck] + curl https://deckofcardsapi.com/api/deck/new/shuffle/ -o /workspace/deck/deck-id.txt
+[create-deck : create-deck]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[create-deck : create-deck]                                  Dload  Upload   Total   Spent    Left  Speed
+100    79  100    79    0     0    292      0 --:--:-- --:--:-- --:--:--   292
+
+[pick-card : draw] internal/fs/utils.js:332
+[pick-card : draw]     throw err;
+[pick-card : draw]     ^
+[pick-card : draw]
+[pick-card : draw] Error: ENOENT: no such file or directory, open '/workspace/deck/deck-id.txt'
+[pick-card : draw]     at Object.openSync (fs.js:497:3)
+[pick-card : draw]     at Object.readFileSync (fs.js:393:35)
+[pick-card : draw]     at Object.<anonymous> (/tekton/scripts/script-0-mg6rh:4:17)
+[pick-card : draw]     at Module._compile (internal/modules/cjs/loader.js:1085:14)
+[pick-card : draw]     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+[pick-card : draw]     at Module.load (internal/modules/cjs/loader.js:950:32)
+[pick-card : draw]     at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+[pick-card : draw]     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+[pick-card : draw]     at internal/main/run_main_module.js:17:47 {
+[pick-card : draw]   errno: -2,
+[pick-card : draw]   syscall: 'open',
+[pick-card : draw]   code: 'ENOENT',
+[pick-card : draw]   path: '/workspace/deck/deck-id.txt'
+[pick-card : draw] }
+
+failed to get logs for task pick-card : container step-draw has failed  : [{"key":"StartedAt","value":"2021-10-24T12:47:27.107Z","type":3}]
+```
+
+<br/>
+
+```
+$ tkn pr logs -f pick-a-card-run-5kmmq
+```
+
+<br/>
+
+### Hello admin
+
+Build a pipeline that will return a different greeting, whether the username passed as a parameter is admin or something else. This pipeline should have two tasks. The first task will verify the username and output the role ( admin or user ) in the result. The second task will pick up this role and display the appropriate message from a ConfigMap mounted as a workspace.
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: messages
+data:
+  admin-welcome: Welcome master.
+  user-welcome: Hello user.
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: get-role
+spec:
+  results:
+    - name: role
+  params:
+    - name: user
+      type: string
+  steps:
+    - name: check-username
+      image: registry.access.redhat.com/ubi8/ubi
+      script: |
+        #!/usr/bin/env bash
+        if [ "$(params.user)" == "admin" ]; then
+          echo "admin" > $(results.role.path)
+        else
+          echo "user" > $(results.role.path)
+        fi
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: role-based-greet
+spec:
+  params:
+    - name: role
+      type: string
+  workspaces:
+    - name: messages
+  steps:
+    - name: greet
+      image: registry.access.redhat.com/ubi8/ubi
+      script: |
+        ROLE=$(params.role)
+        cat $(workspaces.messages.path)/$ROLE-welcome
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: admin-or-not
+spec:
+  params:
+    - name: username
+      default: user
+      type: string
+  workspaces:
+    - name: message-map
+  tasks:
+    - name: validate-admin
+      taskRef:
+        name: get-role
+      params:
+        - name: user
+          value: $(params.username)
+    - name: greetings
+      taskRef:
+        name: role-based-greet
+      params:
+        - name: role
+          value: $(tasks.validate-admin.results.role)
+      workspaces:
+        - name: messages
+          workspace: message-map
+      runAfter:
+        - validate-admin
+EOF
+```
+
+<br/>
+
+```
+$ tkn pipeline start admin-or-not --showlog
+? Value for param `username` of type `string`? (Default is `user`) user
+Please give specifications for the workspace: message-map
+? Name for the workspace : message-map
+? Value of the Sub Path :
+? Type of the Workspace : emptyDir
+? Type of EmptyDir :
+PipelineRun started: admin-or-not-run-rcjzn
+Waiting for logs to be available...
+
+[greetings : greet] + ROLE=user
+[greetings : greet] + cat /workspace/messages/user-welcome
+[greetings : greet] cat: /workspace/messages/user-welcome: No such file or directory
+
+failed to get logs for task greetings : container step-greet has failed  : [{"key":"StartedAt","value":"2021-10-24T12:58:28.817Z","type":3}]
+```

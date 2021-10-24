@@ -14,13 +14,15 @@ permalink: /containers/k8s/setup/minikube/
 
 <br/>
 
+**Делаю:**  
+24.10.2021
+
+<br/>
+
 **minikube** - подготовленная виртуальная машина или контейнер с мини kubernetes сервером.
 Вполне подойдет для изучения kubernetes, особенно на слабых компьютерах и ноутбуках.
 
 <br/>
-
-**Делаю:**  
-21.10.2021
 
 ```shell
 // Узнать последнюю версию (v1.23.2):
@@ -58,6 +60,7 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 -   docker
 -   kvm2
 -   virtualbox
+-   д.р.
 
 <br/>
 
@@ -116,7 +119,7 @@ $ {
 
 <br/>
 
-Далее нужно установить [kubectl](/containers/k8s/setup/tools/kubectl/)
+Далее нужно установить [kubectl](/containers/k8s/tools/kubectl/)
 
 <br/>
 

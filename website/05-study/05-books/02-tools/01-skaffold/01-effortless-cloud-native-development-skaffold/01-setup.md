@@ -11,7 +11,7 @@ permalink: /study/books/tools/skaffold/setup/
 <br/>
 
 Делаю:  
-23.10.2021
+24.10.2021
 
 <br/>
 
@@ -38,9 +38,9 @@ $ gcloud cloud-shell ssh
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/containers/k8s/setup/tools/kubectl/)
+2. Инсталляция [Kubectl](/containers/k8s/tools/kubectl/)
 
-3. Инсталляция [Skaffold](/containers/k8s/tools/scaffold/setup/)
+3. Инсталляция [Skaffold](/containers/k8s/tools/scaffold/)
 
 4. Инсталляция [JDK17](//javadev.org/devtools/jdk/setup/linux/)
 
