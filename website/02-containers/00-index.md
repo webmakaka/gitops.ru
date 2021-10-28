@@ -18,7 +18,7 @@ permalink: /containers/
 
 ### Kubernetes
 
-[Docker](/containers/k8s/)
+[Docker](/containers/kubernetes/)
 
 <br/>
 

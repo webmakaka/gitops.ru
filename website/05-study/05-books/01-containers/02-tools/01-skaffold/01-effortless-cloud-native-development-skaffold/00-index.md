@@ -3,7 +3,7 @@ layout: page
 title: Building CI/CD Systems Using Tekton - Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers
 description: Building CI/CD Systems Using Tekton - Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers
 keywords: books, ci-cd, tekton
-permalink: /study/books/tools/skaffold/effortless-cloud-native-development-skaffold/
+permalink: /study/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/
 ---
 
 # Effortless Cloud-Native App Development Using Skaffold: Simplify the development and deployment of cloud-native Spring Boot applications on Kubernetes with Skaffold [ENG, 2021]
@@ -27,7 +27,7 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 
 <br/>
 
-### [Подготовка стенда](/study/books/tools/skaffold/setup/)
+### [Подготовка стенда](/study/books/containers/kubernetes/tools/skaffold/setup/)
 
 <br/>
 
@@ -36,7 +36,7 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 • Chapter 1. Code, Build, Test, and Repeat – The Application Development Inner Loop
 • Chapter 2. Developing Cloud-Native Applications with Kubernetes
 – A Developer's Nightmare
-• [Chapter 3. Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development](/study/books/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/)
+• [Chapter 3. Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development](/study/books/containers/kubernetes/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/)
 
 <br/>
 
@@ -44,7 +44,7 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 
 • Chapter 4. Understanding Skaffold's Features and Architecture
 • Chapter 5. Installing Skaffold and Demystifying Its Pipeline Stages
-• [Chapter 6. Working with Skaffold Container Image Builders and Deployers](/study/books/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/)
+• [Chapter 6. Working with Skaffold Container Image Builders and Deployers](/study/books/containers/kubernetes/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/)
 
 <br/>
 

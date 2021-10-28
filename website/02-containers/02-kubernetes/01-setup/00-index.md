@@ -3,16 +3,16 @@ layout: page
 title: Локальная установка Kubernetes в linux
 description: Локальная установка Kubernetes в linux
 keywords: gitops, containers, kubernetes, setup
-permalink: /containers/k8s/setup/
+permalink: /containers/kubernetes/setup/
 ---
 
 # Локальная установка Kubernetes в linux
 
 <br/>
 
-### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/containers/k8s/setup/minikube/)
+### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/containers/kubernetes/setup/minikube/)
 
-### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/containers/k8s/setup/minikube/remote-connection/)
+### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/containers/kubernetes/setup/minikube/remote-connection/)
 
 <br/>
 
@@ -24,4 +24,4 @@ permalink: /containers/k8s/setup/
 
 <br/>
 
-## [Инструменты для работы с кластером](/containers/k8s/tools/)
+## [Инструменты для работы с кластером](/containers/kubernetes/tools/)

@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция scaffold в ubuntu 20.04
 description: Инсталляция scaffold в ubuntu 20.04
 keywords: gitops, containers, kubernetes, setup, tools, scaffold
-permalink: /containers/k8s/tools/scaffold/
+permalink: /containers/kubernetes/tools/scaffold/
 ---
 
 # Инсталляция scaffold в ubuntu 20.04

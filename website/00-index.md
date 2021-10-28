@@ -28,9 +28,10 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-### [Предлагаю коллективно поичать книгу] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters
+### [Предлагаю коллективно поичать книгу] [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
 
-English | 2021 | ISBN: 978-1800202450 | 292 Pages | PDF, EPUB, MOBI | 23 MB
+<br/>
+[Ссылка]](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
 
 <br/>
 
@@ -40,7 +41,7 @@ Effortless Cloud-Native App Development Using Skaffold: Simplify the development
 
 <br/>
 
-[Разбор](/study/books/tools/skaffold/effortless-cloud-native-development-skaffold/)
+[Разбор](/study/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
 
 <br/>
 

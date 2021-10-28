@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция и подготовка minikube для работы в ubuntu 20.04
 description: Инсталляция и подготовка minikube для работы в ubuntu 20.04
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu
-permalink: /containers/k8s/setup/minikube/
+permalink: /containers/kubernetes/setup/minikube/
 ---
 
 # Инсталляция и подготовка minikube для работы в ubuntu 20.04
@@ -119,7 +119,7 @@ $ {
 
 <br/>
 
-Далее нужно установить [kubectl](/containers/k8s/tools/kubectl/)
+Далее нужно установить [kubectl](/containers/kubernetes/tools/kubectl/)
 
 <br/>
 

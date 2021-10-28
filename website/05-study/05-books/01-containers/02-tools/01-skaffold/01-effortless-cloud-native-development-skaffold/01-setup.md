@@ -3,7 +3,7 @@ layout: page
 title: Building CI/CD Systems Using Tekton - Подготовка стенда
 description: Building CI/CD Systems Using Tekton - Подготовка стенда
 keywords: books, ci-cd, tekton, Подготовка стенда
-permalink: /study/books/tools/skaffold/setup/
+permalink: /study/books/containers/kubernetes/tools/skaffold/setup/
 ---
 
 # Подготовка стенда
@@ -34,13 +34,13 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
-1. Инсталляция [MiniKube](/containers/k8s/setup/minikube/) (Ingress и остальное можно не устанавливать)
+1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/) (Ingress и остальное можно не устанавливать)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/containers/k8s/tools/kubectl/)
+2. Инсталляция [Kubectl](/containers/kubernetes/tools/kubectl/)
 
-3. Инсталляция [Skaffold](/containers/k8s/tools/scaffold/)
+3. Инсталляция [Skaffold](/containers/kubernetes/tools/scaffold/)
 
 4. Инсталляция [JDK17](//javadev.org/devtools/jdk/setup/linux/)
 

@@ -3,14 +3,14 @@ layout: page
 title: Skaffold в Linux
 description: Skaffold в Linux
 keywords: gitops, containers, skaffold
-permalink: /containers/k8s/tools/skaffold/
+permalink: /containers/kubernetes/tools/skaffold/
 ---
 
 # Skaffold
 
 <br/>
 
-### [Инсталляция Skaffold в linux](/containers/k8s/tools/scaffold/)
+### [Инсталляция Skaffold в linux](/containers/kubernetes/tools/scaffold/)
 
 <br/>
 

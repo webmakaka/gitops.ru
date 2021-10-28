@@ -3,18 +3,18 @@ layout: page
 title: Kubernetes в Linux
 description: Kubernetes в Linux
 keywords: gitops, containers, kubernetes
-permalink: /containers/k8s/
+permalink: /containers/kubernetes/
 ---
 
 # Kubernetes
 
 <br/>
 
-### [Локальная установка kubernetes в linux](/containers/k8s/setup/)
+### [Локальная установка kubernetes в linux](/containers/kubernetes/setup/)
 
-### [Kubernetes сервисы](/containers/k8s/svc/)
+### [Kubernetes сервисы](/containers/kubernetes/svc/)
 
-### [Инструменты для работы с Kubernetes](/containers/k8s/tools/)
+### [Инструменты для работы с Kubernetes](/containers/kubernetes/tools/)
 
 <br/>
 

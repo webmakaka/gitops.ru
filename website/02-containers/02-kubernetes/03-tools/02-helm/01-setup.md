@@ -3,7 +3,7 @@ layout: page
 title: Подготовка и установка Helm
 description: Подготовка и установка Helm
 keywords: devops, containers, kubernetes, linux, helm, setup
-permalink: /containers/k8s/tools/helm/setup/
+permalink: /containers/kubernetes/tools/helm/setup/
 ---
 
 # Подготовка и установка Helm

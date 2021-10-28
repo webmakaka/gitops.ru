@@ -3,7 +3,7 @@ layout: page
 title: Building CI/CD Systems Using Tekton - Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development
 description: Building CI/CD Systems Using Tekton - Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development
 keywords: books, ci-cd, tekton, Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development
-permalink: /study/books/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/
+permalink: /study/books/containers/kubernetes/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/
 ---
 
 # Chapter 3. Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development

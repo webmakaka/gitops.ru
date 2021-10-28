@@ -3,7 +3,7 @@ layout: page
 title: Создание службы Ingress
 description: Создание службы Ingress
 keywords: devops, containers, kubernetes, minikube, Создание службы Ingress
-permalink: /containers/k8s/svc/ingress/
+permalink: /containers/kubernetes/svc/ingress/
 ---
 
 # Создание службы Ingress
@@ -19,7 +19,7 @@ permalink: /containers/k8s/svc/ingress/
 
 <br/>
 
-Deployment и NodePort уже созданы как <a href="/containers/k8s/svc/nodeport/">здесь</a>
+Deployment и NodePort уже созданы как <a href="/containers/kubernetes/svc/nodeport/">здесь</a>
 
 <br/>
 
