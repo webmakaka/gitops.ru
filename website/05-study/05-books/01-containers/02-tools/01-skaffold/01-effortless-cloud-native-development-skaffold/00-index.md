@@ -33,33 +33,40 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
 
 ### Section 1: The Kubernetes Nightmare – Skaffold to the Rescue
 
-• Chapter 1. Code, Build, Test, and Repeat – The Application Development Inner Loop
-• Chapter 2. Developing Cloud-Native Applications with Kubernetes
-– A Developer's Nightmare
-• [Chapter 3. Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development](/study/books/containers/kubernetes/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/)
+<br/>
+
+-   Chapter 1. Code, Build, Test, and Repeat – The Application Development Inner Loop
+-   Chapter 2. Developing Cloud-Native Applications with Kubernetes – A Developer's Nightmare
+-   [Chapter 3. Skaffold – Easy-Peasy Cloud-Native Kubernetes Application Development](/study/books/containers/kubernetes/tools/skaffold/skaffold-easy-peasy-cloud-native-kubernetes-application-development/)
 
 <br/>
 
 ### Section 2: Getting Started with Skaffold
 
-• Chapter 4. Understanding Skaffold's Features and Architecture
-• Chapter 5. Installing Skaffold and Demystifying Its Pipeline Stages
-• [Chapter 6. Working with Skaffold Container Image Builders and Deployers](/study/books/containers/kubernetes/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/)
+<br/>
+
+-   Chapter 4. Understanding Skaffold's Features and Architecture
+-   Chapter 5. Installing Skaffold and Demystifying Its Pipeline Stages
+-   [Chapter 6. Working with Skaffold Container Image Builders and Deployers](/study/books/containers/kubernetes/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/)
 
 <br/>
 
 ### Section 3: Building and Deploying Cloud-Native Spring Boot Applications with Skaffold
 
-• Chapter 7. Building and Deploying a Spring Boot Application with the Cloud
-Code Plugin
-• Chapter 8. Deploying a Spring Boot Application to Google Kubernetes Engine
-Using Skaffold
-• Chapter 9. Creating a Production-Ready CI/CD Pipeline with Skaffold
-• Chapter 10. Exploring Skaffold Alternatives, Best Practices, and Pitfalls
+<br/>
+
+-   Chapter 7. Building and Deploying a Spring Boot Application with the Cloud
+    Code Plugin
+-   Chapter 8. Deploying a Spring Boot Application to Google Kubernetes Engine
+    Using Skaffold
+-   Chapter 9. Creating a Production-Ready CI/CD Pipeline with Skaffold
+-   Chapter 10. Exploring Skaffold Alternatives, Best Practices, and Pitfalls
 
 <br/>
 
-Chapter 7
+### Chapter 7
+
+<br/>
 
 ```
 $ cd ~/tmp/Effortless-Cloud-Native-App-Development-Using-Skaffold/Chapter07/
