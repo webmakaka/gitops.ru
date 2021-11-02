@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 ### [Предлагаю коллективно изучить видеокурс] [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
 
-Предлагают попробовать промо на $100 с использованием kubernetes от linode.
+[Разбор](/study/books/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-[Разбор](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
+[Разбор](/study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
