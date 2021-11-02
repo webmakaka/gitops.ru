@@ -10,4 +10,4 @@ permalink: /study/videos/devops/
 
 <br/>
 
-### [[A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]](/study/videos/devops/implementing-a-full-ci-cd-pipeline/)
+### [[A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/)

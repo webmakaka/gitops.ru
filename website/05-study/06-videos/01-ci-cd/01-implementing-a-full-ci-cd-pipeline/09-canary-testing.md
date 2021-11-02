@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Канареечное тестирование
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Канареечное тестирование
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Канареечное тестирование
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/canary-testing/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/canary-testing/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

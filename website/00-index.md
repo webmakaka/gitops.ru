@@ -28,6 +28,12 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
+### [Предлагаю коллективно изучить видеокурс] [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
+
+Предлагают попробовать промо на $100 с использованием kubernetes от linode.
+
+<br/>
+
 ### [Предлагаю коллективно поичать книгу] [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
 
 <br/>
@@ -74,7 +80,7 @@ Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelin
 
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
-[Подробнее](/study/videos/devops/implementing-a-full-ci-cd-pipeline/)
+[Подробнее](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/)
 
 <br/>
 

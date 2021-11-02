@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Контейнеры
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Контейнеры
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Контейнеры
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/containers/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/containers/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

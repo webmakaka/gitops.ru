@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
@@ -132,22 +132,22 @@ https://github.com/linuxacademy/
 
 <br/>
 
-### [02. Управление версиями исходного кода](/study/videos/devops/implementing-a-full-ci-cd-pipeline/source-control-management/)
+### [02. Управление версиями исходного кода](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/source-control-management/)
 
-### [03. Автоматизация сборки](/study/videos/devops/implementing-a-full-ci-cd-pipeline/build-automation/)
+### [03. Автоматизация сборки](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/build-automation/)
 
-### [04. Непрерывная интеграция](/study/videos/devops/implementing-a-full-ci-cd-pipeline/continuous-integration/)
+### [04. Непрерывная интеграция](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/continuous-integration/)
 
-### [05. Непрерывная доставка](/study/videos/devops/implementing-a-full-ci-cd-pipeline/continuous-delivery/)
+### [05. Непрерывная доставка](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/continuous-delivery/)
 
-### [06. Контейнеры](/study/videos/devops/implementing-a-full-ci-cd-pipeline/containers/)
+### [06. Контейнеры](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/containers/)
 
-### [07. Оркестрация](/study/videos/devops/implementing-a-full-ci-cd-pipeline/orchestration/)
+### [07. Оркестрация](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/orchestration/)
 
-### [08. Мониторинг](/study/videos/devops/implementing-a-full-ci-cd-pipeline/monitoring/)
+### [08. Мониторинг](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/)
 
-### [10. Автоматическое масштабирование](/study/videos/devops/implementing-a-full-ci-cd-pipeline/autoscaling/)
+### [10. Автоматическое масштабирование](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/autoscaling/)
 
-### [11. Канареечное тестирование](/study/videos/devops/implementing-a-full-ci-cd-pipeline/canary-testing/)
+### [11. Канареечное тестирование](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/canary-testing/)
 
-### [12. Реализация полностью автоматического развертывания](/study/videos/devops/implementing-a-full-ci-cd-pipeline/fully-automated-deployment/)
+### [12. Реализация полностью автоматического развертывания](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/fully-automated-deployment/)

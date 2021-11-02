@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Непрерывная доставка
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Непрерывная доставка
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Непрерывная доставка
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/continuous-delivery/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/continuous-delivery/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

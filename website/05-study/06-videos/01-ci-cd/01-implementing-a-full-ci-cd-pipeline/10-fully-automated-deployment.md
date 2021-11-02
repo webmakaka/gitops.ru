@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Реализация полностью автоматического развертывания
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Реализация полностью автоматического развертывания
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Реализация полностью автоматического развертывания
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/fully-automated-deployment/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/fully-automated-deployment/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

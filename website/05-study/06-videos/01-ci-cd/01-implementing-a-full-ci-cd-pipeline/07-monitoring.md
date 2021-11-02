@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Мониторинг
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Мониторинг
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Мониторинг
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/monitoring/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
@@ -196,7 +196,7 @@ sum(rate(http_request_duration_ms_count[2m])) by (service, route, method,code) *
 
 <br/>
 
-![Kubeconfig](/img/study/videos/devops/implementing-a-full-ci-cd-pipeline/pic-m07-pic01.png 'Kubeconfig'){: .center-image }
+![Kubeconfig](/img/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/pic-m07-pic01.png 'Kubeconfig'){: .center-image }
 
 <br/>
 

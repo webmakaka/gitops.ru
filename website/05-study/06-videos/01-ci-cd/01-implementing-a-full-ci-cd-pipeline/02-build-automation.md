@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - 03. Автоматизация сборки
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - 03. Автоматизация сборки
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Автоматизация сборки
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/build-automation/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/build-automation/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

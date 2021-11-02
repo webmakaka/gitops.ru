@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - 02. Управление версиями исходного кода
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - 02. Управление версиями исходного кода
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/source-control-management/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/source-control-management/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]

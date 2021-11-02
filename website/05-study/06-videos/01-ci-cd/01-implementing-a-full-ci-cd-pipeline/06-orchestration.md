@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Оркестрация
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Оркестрация
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Оркестрация
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/orchestration/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/orchestration/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
@@ -172,7 +172,7 @@ Manage Jenkins -> Credentials
 
 <br/>
 
-![Jenkins](/img/study/videos/devops/implementing-a-full-ci-cd-pipeline/pic-m06-pic01.png 'Jenkins'){: .center-image }
+![Jenkins](/img/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/pic-m06-pic01.png 'Jenkins'){: .center-image }
 
 <!--
 
@@ -253,7 +253,7 @@ Kubeconfig -> Enter directly ->
 
 <br/>
 
-![Kubeconfig](/img/study/videos/devops/implementing-a-full-ci-cd-pipeline/pic-m06-pic02.png 'Kubeconfig'){: .center-image }
+![Kubeconfig](/img/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/pic-m06-pic02.png 'Kubeconfig'){: .center-image }
 
 <br/>
 
@@ -482,7 +482,7 @@ http://node1.k8s:30001
 
 <br/>
 
-![Kubeconfig](/img/study/videos/devops/implementing-a-full-ci-cd-pipeline/pic-m06-pic03.png 'Kubeconfig'){: .center-image }
+![Kubeconfig](/img/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/pic-m06-pic03.png 'Kubeconfig'){: .center-image }
 
 <br/>
 

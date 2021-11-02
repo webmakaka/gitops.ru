@@ -3,7 +3,7 @@ layout: page
 title: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Автоматическое масштабирование
 description: Видеокурсы по DevOps - Внедрение полного конвейера CI/CD - Автоматическое масштабирование
 keywords: Видеокурсы по DevOps, Внедрение полного конвейера CI/CD, Автоматическое масштабирование
-permalink: /study/videos/devops/implementing-a-full-ci-cd-pipeline/autoscaling/
+permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/autoscaling/
 ---
 
 # [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
