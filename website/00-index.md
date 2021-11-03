@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 ### [Предлагаю коллективно изучить видеокурс] [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
 
-[Разбор](/study/books/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
@@ -121,6 +121,8 @@ Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelin
 https://www.youtube.com/c/DevOpsToolkit
 
 https://www.youtube.com/c/MarcelDempers
+
+https://www.youtube.com/c/TechWorldwithNana/videos
 
 https://www.youtube.com/watch?v=nnpcTyHZvS8
 
