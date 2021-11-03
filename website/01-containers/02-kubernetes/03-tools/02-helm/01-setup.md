@@ -11,7 +11,7 @@ permalink: /containers/kubernetes/tools/helm/setup/
 <br/>
 
 Делаю:  
-23.10.2021
+03.11.2021
 
 <br/>
 
@@ -23,6 +23,8 @@ v3.7.1+g1d11fcb
 ```
 
 <br/>
+
+### Просто для прмера. Репо протухшее!
 
 ```
 $ helm repo add stable https://charts.helm.sh/stable

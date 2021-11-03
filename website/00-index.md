@@ -30,6 +30,8 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 ### [Предлагаю коллективно изучить видеокурс] [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
 
+<br/>
+
 [Разбор](/study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
@@ -50,13 +52,11 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-### [Предлагаю коллективно поичать книгу] Building CI/CD Systems Using Tekton
-
-Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [English | 2021 | ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB]
+### [Предлагаю коллективно поичать книгу] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers
 
 <br/>
 
-[Разбор](/study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
+[Разбор завершен](/study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
 
 <br/>
 
@@ -118,28 +118,32 @@ Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelin
 
 ### YouTube каналы (Чтобы не потерять)
 
-https://www.youtube.com/c/DevOpsToolkit
-
+**Marcel Dempers:**  
 https://www.youtube.com/c/MarcelDempers
 
+**Viktor Farcic:**  
+https://www.youtube.com/c/DevOpsToolkit
+
+**Nana Janashia:**  
 https://www.youtube.com/c/TechWorldwithNana/videos
 
+**DevOps For Developers:**  
 https://www.youtube.com/watch?v=nnpcTyHZvS8
 
+**Venkat:**  
 https://www.youtube.com/watch?v=NvQY5tuxALY
 
+**Geert Baeke:**  
 https://www.youtube.com/watch?v=N6UCKF7JD7k&list=PLG9qZAczREKmCq6on_LG8D0uiHMx1h3yn&index=2
 
-https://www.youtube.com/watch?v=0v5bjysXTL8
-
+**Petr Ruzicka**  
 https://www.youtube.com/watch?v=Yz2v_p7GTsg
+
+**Weaveworks, Inc.:**  
+https://www.youtube.com/watch?v=0v5bjysXTL8
 
 **Free GitOps Workshop with Weave GitOps Core**  
 https://www.youtube.com/watch?v=euggUTPJzro
 
 **Intro to Kubernetes and GitOps + Free GitOps Workshop!**  
 https://www.youtube.com/watch?v=PE3yuEXmr40
-
-<br/>
-
-Есть чем поделиться? Пишите!

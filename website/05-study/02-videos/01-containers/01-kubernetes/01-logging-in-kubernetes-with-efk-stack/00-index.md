@@ -2,11 +2,16 @@
 layout: page
 title: Logging in Kubernetes with EFK Stack | The Complete Guide
 description: Logging in Kubernetes with EFK Stack | The Complete Guide
-keywords: containers, elastic, fluentd, kibana
+keywords: containers, kubernetes, linode, elastic, fluentd, kibana
 permalink: /study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/
 ---
 
 # [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
+
+<br/>
+
+Делаю:  
+04.11.2021
 
 <br/>
 
@@ -32,6 +37,33 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/links.md
 
 **Set up elastic stack in kubernetes cluster**  
 https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
+
+<br/>
+
+### Подключение к бесплатному облаку от Google
+
+https://shell.cloud.google.com/
+
+<br/>
+
+**Инсталлим google-cloud-sdk**
+
+https://cloud.google.com/sdk/docs/install
+
+<br/>
+
+```
+$ gcloud auth login
+$ gcloud cloud-shell ssh
+```
+
+<br/>
+
+1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/) (Ingress и остальное можно не устанавливать)
+
+**Испольновалась версия KUBERNETES_VERSION=v1.22.2**
+
+2. Инсталляция [Kubectl](/containers/kubernetes/tools/kubectl/)
 
 <br/>
 
@@ -180,4 +212,38 @@ $ kubectl get pods
 NAME                        READY   STATUS    RESTARTS   AGE
 java-app-85b44765bb-rqlwk   1/1     Running   0          6s
 node-app-6c87fddb75-wn285   1/1     Running   0          12s
+```
+
+<br/>
+
+**Инсталляция [helm](/containers/kubernetes/tools/helm/setup/)**
+
+<br/>
+
+**Инсталляция [Elastic Search, Kibana, Fluentd](/containers/kubernetes/tools/helm/)**
+
+<br/>
+
+**kibana-ingress**
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: kibana-ingress
+spec:
+  rules:
+    - host: nb-172-104-255-70.frankfurt.nodebalancer.linode.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: kibana-kibana
+              servicePort: 5601
+EOF
 ```
