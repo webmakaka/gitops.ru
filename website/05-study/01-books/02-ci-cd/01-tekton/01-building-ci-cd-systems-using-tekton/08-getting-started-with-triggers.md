@@ -56,7 +56,7 @@ https://ngrok.com/download
 $ cd ~/tmp
 $ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 $ unzip ngrok-stable-linux-amd64.zip
-$ ./ngrok authtoken 1zGuVESEQqK1TEa3Jdlrk2nNOwk_2mpKtNevDhYM1UFsVEBAq
+$ ./ngrok authtoken <YOUR_TOKEN>
 ```
 
 <br/>
@@ -79,7 +79,7 @@ OK!
 
 **Cloud-based clusters (GKE)**
 
-Мне пока ненужно. Проверять не буду!
+Мне пока не нужно. Проверять не буду!
 
 Пишут, что тестили на GKE version 1.13.7-gke.24
 
@@ -91,22 +91,22 @@ $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/co
 
 <br/>
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: el-ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    name: el-ingress
+    annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/ssl-redirect: 'false'
 spec:
-  rules:
-    - http:
-      paths:
-      - path: /
-        backend:
-          serviceName: <YOUR_EVENTLISTENER_NAME>
-          servicePort: 8080
+    rules:
+        - http:
+          paths:
+              - path: /
+                backend:
+                    serviceName: <YOUR_EVENTLISTENER_NAME>
+                    servicePort: 8080
 ```
 
 <br/>

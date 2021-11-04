@@ -42,14 +42,17 @@ $ cd ~/tmp
 
 $ curl -O https://raw.githubusercontent.com/elastic/Helm-charts/master/elasticsearch/examples/minikube/values.yaml
 
-$ helm upgrade --install elasticsearch elastic/elasticsearch --namespace logging -f ./values.yaml
-
+$ helm upgrade \
+  --namespace logging \
+  --install elasticsearch elastic/elasticsearch \
+  --values ./values.yaml
 ```
 
 <br/>
 
 ```
-$ kubectl port-forward svc/elasticsearch-master 9200 --namespace logging
+// Если нужно
+// $ kubectl --namespace logging port-forward svc/elasticsearch-master 9200
 ```
 
 <br/>
@@ -57,27 +60,44 @@ $ kubectl port-forward svc/elasticsearch-master 9200 --namespace logging
 ### Kibana
 
 ```
-$ helm upgrade --install kibana elastic/kibana --namespace logging
+$ helm upgrade \
+  --namespace logging \
+  --install kibana elastic/kibana
 ```
 
 <br/>
 
 ```
-$ kubectl port-forward deployment/kibana-kibana 5601 --namespace logging
+// Если нужно
+// $ kubectl port-forward deployment/kibana-kibana 5601 --namespace logging
 ```
 
 <br/>
 
 ### Metricbeat (Вроде как лучшее решение чем Fluent-bit)
 
+Перестало работать!.
+Нужно или самому править конфиги или подождать когда поправят для работы на последних версиях k8s.
+
+<br/>
+
 ```
-$ helm upgrade --install metricbeat elastic/metricbeat --namespace logging
+$ helm upgrade \
+  --namespace logging \
+  --install metricbeat elastic/metricbeat
 ```
 
 <br/>
 
 ```
-$ kubectl --namespace logging logs elasticsearch-master-0
+Error: INSTALLATION FAILED: unable to build kubernetes objects from release manifest: [unable to recognize "": no matches for kind "ClusterRole" in version "rbac.authorization.k8s.io/v1beta1", unable to recognize "": no matches for kind "ClusterRoleBinding" in version "rbac.authorization.k8s.io/v1beta1"]
+```
+
+<br/>
+
+```
+$ kubectl \
+  --namespace logging logs elasticsearch-master-0
 ```
 
 https://logz.io/blog/deploying-the-elk-stack-on-kubernetes-with-helm/
@@ -99,7 +119,9 @@ $ helm install fluent-bit fluent/fluent-bit
 
 ```
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
-$ helm install fluentd bitnami/fluentd
+$ helm upgrade \
+  --namespace logging \
+  --install fluentd bitnami/fluentd
 ```
 
 <br/>

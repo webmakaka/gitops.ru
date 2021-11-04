@@ -9,7 +9,7 @@ permalink: /containers/kubernetes/svc/ingress/
 # Создание службы Ingress
 
 Делаю:  
-13.09.2021
+04.11.2021
 
 <br/>
 
@@ -193,10 +193,6 @@ spec:
               number: 80
 EOF
 ```
-
-<br/>
-
-    $ kubectl get ingresses
 
 <br/>
 

@@ -11,7 +11,7 @@ permalink: /containers/kubernetes/tools/helm/setup/
 <br/>
 
 Делаю:  
-03.11.2021
+04.11.2021
 
 <br/>
 
@@ -29,8 +29,7 @@ v3.7.1+g1d11fcb
 ```
 $ helm repo add stable https://charts.helm.sh/stable
 
-// Удалить heml репо
-// Чего-то одна тухлятина в репо
+// Удалить тухлое heml репо
 // $ helm repo remove stable
 ```
 

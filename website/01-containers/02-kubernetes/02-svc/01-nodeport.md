@@ -9,7 +9,7 @@ permalink: /containers/kubernetes/svc/nodeport/
 # Создание службы Nodeport
 
 Делаю:  
-12.09.2021
+04.11.2021
 
 <br/>
 
