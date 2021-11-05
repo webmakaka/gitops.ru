@@ -14,8 +14,6 @@ permalink: /containers/kubernetes/tools/
 
 ### [k9s - инструмент для визуальной работы с кластером](/containers/kubernetes/tools/k9s/)
 
-### [scaffold - инструмент для разработки в kubernetes](/containers/kubernetes/tools/scaffold/)
+### [Scaffold - инструмент для разработки в kubernetes](/containers/kubernetes/tools/scaffold/)
 
 ### [Helm](/containers/kubernetes/tools/helm/)
-
-### [FluxCD v2](/containers/kubernetes/tools/ci-cd/fluxcd/)

@@ -24,7 +24,7 @@ permalink: /
 
 <br/>
 
-Разбираемся [здесь](/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+Разбираемся [здесь](/study/videos/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
 
 <br/>
 
@@ -52,7 +52,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-[Разбор](/study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
@@ -60,7 +60,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-[Разбор](/study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 

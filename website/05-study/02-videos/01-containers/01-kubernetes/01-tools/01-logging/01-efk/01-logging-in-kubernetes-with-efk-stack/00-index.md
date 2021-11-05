@@ -3,7 +3,7 @@ layout: page
 title: Logging in Kubernetes with EFK Stack | The Complete Guide
 description: Logging in Kubernetes with EFK Stack | The Complete Guide
 keywords: containers, kubernetes, linode, elastic, fluentd, kibana
-permalink: /study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-stack/
+permalink: /study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/
 ---
 
 # [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
@@ -14,6 +14,8 @@ permalink: /study/videos/containers/kubernetes/logging-in-kubernetes-with-efk-st
 04.11.2021
 
 <br/>
+
+### Ссылки
 
 **node app:**  
 https://gitlab.com/nanuchi/node-app
@@ -75,6 +77,12 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
+```
+$ export DOCKER_HUB_LOGIN=webmakaka
+```
+
+<br/>
+
 Для меня образы в публичном регистри - норм.
 
 <br/>
@@ -96,8 +104,8 @@ $ cd ~/tmp
 $ git clone https://gitlab.com/nanuchi/node-app.git
 $ cd node-app
 $ docker build -t node-app .
-$ docker tag node-app webmakaka/node-1.0:latest
-$ docker push webmakaka/node-1.0
+$ docker tag node-app ${DOCKER_HUB_LOGIN}/node-1.0:latest
+$ docker push ${DOCKER_HUB_LOGIN}/node-1.0
 ```
 
 <br/>
@@ -110,8 +118,8 @@ $ git clone https://gitlab.com/nanuchi/java-app.git
 $ cd java-app
 $ ./gradlew build
 $ docker build -t java-app .
-$ docker tag java-app webmakaka/java-1.0:latest
-$ docker push webmakaka/java-1.0
+$ docker tag java-app ${DOCKER_HUB_LOGIN}/java-1.0:latest
+$ docker push ${DOCKER_HUB_LOGIN}/java-1.0
 ```
 
 <br/>
@@ -169,7 +177,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: webmakaka/node-1.0
+          image: ${DOCKER_HUB_LOGIN}/node-1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
@@ -202,7 +210,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: webmakaka/java-1.0
+          image: ${DOCKER_HUB_LOGIN}/java-1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
