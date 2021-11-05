@@ -8,6 +8,14 @@ permalink: /
 
 <br/>
 
+### What is GitOps, How GitOps works and Why it's so useful
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/f5EpcWp0THw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
 ### Предлагайте интересные материалы для коллективного разбора
 
 <br/>
