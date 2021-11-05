@@ -17,3 +17,5 @@ permalink: /containers/kubernetes/tools/
 ### [scaffold - инструмент для разработки в kubernetes](/containers/kubernetes/tools/scaffold/)
 
 ### [Helm](/containers/kubernetes/tools/helm/)
+
+### [FluxCD v2](/containers/kubernetes/tools/ci-cd/fluxcd/)

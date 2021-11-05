@@ -16,6 +16,18 @@ permalink: /
 
 <br/>
 
+### Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/R6OeIgb7lUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+Разбираемся [здесь](/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+
+<br/>
+
 ### Предлагайте интересные материалы для коллективного разбора
 
 <br/>
