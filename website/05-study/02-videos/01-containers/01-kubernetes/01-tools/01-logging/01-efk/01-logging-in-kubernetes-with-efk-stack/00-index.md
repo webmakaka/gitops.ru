@@ -11,7 +11,7 @@ permalink: /study/videos/containers/kubernetes/tools/logging/efk/logging-in-kube
 <br/>
 
 Делаю:  
-04.11.2021
+05.11.2021
 
 <br/>
 
@@ -149,7 +149,7 @@ $ kubectl get secret
 
 ### Deploy
 
-Оригинальные лежат в репо проектов.
+Оригинальные конфиги лежат в репо проектов.
 
 <br/>
 
@@ -158,7 +158,7 @@ $ kubectl get secret
 <br/>
 
 ```yaml
-$ cat << 'EOF' | kubectl apply -f -
+$ cat << EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -191,7 +191,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat << 'EOF' | kubectl apply -f -
+$ cat << EOF | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -241,7 +241,7 @@ kibana-kibana-56689685dc-8prxl   1/1     Running   0             3m17s
 
 <br/>
 
-### Проверка работы без использования ingress
+### Публикация сервиса в интернет без использования ingress
 
 ```
 $ kubectl --namespace logging port-forward deployment/kibana-kibana 8080:5601
@@ -344,8 +344,8 @@ EOF
 <br/>
 
 ```
-$ minikube --profile marley-minikube ip
-192.168.49.2
+$ export INGRESS_HOST=$(minikube --profile ${PROFILE} ip)
+$ echo ${INGRESS_HOST}
 ```
 
 <br/>
@@ -355,7 +355,7 @@ $ minikube --profile marley-minikube ip
 <br/>
 
 ```yaml
-$ cat << 'EOF' | kubectl apply -f -
+$ cat << EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -367,7 +367,7 @@ metadata:
   name: kibana-ingress
 spec:
   rules:
-    - host: 192.168.49.2.nip.io
+    - host: ${INGRESS_HOST}.nip.io
       http:
         paths:
           - pathType: Prefix
@@ -391,7 +391,7 @@ kibana-ingress   <none>   192.168.49.2.nip.io             80      5s
 <br/>
 
 ```
-$ curl -I 192.168.49.2.nip.io
+$ curl -I ${INGRESS_HOST}.nip.io
 OK!
 ```
 
@@ -405,7 +405,7 @@ OK!
 <br/>
 
 ```
-./ngrok http 192.168.49.2.nip.io:80 --host-header=192.168.49.2.nip.io
+$ ./ngrok http ${INGRESS_HOST}.nip.io:80 --host-header=${INGRESS_HOST}.nip.io
 ```
 
 <br/>
@@ -418,14 +418,139 @@ OK!
 
 ### Настройка Fluentd
 
-config maps -> fluentd-forwarder
+```
+$ kubectl --namespace logging get configmaps
+NAME                    DATA   AGE
+fluentd-aggregator-cm   4      7m24s
+fluentd-forwarder-cm    4      7m24s
+kube-root-ca.crt        1      8m12s
+```
+
+<br/>
+
+```
+$ kubectl --namespace logging logs fluentd-2phmz
+```
+
+```
+$ kubectl --namespace logging logs fluentd-2bq8s | grep node-app
+2021-11-05 12:59:47 +0000 [info]: #0 following tail of /var/log/containers/node-app-6c87fddb75-5nbrr_default_node-app-2a757252113980b62c449d735845abb36aea92546273c8740fa07e151f9ddc2f.log
+
+$ kubectl --namespace logging logs fluentd-2bq8s | grep java-app
+2021-11-05 12:59:47 +0000 [info]: #0 following tail of /var/log/containers/java-app-85b44765bb-pb8d2_default_java-app-2e037cfd5231ac26fc642b1254953cd5be078c11b796f4653252f8b953573a7a.log
+```
+
+<br/>
+
+```
+$ kubectl --namespace logging edit configmap fluentd-forwarder-cm
+```
+
+<br/>
+
+```
+        # Get the logs from the containers running in the node
+        <source>
+          @type tail
+          path /var/log/containers/*-app*.log
+          pos_file /opt/bitnami/fluentd/logs/buffers/fluentd-docker.pos
+          tag kubernetes.*
+          read_from_head true
+          format json
+          time_format %Y-%m-%dT%H:%M:%S.%NZ
+        </source>
+```
+
+<br/>
+
+**Отключаем неинтересные для задач курса инструкции**
+
+```
+        # Throw the healthcheck to the standard output instead of forwarding it
+        <match fluent.**>
+            @type null
+        </match>
+```
+
+<br/>
+
+**Отслеживаем логи только наших приложений -app**
+
+```
+        # Get the logs from the containers running in the node
+        <source>
+          @type tail
+          path /var/log/containers/*-app*.log
+          pos_file /opt/bitnami/fluentd/logs/buffers/fluentd-docker.pos
+          tag kubernetes.*
+          read_from_head true
+          format json
+          time_format %Y-%m-%dT%H:%M:%S.%NZ
+        </source>
+```
+
+<br/>
+
+**Чтобы логи отображались более наглядно**
+
+```
+        <filter **>
+          @type parser
+          key_name log
+          <parse>
+            @type multi_format
+            <pattern>
+              format json
+              time_key time
+              keep_time_key true
+            </pattern>
+          </parse>
+        </filter>
+```
+
+<br/>
+
+**Определяем что отправлять аггрегаторам -app**
+
+```
+        # Forward all logs to the aggregators
+        <match kubernetes.var.log.containers.**java-app**.log>
+          @type elasticsearch
+          include_tag_key true
+          host "elasticsearch-master.logging.svc.cluster.local"
+          port "9200"
+          index_name "java-app-logs"
+          <buffer>
+            @type file
+            path /opt/bitnami/fluentd/logs/buffers/java-logs.buffer
+            flush_thread_count 2
+            flush_interval 5s
+          </buffer>
+        </match>
+
+        <match kubernetes.var.log.containers.**node-app**.log>
+          @type elasticsearch
+          include_tag_key true
+          host "elasticsearch-master.logging.svc.cluster.local"
+          port "9200"
+          index_name "node-app-logs"
+          <buffer>
+            @type file
+            path /opt/bitnami/fluentd/logs/buffers/node-logs.buffer
+            flush_thread_count 2
+            flush_interval 5s
+          </buffer>
+        </match>
+```
+
+<br/>
 
 ```yaml
 kind: ConfigMap
 apiVersion: v1
 metadata:
     name: fluentd-forwarder-cm
-    namespace: default
+    namespace: logging
     labels:
         app.kubernetes.io/component: forwarder
         app.kubernetes.io/instance: fluentd
@@ -434,7 +559,7 @@ metadata:
         helm.sh/chart: fluentd-1.3.0
     annotations:
         meta.helm.sh/release-name: fluentd
-        meta.helm.sh/release-namespace: default
+        meta.helm.sh/release-namespace: logging
 data:
     fluentd.conf: |
 
@@ -487,7 +612,7 @@ data:
         <match kubernetes.var.log.containers.**java-app**.log>
           @type elasticsearch
           include_tag_key true
-          host "elasticsearch-master.default.svc.cluster.local"
+          host "elasticsearch-master.logging.svc.cluster.local"
           port "9200"
           index_name "java-app-logs"
           <buffer>
@@ -501,7 +626,7 @@ data:
         <match kubernetes.var.log.containers.**node-app**.log>
           @type elasticsearch
           include_tag_key true
-          host "elasticsearch-master.default.svc.cluster.local"
+          host "elasticsearch-master.logging.svc.cluster.local"
           port "9200"
           index_name "node-app-logs"
           <buffer>
@@ -516,14 +641,23 @@ data:
 <br/>
 
 ```
-$ kubectl rollout restart daemonset/fluentd
+$ kubectl --namespace logging \
+  rollout restart daemonset/fluentd
 ```
+
+<br/>
+
+Kibana -> Index Management
+
+должны быть: node-app-logs и java-app-logs
 
 <br/>
 
 Kibana -> Index Patterns -> Create Index pattern
 
-Index pattern name -> _app_ -> Next step
+Index pattern name -> **_*app*_** -> Next step
+
+<br/>
 
 Fime field -> time
 
@@ -532,5 +666,3 @@ Create index pattern
 <br/>
 
 Kibana -> Discovery
-
-<br/>

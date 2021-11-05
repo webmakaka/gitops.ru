@@ -10,12 +10,92 @@ permalink: /study/videos/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with
 
 <br/>
 
+Делаю:  
+05.11.2021
+
+<br/>
+
 https://www.youtube.com/watch?v=R6OeIgb7lUI
 
 <br/>
 
 **Original gist**
 https://gist.github.com/vfarcic/0431989df4836eb82bdac0cc53c7f3d6
+
+<br/>
+
+### Подключение к бесплатному облаку от Google
+
+https://shell.cloud.google.com/
+
+<br/>
+
+**Инсталлим google-cloud-sdk**
+
+https://cloud.google.com/sdk/docs/install
+
+<br/>
+
+```
+$ gcloud auth login
+$ gcloud cloud-shell ssh
+```
+
+<br/>
+
+1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/)
+
+**Испольновалась версия KUBERNETES_VERSION=v1.22.2**
+
+2. Инсталляция [Kubectl](/containers/kubernetes/tools/kubectl/)
+
+3. Инсталляция fluxcd
+
+```
+$ curl -s https://fluxcd.io/install.sh | sudo bash
+```
+
+4. Инсталляция gh Linux
+
+<br/>
+
+```
+$ cd ~/tmp
+```
+
+<br/>
+
+```
+$ vi gh.sh
+```
+
+<br/>
+
+```
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh
+```
+
+```
+$ chmod +x gh.sh
+$ ./gh.sh
+```
+
+<br/>
+
+```
+// Чтобы создавался origin на ssh а не https
+$ gh config set git_protocol ssh -h github.com
+```
+
+<br/>
+
+```
+$ git config --global user.name "<GITHUB_USERNAME>"
+$ git config --global user.email "<GITHUB_EMAIL>"
+```
 
 <br/>
 
@@ -27,10 +107,12 @@ https://gist.github.com/vfarcic/0431989df4836eb82bdac0cc53c7f3d6
 
 <br/>
 
-```
-$ curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
+https://github.com/settings/tokens
 
-$ export INGRESS_HOST=$(minikube --profile my-profile ip)
+```
+
+
+$ export INGRESS_HOST=$(minikube --profile ${PROFILE} ip)
 
 $ echo ${INGRESS_HOST}
 
@@ -38,12 +120,6 @@ $ export GITHUB_USER=<YOUR_GITHUB_USERNAME>
 
 $ export GITHUB_TOKEN=<YOUR_TOKEN>
 ```
-
-<!--
-
-$ export GITHUB_PERSONAL=true
-
--->
 
 ```
 ##############################
@@ -53,36 +129,38 @@ $ export GITHUB_PERSONAL=true
 
 <br/>
 
+**flux-production**
+
 ```
 $ cd ~
-$ mkdir -p flux-production
-$ mkdir -p flux-staging
-```
+$ mkdir -p flux-production/apps/
+$ cd flux-production
+$ git init
 
-<!--
-$ mkdir -p devops-toolkit
+$ gh repo create --public flux-production -y
 
--->
-
-<br/>
-
-**GitHub**
-
-```
-create repo flux-staging
-create repo flux-production
+$ echo "# Production" | tee Readme.md
+$ git add --all
+$ git commit -m "Initial commit"
+$ git push --set-upstream origin master
 ```
 
 <br/>
 
-```
-$ cd flux-production/
-$ git clone https://github.com/${GITHUB_USER}/flux-production .
-$ mkdir apps
+**flux-staging**
 
-$ cd flux-staging/
-$ git clone https://github.com/${GITHUB_USER}/flux-staging .
-$ mkdir apps
+```
+$ cd ~
+$ mkdir -p flux-staging/apps/
+$ cd flux-staging
+$ git init
+
+$ gh repo create --public flux-staging -y
+
+$ echo "# Staging" | tee Readme.md
+$ git add --all
+$ git commit -m "Initial commit"
+$ git push --set-upstream origin master
 ```
 
 <br/>
@@ -109,6 +187,7 @@ $ cd ~
 <br/>
 
 ```
+// Создается приватный репо flux-fleet
 $ flux bootstrap github \
     --owner $GITHUB_USER \
     --repository flux-fleet \
@@ -120,18 +199,20 @@ $ flux bootstrap github \
 <br/>
 
 ```
-$ kubectl --namespace flux-system \
+$ kubectl \
+    --namespace flux-system \
     get pods
 ```
 
 <br/>
 
 ```
-NAME                                      READY   STATUS    RESTARTS   AGE
-helm-controller-86d6475c46-ds6kn          1/1     Running   0          6m37s
-kustomize-controller-689f679f79-7fjgp     1/1     Running   0          6m37s
-notification-controller-b8fbd5997-g9c6h   1/1     Running   0          6m37s
-source-controller-5bb54b4c66-rdcfp        1/1     Running   0          6m37s
+NAME                                       READY   STATUS    RESTARTS   AGE
+helm-controller-f7c5b6c56-cktfx            1/1     Running   0          96s
+kustomize-controller-759b77975b-qhjnq      1/1     Running   0          96s
+notification-controller-77f68bf8f4-n84k2   1/1     Running   0          96s
+source-controller-8457664f8f-hfwb5         1/1     Running   0          96s
+
 ```
 
 <br/>
@@ -143,8 +224,7 @@ $ cd ~
 <br/>
 
 ```
-$ git clone \
-    https://github.com/${GITHUB_USER}/flux-fleet.git
+$ git clone git@github.com:${GITHUB_USER}/flux-fleet.git
 
 $ cd flux-fleet
 
@@ -165,7 +245,7 @@ $ ls -1 apps/flux-system
 
 ```
 $ flux create source git staging \
-    --url https://github.com/$GITHUB_USER/flux-staging \
+    --url https://github.com/${GITHUB_USER}/flux-staging \
     --branch master \
     --interval 30s \
     --export \
@@ -201,7 +281,6 @@ $ flux create kustomization staging \
     --source staging \
     --path "./" \
     --prune true \
-    --validation client \
     --interval 10m \
     --export \
     | tee -a apps/staging.yaml
@@ -214,7 +293,6 @@ $ flux create kustomization production \
     --source production \
     --path "./" \
     --prune true \
-    --validation client \
     --interval 10m \
     --export \
     | tee -a apps/production.yaml
@@ -250,6 +328,8 @@ $ cd ..
 
 ```
 
+<br/>
+
 ```
 $ cd flux-staging
 ```
@@ -258,9 +338,9 @@ $ cd flux-staging
 
 ```
 $ echo "image:
-tag: 2.9.9
+    tag: 2.9.9
 ingress:
-host: staging.devops-toolkit.$INGRESS_HOST.xip.io" \
+    host: staging.devops-toolkit.${INGRESS_HOST}.nip.io" \
  | tee values.yaml
 ```
 
@@ -276,6 +356,15 @@ $ flux create helmrelease \
  --interval 30s \
  --export \
  | tee apps/devops-toolkit.yaml
+```
+
+<br/>
+
+Чекнуть, чтобы не было:
+
+```
+image: null
+    ingress: null
 ```
 
 <br/>
@@ -296,7 +385,7 @@ $ git push
 $ watch flux get helmreleases
 ```
 
-need to wait
+**need to wait**
 
 ```
 NAME READY MESSAGE
@@ -305,9 +394,12 @@ devops-toolkit-staging False HelmChart 'flux-system/flux-system-devops-toolki
 t-staging' is not ready False
 ```
 
+<br/>
+
 ```
-$ kubectl --namespace staging \
- get pods
+$ kubectl \
+    --namespace staging \
+    get pods
 ```
 
 <br/>
@@ -344,8 +436,7 @@ $ watch kubectl --namespace staging \
  get pods
 
 $ watch kubectl --namespace staging \
- get deployment \
- staging-devops-toolkit-devops-toolkit \
+ get deployment staging-devops-toolkit-devops-toolkit \
  --output jsonpath="{.spec.template.spec.containers[0].image}"
 
 $ cd ..
@@ -363,15 +454,15 @@ $ cd ..
 
 ```
 $ cd flux-production
-
-$ mkdir apps
 ```
+
+<br/>
 
 ```
 $ echo "image:
-tag: 2.9.17
+    tag: 2.9.17
 ingress:
-host: devops-toolkit.$INGRESS_HOST.xip.io" \
+    host: devops-toolkit.$INGRESS_HOST.nip.io" \
  | tee values.yaml
 ```
 
