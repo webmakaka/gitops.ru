@@ -69,7 +69,7 @@ $ gcloud cloud-shell ssh
 
 3. Инсталляция [helm](/containers/kubernetes/tools/helm/setup/)
 
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/containers/kubernetes/tools/helm/)
+4. Инсталляция [Elastic Search, Kibana, Fluentd](/containers/kubernetes/tools/helm/logging/)
 
 <br/>
 

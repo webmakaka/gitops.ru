@@ -71,7 +71,7 @@ node2    Ready    <none>                 2m38s   v1.20.2
 
 <br/>
 
-Устанавливаю [Helm3](/devops/containers/kubernetes/packages/heml/setup/) на localhost.
+Устанавливаю [Helm3](/containers/kubernetes/tools/helm/setup/) на localhost.
 
 <br/>
 

@@ -26,7 +26,7 @@ permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/
 
 <br/>
 
-Устанавливаю [Helm3](//sysadm.ru/devops/containers/kubernetes/packages/heml/setup/) на localhost.
+Устанавливаю [Helm3](/containers/kubernetes/tools/helm/setup/) на localhost.
 
 <br/>
 
@@ -131,9 +131,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-monitoring
 
 <br/>
 
-<br/>
-
-```
+```yaml
 $ cat << 'EOF' | kubectl apply -f -
 apiVersion: v1
 kind: Service

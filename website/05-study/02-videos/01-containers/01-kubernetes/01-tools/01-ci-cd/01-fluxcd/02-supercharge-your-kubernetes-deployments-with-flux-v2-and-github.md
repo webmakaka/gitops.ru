@@ -45,8 +45,17 @@ $ gcloud cloud-shell ssh
 
 3. Инсталляция fluxcd
 
+<br/>
+
 ```
 $ curl -s https://fluxcd.io/install.sh | sudo bash
+```
+
+<br/>
+
+```
+$ flux --version
+flux version 0.21.1
 ```
 
 <br/>
@@ -87,7 +96,7 @@ $ vi gh.sh
 
 ```
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable master" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
 sudo apt install gh
 ```
@@ -115,6 +124,7 @@ $ git config --global user.email "<GITHUB_EMAIL>"
 
 <br/>
 
+// Страница генерации тогена  
 https://github.com/settings/tokens
 
 <br/>
@@ -126,16 +136,17 @@ $ echo ${INGRESS_HOST}
 
 $ export GITHUB_USER=<YOUR_GITHUB_USERNAME>
 
-$ export GITHUB_TOKEN=<YOUR_TOKEN>
+$ export GITHUB_TOKEN=<YOUR_GITHUB_TOKEN>
 ```
 
 <br/>
 
 ```
+// Будет создано приватное репо flux-infra
 $ flux bootstrap github \
     --owner=${GITHUB_USER} \
     --repository=flux-infra \
-    --branch=main \
+    --branch=master \
     --path=app-cluster \
     --personal
 ```
@@ -179,7 +190,7 @@ $  cd flux-infra
 ```
 $ flux create source git realtimeapp-infra \
     --url https://github.com/$GITHUB_USER/realtimeapp-infra \
-    --branch main \
+    --branch master \
     --interval 30s \
     --export > ./app-cluster/realtimeapp-source.yaml
 ```
@@ -302,7 +313,7 @@ $ cd ~/project/dev/flux-infra
 ```
 $ flux create source git monitoring \
     --url https://github.com/fluxcd/flux2 \
-    --branch main \
+    --branch master \
     --interval 30m \
     --export > ./app-cluster/monitor-source.yaml
 ```
