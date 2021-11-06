@@ -8,6 +8,11 @@ permalink: /tools/
 
 # Автоматизация Ansible, Puppet, Chef, Terraform
 
+
+<br/>
+
+### [Git](/tools/git/)
+
 <br/>
 
 ### [Ansible](/tools/ansible/)

@@ -10,7 +10,47 @@ permalink: /study/videos/containers/kubernetes/tools/ci-cd/fluxcd/supercharge-yo
 
 <br/>
 
+Делаю:  
+06.11.2021
+
+<br/>
+
 https://www.youtube.com/watch?v=N6UCKF7JD7k&list=PLG9qZAczREKmCq6on_LG8D0uiHMx1h3yn&index=1
+
+<br/>
+
+У нас есть 2 репо и мы создаем спец.репо, которое работает с k8s.
+
+<br/>
+
+**Форкаем себе подготовленное репо 1:**  
+https://github.com/gbaeke/realtimeapp
+
+<br/>
+
+**Кликнуть - Разрешить работать с Actions**
+https://github.com/${GITHUB_USER}/realtimeapp/actions
+
+Это само приложение, которое деплоится на сервер.
+
+По хорошему, нужно настроить, чтобы собиралось и отправлялось в личный registry.
+
+<br/>
+
+**Форкаем себе подготовленное репо с конфигами, которые используются для деплоя:**  
+https://github.com/gbaeke/realtimeapp-infra
+
+<br/>
+
+3-е репо служебное flux-infra. В нем описано за изменениями в каких репо следует следить.
+
+<br/>
+
+По идее:
+
+-   в случае релиза realtimeapp. Создаются новые образы и закидываются в личный registry
+-   обновляется версия image в репо с конфигами realtimeapp-infra
+-   обновляется версия приложения в кластере.
 
 <br/>
 
@@ -78,54 +118,19 @@ $ flux check
 
 <br/>
 
-4. Инсталляция gh Linux
+4. [Инсталляция gh Linux и настройка работы с GitHub по SSH ключу](/tools/github/setup/)
 
 <br/>
 
-```
-$ cd ~/tmp
-```
-
-<br/>
+5. Инсталляция kustomize
 
 ```
-$ vi gh.sh
+$ curl -s "https://raw.githubusercontent.com/\
+kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x kustomize && sudo mv kustomize /usr/local/bin/
+
+$ kustomize version
+Version:kustomize/v4.4.0
 ```
-
-<br/>
-
-```
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable master" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
-```
-
-<br/>
-
-```
-$ chmod +x gh.sh
-$ ./gh.sh
-```
-
-<br/>
-
-```
-// Чтобы создавался origin на ssh а не https
-$ gh config set git_protocol ssh -h github.com
-```
-
-<br/>
-
-```
-$ git config --global user.name "<GITHUB_USERNAME>"
-$ git config --global user.email "<GITHUB_EMAIL>"
-```
-
-<br/>
-
-// Страница генерации тогена  
-https://github.com/settings/tokens
 
 <br/>
 
@@ -142,6 +147,7 @@ $ export GITHUB_TOKEN=<YOUR_GITHUB_TOKEN>
 <br/>
 
 ```
+$ cd ~
 // Будет создано приватное репо flux-infra
 $ flux bootstrap github \
     --owner=${GITHUB_USER} \
@@ -153,52 +159,46 @@ $ flux bootstrap github \
 
 <br/>
 
-# 02-Kubernetes deployments with Flux v2 introduction to kustomize
-
-<br/>
-
-```
-$ curl -s "https://raw.githubusercontent.com/\
-kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x kustomize && sudo mv kustomize /usr/local/bin/
-```
+## 02-Kubernetes deployments with Flux v2 introduction to kustomize (Пропустить! Материал просто для знакомства с kustomize)
 
 <br/>
 
 ```
 $ mkdir -p ~/tmp && cd ~/tmp
 
-$ git clone https://github.com/webmak1/realtimeapp-infra
+$ git clone https://github.com/gbaeke/realtimeapp-infra
 
-$ cd ~/tmp/realtimeapp-infra/deploy/overlays/dev
+$ cd realtimeapp-infra/deploy/overlays/dev
 $ kustomize build
 
+// Сразу еще и применить
 // $ kustomize build | kubeclt apply -f -
 ```
 
 <br/>
 
-# 03-Kubernetes deployments with Flux v2 Deploying Manifests
+## 03-Kubernetes deployments with Flux v2 Deploying Manifests
+
+<br/>
+
+Автор сначала рассказывает до 12 минуты, потом показывает как делать!
+
+<br/>
 
 ```
-$ mkdir -p ~/project/dev && cd ~/project/dev
-$ git clone https://github.com/${GITHUB_USER}/flux-infra
-$  cd flux-infra
+$ git clone git@github.com:${GITHUB_USER}/flux-infra.git
+$ git checkout master
+$ cd flux-infra
 ```
 
 <br/>
 
 ```
 $ flux create source git realtimeapp-infra \
-    --url https://github.com/$GITHUB_USER/realtimeapp-infra \
+    --url https://github.com/${GITHUB_USER}/realtimeapp-infra \
     --branch master \
     --interval 30s \
     --export > ./app-cluster/realtimeapp-source.yaml
-```
-
-<br/>
-
-```
-$ cat ./app-cluster/realtimeapp-source.yaml
 ```
 
 <br/>
@@ -208,7 +208,6 @@ $ flux create kustomization realtimeapp-dev \
     --source realtimeapp-infra \
     --path "./deploy/overlays/dev" \
     --prune true \
-    --validation client \
     --interval 1m \
     --health-check="Deployment/realtime-dev.realtime-dev" \
     --health-check="Deployment/redis-dev.realtime-dev" \
@@ -223,7 +222,6 @@ $ flux create kustomization realtimeapp-prd \
     --source realtimeapp-infra \
     --path "./deploy/overlays/prd" \
     --prune true \
-    --validation client \
     --interval 1m \
     --health-check="Deployment/realtime-prd.realtime-prd" \
     --health-check="Deployment/redis-prd.realtime-prd" \
@@ -235,6 +233,84 @@ $ flux create kustomization realtimeapp-prd \
 
 ```
 $ cat ./app-cluster/realtimeapp-source.yaml
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: realtimeapp-infra
+  namespace: flux-system
+spec:
+  interval: 30s
+  ref:
+    branch: master
+  url: https://github.com/webmak1/realtimeapp-infra
+```
+
+<br/>
+
+```
+$ cat ./app-cluster/realtimeapp-dev.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: realtimeapp-dev
+  namespace: flux-system
+spec:
+  healthChecks:
+  - kind: Deployment
+    name: realtime-dev
+    namespace: realtime-dev
+  - kind: Deployment
+    name: redis-dev
+    namespace: realtime-dev
+  interval: 1m0s
+  path: ./deploy/overlays/dev
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: realtimeapp-infra
+  timeout: 2m0s
+```
+
+<br/>
+
+```
+$ cat ./app-cluster/realtimeapp-prd.yaml
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: realtimeapp-prd
+  namespace: flux-system
+spec:
+  healthChecks:
+  - kind: Deployment
+    name: realtime-prd
+    namespace: realtime-prd
+  - kind: Deployment
+    name: redis-prd
+    namespace: realtime-prd
+  interval: 1m0s
+  path: ./deploy/overlays/prd
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: realtimeapp-infra
+  timeout: 2m0s
+```
+
+<br/>
+
+```
+$ kubectl get ns
+NAME              STATUS   AGE
+default           Active   28m
+flux-system       Active   16m
+ingress-nginx     Active   28m
+kube-node-lease   Active   28m
+kube-public       Active   28m
+kube-system       Active   28m
 ```
 
 <br/>
@@ -244,14 +320,22 @@ $ git add --all
 
 $ git commit -m "Added source and kustomization"
 
-$ git push
+$ git push --set-upstream origin master
 ```
 
 <br/>
 
 ```
-$ watch flux get kustomizations
+$ flux get kustomizations
+NAME           	READY	MESSAGE                                                          	REVISION                                       	SUSPENDED
+flux-system    	True 	Applied revision: master/4d351c32ab089c8644671bc7627f9574fd412727	master/4d351c32ab089c8644671bc7627f9574fd412727	False
+realtimeapp-dev	True 	Applied revision: master/401ddd880d59f2dc0a65402bedfa6e1b4099666e	master/401ddd880d59f2dc0a65402bedfa6e1b4099666e	False
+realtimeapp-prd	True 	Applied revision: master/401ddd880d59f2dc0a65402bedfa6e1b4099666e	master/401ddd880d59f2dc0a65402bedfa6e1b4099666e	False
 ```
+
+<br/>
+
+Нужно дождаться, чтобы появились realtimeapp-dev и realtimeapp-prd с состоянием READY - True
 
 <br/>
 
@@ -271,34 +355,74 @@ realtime-prd      Active   83s
 
 ```
 $ kubectl get pods -n realtime-dev
-NAME                          READY   STATUS    RESTARTS   AGE
-realtime-dev-869b5674-h6gd5   1/1     Running   0          115s
-redis-dev-589977c5c6-7pccx    1/1     Running   0          115s
+NAME                            READY   STATUS    RESTARTS      AGE
+realtime-dev-5d86fb7b78-df672   1/1     Running   1 (47s ago)   61s
+redis-dev-589977c5c6-m5ft5      1/1     Running   0             61s
 ```
 
 <br/>
 
 ```
+$ kubectl get pods -n realtime-prd
+NAME                            READY   STATUS    RESTARTS   AGE
+realtime-prd-576b496476-2sf6m   1/1     Running   0          34s
+realtime-prd-576b496476-8cxcg   1/1     Running   0          34s
+realtime-prd-576b496476-dd4f5   1/1     Running   0          34s
+redis-prd-589977c5c6-65ch8      1/1     Running   0          34s
+```
+
+<br/>
+
+```
+// Дать пинка, чтобы обновилось
 $ flux reconcile kustomization realtimeapp-dev
 ```
 
 <br/>
 
-https://github.com/webmak1/realtimeapp
+### Создание нового релиза
+
+<br/>
+
+```
+$ kubectl -n realtime-prd describe pod realtime-prd-576b496476-2sf6m | grep Image:
+    Image:          gbaeke/flux-rt:1.0.2
+```
+
+<br/>
+
+**По идее:**
+
+https://github.com/${GITHUB_USER}/realtimeapp/
 
 New Release
 
-1.0.2
+1.0.3
 
 Publish
 
 В Actions должен пойти билд.
 
-Там срабатывает kustomize edit который меняет версию.
+<br/>
+
+Должен сработать kustomize edit который поменяет версию.
+
+https://github.com/webmak1/realtimeapp-infra/blob/master/deploy/overlays/prd/kustomization.yaml
+
+Но я поменяю ее руками. На 1.0.1 т.к. 1.0.3 просто нет в репо автора.
 
 <br/>
 
-# 04-Kubernetes deployments with Flux v2 Monitoring and Alerting
+```
+$ kubectl -n realtime-prd describe pod realtime-prd-566d96bc7f-4xg8n | grep Image:
+    Image:          gbaeke/flux-rt:1.0.1
+```
+
+<br/>
+
+## 04-Kubernetes deployments with Flux v2 Monitoring and Alerting
+
+<br/>
 
 (Пропустил этот шаг)
 
@@ -333,6 +457,10 @@ $ flux create kustomization monitoring \
 
 <br/>
 
+commit, push
+
+<br/>
+
 ```
 $ watch flux get kustomizations
 ```
@@ -355,7 +483,36 @@ $ flux get alert-providers
 
 <br/>
 
-# 05-Kubernetes Deployments with Flux v2 Helm Basics
+## 05-Kubernetes Deployments with Flux v2 Helm Basics
+
+<br/>
+
+В этом уроке используются HELM репозитории. Bitnami для redis и автора для его проекта (кстати он им не поделился или я не нашел!).
+
+<br/>
+
+```
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm install redis --set cluster.enabled=false,usePassword=false bitnami/redis
+```
+
+<br/>
+
+```
+// Нет репо
+$ helm install realtimeapp --wait .
+```
+
+<br/>
+
+```
+$ helm uninstall realtimeapp
+$ helm uninstall redis
+```
+
+<br/>
+
+### Повторяем с использованием flux
 
 <br/>
 
@@ -364,6 +521,12 @@ $ flux create source helm bitnami \
     --url https://charts.bitnami.com/bitnami \
     --interval 1m0s \
     --export > ./app-cluster/helmrepo-bitnami.yaml
+```
+
+<br/>
+
+```
+$ flux get sources helm
 ```
 
 <br/>
@@ -420,5 +583,7 @@ $ flux create helmrelease realtimeapp \
     --interval 5m0s \
     --export > ./app-cluster/helmrelease-realtimeapp.yaml
 ```
+
+<br/>
 
 Добавили некоторые изменения в конфиги редиса и realtimeapp.
