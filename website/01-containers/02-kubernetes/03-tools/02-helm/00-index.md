@@ -31,9 +31,12 @@ https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
 ### Elastic Search
 
 ```
-
 $ kubectl create namespace logging
+```
 
+<br/>
+
+```
 $ helm repo add elastic https://helm.elastic.co
 
 $ helm repo update

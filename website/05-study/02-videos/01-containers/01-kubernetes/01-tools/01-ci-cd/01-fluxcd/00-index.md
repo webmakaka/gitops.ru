@@ -11,3 +11,5 @@ permalink: /study/videos/containers/kubernetes/tools/ci-cd/fluxcd/
 <br/>
 
 ### [FluxCD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism](/study/videos/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+
+### [Supercharge your Kubernetes deployments with Flux v2 and GitHub](/study/videos/containers/kubernetes/tools/ci-cd/fluxcd/supercharge-your-kubernetes-deployments-with-flux-v2-and-github/)

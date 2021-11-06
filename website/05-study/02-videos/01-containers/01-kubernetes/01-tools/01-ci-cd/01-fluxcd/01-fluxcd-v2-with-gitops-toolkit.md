@@ -11,7 +11,11 @@ permalink: /study/videos/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with
 <br/>
 
 Делаю:  
-05.11.2021
+06.11.2021
+
+<br/>
+
+### Не работает! Нужно обновить конфиги для ingress.
 
 <br/>
 
@@ -55,6 +59,26 @@ $ gcloud cloud-shell ssh
 $ curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
+<br/>
+
+```
+$ flux check
+► checking prerequisites
+✔ Kubernetes 1.22.2 >=1.19.0-0
+► checking controllers
+✔ helm-controller: deployment ready
+► ghcr.io/fluxcd/helm-controller:v0.12.1
+✔ kustomize-controller: deployment ready
+► ghcr.io/fluxcd/kustomize-controller:v0.16.0
+✔ notification-controller: deployment ready
+► ghcr.io/fluxcd/notification-controller:v0.18.1
+✔ source-controller: deployment ready
+► ghcr.io/fluxcd/source-controller:v0.17.2
+✔ all checks passed
+```
+
+<br/>
+
 4. Инсталляция gh Linux
 
 <br/>
@@ -77,6 +101,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 ```
+
+<br/>
 
 ```
 $ chmod +x gh.sh
@@ -110,8 +136,6 @@ $ git config --global user.email "<GITHUB_EMAIL>"
 https://github.com/settings/tokens
 
 ```
-
-
 $ export INGRESS_HOST=$(minikube --profile ${PROFILE} ip)
 
 $ echo ${INGRESS_HOST}
@@ -120,6 +144,8 @@ $ export GITHUB_USER=<YOUR_GITHUB_USERNAME>
 
 $ export GITHUB_TOKEN=<YOUR_TOKEN>
 ```
+
+<br/>
 
 ```
 ##############################
@@ -218,12 +244,9 @@ source-controller-8457664f8f-hfwb5         1/1     Running   0          96s
 <br/>
 
 ```
+
 $ cd ~
-```
 
-<br/>
-
-```
 $ git clone git@github.com:${GITHUB_USER}/flux-fleet.git
 
 $ cd flux-fleet
@@ -312,11 +335,7 @@ $ git push
 
 ```
 $ watch flux get sources git
-
 $ watch flux get kustomizations
-
-$ cd ..
-
 ```
 
 <br/>
@@ -325,13 +344,12 @@ $ cd ..
 ###############################
 # Deploying the first release
 ###############################
-
 ```
 
 <br/>
 
 ```
-$ cd flux-staging
+$ cd ~/flux-staging
 ```
 
 <br/>
@@ -341,7 +359,7 @@ $ echo "image:
     tag: 2.9.9
 ingress:
     host: staging.devops-toolkit.${INGRESS_HOST}.nip.io" \
- | tee values.yaml
+    | tee values.yaml
 ```
 
 <br/>
@@ -356,15 +374,6 @@ $ flux create helmrelease \
  --interval 30s \
  --export \
  | tee apps/devops-toolkit.yaml
-```
-
-<br/>
-
-Чекнуть, чтобы не было:
-
-```
-image: null
-    ingress: null
 ```
 
 <br/>
@@ -385,13 +394,19 @@ $ git push
 $ watch flux get helmreleases
 ```
 
-**need to wait**
+**Нужно подождать**
 
 ```
 NAME READY MESSAGE
 REVISION SUSPENDED
-devops-toolkit-staging False HelmChart 'flux-system/flux-system-devops-toolki
-t-staging' is not ready False
+devops-toolkit-staging False HelmChart 'flux-system/flux-system-devops-toolkit-staging' is not ready False
+```
+
+<br/>
+
+```
+$ flux logs
+2021-11-05T21:39:41.581Z error HelmRelease/devops-toolkit-staging.flux-system - Reconciler error Helm install failed: unable to build kubernetes objects from release manifest: unable to recognize &#34;&#34;: no matches for kind &#34;Ingress&#34; in version &#34;extensions/v1beta1&#34;
 ```
 
 <br/>
@@ -420,7 +435,7 @@ staging-devops-toolkit-staging-devops-toolkit-76b88d8899-j9b8x 1/1 Running 0 3m5
 <br/>
 
 ```
-$ cd flux-staging/
+$ cd ~/flux-staging/
 
 $ cat apps/devops-toolkit.yaml \
  | sed -e "s@tag: 2.9.9@tag: 2.9.17@g" \
@@ -438,8 +453,6 @@ $ watch kubectl --namespace staging \
 $ watch kubectl --namespace staging \
  get deployment staging-devops-toolkit-devops-toolkit \
  --output jsonpath="{.spec.template.spec.containers[0].image}"
-
-$ cd ..
 ```
 
 <br/>
@@ -453,7 +466,7 @@ $ cd ..
 <br/>
 
 ```
-$ cd flux-production
+$ cd ~/flux-production
 ```
 
 <br/>
@@ -463,7 +476,7 @@ $ echo "image:
     tag: 2.9.17
 ingress:
     host: devops-toolkit.$INGRESS_HOST.nip.io" \
- | tee values.yaml
+    | tee values.yaml
 ```
 
 <br/>
