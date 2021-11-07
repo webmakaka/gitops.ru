@@ -58,6 +58,7 @@ $ gcloud cloud-shell ssh
 <br/>
 
 ```
+// Инсталляция fluxcd
 $ curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
@@ -66,6 +67,12 @@ $ curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 $ flux --version
 flux version 0.21.1
+```
+
+<br/>
+
+```
+$ flux install
 ```
 
 <br/>
