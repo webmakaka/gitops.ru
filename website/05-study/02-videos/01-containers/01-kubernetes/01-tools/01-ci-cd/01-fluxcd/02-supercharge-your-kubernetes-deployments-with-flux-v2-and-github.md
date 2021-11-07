@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=N6UCKF7JD7k&list=PLG9qZAczREKmCq6on_LG8D0uiHMx1h
 
 <br/>
 
-У нас есть 2 репо и мы создаем спец.репо, которое работает с k8s.
+У нас есть 2 репо и мы создаем спец.репо flux-infra, которое работает с k8s.
 
 <br/>
 

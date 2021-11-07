@@ -15,3 +15,5 @@ permalink: /study/videos/devops/
 ### [[Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
 
 ### [FluxCD v2](/study/videos/containers/kubernetes/tools/ci-cd/fluxcd/)
+
+### [[Geert Baeke] Use GitHub Actions to build and push a container image [ENG, 2020]](/study/videos/ci-cd/use-github-actions-to-build-and-push-a-container-image/)
