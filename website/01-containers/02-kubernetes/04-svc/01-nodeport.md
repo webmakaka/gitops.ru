@@ -19,7 +19,7 @@ permalink: /containers/kubernetes/svc/nodeport/
 
 **Запуск minikube**
 
-Как <a href="/containers/kubernetes/setup/minikube/">здесь</a>
+Как <a href="/containers/kubernetes/minikube/setup/">здесь</a>
 
 <br/>
 

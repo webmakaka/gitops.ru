@@ -10,7 +10,7 @@ permalink: /ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/
 
 <br/>
 
-**[Upd: Есть мысль, что можно сделать проще с использованием nginx.](/containers/kubernetes/setup/minikube/remote-connection/)**
+**[Upd: Есть мысль, что можно сделать проще с использованием nginx.](/containers/kubernetes/minikube/setup/remote-connection/)**
 
 <br/>
 

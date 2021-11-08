@@ -19,7 +19,7 @@ Docker version 20.10.0, build 7287ab3
 
 <br/>
 
-### [Minikube installation](/containers/kubernetes/setup/minikube/)
+### [Minikube installation](/containers/kubernetes/minikube/setup/)
 
 Последний раз делалось на:
 
@@ -38,7 +38,7 @@ minikube version: v1.16.0
 
 **Здесь используется драйвер vm-driver virtualbox**
 
-Если использовать docker или kvm, можно посмотреть [здесь](/containers/kubernetes/setup/minikube/remote-connection/)
+Если использовать docker или kvm, можно посмотреть [здесь](/containers/kubernetes/minikube/setup/remote-connection/)
 
 <br/>
 

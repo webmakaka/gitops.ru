@@ -19,7 +19,7 @@ https://istio.io/docs/setup/getting-started/#download
 
 <br/>
 
-1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/)
+1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
@@ -84,7 +84,7 @@ $ istioctl manifest install -y --set profile=default
 <br/>
 
 ```
-// После этого, **новые** создаваемые pod будут "проксируемыми". Т.е. старые нужно пересоздать.
+// После выполнения данной команды, **новые** pod будут "проксируемыми". Т.е. старые нужно пересоздать.
 $ kubectl label namespace default istio-injection=enabled
 ```
 
@@ -98,7 +98,7 @@ istio-system      Active   2m35s   kubernetes.io/metadata.name=istio-system
 
 <br/>
 
-### [Добавляю Metal LB](/containers/kubernetes/setup/minikube/)
+### [Добавляю Metal LB](/containers/kubernetes/minikube/setup/)
 
 <br/>
 

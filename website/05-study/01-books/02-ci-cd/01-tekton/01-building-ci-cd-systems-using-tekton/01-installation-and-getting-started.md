@@ -34,7 +34,7 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
-1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/) (Ingress и остальное можно не устанавливать)
+1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/) (Ingress и остальное можно не устанавливать)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 

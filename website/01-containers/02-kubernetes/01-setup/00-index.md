@@ -10,9 +10,9 @@ permalink: /containers/kubernetes/setup/
 
 <br/>
 
-### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/containers/kubernetes/setup/minikube/)
+### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/containers/kubernetes/minikube/setup/)
 
-### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/containers/kubernetes/setup/minikube/remote-connection/)
+### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/containers/kubernetes/minikube/setup/remote-connection/)
 
 <br/>
 

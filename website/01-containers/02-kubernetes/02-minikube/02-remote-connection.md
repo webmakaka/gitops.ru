@@ -3,7 +3,7 @@ layout: page
 title: Удаленное подключение к хосту с minikube в ubuntu 20.04
 description: Удаленное подключение к хосту с minikube в ubuntu 20.04
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu, remote
-permalink: /containers/kubernetes/setup/minikube/remote-connection/
+permalink: /containers/kubernetes/minikube/setup/remote-connection/
 ---
 
 # Удаленное подключение к хосту с minikube в ubuntu 20.04

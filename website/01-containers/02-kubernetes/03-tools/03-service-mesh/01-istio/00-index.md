@@ -17,3 +17,5 @@ permalink: /containers/kubernetes/tools/service-mesh/istio/
 ### [Подготовка окружения для тестов Istio в minikube](/containers/kubernetes/tools/service-mesh/istio/setup/)
 
 ### [Запуск демонстрационного приложения Istio - bookinfo](/containers/kubernetes/tools/service-mesh/istio/bookinfo/)
+
+### [Istio Request Routing](/containers/kubernetes/tools/service-mesh/istio/request-routing/)

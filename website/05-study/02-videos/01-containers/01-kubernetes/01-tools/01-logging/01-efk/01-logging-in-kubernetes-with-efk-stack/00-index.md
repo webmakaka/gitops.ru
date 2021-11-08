@@ -61,7 +61,7 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
-1. Инсталляция [MiniKube](/containers/kubernetes/setup/minikube/)
+1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
