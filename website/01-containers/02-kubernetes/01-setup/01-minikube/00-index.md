@@ -15,7 +15,7 @@ permalink: /containers/kubernetes/setup/minikube/
 <br/>
 
 **Делаю:**  
-07.11.2021
+08.11.2021
 
 <br/>
 
@@ -139,6 +139,8 @@ $ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | g
 
 ### Добавить "Metal LB" (При необходимости)
 
+<br/>
+
 Metal LB позволит получить внешний IP в миникубе на локалхосте. Аналогично тому, как это происходит в облаках, когда облачный сервис выделяет ip адрес, к котому можно будет подключиться извне.
 
 <br/>
@@ -190,8 +192,6 @@ data:
 EOF
 ```
 
-<!--
-
 <br/>
 
 ```
@@ -202,7 +202,8 @@ $ export INGRESS_HOST=$(kubectl \
 
 $ echo ${INGRESS_HOST}
 ```
--->
+
+<br/>
 
 ```
 $ kubectl get pods --all-namespaces

@@ -16,4 +16,6 @@ permalink: /containers/kubernetes/tools/
 
 ### [Scaffold - инструмент для разработки в kubernetes](/containers/kubernetes/tools/scaffold/)
 
-### [Helm](/containers/kubernetes/tools/helm/)
+### [Helm (управление пакетами)](/containers/kubernetes/tools/helm/)
+
+### [Service Mesh](/containers/kubernetes/tools/service-mesh/)
