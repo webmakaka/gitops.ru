@@ -10,9 +10,7 @@ permalink: /containers/kubernetes/tools/service-mesh/
 
 ### [Istio](/containers/kubernetes/tools/service-mesh/istio/)
 
-### [Linkerd]
-
-https://www.youtube.com/watch?v=Hc-XFPHDDk4&
+### [Linkerd](/containers/kubernetes/tools/service-mesh/linkerd/)
 
 ### [App Mesh]
 

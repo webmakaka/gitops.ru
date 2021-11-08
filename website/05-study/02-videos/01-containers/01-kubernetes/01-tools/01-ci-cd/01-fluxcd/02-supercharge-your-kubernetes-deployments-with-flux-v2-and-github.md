@@ -58,22 +58,7 @@ https://github.com/gbaeke/realtimeapp-infra
 
 <br/>
 
-### Подключение к бесплатному облаку от Google
-
-https://shell.cloud.google.com/
-
-<br/>
-
-**Инсталлим google-cloud-sdk**
-
-https://cloud.google.com/sdk/docs/install
-
-<br/>
-
-```
-$ gcloud auth login
-$ gcloud cloud-shell ssh
-```
+### [Используется беслпатное облако Google](/containers/kubernetes/google-cloud-shell/)
 
 <br/>
 

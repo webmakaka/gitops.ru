@@ -28,22 +28,7 @@ https://gist.github.com/vfarcic/0431989df4836eb82bdac0cc53c7f3d6
 
 <br/>
 
-### Подключение к бесплатному облаку от Google
-
-https://shell.cloud.google.com/
-
-<br/>
-
-**Инсталлим google-cloud-sdk**
-
-https://cloud.google.com/sdk/docs/install
-
-<br/>
-
-```
-$ gcloud auth login
-$ gcloud cloud-shell ssh
-```
+### [Используется беслпатное облако Google](/containers/kubernetes/google-cloud-shell/)
 
 <br/>
 
