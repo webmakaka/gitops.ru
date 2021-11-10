@@ -22,27 +22,7 @@ https://www.youtube.com/watch?v=laMwuG8r7Tw
 
 <br/>
 
-```
-$ curl -fsL https://run.linkerd.io/install | sh
-```
-
-<br/>
-
-```
-$ export PATH=$PATH:/home/a3333333/.linkerd2/bin
-```
-
-<br/>
-
-```
-$ linkerd check --pre
-```
-
-<br/>
-
-```
-$ linkerd install
-```
+[Инсталляция Linkerd](/containers/kubernetes/tools/service-mesh/linkerd/setup/)
 
 <br/>
 

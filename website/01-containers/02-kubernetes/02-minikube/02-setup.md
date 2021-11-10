@@ -15,7 +15,7 @@ permalink: /containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-08.11.2021
+10.11.2021
 
 <br/>
 
@@ -25,7 +25,7 @@ permalink: /containers/kubernetes/minikube/setup/
 <br/>
 
 ```shell
-// Узнать последнюю версию (v1.23.2):
+// Узнать последнюю версию (v1.24.0):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 // Установка
@@ -36,8 +36,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.23.2
-commit: 0a0ad764652082477c00d51d2475284b5d39ceed
+minikube version: v1.24.0
+commit: 76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b
 ```
 
 <br/>
@@ -65,22 +65,12 @@ commit: 0a0ad764652082477c00d51d2475284b5d39ceed
 <br/>
 
 ```
-KUBERNETES_VERSION=v1.23.2 - так пока не работает!
-
-// Error response from daemon: manifest for k8s.gcr.io/kube-proxy:v1.23.2 not found
-// $ docker pull k8s.gcr.io/kube-proxy:v1.23.2
-
-```
-
-<br/>
-
-```
 $ export \
-    PROFILE=marley-minikube \
+    PROFILE=${USER}-minikube \
     MEMORY=8192 \
     CPUS=4 \
     DRIVER=docker \
-    KUBERNETES_VERSION=v1.22.2
+    KUBERNETES_VERSION=v1.22.3
 ```
 
 <br/>

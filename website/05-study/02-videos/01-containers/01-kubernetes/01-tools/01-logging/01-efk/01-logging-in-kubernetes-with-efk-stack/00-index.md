@@ -42,24 +42,7 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
 
 <br/>
 
-### Подключение к бесплатному облаку от Google
-
-https://shell.cloud.google.com/
-
-<br/>
-
-**Инсталлим google-cloud-sdk**
-
-https://cloud.google.com/sdk/docs/install
-
-<br/>
-
-```
-$ gcloud auth login
-$ gcloud cloud-shell ssh
-```
-
-<br/>
+1. [Подключение к бесплатному облаку от Google](/containers/kubernetes/google-cloud-shell/)
 
 1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/)
 
@@ -242,6 +225,8 @@ kibana-kibana-56689685dc-8prxl   1/1     Running   0             3m17s
 <br/>
 
 ### Публикация сервиса в интернет без использования ingress
+
+<br/>
 
 ```
 $ kubectl --namespace logging port-forward deployment/kibana-kibana 8080:5601
