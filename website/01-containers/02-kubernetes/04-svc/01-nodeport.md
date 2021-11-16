@@ -9,7 +9,7 @@ permalink: /containers/kubernetes/svc/nodeport/
 # Создание службы Nodeport
 
 Делаю:  
-04.11.2021
+14.11.2021
 
 <br/>
 
@@ -70,37 +70,83 @@ EOF
 
 <br/>
 
-    port: 80 - хз для чего задаем. Наверняка можно заменить, чем-то более осмысленным.
-    targetPort: 8080 - порт на котором работает приложение внутри pod.
-    nodePort: 30123 - то к какому порту обращаться на этот под.
+```
+port: 80 - Внутренний порт для для коммуникаций между контейнерами (Надеюсь я ничего не перепутал!).
+targetPort: 8080 - порт на котором работает приложение внутри pod.
+nodePort: 30123 - то к какому порту обращаться на этот под.
+```
 
 <br/>
 
-    $ kubectl get pods
-    NAME                               READY   STATUS    RESTARTS   AGE
-    nodejs-cats-app-774f89d47b-2tbrj   1/1     Running   0          61s
-    nodejs-cats-app-774f89d47b-8hjrv   1/1     Running   0          61s
-    nodejs-cats-app-774f89d47b-lwc85   1/1     Running   0          61s
+```
+$ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+nodejs-cats-app-56cc7754f-8kbrq   1/1     Running   0          3m22s
+nodejs-cats-app-56cc7754f-vnlrl   1/1     Running   0          3m22s
+nodejs-cats-app-56cc7754f-z26sm   1/1     Running   0          3m22s
+```
 
 <br/>
 
-    $ kubectl get svc
-    NAME                       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-    nodejs-cats-app-nodeport   NodePort   10.109.227.32   <none>        80:30123/TCP   22s
+```
+$ kubectl get svc
+NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes                 ClusterIP   10.96.0.1        <none>        443/TCP        10m
+nodejs-cats-app-nodeport   NodePort    10.109.225.154   <none>        80:30123/TCP   3m3s
+
+```
 
 <br/>
 
-    // Если не используется профиль, удалить
-    // Если не используется namespace, таке можно убрать -n default
-    $ echo $(minikube --profile marley-minikube service nodejs-cats-app-nodeport -n default --url)
+```
+// Если не используется профиль, удалить
+// Если не используется namespace, таке можно убрать -n default
+$ echo $(minikube --profile ${PROFILE} service nodejs-cats-app-nodeport -n default --url)
+```
 
 <br/>
 
-    http://192.168.99.113:30123
+```
+http://192.168.49.2:30123
+```
 
 <br/>
 
 При обращении по адресу запустилось приложение.
+
+<br/>
+
+### UPD по поводу порт 80 в Service
+
+```
+$ kubectl exec -it nodejs-cats-app-56cc7754f-8kbrq -- sh
+```
+
+<br/>
+
+```
+# apk add curl
+```
+
+<br/>
+
+```
+# curl nodejs-cats-app-nodeport:80
+```
+
+<br/>
+
+Возвращает страницу
+
+<br/>
+
+```
+# apk add curl
+```
+
+<br/>
+
+### Удалить созданное
 
 <br/>
 

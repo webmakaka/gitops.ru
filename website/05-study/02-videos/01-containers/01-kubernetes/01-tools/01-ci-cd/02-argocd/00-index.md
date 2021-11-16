@@ -19,10 +19,10 @@ https://gitlab.com/nanuchi/argocd-app-config/
 
 <br/>
 
-<br/>
-
 **Делаю:**  
 11.11.2021
+
+<br/>
 
 ```
 // install ArgoCD in k8s

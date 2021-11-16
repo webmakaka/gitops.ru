@@ -37,26 +37,30 @@ EOF
 
 <br/>
 
-    $ kubectl get svc
-    NAME                            TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
-    nodejs-casts-app-loadbalancer   LoadBalancer   10.104.115.199   <pending>     80:30123/TCP   55s
+```
+$ kubectl get svc
+NAME                            TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+nodejs-casts-app-loadbalancer   LoadBalancer   10.104.115.199   <pending>     80:30123/TCP   55s
+```
 
 <br/>
 
-    $ kubectl describe svc nodejs-casts-app-loadbalancer
-    Name:                     nodejs-casts-app-loadbalancer
-    Namespace:                demo
-    Labels:                   <none>
-    Annotations:              Selector:  app=nodejs-cats-app,env=dev
-    Type:                     LoadBalancer
-    IP:                       10.104.115.199
-    Port:                     <unset>  80/TCP
-    TargetPort:               8080/TCP
-    NodePort:                 <unset>  30123/TCP
-    Endpoints:                172.17.0.4:8080,172.17.0.5:8080,172.17.0.6:8080
-    Session Affinity:         None
-    External Traffic Policy:  Cluster
-    Events:                   <none>
+```
+$ kubectl describe svc nodejs-casts-app-loadbalancer
+Name:                     nodejs-casts-app-loadbalancer
+Namespace:                demo
+Labels:                   <none>
+Annotations:              Selector:  app=nodejs-cats-app,env=dev
+Type:                     LoadBalancer
+IP:                       10.104.115.199
+Port:                     <unset>  80/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  30123/TCP
+Endpoints:                172.17.0.4:8080,172.17.0.5:8080,172.17.0.6:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+```
 
 <br/>
 
@@ -64,15 +68,23 @@ EOF
 
 <br/>
 
-    // Если не используется профиль, удалить
-    // Если не используется namespace, таке можно убрать -n default
-    $ echo $(minikube --profile marley-minikube service nodejs-casts-app-loadbalancer -n default --url)
+```
+// Если не используется профиль, удалить
+// Если не используется namespace, таке можно убрать -n default
+$ echo $(minikube --profile ${PROFILE} service nodejs-casts-app-loadbalancer -n default --url)
+```
 
 <br/>
 
-    http://192.168.99.113:30123
+```
+http://192.168.99.113:30123
+```
 
 <br/>
 
-    // Удалить сервис, если больше не нужен
-    $ kubectl delete svc nodejs-casts-app-loadbalancer
+### Удалить созданное
+
+```
+// Удалить сервис, если больше не нужен
+$ kubectl delete svc nodejs-casts-app-loadbalancer
+```

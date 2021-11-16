@@ -15,7 +15,7 @@ permalink: /containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-11.11.2021
+14.11.2021
 
 <br/>
 
@@ -127,10 +127,6 @@ $ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | g
 
 <br/>
 
-### [Добавить "Metal LB" (При необходимости)](/containers/kubernetes/tools/metal-lb/)
-
-<br/>
-
 ### Дополнительная инфа по развернутому kuberntes кластеру
 
 ```
@@ -213,71 +209,8 @@ https://github.com/burrsutter/9stepsawesome/
 
 <br/>
 
-### Registry в Minikube
-
-// Установка настройка  
-https://github.com/kameshsampath/minikube-helpers/tree/master/registry
-
-// Что-то нужное по tekton
-https://developers.redhat.com/blog/2019/07/11/deploying-an-internal-container-registry-with-minikube-add-ons#what_do_we_need_
+### [Добавить "Metal LB" (При необходимости)](/containers/kubernetes/tools/metal-lb/)
 
 <br/>
 
-```
-$ minikube start --profile ${PROFILE}
-$ minikube start --profile addons enable registry
-```
-
-<br/>
-
-```
-$ cd ~/tmp
-$ git clone https://github.com/kameshsampath/minikube-helpers
-$ cd minikube-helpers/registry
-```
-
-<br/>
-
-```
-$ kubectl apply -n kube-system \
-  -f registry-aliases-config.yaml \
-  -f node-etc-hosts-update.yaml \
-  -f patch-coredns-job.yaml
-```
-
-<br/>
-
-```
-$ minikube --profile marley-minikube ssh -- sudo cat /etc/hosts
-```
-
-<br/>
-
-**Testing**
-
-<br/>
-
-```
-$ cd ~/tmp
-$ git clone https://github.com/kameshsampath/minikube-registry-aliases-demo
-
-$ cd minikube-registry-aliases-demo
-```
-
-<br/>
-
-```
-eval $(minikube --profile ${PROFILE} docker-env)
-```
-
-<br/>
-
-```
-skaffold dev --port-forward
-```
-
-<br/>
-
-```
-$ curl localhost:8080
-```
+### [Registry в Minikube](/containers/kubernetes/minikube/setup/registry/)

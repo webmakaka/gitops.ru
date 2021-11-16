@@ -16,6 +16,14 @@ permalink: /
 
 <br/>
 
+### Running AWS Services In A Laptop Using LocalStack
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/8hi9P1ffaQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
 ### Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
 
 <div align="center">
