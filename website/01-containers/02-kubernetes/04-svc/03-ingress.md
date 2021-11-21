@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Создание службы Ingress
-description: Создание службы Ingress
-keywords: devops, containers, kubernetes, minikube, Создание службы Ingress
+title: Создание службы Ingress и ClusterIP
+description: Создание службы Ingress и ClusterIP
+keywords: devops, containers, kubernetes, minikube, ingress, clusterip, Создание службы Ingress и ClusterIP
 permalink: /containers/kubernetes/svc/ingress/
 ---
 
-# Создание службы Ingress
+# Создание службы Ingress и ClusterIP
 
 Делаю:  
-04.11.2021
+21.11.2021
 
 <br/>
 
@@ -19,7 +19,29 @@ permalink: /containers/kubernetes/svc/ingress/
 
 <br/>
 
-Deployment и NodePort уже созданы как <a href="/containers/kubernetes/svc/nodeport/">здесь</a>
+Deployment уже создан как <a href="/containers/kubernetes/svc/nodeport/">здесь</a>
+
+<br/>
+
+**Создаю сервис ClusterIP**
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-cats-app-cluster-ip
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: nodejs-cats-app
+EOF
+```
 
 <br/>
 
@@ -54,9 +76,9 @@ ingress-nginx-controller-69bdbc4d57-zxn77   1/1     Running     0          76m
 <br/>
 
 ```
-$ kubectl get service nodejs-cats-app-nodeport
-NAME                       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-nodejs-cats-app-nodeport   NodePort   10.111.195.73   <none>        80:30123/TCP   43m
+$ kubectl get service nodejs-cats-app-cluster-ip
+NAME                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+nodejs-cats-app-cluster-ip   ClusterIP   10.101.76.157   <none>        80/TCP    21s
 ```
 
 <br/>
@@ -81,7 +103,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: nodejs-cats-app-nodeport
+            name: nodejs-cats-app-cluster-ip
             port:
               number: 80
 EOF
@@ -98,7 +120,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: nodejs-cats-app-nodeport
+      name: nodejs-cats-app-cluster-ip
       port:
         number: 80
 EOF
@@ -143,7 +165,7 @@ http://nodejs-cats-app.example.com
     $ kubectl delete ingress nodejs-cats-app-ingress
 
     // И остальное
-    $ kubectl delete svc nodejs-cats-app-nodeport
+    $ kubectl delete svc nodejs-cats-app-cluster-ip
     $ kubectl delete deployment nodejs-cats-app
 
 <br/>
@@ -188,7 +210,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: nodejs-cats-app-nodeport
+            name: nodejs-cats-app-cluster-ip
             port:
               number: 80
 EOF
@@ -199,7 +221,7 @@ EOF
 ```
 $ kubectl get ingresses
 NAME                      CLASS    HOSTS                 ADDRESS   PORTS   AGE
-nodejs-cats-app-ingress   <none>   192.168.49.2.nip.io             80      11s
+nodejs-cats-app-ingress   <none>   192.168.49.2.nip.io             80      8s
 ```
 
 <br/>

@@ -45,6 +45,10 @@ nodejs-casts-app-loadbalancer   LoadBalancer   10.104.115.199   <pending>     80
 
 <br/>
 
+В общем в облаках, если мы сами создавали виртуалки, нужно дополнительно руками создавать Load Balancers (по крайней мере в AWS). Если мы используем готовое kubernetes решение, EXTERNAL-IP нам прилетит сам через какое-то время. (Пару минут). Чтобы пример заработал локально. Нужно установить, например [Metal LB](/containers/kubernetes/tools/metal-lb/)
+
+<br/>
+
 ```
 $ kubectl describe svc nodejs-casts-app-loadbalancer
 Name:                     nodejs-casts-app-loadbalancer

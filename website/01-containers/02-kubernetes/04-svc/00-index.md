@@ -16,4 +16,4 @@ permalink: /containers/kubernetes/svc/
 
 -   [NodePort](/containers/kubernetes/svc/nodeport/)
 -   [LoadBalancer](/containers/kubernetes/svc/load-balancer/)
--   [Ingress](/containers/kubernetes/svc/ingress/)
+-   [Ingress и ClusterIP](/containers/kubernetes/svc/ingress/)
