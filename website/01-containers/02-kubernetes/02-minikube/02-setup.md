@@ -15,7 +15,7 @@ permalink: /containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-21.11.2021
+16.12.2021
 
 <br/>
 
@@ -70,7 +70,7 @@ $ export \
     MEMORY=8192 \
     CPUS=4 \
     DRIVER=docker \
-    KUBERNETES_VERSION=v1.22.4
+    KUBERNETES_VERSION=v1.23.1
 ```
 
 <br/>
