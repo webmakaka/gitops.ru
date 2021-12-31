@@ -18,7 +18,7 @@ permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/build-automati
 
 Устанавливаю <a href="//javadev.org/devtools/jdk/setup/linux/">JDK8</a>
 
-Устанавливаю <a href="//javadev.org/devtools/assembly/gradle/linux/ubuntu/">Gradle</a>
+Устанавливаю <a href="//javadev.org/devtools/build/gradle/linux/ubuntu/">Gradle</a>
 
 <br/>
 
