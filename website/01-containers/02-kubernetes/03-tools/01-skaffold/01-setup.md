@@ -9,11 +9,13 @@ permalink: /containers/kubernetes/tools/scaffold/
 # Инсталляция scaffold в ubuntu 20.04
 
 Делаю:  
-23.10.2021
+31.12.2021
 
 <br/>
 
-**scaffold - инструмент для разработки в kubernetes**
+**scaffold - инструмент, помогающий в разработке kubernetes. Автоматическое обновление контейнеров, при изменении исходиников. LiveReload, только сразу в контейнерах**
+
+<br/>
 
 ```
 $ cd ~/tmp/
@@ -23,12 +25,12 @@ $ sudo mv skaffold /usr/local/bin
 $ chmod +x /usr/local/bin/skaffold
 
 $ skaffold version
-v1.33.0
+v1.34.0
 ```
 
 <br/>
 
-### Skaffold config
+### Skaffold config (Дополнительные, необязательные настройки)
 
 ```
 $ skaffold config
@@ -64,14 +66,21 @@ build:
 
 ```
 $ kubectl config current-context
-marley-minikube
 ```
 
 <br/>
 
 ```
-$ source minikube docker-env -p marley-minikube
-$ skaffold config set --kube-context marley-minikube local-cluster true
+$ minikube docker-env -p ${PROFILE}
+
+// Будет какая-то другая команда, но очень похожая
+$ eval $(minikube -p a3333333-minikube docker-env)
+```
+
+<br/>
+
+```
+$ skaffold config set --kube-context ${PROFILE} local-cluster true
 ```
 
 <br/>

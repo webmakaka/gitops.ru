@@ -15,7 +15,7 @@ permalink: /containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-16.12.2021
+31.12.2021
 
 <br/>
 
@@ -114,15 +114,28 @@ $ {
 <br/>
 
 ```
+$ kubectl config current-context
+```
+
+<br/>
+
+```
+$ minikube docker-env -p ${PROFILE}
+$ eval $(minikube -p ${PROFILE} docker-env)
+```
+
+<br/>
+
+```
 // Подключиться к dashboard можно следующей командой
-$ minikube --profile ${PROFILE} dashboard
+// $ minikube --profile ${PROFILE} dashboard
 ```
 
 <br/>
 
 ```
 // Получить токен для авторизации в kubernetes dashboard
-$ kubectl -n kube-system describe secret $(qrunctl -n kube-system get secret | grep admin-user | awk '{print $1}')
+// $ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ```
 
 <br/>
