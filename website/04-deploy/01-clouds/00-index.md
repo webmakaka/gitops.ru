@@ -22,6 +22,8 @@ permalink: /deploy/clouds/
 
 ## С промо на какой-то период
 
+### [Yandex 4000 руб. на 2 мес.](/deploy/clouds/yandex/)
+
 ### [Облака для изучения Google Clouds и AWS](/deploy/clouds/qwiklabs/)
 
 ### [Digital Ocean](/deploy/clouds/digital-ocean/)

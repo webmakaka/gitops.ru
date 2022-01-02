@@ -66,7 +66,7 @@ services:
             - ./mysql:/etc/mysql/conf.d
         environment:
             MYSQL_DATABASE: opd_data
-            MYSQL_ROOT_PASSWORD: p@55w0rd1
+            MYSQL_ROOT_PASSWORD: pA55w0rd1
 ```
 
 <br/>
@@ -91,7 +91,7 @@ $ sudo apt install -y mysql-client
 <br/>
 
 ```
-$ mysql --user=root --password=p@55w0rd1 -h 127.0.0.1 opd_data
+$ mysql --user=root --password=pA55w0rd1 -h 127.0.0.1 opd_data
 ```
 
 <br/>
@@ -110,13 +110,13 @@ $ cd ~/tmp/Designing-Microservices-Platforms-with-NATS/chapter6/resources/
 
 ```
 // Добавляем данные в базу
-$ mysql --user=root --password=p@55w0rd1 -h 127.0.0.1 opd_data < ./mysql.sql
+$ mysql --user=root --password=pA55w0rd1 -h 127.0.0.1 opd_data < ./mysql.sql
 ```
 
 <br/>
 
 ```
-$ mysql --user=root --password=p@55w0rd1 -h 127.0.0.1 opd_data
+$ mysql --user=root --password=pA55w0rd1 -h 127.0.0.1 opd_data
 ```
 
 <br/>
@@ -148,7 +148,7 @@ $ cd ~/tmp/Designing-Microservices-Platforms-with-NATS/chapter6/registration-ser
 <br/>
 
 ```
-$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword p@55w0rd1
+$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword pA55w0rd1
 ```
 
 **output:**
@@ -189,7 +189,7 @@ $ cd ~/tmp/Designing-Microservices-Platforms-with-NATS/chapter6/inspection-servi
 <br/>
 
 ```
-$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword p@55w0rd1
+$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword pA55w0rd1
 ```
 
 **output:**
@@ -232,7 +232,7 @@ $ cd ~/tmp/Designing-Microservices-Platforms-with-NATS/chapter6/treatment-servic
 <br/>
 
 ```
-$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword p@55w0rd1
+$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword pA55w0rd1
 ```
 
 **output:**
@@ -270,7 +270,7 @@ $ cd ~/tmp/Designing-Microservices-Platforms-with-NATS/chapter6/release-service
 <br/>
 
 ```
-$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword p@55w0rd1
+$ go run cmd/main.go -dbName opd_data -dbUser root -dbPassword pA55w0rd1
 ```
 
 **output:**

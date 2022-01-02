@@ -25,7 +25,7 @@ $ sudo mv skaffold /usr/local/bin
 $ chmod +x /usr/local/bin/skaffold
 
 $ skaffold version
-v1.34.0
+v1.35.1
 ```
 
 <br/>
@@ -44,7 +44,31 @@ $ cat ~/.skaffold/config
 
 <br/>
 
-### Объяснить skaffold, что используется local Kubernetes cluster
+### Настроить skaffold, чтобы использовался local Kubernetes cluster
+
+<br/>
+
+```
+$ export \
+    PROFILE=${USER}-minikube \
+    MEMORY=8192 \
+    CPUS=4 \
+    DRIVER=docker \
+    KUBERNETES_VERSION=v1.23.1
+```
+
+<br/>
+
+```
+$ minikube docker-env -p ${PROFILE}
+$ eval $(minikube -p ${PROFILE} docker-env)
+```
+
+<br/>
+
+```
+$ skaffold config set --kube-context ${PROFILE} local-cluster true
+```
 
 <br/>
 
@@ -56,36 +80,7 @@ https://skaffold.dev/docs/environment/local-cluster/
 
 <br/>
 
-```
-build:
-  local:
-    push: false
-```
-
-<br/>
-
-```
-$ kubectl config current-context
-```
-
-<br/>
-
-```
-$ minikube docker-env -p ${PROFILE}
-
-// Будет какая-то другая команда, но очень похожая
-$ eval $(minikube -p a3333333-minikube docker-env)
-```
-
-<br/>
-
-```
-$ skaffold config set --kube-context ${PROFILE} local-cluster true
-```
-
-<br/>
-
-### Добавление insecure-registries (не работает)
+### Добавление insecure-registries (возможно не работает, нужно поразбираться)
 
 ```
 $ skaffold config set --global insecure-registries localhost:5000
