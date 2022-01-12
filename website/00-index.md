@@ -32,10 +32,6 @@ https://t.me/otus_golang
 
 <br/>
 
-[Разбор](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
-
-<br/>
-
 ### Running AWS Services In A Laptop Using LocalStack
 
 <div align="center">
@@ -88,7 +84,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-[Разбор](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
 
 <br/>
 
