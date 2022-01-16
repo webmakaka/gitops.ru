@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds
 description: Yandex Clouds
 keywords: Deploy, Clouds, Yandex
-permalink: /deploy/clouds/yandex/
+permalink: /clouds/yandex/
 ---
 
 # Yandex Clouds

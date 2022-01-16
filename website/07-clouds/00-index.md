@@ -1,43 +1,37 @@
 ---
 layout: page
-title: Clouds
-description: Clouds
-keywords: Clouds
+title: Deploy Clouds
+description: Deploy Clouds
+keywords: Deploy, Clouds
 permalink: /clouds/
 ---
 
-# Clouds
+# Deploy Clouds
 
-### AWS
+## Облака, которыми можно пользоваться бесплатно
 
-Делалось по инструкции:
+Отсортировано от более простых и интересных, к более сложным.
 
-[Прикрутить свой домен к AWS без переноса его в AWS и использованием CloudFlare](https://medium.com/@bobthomas295/combining-aws-serverless-with-cloudflare-sub-domains-338a1b7b2bd)
+### [IBM Cloud](/clouds/ibm/)
+
+### Heroku (Да все интернеты завалены материалами по Heroku)
+
+### [Oracle](/clouds/oracle/free-tier/)
 
 <br/>
 
-**В заработавшем варианте:**
+## С промо на какой-то период
 
-Cloudflare -> SSL/TLS -> Full (strict)
+### [Yandex 4000 руб. на 2 мес.](/clouds/yandex/)
 
-В DNS
+### [Облака для изучения Google Clouds и AWS](/clouds/qwiklabs/)
 
-```
-Type: CNAME
-Name: _6be2d4c99b2c4199a3abf29716f8fd4e
-Target: _f13db5c800d33fd3174874c84f677c33.bwlshdtstt.acm-validations.aws
-Proxy status: DNS only
-TTL: Auto
+### [Digital Ocean](/clouds/digital-ocean/)
 
-Type: CNAME
-Name: api
-Target: d2siadvb5bmoyb.cloudfront.net
-Proxy status: Proxied
-TTL: Auto
+### [Amazon AWS](/clouds/aws/)
 
-Type: CNAME
-Name: webmak.site
-Target: d2siadvb5bmoyb.cloudfront.net
-Proxy status: Proxied
-TTL: Auto
-```
+### [Google Clouds]
+
+### [Microsoft Azure]
+
+### [OpenShift (IBM / REDHAT)]

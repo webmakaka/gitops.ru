@@ -3,7 +3,7 @@ layout: page
 title: Deploy Clouds IBM
 description: Deploy Clouds, IBM
 keywords: Deploy, Clouds, IBM
-permalink: /deploy/clouds/ibm/
+permalink: /clouds/ibm/
 ---
 
 # Deploy Clouds IBM

@@ -3,7 +3,7 @@ layout: page
 title: Digital Ocean
 description: Digital Ocean
 keywords: Облака, Digital Ocean
-permalink: /deploy/clouds/digital-ocean/
+permalink: /clouds/digital-ocean/
 ---
 
 # Digital Ocean

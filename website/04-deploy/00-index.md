@@ -10,4 +10,4 @@ permalink: /deploy/
 
 <br/>
 
-[Облака](/deploy/clouds/)
+[Облака](/clouds/)

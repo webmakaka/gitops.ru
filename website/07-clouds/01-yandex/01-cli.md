@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds - CLI
 description: Yandex Clouds - CLI
 keywords: Deploy, Clouds, Yandex Clouds - CLI
-permalink: /deploy/clouds/yandex/cli/
+permalink: /clouds/yandex/cli/
 ---
 
 # Yandex Clouds - CLI

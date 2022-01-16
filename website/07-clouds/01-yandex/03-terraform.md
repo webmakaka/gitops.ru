@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds - Terraform
 description: Yandex Clouds - Terraform
 keywords: Deploy, Clouds, Yandex, Terraform
-permalink: /deploy/clouds/yandex/terraform/
+permalink: /clouds/yandex/terraform/
 ---
 
 # Yandex Clouds - Terraform

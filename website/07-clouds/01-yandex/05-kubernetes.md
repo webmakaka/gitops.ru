@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds - Kubernetes
 description: Yandex Clouds - Kubernetes
 keywords: Deploy, Clouds, Yandex, Kubernetes
-permalink: /deploy/clouds/yandex/kubernetes/
+permalink: /clouds/yandex/kubernetes/
 ---
 
 # Yandex Clouds - Kubernetes

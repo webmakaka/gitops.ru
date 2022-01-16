@@ -3,7 +3,7 @@ layout: page
 title: Облака для изучения Google Clouds и AWS
 description: Облака для изучения Google Clouds и AWS
 keywords: Облака для изучения Google Clouds и AWS
-permalink: /deploy/clouds/qwiklabs/
+permalink: /clouds/qwiklabs/
 ---
 
 # Облака для изучения Google Clouds и AWS

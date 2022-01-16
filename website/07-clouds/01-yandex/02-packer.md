@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds - Packer
 description: Yandex Clouds - Packer
 keywords: Deploy, Clouds, Yandex, Packer
-permalink: /deploy/clouds/yandex/packer/
+permalink: /clouds/yandex/packer/
 ---
 
 # Yandex Clouds - Packer
