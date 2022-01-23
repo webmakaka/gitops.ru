@@ -157,6 +157,19 @@ $ yc iam service-account create --name my-robot \
 <br/>
 
 ```
+$ yc iam service-account list
+```
+
+<br/>
+
+```
+// DELETE
+// $ yc iam service-account delete my-robot
+```
+
+<br/>
+
+```
 // Получить список стандартных image
 $ yc compute image list --folder-id standard-images
 ```

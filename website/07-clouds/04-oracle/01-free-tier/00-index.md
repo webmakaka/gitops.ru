@@ -22,7 +22,12 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scr
 
 <br/>
 
-Новый терминал
+```
+// Чтобы shell мог выполнять команды oci
+$ exec -l $SHELL
+```
+
+<br/>
 
 ```
 oci --version
@@ -67,31 +72,30 @@ $ oci iam user list
 
 ### Create cloud services for the Linux VM
 
-```
-$ oci iam compartment list
-```
-
 <br/>
 
 ```
-$ export ROOT_COMPARTMENT_ID=
+$ export TENANCY_COMPARTMENT_ID=$(
+    oci iam compartment list \
+    --all \
+    --compartment-id-in-subtree true \
+    --access-level ACCESSIBLE \
+    --include-root \
+    --raw-output \
+    --query "data[?contains(\"id\",'tenancy')].id | [0]"
+)
 
-$ echo ${ROOT_COMPARTMENT_ID}=
+$ echo ${TENANCY_COMPARTMENT_ID}
+
 $ export COMPARTMENT_NAME=testcompartment
 
 $ oci iam compartment create \
     --name ${COMPARTMENT_NAME} \
     --description "test compartment for linux" \
-    --compartment-id ${ROOT_COMPARTMENT_ID}
+    --compartment-id ${TENANCY_COMPARTMENT_ID}
 ```
 
 <br/>
-
-```
-// compartment-id
-$ oci iam compartment list \
-  | jq -r -c '.data[] ["compartment-id"]'
-```
 
 ```
 // compartment-id
@@ -102,7 +106,7 @@ $ oci iam compartment list \
 <br/>
 
 ```
-$ COMPARTMENT_ID = результат
+$ export COMPARTMENT_ID=результат
 $ echo ${COMPARTMENT_ID}
 ```
 
@@ -226,21 +230,27 @@ VM.Standard.E2.1.Micro дают бесплатно только в QBXU:EU-FRANK
 
 <br/>
 
-    $ export SUBNET_DISPLAY_NAME=subnetlinuxtest
-    $ export SUBNET_DNS_LABEL=subnetlinuxtest
+```
+$ export SUBNET_DISPLAY_NAME=subnetlinuxtest
+$ export SUBNET_DNS_LABEL=subnetlinuxtest
 
-    $ oci network subnet create \
-        --vcn-id ${VCN_ID} \
-        --compartment-id ${COMPARTMENT_ID} \
-        --availability-domain ${AVAILABILITY_DOMAIN} \
-        --display-name ${SUBNET_DISPLAY_NAME} \
-        --dns-label ${SUBNET_DNS_LABEL} \
-        --cidr-block "10.0.0.0/24" \
-        --security-list-ids '["ocid1.securitylist.oc1.eu-frankfurt-1.aaaaaaaa7ql5dxwecflkulajs2wutvc7bsfvuie3y55xckwjrh6ktsflrfpa"]'
+$ oci network subnet create \
+    --vcn-id ${VCN_ID} \
+    --compartment-id ${COMPARTMENT_ID} \
+    --availability-domain ${AVAILABILITY_DOMAIN} \
+    --display-name ${SUBNET_DISPLAY_NAME} \
+    --dns-label ${SUBNET_DNS_LABEL} \
+    --cidr-block "10.0.0.0/24" \
+    --security-list-ids '["<security_list_id>"]'
+```
 
 <br/>
 
-    $ export SUBNET_ID=ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaarqrgq3slrfd4k6d6nb2fudjpp3uwogxrzru3tidl6oi2mlnxbwqa
+```
+$ export SUBNET_ID=ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaarqrgq3slrfd4k6d6nb2fudjpp3uwogxrzru3tidl6oi2mlnxbwqa
+
+$ export ROUTE_TABLE_ID=ocid1.routetable.oc1.eu-frankfurt-1.aaaaaaaawhijpni6r35f26rshruartz2svegn47afxu4z4ntvy6qrj4treuq
+```
 
 <br/>
 
@@ -248,20 +258,25 @@ VM.Standard.E2.1.Micro дают бесплатно только в QBXU:EU-FRANK
 
 <br/>
 
-    $ export INTERNET_GATEWAY_DISPLAY_NAME=LinuxGateWay
-    $ export INTERNET_GATEWAY_VCN_ID=LinuxGateWay
+```
+$ export INTERNET_GATEWAY_DISPLAY_NAME=LinuxGateWay
+```
 
 <br/>
 
-    $ oci network internet-gateway create \
-        --compartment-id ${COMPARTMENT_ID} \
-        --is-enabled true \
-        --vcn-id ${INTERNET_GATEWAY_VCN_ID} \
-        --display-name ${INTERNET_GATEWAY_DISPLAY_NAME}
+```
+$ oci network internet-gateway create \
+    --compartment-id ${COMPARTMENT_ID} \
+    --is-enabled true \
+    --vcn-id ${VCN_ID} \
+    --display-name ${INTERNET_GATEWAY_DISPLAY_NAME}
+```
 
 <br/>
 
-    $ export GATEWAY_ID=ocid1.internetgateway.oc1.eu-frankfurt-1.aaaaaaaajungy23o6xt7bpdsrdvg3aexegk2dgowthv3ojm476mpvhbaheba
+```
+$ export GATEWAY_ID=ocid1.internetgateway.oc1.eu-frankfurt-1.aaaaaaaajungy23o6xt7bpdsrdvg3aexegk2dgowthv3ojm476mpvhbaheba
+```
 
 <br/>
 
@@ -269,12 +284,14 @@ VM.Standard.E2.1.Micro дают бесплатно только в QBXU:EU-FRANK
 
 <br/>
 
-    $ oci network route-table update \
-        --rt-id ${DEFAULT_ROUTE_TABLE_ID} \
-        --route-rules '[
-            {"cidrBlock" : "0.0.0.0/0",
-            "networkEntityId" : "ocid1.internetgateway.oc1.eu-frankfurt-1.aaaaaaaajungy23o6xt7bpdsrdvg3aexegk2dgowthv3ojm476mpvhbaheba"}
-        ]'
+```
+$ oci network route-table update \
+    --rt-id ${ROUTE_TABLE_ID} \
+    --route-rules '[
+        {"cidrBlock" : "0.0.0.0/0",
+        "networkEntityId" : "<internet_gateway_id>"}
+    ]'
+```
 
 <br/>
 
@@ -282,43 +299,125 @@ VM.Standard.E2.1.Micro дают бесплатно только в QBXU:EU-FRANK
 
 <br/>
 
-    $ export DISPLAY_NAME="LinuxVMTest"
-    $ export IMAGE_ID=ocid1.image.oc1.eu-frankfurt-1.aaaaaaaazixyfjdjd7vsnzsucbnvabadypmijraftu7t6jn5hroxgh35jhuq
-
-<br/>
-
 ```
 // Получить список образов операционных систем
 $ oci compute image list --all \
     --compartment-id ${COMPARTMENT_ID}  \
-| jq -r -c '.data[] ["display-name"]'
+    | jq -r -c '.data[] ["display-name"]'
 ```
 
 <br/>
 
-    $ ssh-keygen -t rsa
+```
+$ export DISPLAY_NAME="LinuxVMTest"
+$ export IMAGE_ID=ocid1.image.oc1.eu-frankfurt-1.aaaaaaaadqrjjiunkzkf62ggllx56s3p5775gonlifl74d4ri3bykztb4bha
+```
 
 <br/>
 
-    $ oci compute instance launch \
-        --availability-domain ${AVAILABILITY_DOMAIN} \
-        --compartment-id ${COMPARTMENT_ID} \
-        --shape "VM.Standard.E2.1.Micro" \
-        --display-name ${DISPLAY_NAME} \
-        --image-id ${IMAGE_ID} \
-        --ssh-authorized-keys-file "/home/username/.ssh/id_rsa.pub" \
-        --subnet-id ${SUBNET_ID}
+```
+$ ssh-keygen -t rsa
+```
 
 <br/>
 
-    $ export INSTANCE_ID=ocid1.instance.oc1.eu-frankfurt-1.antheljtljudzkacvzoqzlcx3nkgraya434v4npmtnl7mdtabtylxpa4wcaa
+```
+$ oci compute instance launch \
+    --availability-domain ${AVAILABILITY_DOMAIN} \
+    --compartment-id ${COMPARTMENT_ID} \
+    --shape "VM.Standard.E2.1.Micro" \
+    --display-name ${DISPLAY_NAME} \
+    --image-id ${IMAGE_ID} \
+    --ssh-authorized-keys-file "/home/username/.ssh/id_rsa.pub" \
+    --subnet-id ${SUBNET_ID}
+```
 
 <br/>
 
-    $ oci compute instance list-vnics \
-        --instance-id ${INSTANCE_ID}
+```
+$ export INSTANCE_ID=ocid1.instance.oc1.eu-frankfurt-1.antheljtljudzkacezkneuv5a5k5gftp6hgbepdmwlaz3snq4fh73c65kuiq
+```
 
 <br/>
+
+```
+$ oci compute instance list-vnics \
+    --instance-id ${INSTANCE_ID}
+```
+
+<br/>
+
+```
+$ export PUBLIC_IP=<PUBLIC_IP>
+```
+
+<br/>
+
+```
+$ ssh ubuntu@${PUBLIC_IP}
+
+
+
+// Если не ubuntu
+$ ssh opc@${PUBLIC_IP}
+```
+
+<br/>
+
+## Добавить диск
+
+<br/>
+
+```
+// Create block volume
+$ oci bv volume create \
+    --availability-domain ${AVAILABILITY_DOMAIN} \
+    --compartment-id ${COMPARTMENT_ID} \
+    --size-in-mbs 51200
+    --display-name VOLUME_DISPLAY_NAME
+```
+
+<br/>
+
+```
+$ export VOLUME_ID=ocid1.volume.oc1.eu-frankfurt-1.abtheljtdfi26t4mjt3rv5z2bmeo4enkgm2givrvm4oiqs4ys6u6umj4jsmq
+```
+
+<br/>
+
+```
+// Check status of the block volume
+$ oci bv volume get \
+    --volume-id ${VOLUME_ID}
+```
+
+<br/>
+
+```
+// Add block volume to instance
+$ oci compute volume-attachment attach \
+    --instance-id ${INSTANCE_ID} \
+    --type iscsi \
+    --volume-id ${VOLUME_ID}
+```
+
+<br/>
+
+```
+$ oci compute volume-attachment list \
+    --instance-id ${INSTANCE_ID}
+```
+
+<br/>
+
+```
+$ export ATTACHMENT_ID=ocid1.volumeattachment.oc1.eu-frankfurt-1.antheljtljudzkacz7yiszxkj27qo6bslw3q7pwehhb2oobpa474ycj4phva
+```
+
+```
+$ oci compute volume-attachment get \
+    --volume-attachment-id ${ATTACHMENT_ID}
+```
 
 <br/>
 
@@ -326,6 +425,10 @@ $ oci compute image list --all \
 
 https://git.ir/pluralsight-provisioning-virtual-machines-on-oracle-compute-cloud/
 
-```
+<br/>
 
+### Доступ к облаку Oracle по http
+
+```
+$ python -m http.server 8000
 ```

@@ -31,8 +31,66 @@ YANDEX CLOUD UI -> Managed Service for Kubernetes -> Создать
 
 <br/>
 
+Управление узлами -> Создание группы узлов
+
+<br/>
+
+$ vi my-nginx.yaml
+
+<br/>
+
 ```
-// Создать сервисный аккаунт yandex
-$ yc iam service-account create --name my-robot \
-    --description "this is my favorite service account"
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: cr.yandex/crpv7tlcpgb30qpgkiij/ubuntu-nginx:latest
 ```
+
+<br/>
+
+```
+$ kubectl apply -f my-nginx.yaml
+```
+
+<br/>
+
+$ vi load-balancer.yaml
+
+<br/>
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-loadbalancer
+spec:
+  selector:
+     app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
+```
+
+<br/>
+
+```
+$ kubectl apply -f load-balancer.yaml
+```
+
+<br/>
+
+YANDEX CLOUD UI -> Network Load Balancer
