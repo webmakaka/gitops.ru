@@ -1,16 +1,18 @@
 ---
 layout: page
-title: Oracle Clouds
-description: Oracle Clouds
-keywords: devops, clouds, Oracle Clouds
-permalink: /devops/clouds/oracle/
+title: Пример с балансировщиком нагрузки
+description: Пример с балансировщиком нагрузки
+keywords: devops, clouds, Пример с балансировщиком нагрузки
+permalink: /clouds/oracle/free-tier/load-balancer/
 ---
 
-# Oracle Clouds
+# Пример с балансировщиком нагрузки
 
-```
 https://www.youtube.com/watch?v=nFlFswEpwnA
 
+<br/>
+
+```
 Networking -> Virtualc Cloud Networks -> Create VCN
 
 <br/>
