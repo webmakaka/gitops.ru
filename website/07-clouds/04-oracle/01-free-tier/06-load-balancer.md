@@ -12,8 +12,7 @@ https://www.youtube.com/watch?v=nFlFswEpwnA
 
 <br/>
 
-```
-Networking -> Virtualc Cloud Networks -> Create VCN
+Networking -> Virtual Cloud Networks -> Create VCN
 
 <br/>
 
@@ -84,5 +83,3 @@ VCN -> Default Security List for Marley-VCN
 0.0.0.0/0
 
 80
-
-```

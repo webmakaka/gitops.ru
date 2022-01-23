@@ -18,4 +18,8 @@ permalink: /clouds/oracle/free-tier/
 
 ### [Добавить iscsi диск виртуальной машине Oracle](/clouds/oracle/free-tier/compute-instance/add-disk/)
 
+### [Доступ к облаку Oracle по http](/clouds/oracle/free-tier/http/)
+
 ### [Пример с балансировщиком нагрузки](/clouds/oracle/free-tier/load-balancer/)
+
+### [Попытка запустить React + GoLang + PostgreSQL приложения в облаках Oracle](/clouds/oracle/free-tier/react-golang-postgres-app/)

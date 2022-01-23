@@ -11,7 +11,7 @@ permalink: /containers/kubernetes/google-cloud-shell/
 <br/>
 
 **Делаю:**  
-10.11.2021
+23.01.2022
 
 <br/>
 
@@ -41,6 +41,17 @@ https://shell.cloud.google.com/
 **Инсталлим google-cloud-sdk**
 
 https://cloud.google.com/sdk/docs/install
+
+<br/>
+
+```
+$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-369.0.0-linux-x86_64.tar.gz
+
+unzip
+
+$ ./install.sh
+
+```
 
 <br/>
 

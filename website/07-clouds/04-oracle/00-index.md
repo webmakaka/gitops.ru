@@ -12,3 +12,4 @@ permalink: /clouds/oracle/
 
 ### [Oracle Cloud Free Tier](/clouds/oracle/free-tier/)
 
+### [Build a Microservices App on Oracle Cloud Infrastructure](https://www.youtube.com/watch?v=3ZdHjDBSr9A)

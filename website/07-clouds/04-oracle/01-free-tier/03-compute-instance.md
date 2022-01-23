@@ -25,11 +25,11 @@ $ export TENANCY_COMPARTMENT_ID=$(
 
 $ echo ${TENANCY_COMPARTMENT_ID}
 
-$ export COMPARTMENT_NAME=testcompartment
+$ export COMPARTMENT_NAME=test-compartment
 
 $ oci iam compartment create \
     --name ${COMPARTMENT_NAME} \
-    --description "test compartment for linux" \
+    --description "Test compartment for linux" \
     --compartment-id ${TENANCY_COMPARTMENT_ID}
 ```
 
@@ -37,14 +37,29 @@ $ oci iam compartment create \
 
 ```
 // compartment-id
-$ oci iam compartment list \
-  | jq -r -c '.data[] ["id"]'
+$ oci iam compartment list
 ```
 
 <br/>
 
 ```
-$ export COMPARTMENT_ID=результат
+// delete compartment-id
+// $ oci iam compartment delete \
+    --compartment-id ocid1.compartment.oc1..aaaaaaaar6csjw3wumyafzfhix23dwgj4mc2iesblkxzqzod45yqrosu7fhq
+```
+
+<!-- <br/>
+
+```
+// compartment-id
+$ oci iam compartment list \
+  | jq -r -c '.data[] ["id"]'
+``` -->
+
+<br/>
+
+```
+$ export COMPARTMENT_ID=указать ранее созданный compartment
 $ echo ${COMPARTMENT_ID}
 ```
 
@@ -84,43 +99,49 @@ $ oci network vcn list \
 <br/>
 
 ```
-$ export VCN_ID=
-```
-
-<br/>
-
-```
-$ oci network vcn list \
+$ export VCN_ID=$(
+    oci network vcn list \
     --compartment-id ${COMPARTMENT_ID} \
-  | jq -r -c '.data[] ["id"]'
+    | jq -r -c '.data[] ["id"]'
+)
 ```
 
 <br/>
 
 ```
-$ export DEFAULT_SECURITY_LIST_ID=
+$ echo ${VCN_ID}
 ```
 
 <br/>
 
 ```
-$ oci network vcn list \
+$ export DEFAULT_SECURITY_LIST_ID=$(
+    oci network vcn list \
     --compartment-id ${COMPARTMENT_ID} \
-  | jq -r -c '.data[] ["default-security-list-id"]'
+    | jq -r -c '.data[] ["default-security-list-id"]'
+)
 ```
 
 <br/>
 
 ```
-$ export DEFAULT_ROUTE_TABLE_ID=
+$ echo ${DEFAULT_SECURITY_LIST_ID}
 ```
 
 <br/>
 
 ```
-$ oci network vcn list \
+$ export DEFAULT_ROUTE_TABLE_ID=$(
+    oci network vcn list \
     --compartment-id ${COMPARTMENT_ID} \
-  | jq -r -c '.data[] ["default-route-table-id"]'
+    | jq -r -c '.data[] ["default-route-table-id"]'
+)
+```
+
+<br/>
+
+```
+$ echo ${DEFAULT_ROUTE_TABLE_ID}
 ```
 
 <br/>
@@ -172,6 +193,10 @@ VM.Standard.E2.1.Micro дают бесплатно только в QBXU:EU-FRANK
 $ export SUBNET_DISPLAY_NAME=subnetlinuxtest
 $ export SUBNET_DNS_LABEL=subnetlinuxtest
 
+$ echo ${DEFAULT_SECURITY_LIST_ID}
+
+
+// Прописать руками <default_secrity_list_id>
 $ oci network subnet create \
     --vcn-id ${VCN_ID} \
     --compartment-id ${COMPARTMENT_ID} \
@@ -179,15 +204,42 @@ $ oci network subnet create \
     --display-name ${SUBNET_DISPLAY_NAME} \
     --dns-label ${SUBNET_DNS_LABEL} \
     --cidr-block "10.0.0.0/24" \
-    --security-list-ids '["<security_list_id>"]'
+    --security-list-ids '["<default_secrity_list_id>"]'
 ```
 
 <br/>
 
 ```
-$ export SUBNET_ID=ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaarqrgq3slrfd4k6d6nb2fudjpp3uwogxrzru3tidl6oi2mlnxbwqa
+$ oci network subnet list  \
+    --compartment-id ${COMPARTMENT_ID}
+```
 
-$ export ROUTE_TABLE_ID=ocid1.routetable.oc1.eu-frankfurt-1.aaaaaaaawhijpni6r35f26rshruartz2svegn47afxu4z4ntvy6qrj4treuq
+<br/>
+
+```
+$ export SUBNET_ID=$(
+    oci network subnet list \
+    --compartment-id ${COMPARTMENT_ID} \
+    | jq -r -c '.data[] ["id"]'
+)
+```
+
+<br/>
+
+```
+$ export ROUTE_TABLE_ID=$(
+    oci network subnet list \
+    --compartment-id ${COMPARTMENT_ID} \
+    | jq -r -c '.data[] ["route-table-id"]'
+)
+```
+
+<br/>
+
+```
+$ echo ${SUBNET_ID}
+
+$ echo ${ROUTE_TABLE_ID}
 ```
 
 <br/>
@@ -213,7 +265,17 @@ $ oci network internet-gateway create \
 <br/>
 
 ```
-$ export GATEWAY_ID=ocid1.internetgateway.oc1.eu-frankfurt-1.aaaaaaaajungy23o6xt7bpdsrdvg3aexegk2dgowthv3ojm476mpvhbaheba
+$ export GATEWAY_ID=$(
+    oci network internet-gateway list \
+    --compartment-id ${COMPARTMENT_ID} \
+    | jq -r -c '.data[] ["id"]'
+)
+```
+
+<br/>
+
+```
+$ echo ${GATEWAY_ID}
 ```
 
 <br/>
@@ -223,6 +285,7 @@ $ export GATEWAY_ID=ocid1.internetgateway.oc1.eu-frankfurt-1.aaaaaaaajungy23o6xt
 <br/>
 
 ```
+// Прописать руками <internet_gateway_id>
 $ oci network route-table update \
     --rt-id ${ROUTE_TABLE_ID} \
     --route-rules '[
@@ -248,6 +311,8 @@ $ oci compute image list --all \
 
 ```
 $ export DISPLAY_NAME="LinuxVMTest"
+
+// Выбрал Ubuntu 20
 $ export IMAGE_ID=ocid1.image.oc1.eu-frankfurt-1.aaaaaaaadqrjjiunkzkf62ggllx56s3p5775gonlifl74d4ri3bykztb4bha
 ```
 
@@ -260,6 +325,7 @@ $ ssh-keygen -t rsa
 <br/>
 
 ```
+// Заменить путь до публичного ключа
 $ oci compute instance launch \
     --availability-domain ${AVAILABILITY_DOMAIN} \
     --compartment-id ${COMPARTMENT_ID} \
@@ -273,7 +339,24 @@ $ oci compute instance launch \
 <br/>
 
 ```
-$ export INSTANCE_ID=ocid1.instance.oc1.eu-frankfurt-1.antheljtljudzkacezkneuv5a5k5gftp6hgbepdmwlaz3snq4fh73c65kuiq
+$ oci compute instance list \
+    --compartment-id ${COMPARTMENT_ID}
+```
+
+<br/>
+
+```
+$ export INSTANCE_ID=$(
+    oci compute instance list \
+    --compartment-id ${COMPARTMENT_ID} \
+    | jq -r -c '.data[] ["id"]'
+)
+```
+
+<br/>
+
+```
+$ echo ${INSTANCE_ID}
 ```
 
 <br/>
@@ -286,7 +369,17 @@ $ oci compute instance list-vnics \
 <br/>
 
 ```
-$ export PUBLIC_IP=<PUBLIC_IP>
+$ export PUBLIC_IP=$(
+    oci compute instance list-vnics \
+    --instance-id ${INSTANCE_ID} \
+    | jq -r -c '.data[] ["public-ip"]'
+)
+```
+
+<br/>
+
+```
+$ echo ${PUBLIC_IP}
 ```
 
 <br/>
@@ -295,9 +388,14 @@ $ export PUBLIC_IP=<PUBLIC_IP>
 $ ssh ubuntu@${PUBLIC_IP}
 
 
-
 // Если не ubuntu
 $ ssh opc@${PUBLIC_IP}
+```
+
+<br/>
+
+```
+$ sudo apt update -y && sudo apt upgrade -y
 ```
 
 <br/>
@@ -305,11 +403,3 @@ $ ssh opc@${PUBLIC_IP}
 **См. Подробнее:**
 
 https://git.ir/pluralsight-provisioning-virtual-machines-on-oracle-compute-cloud/
-
-<br/>
-
-### Доступ к облаку Oracle по http
-
-```
-$ python -m http.server 8000
-```
