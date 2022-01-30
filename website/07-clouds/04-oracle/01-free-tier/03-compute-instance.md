@@ -44,8 +44,8 @@ $ oci iam compartment list
 
 ```
 // delete compartment-id
-// $ oci iam compartment delete \
-    --compartment-id ocid1.compartment.oc1..aaaaaaaar6csjw3wumyafzfhix23dwgj4mc2iesblkxzqzod45yqrosu7fhq
+// $ oci iam compartment delete --force \
+    --compartment-id ocid1.compartment.oc1..aaaaaaaaxary2whptgduzl3m3uqu6p2ci4wpwvty7ow2qrh6xejvv5sb4xaa
 ```
 
 <!-- <br/>
@@ -244,7 +244,7 @@ $ echo ${ROUTE_TABLE_ID}
 
 <br/>
 
-### Craete Network Internet Gateway
+### Create Network Internet Gateway
 
 <br/>
 
@@ -332,7 +332,7 @@ $ oci compute instance launch \
     --shape "VM.Standard.E2.1.Micro" \
     --display-name ${DISPLAY_NAME} \
     --image-id ${IMAGE_ID} \
-    --ssh-authorized-keys-file "/home/username/.ssh/id_rsa.pub" \
+    --ssh-authorized-keys-file ${HOME}/.ssh/id_rsa.pub \
     --subnet-id ${SUBNET_ID}
 ```
 
@@ -351,6 +351,14 @@ $ export INSTANCE_ID=$(
     --compartment-id ${COMPARTMENT_ID} \
     | jq -r -c '.data[] ["id"]'
 )
+```
+
+<br/>
+
+```
+// DELETE
+// $ oci compute instance terminate \
+//    --instance-id ${INSTANCE_ID}
 ```
 
 <br/>
@@ -403,3 +411,9 @@ $ sudo apt update -y && sudo apt upgrade -y
 **См. Подробнее:**
 
 https://git.ir/pluralsight-provisioning-virtual-machines-on-oracle-compute-cloud/
+
+<br/>
+
+```
+$ oci limits quota list --compartment-id ocid1.compartment.oc1..aaaaaaaaoujbluer6x6sjjtmzzpvkq4reidzyuolihmfsbie5b6tvp35crpq
+```
