@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Deploy Clouds AWS
+title: Clouds Amazon
 description: Deploy Clouds, AWS
 keywords: Deploy, Clouds, AWS
 permalink: /clouds/aws/
 ---
 
-# Deploy Clouds AWS
+# Clouds Amazon (AWS)
 
 <br/>
 

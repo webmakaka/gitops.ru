@@ -30,7 +30,7 @@ permalink: /clouds/
 
 ### [Amazon AWS](/clouds/aws/)
 
-### [Google Clouds]
+### [Google Clouds](/clouds/google/)
 
 ### [Microsoft Azure]
 
