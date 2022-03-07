@@ -132,9 +132,9 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 <br/>
 
-[Docker / Kubernetes](/containers/)
+[Docker / Kubernetes](/tools/containers/)
 
-[CI/CD](/ci-cd/)
+[CI/CD](/tools/ci-cd/)
 
 [Deploy](/deploy/)
 
