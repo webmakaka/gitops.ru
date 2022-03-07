@@ -25,8 +25,16 @@ permalink: /
 
 ### Нужно изучить
 
+**[O’REILLY]GitOps and Kubernetes video edition [2021, ENG]**
+
 **How to deploy Vault for Kubernetes in 2022 and inject secrets**  
 https://www.youtube.com/watch?v=2Owo4Ioo9tQ
+
+**What is SRE | Tasks and Responsibilities of an SRE | SRE vs DevOps**  
+https://www.youtube.com/watch?v=OnK4IKgLl24
+
+**GitOps with GitHub Actions & Flux with Kingdon Barrett**
+https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
