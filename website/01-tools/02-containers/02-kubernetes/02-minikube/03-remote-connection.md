@@ -155,4 +155,4 @@ $ kubectl cluster-info
 
 **[Пример с драйвером kvm](https://www.zepworks.com/posts/access-minikube-remotely-kvm/)**
 
-**[Пример с драйвером virtualbox](/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/)**
+**[Пример с драйвером virtualbox](/tools/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/)**

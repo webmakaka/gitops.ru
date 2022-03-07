@@ -166,7 +166,7 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 
 ### Идеальная CI-CD на базе GitLab, Docker, Kubernetes для современных javascript проектов
 
-[Здесь](/ci-cd/gitlab/kubernetes/)
+[Здесь](/tools/ci-cd/gitlab/kubernetes/)
 
 <br/>
 

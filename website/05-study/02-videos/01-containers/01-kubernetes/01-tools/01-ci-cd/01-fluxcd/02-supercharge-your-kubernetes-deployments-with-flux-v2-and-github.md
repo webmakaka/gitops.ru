@@ -62,11 +62,11 @@ https://github.com/gbaeke/realtimeapp-infra
 
 <br/>
 
-1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/)
+1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/containers/kubernetes/tools/kubectl/)
+2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
 3. Инсталляция fluxcd
 

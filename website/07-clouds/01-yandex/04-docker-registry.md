@@ -3,7 +3,7 @@ layout: page
 title: Yandex Clouds - Docker Registry
 description: Yandex Clouds - Docker Registry
 keywords: Deploy, Clouds, Yandex, Docker Registry
-permalink: /clouds/yandex/terraform/
+permalink: /clouds/yandex/docker-registry/
 ---
 
 # Yandex Clouds - Docker Registry
