@@ -18,7 +18,7 @@ permalink: /tools/ci-cd/jenkins/
 <br/>
 
     $ cd ~/projects/
-    $ mkdir -p ./tools/ci-cd/jenkins/
+    $ mkdir -p ./ci-cd/jenkins/
     $ cd ci-cd/jenkins/
 
     $ mkdir jenkins_home

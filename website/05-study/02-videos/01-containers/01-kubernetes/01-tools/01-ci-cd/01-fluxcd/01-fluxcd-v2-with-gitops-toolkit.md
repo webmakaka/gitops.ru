@@ -28,7 +28,7 @@ https://gist.github.com/vfarcic/0431989df4836eb82bdac0cc53c7f3d6
 
 <br/>
 
-### [Используется беслпатное облако Google](/containers/kubernetes/google-cloud-shell/)
+### [Используется беслпатное облако Google](/tools/containers/kubernetes/google-cloud-shell/)
 
 <br/>
 

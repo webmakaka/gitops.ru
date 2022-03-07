@@ -42,17 +42,17 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
 
 <br/>
 
-1. [Подключение к бесплатному облаку от Google](/containers/kubernetes/google-cloud-shell/)
+1. [Подключение к бесплатному облаку от Google](/tools/containers/kubernetes/google-cloud-shell/)
 
-1. Инсталляция [MiniKube](/containers/kubernetes/minikube/setup/)
+1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
-3. Инсталляция [helm](/containers/kubernetes/tools/helm/setup/)
+3. Инсталляция [Helm](/tools/containers/kubernetes/tools/helm/setup/)
 
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/containers/kubernetes/tools/helm/logging/)
+4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/helm/logging/)
 
 <br/>
 

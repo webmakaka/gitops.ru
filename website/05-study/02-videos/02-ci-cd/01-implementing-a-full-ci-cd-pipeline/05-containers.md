@@ -14,7 +14,7 @@ permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/containers/
 
 <br/>
 
-Устанавливаю <a href="/containers/docker/setup/ubuntu/">Docker</a> на хосте, на котором уже уснановлен Jenkis и на хост, где будет запускаться приложение.
+Устанавливаю <a href="/tools/containers/docker/setup/ubuntu/">Docker</a> на хосте, на котором уже уснановлен Jenkis и на хост, где будет запускаться приложение.
 
 <br/>
 
