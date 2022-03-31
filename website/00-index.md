@@ -25,7 +25,10 @@ permalink: /
 
 ### Нужно изучить
 
-**[O’REILLY]GitOps and Kubernetes video edition [2021, ENG]**
+**GitOps (& Flux) for Helm Users with Scott Rigby**
+https://www.youtube.com/watch?v=sQTkLT-V6sg
+
+**[O’REILLY] GitOps and Kubernetes video edition [2021, ENG]**
 
 **How to deploy Vault for Kubernetes in 2022 and inject secrets**  
 https://www.youtube.com/watch?v=2Owo4Ioo9tQ
@@ -50,7 +53,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 Обсуждаем в телеге здесь:
 
-https://t.me/otus_golang
+https://t.me/golang_edu
 
 <br/>
 

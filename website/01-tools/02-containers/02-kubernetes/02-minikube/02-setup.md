@@ -15,17 +15,16 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-17.02.2022
+08.03.2022
 
 <br/>
 
-**minikube** - подготовленная виртуальная машина или контейнер с мини kubernetes сервером.
-Вполне подойдет для изучения kubernetes, особенно на слабых компьютерах и ноутбуках.
+**minikube** - подготовленная виртуальная машина или контейнер с мини kubernetes сервером. Вполне подойдет для изучения kubernetes, особенно на слабых компьютерах и ноутбуках.
 
 <br/>
 
 ```shell
-// Узнать последнюю версию (v1.25.1):
+// Узнать последнюю версию (v1.25.2):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 // Установка
@@ -36,8 +35,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.24.0
-commit: 76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b
+minikube version: v1.25.2
+commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
 ```
 
 <br/>
@@ -65,12 +64,19 @@ commit: 76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b
 <br/>
 
 ```
+// v1.23.4
+$ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+```
+
+<br/>
+
+```
 $ export \
     PROFILE=${USER}-minikube \
     MEMORY=8192 \
     CPUS=4 \
     DRIVER=docker \
-    KUBERNETES_VERSION=v1.23.4
+    KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
 ```
 
 <br/>
@@ -120,11 +126,16 @@ $ kubectl config current-context
 <br/>
 
 ```
-$ minikube docker-env -p ${PROFILE}
+$ minikube docker-env --profile ${PROFILE}
+
+export ****
+
 $ eval $(minikube -p ${PROFILE} docker-env)
 ```
 
 <br/>
+
+### Подключиться к UI (Не нужно, но можно)
 
 ```
 // Подключиться к dashboard можно следующей командой
@@ -188,19 +199,6 @@ $ kubectl get events --sort-by=.metadata.creationTimestamp
 $ export KUBE_EDITOR="code -w"
 ```
 
-<br/>
-
-```
-$ minikube --profile ${PROFILE} docker-env
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.49.2:2376"
-export DOCKER_CERT_PATH="/google/minikube/.minikube/certs"
-export MINIKUBE_EXISTING_DOCKER_HOST="unix:///var/run/docker.sock"
-export MINIKUBE_ACTIVE_DOCKERD="a3333333-minikube"
-
-# To point your shell to minikube's docker-daemon, run:
-# eval $(minikube -p a3333333-minikube docker-env)
-```
 
 <br/>
 
@@ -217,9 +215,11 @@ $ minikube profile list
 
 <br/>
 
-**Дополнительно:**
+**Дополнительно:**  
 
+<!--
 https://github.com/burrsutter/9stepsawesome/
+-->
 
 <br/>
 
