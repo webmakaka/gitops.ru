@@ -15,6 +15,12 @@ permalink: /
 
 <br/>
 
+### Цели
+
+1. Изучить работу Harbot, в том числе с сертификатами.
+
+<br/>
+
 ### What is GitOps, How GitOps works and Why it's so useful
 
 <div align="center">

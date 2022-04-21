@@ -18,7 +18,6 @@ gh - консольная программа для работы с GitHub API �
 
 <br/>
 
-
 ```
 $ cd ~/tmp
 ```
@@ -118,7 +117,11 @@ $ ssh -T git@github.com
 
 ### Использовать несколько ключей для разных github аккаунтов
 
-    $ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git push
+<br/>
+
+```
+$ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git push
+```
 
 <br/>
 
