@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/google-cloud-shell/
 <br/>
 
 **Делаю:**  
-23.01.2022
+02.05.2022
 
 <br/>
 
@@ -30,7 +30,7 @@ permalink: /tools/containers/kubernetes/google-cloud-shell/
 
 <br/>
 
-#### Подключиться по http
+#### Подключиться по https
 
 https://shell.cloud.google.com/
 
@@ -42,18 +42,26 @@ https://shell.cloud.google.com/
 
 **Инсталлим google-cloud-sdk**
 
-https://cloud.google.com/sdk/docs/install
-
 <br/>
 
 ```
-$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-369.0.0-linux-x86_64.tar.gz
+$ cd ~/tmp
 
-unzip
+$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-383.0.1-linux-x86_64.tar.gz
+
+$ tar -zxvf google-cloud-cli-383.0.1-linux-x86_64.tar.gz
+
+$ cd google-cloud-sdk/
 
 $ ./install.sh
 
+$ source ~/.bashrc
 ```
+
+<br/>
+
+**Инструкция:**
+https://cloud.google.com/sdk/docs/install
 
 <br/>
 
@@ -68,7 +76,7 @@ $ gcloud cloud-shell ssh
 
 В веб консоли есть возможность открыть порт, но только для себя. Т.е. удаленные клиенты не смогут подключиться.
 
-В верху preview on port 8080
+Вверху preview on port 8080
 
 <br/>
 
@@ -98,6 +106,7 @@ $ ./ngrok http 8080
 <br/>
 
 ```
+// Пример
 $ kubectl --namespace logging port-forward deployment/kibana-kibana 8080:5601
 ```
 

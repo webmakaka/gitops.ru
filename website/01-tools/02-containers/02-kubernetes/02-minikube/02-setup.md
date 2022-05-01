@@ -50,7 +50,7 @@ commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
 
 <br/>
 
-### Запуск:
+### Запуск
 
 <br/>
 
@@ -64,7 +64,7 @@ commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
 <br/>
 
 ```
-// v1.23.4
+// v1.23.6
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -177,6 +177,8 @@ $ minikube --profile ${PROFILE} config view
 $ minikube --profile ${PROFILE} ssh
 ```
 
+<br/>
+
 Или еще вариант
 
 ```
@@ -199,7 +201,6 @@ $ kubectl get events --sort-by=.metadata.creationTimestamp
 $ export KUBE_EDITOR="code -w"
 ```
 
-
 <br/>
 
 ```
@@ -215,7 +216,7 @@ $ minikube profile list
 
 <br/>
 
-**Дополнительно:**  
+**Дополнительно:**
 
 <!--
 https://github.com/burrsutter/9stepsawesome/
