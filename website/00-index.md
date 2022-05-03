@@ -11,11 +11,11 @@ permalink: /
 ### Пару слов о сайте
 
 Здесь просто собираются записи, по автоматизации развертывания приложений. Если интересно, подключайтесь!
-Просто, очередная записная книжка. Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи, максимально удобный способ для этого выбран. Можно предлагать и обновлять то, что устарело.
+Просто, очередная записная книжка. Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи, максимально удобный способ для этого выбран - github. Можно предлагать и обновлять то, что устарело.
 
 <br/>
 
-### Цели
+### Цели на ближайшее время
 
 1. Изучить работу Harbot, в том числе с сертификатами.
 
@@ -31,7 +31,10 @@ permalink: /
 
 ### Нужно изучить
 
-**GitOps (& Flux) for Helm Users with Scott Rigby**
+**Kubernetes Security Best Practices you need to know | THE Guide for securing your K8s cluster!**  
+https://www.youtube.com/watch?v=oBf5lrmquYI
+
+**GitOps (& Flux) for Helm Users with Scott Rigby**  
 https://www.youtube.com/watch?v=sQTkLT-V6sg
 
 **[O’REILLY] GitOps and Kubernetes video edition [2021, ENG]**
@@ -42,32 +45,8 @@ https://www.youtube.com/watch?v=2Owo4Ioo9tQ
 **What is SRE | Tasks and Responsibilities of an SRE | SRE vs DevOps**  
 https://www.youtube.com/watch?v=OnK4IKgLl24
 
-**GitOps with GitHub Actions & Flux with Kingdon Barrett**
+**GitOps with GitHub Actions & Flux with Kingdon Barrett**  
 https://www.youtube.com/watch?v=cR2eCMbiZg4
-
-<br/>
-
-### [Предлагаю коллективно изучить видеокурс] [Bill Kennedy] Ultimate Service 3.0 [ENG, 2022]
-
-В этом обновленном курсе вы узнаете, как создавать сервисы продакшн уровня на Go, используя всю мощь Kubernetes. С самого начала курса вы будете программировать в паре со своим инструктором Биллом Кеннеди, поскольку он познакомит вас с философией проектирования, архитектурными решениями и передовыми практиками, применимыми к разработке готового к продакшену сервиса Go.
-
-С каждой новой функцией, добавляемой в сервис, вы узнаете, как развертывать среду Kubernetes, используемую для запуска сервиса, и управлять ним. На протяжении всего курса код, над которым выполняется работа, помещается в репозиторий для личного доступа и просмотра.
-
-Этот курс учит, как создавать сервисы продакшн уровня в Go, уделяя особое внимание инженерным решениям на макроуровне. С самого начала вы объедините программу с инструктором, пройдя через философию дизайна и руководящие принципы, используемые для разработки кода.
-
-<br/>
-
-Обсуждаем в телеге здесь:
-
-https://t.me/golang_edu
-
-<br/>
-
-### Running AWS Services In A Laptop Using LocalStack
-
-<div align="center">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/8hi9P1ffaQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 <br/>
 
@@ -84,22 +63,6 @@ https://t.me/golang_edu
 <br/>
 
 ### Предлагайте интересные материалы для коллективного разбора
-
-<br/>
-
-### Предлагаю покопать язык программирования rust
-
-И на основе изученных материалов, развернуть [приложение](https://github.com/webmakaka/k8s-rust-skaffold-demo) на языке rust в minikube на бесплатных облаках google - https://shell.cloud.google.com/
-
-С использованием skaffold, tekton и д.р.
-
-Есть книга на русском:
-
-[Book] Стив Клабник, Кэрол Никол | Программирование на Rust [RUS, 2021]
-
--   видео:
-
-https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bxVRw
 
 <br/>
 
@@ -164,12 +127,6 @@ https://www.youtube.com/watch?v=yNe9Xr35n4Q&list=PL8lUUBadSMNBNKMYJpUE830tBiN6bx
 Можно отправлять pull request's с исправлениями, добавлениями и замечаниями.
 
 [UPD.] Какая-то ерунда с плагинами Jenkins. Ошибка, которую не удалось победить. Т.е. с помощью Jenkis не удалось выполнять команды для работы с Kubernetes. И, вроде как, разработчики плагинов не особо спешат что-то поправить.
-
-<br/>
-
-### Простое приложение для тестов запуска в конейнерах
-
-[Здесь](https://github.com/webmakaka/cats-app)
 
 <br/>
 
