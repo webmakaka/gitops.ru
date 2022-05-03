@@ -37,6 +37,8 @@ $ tkn hub install task kubernetes-actions
 
 ### Adding an additional task
 
+<br/>
+
 Можно попробовать использовать task "docker build task".
 Но требуется обращение к Docker демону по сокету (или как-то так) и не работает во всех окружения.
 
@@ -318,15 +320,13 @@ https://github.com/<YOUR_USERNAME>/tekton-book-app/blob/main/server.js
 
 <br/>
 
-Меняем
-
 ```
 change: "here"
 ```
 
 <br/>
 
-Меняем
+Меняем на
 
 ```
 change: "the end"

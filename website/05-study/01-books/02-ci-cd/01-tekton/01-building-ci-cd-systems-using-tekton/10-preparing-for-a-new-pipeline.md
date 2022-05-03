@@ -82,6 +82,8 @@ $ npm start
 
 Подключаемся еще 1 терминалом
 
+<br/>
+
 ```
 $ gcloud cloud-shell ssh
 ```

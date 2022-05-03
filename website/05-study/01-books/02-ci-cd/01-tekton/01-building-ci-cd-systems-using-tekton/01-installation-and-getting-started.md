@@ -17,18 +17,11 @@ permalink: /study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/install
 
 ### Подключение к бесплатному облаку от Google
 
-https://shell.cloud.google.com/
-
-<br/>
-
-**Инсталлим google-cloud-sdk**
-
-https://cloud.google.com/sdk/docs/install
+Описание [здесь](/tools/containers/kubernetes/google-cloud-shell/)
 
 <br/>
 
 ```
-$ gcloud auth login
 $ gcloud cloud-shell ssh
 ```
 
@@ -96,7 +89,7 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeli
 
 <br/>
 
-#### Добавление Tekton Dashboard в MiniKube
+#### Добавление Tekton Dashboard в MiniKube (Если нужно)
 
 <br/>
 

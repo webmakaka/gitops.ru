@@ -10,6 +10,10 @@ permalink: /clouds/oracle/free-tier/info/
 
 <br/>
 
+**UPD. Мне забанили, т.к. я гражданин РФ, жувущий на территории РФ**
+
+<br/>
+
 Oracle дает 4 бесплатных облака навсегда.
 
 Зарегать можно здесь https://www.oracle.com/cloud/free/

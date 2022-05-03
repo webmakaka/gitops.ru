@@ -55,6 +55,8 @@ $ tkn pipeline start something-pushed --showlog
 
 Просто будет выводить сообщение в консоль.
 
+<br/>
+
 ```
 ? Value for param `repository` of type `string`? myrepo
 ```
@@ -239,6 +241,8 @@ $ ./ngrok http 8080
 
 ### Configuring your GitHub repository
 
+<br/>
+
 Github -> MyProject -> Settings -> Webhooks -> Add webhook
 
 <br/>
@@ -266,6 +270,8 @@ Which events would you like to trigger this webhook?
 <br/>
 
 Подключаемся еще 1 терминалом
+
+<br/>
 
 ```
 $ gcloud cloud-shell ssh
