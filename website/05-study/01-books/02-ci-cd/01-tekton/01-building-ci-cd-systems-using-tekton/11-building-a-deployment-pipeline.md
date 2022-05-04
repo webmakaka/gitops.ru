@@ -10,6 +10,15 @@ permalink: /study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/buildin
 
 <br/>
 
+**Делаю:**  
+04.05.2022
+
+<br/>
+
+**Нужно обновить версии v1alpha1!**
+
+<br/>
+
 Let's think about what operations are needed every time you perform a commit on your source code:
 
 <br/>
@@ -48,6 +57,9 @@ https://buildah.io/
 
 <br/>
 
+**Вернуть, если не будет работать!**  
+image: quay.io/buildah/stable:v1.18.0
+
 ```yaml
 $ cat << 'EOF' | kubectl apply -f -
 apiVersion: tekton.dev/v1beta1
@@ -63,7 +75,7 @@ spec:
     - name: source
   steps:
     - name: build-image
-      image: quay.io/buildah/stable:v1.18.0
+      image: quay.io/buildah/stable:v1.23.3
       securityContext:
         privileged: true
       script: |
@@ -180,19 +192,19 @@ EOF
 <br/>
 
 ```
-$ export TEKTON_SECRET=$(head -c 24 /dev/random | base64)
-$ echo ${TEKTON_SECRET}
-$ kubectl create secret generic git-secret --from-literal=secretToken=${TEKTON_SECRET}
+$ export TEKTON_SECRET_TOKEN=$(head -c 24 /dev/random | base64)
+$ echo ${TEKTON_SECRET_TOKEN}
+$ kubectl create secret generic git-secret --from-literal=secretToken=${TEKTON_SECRET_TOKEN}
 ```
 
 <br/>
 
-**Нужно не забыть заменить <YOUR_USERNAME> и <YOUR_PASSWORD> на свои.**
+**Нужно не забыть заменить <DOCKER_PASSWORD> на свой.**
 
 <br/>
 
 ```yaml
-$ cat << 'EOF' | kubectl apply -f -
+$ cat << 'EOF' | envsubst | kubectl apply -f -
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
@@ -224,11 +236,11 @@ spec:
         - name: deployment-name
           value: tekton-deployment
         - name: image
-          value: <YOUR_USERNAME>/tekton-lab-app
+          value: ${DOCKER_USERNAME}/tekton-lab-app
         - name: docker-username
-          value: <YOUR_USERNAME>
+          value: ${DOCKER_USERNAME}
         - name: docker-password
-          value: <YOUR_PASSWORD>
+          value: <DOCKER_PASSWORD>
       workspaces:
         - name: source
           volumeClaimTemplate:
@@ -269,11 +281,8 @@ $ kubectl port-forward svc/el-listener 8080
 
 <br/>
 
-Подключаемся еще 1 терминалом
-
-<br/>
-
 ```
+// Подключаемся еще 1 терминалом
 $ gcloud cloud-shell ssh
 ```
 
@@ -286,13 +295,13 @@ $ ./ngrok http 8080
 
 <br/>
 
-Github -> MyProject -> Settings -> Webhooks -> Add webhook.
+**Github -> MyProject -> Settings -> Webhooks -> Add webhook**
 
 <br/>
 
 • Payload URL: This is your ngrok URL.
 • Content type: application/json.
-• Secret: Use the secret token you created earlier. You can view your token with the echo $TEKTON_SECRET_TOKEN command.
+• Secret: Use the secret token you created earlier. You can view your token with the echo ${TEKTON_SECRET_TOKEN} command.
 
 <br/>
 
@@ -306,11 +315,8 @@ Which events would you like to trigger this webhook?
 
 <br/>
 
-Подключаемся еще 1 терминалом
-
-<br/>
-
 ```
+// Подключаемся еще 1 терминалом
 $ gcloud cloud-shell ssh
 ```
 
@@ -337,7 +343,13 @@ change: "the end"
 ```
 $ tkn pipelineruns ls
 NAME                  STARTED         DURATION    STATUS
-tekton-deploy-qhpcp   4 minutes ago   2 minutes   Succeeded
+tekton-deploy-zzvxv   4 minutes ago   4 minutes   Succeeded
+```
+
+<br/>
+
+```
+$ tkn pipelinerun logs tekton-deploy-zzvxv
 ```
 
 <br/>
@@ -354,4 +366,19 @@ $ curl $(minikube --profile ${PROFILE} ip)
 
 ```
 {"message":"Hello","change":"the end"}
+```
+
+<br/>
+
+```
+$ kubectl get pods
+NAME                                 READY   STATUS      RESTARTS   AGE
+el-listener-65c9dd676b-2zzkt         1/1     Running     0          41m
+tekton-deploy-zzvxv-build-push-pod   0/1     Completed   0          28m
+tekton-deploy-zzvxv-clone-pod        0/1     Completed   0          29m
+tekton-deploy-zzvxv-deploy-pod       0/1     Completed   0          26m
+tekton-deploy-zzvxv-install-pod      0/1     Completed   0          29m
+tekton-deploy-zzvxv-lint-pod         0/1     Completed   0          28m
+tekton-deploy-zzvxv-test-pod         0/1     Completed   0          28m
+tekton-deployment-77b749c5dc-gzwwl   1/1     Running     0          25m
 ```

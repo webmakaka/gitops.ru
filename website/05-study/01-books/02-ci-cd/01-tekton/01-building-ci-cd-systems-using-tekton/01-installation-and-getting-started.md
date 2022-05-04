@@ -40,6 +40,7 @@ $ gcloud cloud-shell ssh
 <br/>
 
 ```
+$ mkdir ~/tmp
 $ cd ~/tmp/
 ```
 
@@ -74,7 +75,7 @@ $ ./tekton-setup.sh
 
 ```
 $ tkn version
-Client version: 0.21.0
+Client version: 0.23.1
 ```
 
 <br/>

@@ -199,9 +199,8 @@ $ kubectl port-forward svc/el-listener 8080
 
 <br/>
 
-Подключаемся еще 1 терминалом
-
 ```
+// Подключаемся еще 1 терминалом
 $ gcloud cloud-shell ssh
 ```
 
@@ -249,7 +248,7 @@ Github -> MyProject -> Settings -> Webhooks -> Add webhook
 
 • Payload URL: This is your ngrok URL.
 • Content type: application/json.
-• Secret: Use the secret token you created earlier. You can view your token with the echo $TEKTON_SECRET_TOKEN command.
+• Secret: Use the secret token you created earlier. You can view your token with the echo ${TEKTON_SECRET_TOKEN} command.
 
 <br/>
 
@@ -269,11 +268,8 @@ Which events would you like to trigger this webhook?
 
 <br/>
 
-Подключаемся еще 1 терминалом
-
-<br/>
-
 ```
+// Подключаемся еще 1 терминалом
 $ gcloud cloud-shell ssh
 ```
 

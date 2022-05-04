@@ -22,6 +22,8 @@ permalink: /study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securin
 $ vi ~/tmp/task.yaml
 ```
 
+<br/>
+
 ```yaml
 apiVersion: tekton.dev/v1beta1
 kind: Task

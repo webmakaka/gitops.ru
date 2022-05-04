@@ -8,7 +8,26 @@ permalink: /study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/prepari
 
 # Chapter 12. Preparing for a New Pipeline
 
-Поднимаем новый minikube
+<br/>
+
+**Делаю:**  
+04.05.2022
+
+<br/>
+
+Ничего интересного. Здесь просто запускаем приложение без использования Tekton. Просто собираем в контейнере и запускаем в kubernetes.
+
+<br/>
+
+```
+$ gcloud cloud-shell ssh
+```
+
+<br/>
+
+[Поднимаем новый minikube](/tools/containers/kubernetes/minikube/setup/)
+
+<br/>
 
 Настраиваем для работы.
 
@@ -38,9 +57,9 @@ $ kubectl create clusterrolebinding \
 
 ```
 $ tkn version
-Client version: 0.21.0
-Pipeline version: v0.28.1
-Triggers version: v0.16.0
+Client version: 0.23.1
+Pipeline version: v0.35.0
+Triggers version: v0.19.1
 ```
 
 <br/>
@@ -53,7 +72,7 @@ https://github.com/PacktPublishing/tekton-book-app
 
 <br/>
 
-Форкаем.
+**Форкаем**
 
 <br/>
 
@@ -80,11 +99,8 @@ $ npm start
 
 <br/>
 
-Подключаемся еще 1 терминалом
-
-<br/>
-
 ```
+// Подключаемся еще 1 терминалом
 $ gcloud cloud-shell ssh
 ```
 
@@ -99,6 +115,7 @@ $ curl localhost:3000/substract/10/2
 <br/>
 
 ```
+$ cd ~/tmp/tekton-book-app/
 $ npm run lint
 $ npm run test
 ```
@@ -127,7 +144,7 @@ $ docker push ${DOCKER_USERNAME}/tekton-lab-app
 <br/>
 
 ```yaml
-$ cat << 'EOF' | kubectl apply -f -
+$ cat << 'EOF' | envsubst | kubectl apply -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -143,7 +160,7 @@ spec:
     spec:
       containers:
       - name: tekton-pod
-        image: <YOUR_USERNAME>/tekton-lab-app
+        image: ${DOCKER_USERNAME}/tekton-lab-app
         ports:
         - containerPort: 3000
 ---
