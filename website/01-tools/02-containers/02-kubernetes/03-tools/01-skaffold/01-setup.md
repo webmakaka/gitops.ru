@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/scaffold/
 # Инсталляция scaffold в ubuntu 20.04
 
 Делаю:  
-31.12.2021
+05.05.2022
 
 <br/>
 
@@ -25,7 +25,7 @@ $ sudo mv skaffold /usr/local/bin
 $ chmod +x /usr/local/bin/skaffold
 
 $ skaffold version
-v1.35.1
+v1.38.0
 ```
 
 <br/>
@@ -50,11 +50,7 @@ $ cat ~/.skaffold/config
 
 ```
 $ export \
-    PROFILE=${USER}-minikube \
-    MEMORY=8192 \
-    CPUS=4 \
-    DRIVER=docker \
-    KUBERNETES_VERSION=v1.23.1
+    PROFILE=${USER}-minikube
 ```
 
 <br/>
@@ -86,5 +82,3 @@ https://skaffold.dev/docs/environment/local-cluster/
 $ skaffold config set --global insecure-registries localhost:5000
 $ cat ~/.skaffold/config
 ```
-
-Можно посмотреть работающий вариант в доке по инсталляции.

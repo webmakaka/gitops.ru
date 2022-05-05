@@ -57,7 +57,7 @@ $ echo ${PROFILE}
 
 ```
 $ export \
-  PROFILE=marley-minikube
+    PROFILE=${USER}-minikube
 ```
 
 <br/>

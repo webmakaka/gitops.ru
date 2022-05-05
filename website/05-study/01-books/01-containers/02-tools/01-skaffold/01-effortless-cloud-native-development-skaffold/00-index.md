@@ -14,8 +14,14 @@ English | 2021 | ISBN: 978-1801077118 | 272 Pages | PDF, EPUB | 20 MB
 
 <br/>
 
+**Не рекомендую тратить время на книгу! По неподтвержденным данным ее писал очередной индус-#$%^&\*б. Он и с конфигами накосячил, забыв выложить нужные файлы и image, которые используются в примерах и были расположены в облаках google, уже удалил.**
+
+Впрочем простой пример, с развертыванием Spring Boot приложения в kubernetes с использованием skaffold работает. А другие варианты, наверное, при желании, можно докрутить.
+
+<br/>
+
 Делаю:  
-19.10.2021
+05.05.2022
 
 <br/>
 
@@ -61,47 +67,3 @@ http://www.packtpub.com/sites/default/files/downloads/9781801078214_ColorImages.
     Using Skaffold
 -   Chapter 9. Creating a Production-Ready CI/CD Pipeline with Skaffold
 -   Chapter 10. Exploring Skaffold Alternatives, Best Practices, and Pitfalls
-
-<br/>
-
-### Chapter 7
-
-<br/>
-
-```
-$ cd ~/tmp/Effortless-Cloud-Native-App-Development-Using-Skaffold/Chapter07/
-$ ./mvnw package
-$ skaffold dev
-```
-
-<br/>
-
-```
-$ skaffold dev
-Listing files to watch...
- - breathe
-Generating tags...
- - breathe -> breathe:4c4f2c8-dirty
-Checking cache...
- - breathe: Found Locally
-Tags used in deployment:
- - breathe -> breathe:dfadbcd7482c04d0eda01131ebb1b2e32132d8b3256aae76b63bef1c17545eb8
-Starting deploy...
- - service/scanner created
- - deployment.apps/scanner created
- - ingress.networking.k8s.io/scanner created
-Waiting for deployments to stabilize...
- - deployment/scanner: creating container scanner
-    - pod/scanner-57869fc7cb-2sd97: creating container scanner
-    - pod/scanner-57869fc7cb-l5jgx: container scanner is waiting to start: a3333333/scanner:0.0.1-SNAPSHOT can't be pulled
- - deployment/scanner failed. Error: creating container scanner.
-Cleaning up...
- - service "scanner" deleted
- - deployment.apps "scanner" deleted
- - ingress.networking.k8s.io "scanner" deleted
-1/1 deployment(s) failed
-```
-
-<br/>
-
-Из коробки не работает. Плагины для IDE не интересуют. УГ.

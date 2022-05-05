@@ -17,18 +17,11 @@ permalink: /study/books/containers/kubernetes/tools/skaffold/setup/
 
 ### Подключение к бесплатному облаку от Google
 
-https://shell.cloud.google.com/
-
-<br/>
-
-**Инсталлим google-cloud-sdk**
-
-https://cloud.google.com/sdk/docs/install
+Описание [здесь](/tools/containers/kubernetes/google-cloud-shell/)
 
 <br/>
 
 ```
-$ gcloud auth login
 $ gcloud cloud-shell ssh
 ```
 
@@ -48,7 +41,7 @@ $ gcloud cloud-shell ssh
 
 ```
 $ java -version
-java version "17.0.1" 2021-10-19 LTS
+java version "17.0.3.1" 2022-04-22 LTS
 ```
 
 <br/>

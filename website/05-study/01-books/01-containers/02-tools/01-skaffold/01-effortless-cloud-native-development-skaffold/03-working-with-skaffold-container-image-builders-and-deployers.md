@@ -58,12 +58,13 @@ $ echo ${PROFILE}
 
 ```
 $ export \
-  PROFILE=marley-minikube
+    PROFILE=${USER}-minikube
 ```
 
 <br/>
 
 ```
+// Перестало отображаться в новых версиях
 $ minikube --profile ${PROFILE} service reactive-web-app
 |-----------|------------------|-------------|---------------------------|
 | NAMESPACE |       NAME       | TARGET PORT |            URL            |
@@ -72,12 +73,17 @@ $ minikube --profile ${PROFILE} service reactive-web-app
 |-----------|------------------|-------------|---------------------------|
 🎉  Opening service default/reactive-web-app in default browser...
 👉  http://192.168.49.2:32585
+
+
+
+// Но можно
+$ minikube --profile ${PROFILE} service --all
 ```
 
 <br/>
 
 ```
-$ curl -X GET "http://192.168.49.2:32585/employee" \
+$ curl -X GET "http://192.168.49.2:32538/employee" \
   | jq
 ```
 
@@ -124,7 +130,7 @@ $ skaffold delete
 
 <br/>
 
-### Kustomize
+### Jib and Helm
 
 <br/>
 
@@ -150,7 +156,7 @@ $ vi pom.xml
 
 <br/>
 
-```
+```xml
 <groupId>com.google.cloud.tools</groupId>
 <artifactId>jib-maven-plugin</artifactId>
 <version>3.1.4</version>
@@ -164,13 +170,57 @@ https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#quickst
 
 <br/>
 
+Helm установлен
+
+<br/>
+
 ```
-$ skaffold dev
+$ skaffold run --profile jibWithHelm
 ```
 
 <br/>
 
-Команды из примера выше для подключения работают!
+```
+Generating tags...
+ - gcr.io/basic-curve-316617/reactive-web-app-helm -> gcr.io/basic-curve-316617/reactive-web-app-helm:4c4f2c8-dirty
+Checking cache...
+ - gcr.io/basic-curve-316617/reactive-web-app-helm: Found Locally
+Starting test...
+Tags used in deployment:
+ - gcr.io/basic-curve-316617/reactive-web-app-helm -> gcr.io/basic-curve-316617/reactive-web-app-helm:7b7f64704771899fb746b73432c1b2cca9d5cc2ed818246763847847b4a87122
+Starting deploy...
+Error: UPGRADE FAILED: YAML parse error on reactive-web-app-helm/templates/deployment.yaml: error converting YAML to JSON: yaml: line 5: did not find expected node content
+deploying "reactive-web-app-helm": install: exit status 1
+```
+
+<br/>
+
+```
+$ vi reactive-web-app-helm/templates/deployment.yaml
+```
+
+<br/>
+
+Похоже индус забыл выложить файл с нужными параметрами. Не сложно поправить, но пока лень.
+
+Думаю, можно использовать вот это
+https://github.com/yrashish/Effortless-Cloud-Native-Apps-Development-using-Skaffold/blob/main/Chapter06/k8s/manifest.yaml
+
+Но пока тоже не работает. Имиджи, что в конфигах не удается скачать. "Project not found or deleted".
+
+<br/>
+
+Fail!
+
+<br/>
+
+### Kustomize
+
+<br/>
+
+```
+$ skaffold dev
+```
 
 <br/>
 
@@ -189,34 +239,6 @@ $ skaffold delete
 
 ```
 $ skaffold run --profile=kustomizeDev
-```
-
-<br/>
-
-Fail!
-
-<br/>
-
-### Helm
-
-<br/>
-
-Установил Helm
-
-<br/>
-
-```
-$ skaffold run --profile=jibWithHelm
-Generating tags...
- - gcr.io/basic-curve-316617/reactive-web-app-helm -> gcr.io/basic-curve-316617/reactive-web-app-helm:4c4f2c8-dirty
-Checking cache...
- - gcr.io/basic-curve-316617/reactive-web-app-helm: Found Locally
-Starting test...
-Tags used in deployment:
- - gcr.io/basic-curve-316617/reactive-web-app-helm -> gcr.io/basic-curve-316617/reactive-web-app-helm:7b7f64704771899fb746b73432c1b2cca9d5cc2ed818246763847847b4a87122
-Starting deploy...
-Error: UPGRADE FAILED: YAML parse error on reactive-web-app-helm/templates/deployment.yaml: error converting YAML to JSON: yaml: line 5: did not find expected node content
-deploying "reactive-web-app-helm": install: exit status 1
 ```
 
 <br/>
