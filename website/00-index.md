@@ -35,6 +35,12 @@ permalink: /
 
 ### Нужно изучить
 
+**How to learn Kubernetes in 2022**  
+https://www.youtube.com/watch?v=JeAHlTYB1Qk
+
+**Kubernetes Notifications, Troubleshooting, And Automation With Robusta**  
+https://www.youtube.com/watch?v=2P76WVVua8w
+
 **Kubernetes Security Best Practices you need to know | THE Guide for securing your K8s cluster!**  
 https://www.youtube.com/watch?v=oBf5lrmquYI
 
