@@ -23,6 +23,17 @@ permalink: /
 
 3. Сборка Java (Spring Boot) проекта с использованием tekton, skaffold, harbor
 
+
+<br/>
+
+### [TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
+
+**Надо надыбать и изучить!**
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/F7WMRXLUQRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <br/>
 
 ### What is GitOps, How GitOps works and Why it's so useful
