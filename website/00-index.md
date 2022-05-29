@@ -23,7 +23,6 @@ permalink: /
 
 3. Сборка Java (Spring Boot) проекта с использованием tekton, skaffold, harbor
 
-
 <br/>
 
 ### [TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
@@ -79,7 +78,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-Разбираемся [здесь](/study/videos/containers/kubernetes/tools/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+Разбираемся [здесь](/study/videos/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
 
 <br/>
 
@@ -125,9 +124,9 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Docker / Kubernetes](/tools/containers/)
+[Docker / Kubernetes](/containers/)
 
-[CI/CD](/tools/ci-cd/)
+[CI/CD](/ci-cd/)
 
 [Deploy](/deploy/)
 
@@ -153,7 +152,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 ### Идеальная CI-CD на базе GitLab, Docker, Kubernetes для современных javascript проектов
 
-[Здесь](/tools/ci-cd/gitlab/kubernetes/)
+[Здесь](/ci-cd/gitlab/kubernetes/)
 
 <br/>
 
