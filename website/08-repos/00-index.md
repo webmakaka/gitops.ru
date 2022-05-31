@@ -3,7 +3,7 @@ layout: page
 title: Dockerfile для сборки образа docker с использованием внутрненних репо
 description: Dockerfile для сборки образа docker с использованием внутрненних репо
 keywords: Repo, docker, nexus, pip
-permalink: /tools/repos/
+permalink: /repos/
 ---
 
 # Dockerfile для сборки образа docker с использованием внутрненних репо

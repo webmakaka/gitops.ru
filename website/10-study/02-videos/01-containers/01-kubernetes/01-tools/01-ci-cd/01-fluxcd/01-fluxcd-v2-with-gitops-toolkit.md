@@ -80,7 +80,7 @@ $ flux check
 
 <br/>
 
-4. [Инсталляция gh Linux и настройка работы с GitHub по SSH ключу](/tools/github/setup/)
+4. [Инсталляция gh Linux и настройка работы с GitHub по SSH ключу](/github/setup/)
 
 <br/>
 

@@ -3,7 +3,7 @@ layout: page
 title: Настройки git для работы с github
 description: Настройки git для работы с github
 keywords: Настройки git для работы с github
-permalink: /tools/github/setup/
+permalink: /github/setup/
 ---
 
 # Настройки git для работы с github
