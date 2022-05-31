@@ -130,8 +130,6 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 [CI/CD](/ci-cd/)
 
-[Deploy](/deploy/)
-
 [Tools](/tools/)
 
 <br/>
