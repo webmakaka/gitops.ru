@@ -130,8 +130,6 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 [CI/CD](/ci-cd/)
 
-[Tools](/tools/)
-
 <br/>
 
 ## [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
