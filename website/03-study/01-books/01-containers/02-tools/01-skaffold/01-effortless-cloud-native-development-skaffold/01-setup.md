@@ -3,7 +3,7 @@ layout: page
 title: Building CI/CD Systems Using Tekton - Подготовка стенда
 description: Building CI/CD Systems Using Tekton - Подготовка стенда
 keywords: books, ci-cd, tekton, Подготовка стенда
-permalink: /study/books/tools/containers/kubernetes/tools/skaffold/setup/
+permalink: /study/books/containers/kubernetes/tools/skaffold/setup/
 ---
 
 # Подготовка стенда

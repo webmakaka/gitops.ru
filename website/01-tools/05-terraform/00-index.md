@@ -43,7 +43,3 @@ $ terraform plan -out example.tfplan
 $ terraform apply
 $ teffaform apply example.tfplan
 ```
-
-<br/>
-
-### [[Webinar] Using Infrastructure as Code to Build Reproducible Systems with Terraform on DigitalOcean](//sysadm.ru/devops/tools/clouds/do/tools/terraform/)

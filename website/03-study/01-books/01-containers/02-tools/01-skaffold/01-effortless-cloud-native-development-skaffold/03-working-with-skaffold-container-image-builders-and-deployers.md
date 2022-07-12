@@ -3,7 +3,7 @@ layout: page
 title: Building CI/CD Systems Using Tekton - Working with Skaffold Container Image Builders and Deployers
 description: Building CI/CD Systems Using Tekton - Working with Skaffold Container Image Builders and Deployers
 keywords: books, ci-cd, tekton, Working with Skaffold Container Image Builders and Deployers
-permalink: /study/books/tools/containers/kubernetes/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/
+permalink: /study/books/containers/kubernetes/tools/skaffold/working-with-skaffold-container-image-builders-and-deployers/
 ---
 
 # Chapter 6. Working with Skaffold Container Image Builders and Deployers

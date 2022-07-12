@@ -16,7 +16,7 @@ permalink: /study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/continuous-int
 
 ### 15. Установка Jenkins
 
-Устанавливаю <a href="/ci-cd/jenkins/">Jenkins в ubuntu</a>
+Устанавливаю <a href="/tools/ci-cd/jenkins/">Jenkins в ubuntu</a>
 
 <br/>
 

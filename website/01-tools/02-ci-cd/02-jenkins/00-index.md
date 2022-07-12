@@ -3,7 +3,7 @@ layout: page
 title: Jenkins
 description: Jenkins
 keywords: ci-cd, jenkins
-permalink: /ci-cd/jenkins/
+permalink: /tools/ci-cd/jenkins/
 ---
 
 # Jenkins

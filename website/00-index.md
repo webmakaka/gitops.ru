@@ -112,7 +112,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/tools/containers/kubernetes/kubernetes-in-production-best-practices/)
+[Разбор](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
 
 <br/>
 
@@ -120,7 +120,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/tools/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
+[Разбор](/study/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
 
 <br/>
 
@@ -140,7 +140,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 [Docker / Kubernetes](/tools/containers/)
 
-[CI/CD](/ci-cd/)
+[CI/CD](/tools/ci-cd/jenkins/)
 
 <br/>
 

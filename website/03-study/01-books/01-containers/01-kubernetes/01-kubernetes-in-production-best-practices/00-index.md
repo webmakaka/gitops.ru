@@ -3,7 +3,7 @@ layout: page
 title: Kubernetes in Production Best Practices
 description: Kubernetes in Production Best Practices
 keywords: containers, Kubernetes in Production Best Practices
-permalink: /study/books/tools/containers/kubernetes/kubernetes-in-production-best-practices/
+permalink: /study/books/containers/kubernetes/kubernetes-in-production-best-practices/
 ---
 
 # [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
