@@ -13,15 +13,27 @@ permalink: /
 Здесь просто собираются записи, по автоматизации развертывания приложений. Если интересно, подключайтесь!
 Просто, очередная записная книжка. Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи, максимально удобный способ для этого выбран - github. Можно предлагать и обновлять то, что устарело.
 
-<br/>
+<!--
 
-### Цели на ближайшее время
+!Alertmanager
 
-1. Изучить работу harbor, в том числе с сертификатами.
 
-2. Опять покопать tekton.
+UseTech
 
-3. Сборка Java (Spring Boot) проекта с использованием tekton, skaffold, harbor
+Используемые технологии:
+
+Kubernetes, Helm, Docker, Istio
+Prometheus/Grafana/Alertmanager, Dynatrace
+ELK Opendistro
+Ansible/Terraform
+Python/Bash
+Github/Jenkins/Artifactory/Xray/SonarQube/Hashicorp Vault
+Jira/Confluence
+VMWare/Openstack/Yandex Cloud
+Nginx/Nginx+/Openresty
+IaC
+
+-->
 
 <br/>
 
@@ -80,7 +92,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-Разбираемся [здесь](/study/videos/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+Разбираемся [здесь](/study/videos/tools/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
 
 <br/>
 
@@ -92,7 +104,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/videos/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/study/videos/tools/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
@@ -100,7 +112,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
+[Разбор](/study/books/tools/containers/kubernetes/kubernetes-in-production-best-practices/)
 
 <br/>
 
@@ -108,7 +120,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
+[Разбор](/study/books/tools/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
 
 <br/>
 
@@ -126,7 +138,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Docker / Kubernetes](/containers/)
+[Docker / Kubernetes](/tools/containers/)
 
 [CI/CD](/ci-cd/)
 
@@ -150,7 +162,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 ### Идеальная CI-CD на базе GitLab, Docker, Kubernetes для современных javascript проектов
 
-[Здесь](/ci-cd/gitlab/kubernetes/)
+[Здесь](/samples/ci-cd/gitlab/kubernetes/)
 
 <br/>
 
