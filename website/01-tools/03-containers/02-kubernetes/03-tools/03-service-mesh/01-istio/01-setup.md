@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/service-mesh/istio/setup/
 <br/>
 
 Делаю:  
-08.11.2021
+17.07.2022
 
 <br/>
 
@@ -29,9 +29,16 @@ https://istio.io/docs/setup/getting-started/#download
 
 ### Устанавливаю istioctl на локальном хосте
 
+<br/>
+
 ```
 $ cd ~/tmp/
 $ export LATEST_VERSION=$(curl --silent "https://api.github.com/repos/istio/istio/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+
+$ echo ${LATEST_VERSION}
+
+// Если меньше 1.14.1
+$ export LATEST_VERSION=1.14.1
 
 $ curl -L https://istio.io/downloadIstio | sh - && chmod +x ./istio-${LATEST_VERSION}/bin/istioctl && sudo mv ./istio-${LATEST_VERSION}/bin/istioctl /usr/local/bin/
 ```
@@ -41,12 +48,74 @@ $ curl -L https://istio.io/downloadIstio | sh - && chmod +x ./istio-${LATEST_VER
 ```
 $ istioctl version
 no running Istio pods in "istio-system"
-1.11.4
+1.14.1
 ```
 
 <br/>
 
-### Запуск сервисов istio
+### Установка ресурсов istio на minikube
+
+```
+$ istioctl experimental precheck
+✔ No issues found when checking the cluster. Istio is safe to install or upgrade!
+```
+
+<br/>
+
+```
+// Install Istio using the demo profile
+$ istioctl install --skip-confirmation \
+  --set profile=demo \
+  --set meshConfig.accessLogFile=/dev/stdout \
+  --set meshConfig.accessLogEncoding=JSON
+```
+
+<br/>
+
+```
+$ kubectl -n istio-system wait --timeout=600s --for=condition=available deployment --all
+```
+
+<br/>
+
+```
+// install Kiali, Jaeger, Prometheus, and Grafana
+$ istio_version=$(istioctl version --short --remote=false)
+
+$ echo "Installing integrations for Istio v$istio_version"
+
+$ kubectl apply -n istio-system -f https://raw.githubusercontent.com/istio/istio/${istio_version}/samples/addons/kiali.yaml
+
+$ kubectl apply -n istio-system -f https://raw.githubusercontent.com/istio/istio/${istio_version}/samples/addons/jaeger.yaml
+
+$ kubectl apply -n istio-system -f https://raw.githubusercontent.com/istio/istio/${istio_version}/samples/addons/prometheus.yaml
+
+$ kubectl apply -n istio-system -f https://raw.githubusercontent.com/istio/istio/${istio_version}/samples/addons/grafana.yaml
+```
+
+<br/>
+
+```
+$ kubectl -n istio-system wait --timeout=600s --for=condition=available deployment --all
+```
+
+<br/>
+
+```
+$ kubectl -n istio-system get deploy
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+grafana                1/1     1            1           76s
+istio-egressgateway    1/1     1            1           5m7s
+istio-ingressgateway   1/1     1            1           5m7s
+istiod                 1/1     1            1           5m21s
+jaeger                 1/1     1            1           92s
+kiali                  1/1     1            1           99s
+prometheus             1/1     1            1           83s
+```
+
+<br/>
+
+### Запуск сервисов istio (Старый вариант)
 
 UPD. Оказазось istio уже есть среди предустановленных расширений на minikube, и можно просто активироваь.
 
@@ -132,6 +201,8 @@ istio-ingressgateway   LoadBalancer   10.106.144.8   192.168.49.20   15021:32220
 istiod                 ClusterIP      10.99.91.237   <none>          15010/TCP,15012/TCP,443/TCP,15014/TCP                                        3m45s
 ```
 
+<!--
+
 <br/>
 
 ### Дополнительные сервисы (Prometheus, Grafana, Kiali, Jaeger):
@@ -167,6 +238,8 @@ jaeger-5d44bc5c5d-4f4gl                1/1     Running   0          32s
 kiali-fd9f88575-tml7d                  1/1     Running   0          31s
 prometheus-77b49cb997-hs7nq            2/2     Running   0          31s
 ```
+
+-->
 
 <br/>
 

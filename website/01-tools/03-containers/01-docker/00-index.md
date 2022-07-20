@@ -13,3 +13,19 @@ permalink: /tools/containers/docker/
 ### Инсталляция Docker
 
 [Инсталляция Docker и Docker-Compose](/tools/containers/docker/setup/)
+
+<br/>
+
+### Удаление созданных Docker ресурсов
+
+<br/>
+
+```
+$ {
+    docker system prune -af
+    docker container prune -f
+    docker image prune -f
+    docker volume prune -f
+    docker network prune -f
+}
+```
