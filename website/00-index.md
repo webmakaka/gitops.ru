@@ -37,6 +37,19 @@ IaC
 
 <br/>
 
+### Нужно посмотреть
+
+// Introduction to Service monitors for beginners | Kubernetes monitoring  
+https://www.youtube.com/watch?v=_NtRkBipepg
+
+// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
+https://www.youtube.com/watch?v=_aqlanvWL-c
+
+// Поднимаем динамические стенды с помощью GitOps  
+https://www.youtube.com/watch?v=kAT4qAb-HVw
+
+<br/>
+
 ### [TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
 
 **Надо надыбать и изучить!**

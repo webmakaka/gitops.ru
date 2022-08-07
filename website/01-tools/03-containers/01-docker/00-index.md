@@ -16,7 +16,7 @@ permalink: /tools/containers/docker/
 
 <br/>
 
-### Удаление созданных Docker ресурсов
+### Удаление всех созданных ресурсов Docker
 
 <br/>
 
