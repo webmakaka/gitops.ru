@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-29.07.2022
+11.08.2022
 
 <br/>
 
@@ -24,7 +24,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 ```shell
-// Узнать последнюю версию (v1.25.2):
+// Узнать последнюю версию (v1.26.1):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 // Установка
@@ -35,8 +35,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.25.2
-commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
+minikube version: v1.26.1
+commit: 62e108c3dfdec8029a890ad6d8ef96b6461426dc
 ```
 
 <br/>
@@ -54,7 +54,7 @@ commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
 
 <br/>
 
-**vm-driver может быть из популярных:**
+**driver может быть из популярных:**
 
 - docker
 - kvm2
@@ -64,7 +64,6 @@ commit: 362d5fdc0a3dbee389b3d3f1034e8023e72bd3a7
 <br/>
 
 ```
-// Пока проблемы с новой версией
 // v1.24.3
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
@@ -72,14 +71,15 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 <br/>
 
 ```
-$ echo ${LATEST_KUBERNETES_VERSION=}
+$ echo ${LATEST_KUBERNETES_VERSION}
 v1.24.3
 ```
 
 <br/>
 
 ```
-$ LATEST_KUBERNETES_VERSION=v1.24.1
+// Если младше v1.24.3
+$ LATEST_KUBERNETES_VERSION=v1.24.3
 ```
 
 <br/>
@@ -87,21 +87,45 @@ $ LATEST_KUBERNETES_VERSION=v1.24.1
 ```
 $ export \
     PROFILE=${USER}-minikube \
-    MEMORY=8192 \
     CPUS=4 \
+    MEMORY=8192 \
+    HDD=20G \
     DRIVER=docker \
     KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
 ```
 
+<!--
+
+
+```
+$ export \
+    PROFILE=${USER}-minikube \
+    MEMORY=22528 \
+    CPUS=8 \
+    DRIVER=virtualbox \
+    KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
+```
+
+-->
+
 <br/>
+
+<!--
+
+--apiserver-ips=192.168.1.101
+
+
+ docker network create --driver=bridge --subnet=192.168.1.0/24 --gateway=192.168.1.1 minikube
+--network minikube
+-->
 
 ```
 $ {
     minikube --profile ${PROFILE} config set memory ${MEMORY}
     minikube --profile ${PROFILE} config set cpus ${CPUS}
-    minikube --profile ${PROFILE} config set disk-size 20g
+    minikube --profile ${PROFILE} config set disk-size ${HDD}
 
-    minikube --profile ${PROFILE} config set vm-driver ${DRIVER}
+    minikube --profile ${PROFILE} config set driver ${DRIVER}
 
     minikube --profile ${PROFILE} config set kubernetes-version ${KUBERNETES_VERSION}
     minikube start --profile ${PROFILE} --embed-certs
@@ -134,6 +158,7 @@ $ {
 <br/>
 
 ```
+// Получить текущий контекст
 $ kubectl config current-context
 ```
 
@@ -188,14 +213,19 @@ $ minikube --profile ${PROFILE} config view
 
 <br/>
 
+### Подключиться к minikube по ssh
+
+<br/>
+
 ```
-// Подключиться к minikube по ssh
 $ minikube --profile ${PROFILE} ssh
 ```
 
 <br/>
 
 Или еще вариант
+
+<br/>
 
 ```
 $ minikube --profile ${PROFILE} ip
@@ -204,6 +234,8 @@ $ ssh -i ~/.minikube/machines/${PROFILE}/id_rsa docker@${MINIKUBE_IP}
 ```
 
 <br/>
+
+### Остальное
 
 ```
 $ kubectl get events

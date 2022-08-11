@@ -11,18 +11,18 @@ permalink: /tools/containers/kubernetes/minikube/setup/remote-connection/
 <br/>
 
 **Делаю:**  
-04.10.2021
+11.08.2022
 
 <br/>
 
 ```
 $ export \
-  API_SERVER=192.168.0.11
+  API_SERVER=192.168.1.101
 ```
 
 <br/>
 
-где 192.168.0.11 - адрес хоста на котором будет запущен minikube.
+где 192.168.1.101 - адрес хоста на котором будет запущен minikube.
 
 <br/>
 
@@ -77,17 +77,21 @@ $ sudo cp nginx.conf nginx.conf.orig
 $ sudo vi nginx.conf
 ```
 
+<br/>
+
 Добавил блок
 
 ```
 stream {
   server {
-      listen 192.168.0.11:51999;
+      listen 192.168.1.101:51999;
       #TCP traffic will be forwarded to the specified server
       proxy_pass 192.168.49.2:8443;
   }
 }
 ```
+
+<br/>
 
 ```
 $ sudo nginx -t
@@ -104,7 +108,7 @@ server: https://192.168.49.2:8443
 меняю на
 
 ```
-server: https://192.168.0.11:51999
+server: https://192.168.1.101:51999
 ```
 
 <br/>
@@ -115,7 +119,7 @@ server: https://192.168.0.11:51999
 $ sudo ufw allow ssh
 $ sudo ufw enable
 
-$ sudo ufw allow from 192.168.0.11/24 to any port 51999
+$ sudo ufw allow from 192.168.1.101/24 to any port 51999
 
 $ sudo ufw status verbose
 ```
@@ -124,29 +128,35 @@ $ sudo ufw status verbose
 
 ### Проверка
 
-$ kubectl get pods
-Unable to connect to the server: x509: certificate is valid for 192.168.49.2, 10.96.0.1, 127.0.0.1, 10.0.0.1, not 192.168.0.11
-
-```
-$ kubectl cluster-info
-Kubernetes control plane is running at https://192.168.49.2:8443
-CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-```
-
-<br/>
-
-### Проверка на удаленном хосте
-
-<br/>
-
-```
-$ telnet 192.168.0.11 51999
-```
-
 <br/>
 
 ```
 $ kubectl cluster-info
+Kubernetes control plane is running at https://192.168.1.101:51999
+CoreDNS is running at https://192.168.1.101:51999/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+```
+
+<br/>
+
+### Проверка на хосте с которого буду выполнять команды
+
+<br/>
+
+```
+$ telnet 192.168.1.101 51999
+```
+
+<br/>
+
+Копирую ~/.kube/config с хоста с minikube на хост с которого буду выполнять команды.
+
+<br/>
+
+```
+$ kubectl get nodes
+NAME              STATUS   ROLES           AGE   VERSION
+marley-minikube   Ready    control-plane   24m   v1.24.3
 ```
 
 <br/>

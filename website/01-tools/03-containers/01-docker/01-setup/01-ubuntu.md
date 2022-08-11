@@ -9,7 +9,7 @@ permalink: /tools/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04
 
 Делаю:  
-07.03.2022
+11.08.2022
 
 <br/>
 
@@ -70,18 +70,20 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 20.10.12, build e91ed57
+Docker version 20.10.17, build 100c701
 
 $ docker-compose --version
-Docker Compose version v2.3.0
+Docker Compose version v2.9.0
 ```
 
 <br/>
 
 ### Предоставить пользователю права для работы с docker
 
-    // Добавить текущего пользоателя в группу для работы с docker
-    $ sudo usermod -aG docker ${USER}
+```
+// Добавить текущего пользоателя в группу для работы с docker
+$ sudo usermod -aG docker ${USER}
+```
 
 <br/>
 

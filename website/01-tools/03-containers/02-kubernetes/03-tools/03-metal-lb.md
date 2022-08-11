@@ -22,6 +22,8 @@ Metal LB позволит получить внешний IP в миникубе
 ```
 $ LATEST_VERSION=$(curl --silent "https://api.github.com/repos/metallb/metallb/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
+
+// v0.11.0
 $ echo ${LATEST_VERSION}
 ```
 
@@ -66,7 +68,7 @@ data:
 EOF
 ```
 
-<br/>
+<!-- <br/>
 
 ```
 $ export INGRESS_HOST=$(kubectl \
@@ -81,4 +83,4 @@ $ echo ${INGRESS_HOST}
 
 ```
 $ kubectl get pods --all-namespaces
-```
+``` -->

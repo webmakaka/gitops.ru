@@ -36,7 +36,7 @@ minikube version: v1.16.0
 
 ### Run minikube
 
-**Здесь используется драйвер vm-driver virtualbox**
+**Здесь используется драйвер driver virtualbox**
 
 Если использовать docker или kvm, можно посмотреть [здесь](/tools/containers/kubernetes/minikube/setup/remote-connection/)
 
@@ -47,8 +47,8 @@ $ {
     minikube --profile devops-app config set memory 8192
     minikube --profile devops-app config set cpus 4
 
-    minikube --profile devops-app config set vm-driver virtualbox
-    // minikube --profile devops-app config set vm-driver docker
+    minikube --profile devops-app config set driver virtualbox
+    // minikube --profile devops-app config set driver docker
 
     minikube --profile devops-app config set kubernetes-version v1.20.2
     minikube start --profile devops-app
@@ -57,17 +57,23 @@ $ {
 
 <br/>
 
-    // Enable ingress
-    $ minikube addons --profile devops-app enable ingress
+```
+// Enable ingress
+$ minikube addons --profile devops-app enable ingress
+```
 
 <br/>
 
-    $ minikube --profile devops-app ip
-    192.168.99.100
+```
+$ minikube --profile devops-app ip
+192.168.99.100
+```
 
 <br/>
 
-    $ sudo vi /etc/hosts
+```
+$ sudo vi /etc/hosts
+```
 
 <br/>
 
@@ -94,7 +100,7 @@ $ {
 
 ### Подготовка проекта
 
-    $ mkdir ~/projects/dev/devops/super-intensive && cd ~/projects/dev/devops/super-intensive
+    $ mkdir ~/projects/dev/devops/intensive && cd ~/projects/dev/devops/intensive
 
     $ git clone https://github.com/webmakaka/Packaging-Applications-with-Helm-for-Kubernetes .
 
@@ -108,13 +114,13 @@ $ {
 <br/>
 
 ```
-webmakaka/frontend:2.0  меняю на  webmakaka/devops-frontend:0.0.10
-webmakaka/backend:2.0 меняю на  webmakaka/devops-backend:0.0.10
+webmakaka/frontend:2.0 меняю на webmakaka/devops-frontend:0.0.10
+webmakaka/backend:2.0 меняю на webmakaka/devops-backend:0.0.10
 ```
 
 <br/>
 
-    $ cd .../projects/dev/devops/super-intensive/apps/v1/chart
+    $ cd .../projects/dev/devops/intensive/apps/v1/chart
 
     $ helm install myguestbook guestbook
 

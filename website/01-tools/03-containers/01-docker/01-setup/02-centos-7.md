@@ -8,17 +8,23 @@ permalink: /tools/containers/docker/setup/centos/7/
 
 # Инсталляция Docker в CentOS 7.3
 
+<br/>
+
 Устанавливаю с нуля: 21 ноября 2017  
 Добавляю исправления: 29 января 2018
 
 Похоже, что все опять поменялось. Я не успеваю менять инструкции по инсталляции. А все почему? Потому, что владельцы Docker похоже хотят заработать и начинают навязывать платную версию продукта.
 
-    # curl -fsSL https://get.docker.com/ | sh
-    # Executing docker install script, commit: 11aa13e
+<br/>
+
+```
+# curl -fsSL https://get.docker.com/ | sh
+# Executing docker install script, commit: 11aa13e
 
 
-      WARNING: ol is now only supported by Docker EE
-               Check XXXXXXXXX for information on Docker EE
+    WARNING: ol is now only supported by Docker EE
+            Check XXXXXXXXX for information on Docker EE
+```
 
 <br/>
 

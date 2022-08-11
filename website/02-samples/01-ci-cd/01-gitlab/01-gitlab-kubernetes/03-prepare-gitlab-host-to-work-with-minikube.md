@@ -10,17 +10,28 @@ permalink: /samples/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-min
 
 <br/>
 
-**[Upd: Есть мысль, что можно сделать проще с использованием nginx.](/tools/containers/kubernetes/minikube/setup/remote-connection/)**
+UPD. Запутался! Не смог повторить стустя какое-то время! (А, здесь драйвер используется vm-driver virtualbox. Это определенно все меняет!)
+
+<br/>
+
+**[Upd: Есть мысль, что можно сделать проще с использованием nginx](/tools/containers/kubernetes/minikube/setup/remote-connection/)**
 
 <br/>
 
 <!--
-
 $ minikube --profile devops-app start --apiserver-ips=192.168.0.5
+-->
+
+<!--
+
+    // root password: kubeadmin
+    $ scp 192.168.1.101:/home/marley/.kube/config ~/.kube/config
 
 -->
 
-### С хост машины c minikube
+<br/>
+
+### С машины где установлен и запущен minikube
 
 ```
 $ cd ~/.minikube/
@@ -48,7 +59,11 @@ ca.key	config	  logs		     proxy-client-ca.key
 
 ### В виртуальной машине с GitLab
 
+<!--
+
 В интернетах инструкции, в которых предлагают делать PORT FORWARD для 8443. У меня сам форвард не заработал.
+
+-->
 
 <br/>
 
@@ -82,14 +97,6 @@ users:
 
 <br/>
 
-```
-$ kubectl get nodes
-NAME         STATUS   ROLES                  AGE   VERSION
-devops-app   Ready    control-plane,master   84m   v1.20.2
-```
-
-<br/>
-
 Нужно заменить ссылки на сертификаты client-certificate и client-key на содержимое данных файлов. Для этого.
 
 <br/>
@@ -107,7 +114,7 @@ NAME         STATUS   ROLES                  AGE   VERSION
 devops-app   Ready    control-plane,master   84m   v1.20.2
 ```
 
-OK
+OK!
 
 <br/>
 
