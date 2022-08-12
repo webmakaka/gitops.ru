@@ -45,6 +45,8 @@ http://backend.minikube.local/metrics/
 name: http-metrics
 ```
 
+<br/>
+
 ```yaml
 apiVersion: v1
 kind: Service

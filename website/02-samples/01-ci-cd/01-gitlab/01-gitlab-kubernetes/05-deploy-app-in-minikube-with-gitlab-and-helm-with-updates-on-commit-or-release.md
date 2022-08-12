@@ -113,7 +113,6 @@ frontend:
   image:
     repository: webmakaka/devops-frontend
     tag: 15aee951
-
 ***
 ```
 

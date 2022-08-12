@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Удаленное подключение к хосту с minikube в ubuntu 20.04
-description: Удаленное подключение к хосту с minikube в ubuntu 20.04
+title: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
+description: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu, remote
-permalink: /tools/containers/kubernetes/minikube/setup/remote-connection/
+permalink: /tools/containers/kubernetes/minikube/setup/remote-connection-nginx/
 ---
 
-# Удаленное подключение к хосту с minikube в ubuntu 20.04
+# Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
 
 <br/>
 
@@ -163,6 +163,4 @@ marley-minikube   Ready    control-plane   24m   v1.24.3
 
 ### Дополнительно
 
-**[Пример с драйвером kvm](https://www.zepworks.com/posts/access-minikube-remotely-kvm/)**
-
-**[Пример с драйвером virtualbox](/samples/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-minikube/)**
+**[Еще 1 Пример с драйвером virtualbox](/tools/containers/kubernetes/minikube/setup/remote-connection-virtualbox/)**

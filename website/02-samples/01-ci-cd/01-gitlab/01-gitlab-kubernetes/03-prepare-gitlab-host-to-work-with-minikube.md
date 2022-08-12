@@ -10,17 +10,18 @@ permalink: /samples/ci-cd/gitlab/kubernetes/prepare-gitlab-host-to-work-with-min
 
 <br/>
 
-UPD. Запутался! Не смог повторить стустя какое-то время! (А, здесь драйвер используется vm-driver virtualbox. Это определенно все меняет!)
+**[Upd: Можно сделать проще с использованием nginx](/tools/containers/kubernetes/minikube/setup/remote-connection-nginx/)**
 
 <br/>
 
-**[Upd: Есть мысль, что можно сделать проще с использованием nginx](/tools/containers/kubernetes/minikube/setup/remote-connection/)**
+Есть ошущение, что так работать не будет. Или нужно ковырять virtualbox и firewall глубже. Поэтому, наверное, лучше посмотреть вот ...
+
+**[сюда](/tools/containers/kubernetes/minikube/setup/remote-connection-virtualbox/)**
 
 <br/>
 
 <!--
-$ minikube --profile devops-app start --apiserver-ips=192.168.0.5
--->
+$ minikube --profile devops-app start --apiserver-ips=192.168.1.101
 
 <!--
 
@@ -62,6 +63,8 @@ ca.key	config	  logs		     proxy-client-ca.key
 <!--
 
 В интернетах инструкции, в которых предлагают делать PORT FORWARD для 8443. У меня сам форвард не заработал.
+
+echo -n 'my-string' | base64
 
 -->
 

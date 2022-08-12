@@ -101,6 +101,7 @@ $ export \
 $ export \
     PROFILE=${USER}-minikube \
     MEMORY=22528 \
+    HDD=60G \
     CPUS=8 \
     DRIVER=virtualbox \
     KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
@@ -113,7 +114,6 @@ $ export \
 <!--
 
 --apiserver-ips=192.168.1.101
-
 
  docker network create --driver=bridge --subnet=192.168.1.0/24 --gateway=192.168.1.1 minikube
 --network minikube
