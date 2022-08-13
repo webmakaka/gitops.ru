@@ -38,7 +38,7 @@ minikube version: v1.16.0
 
 **Здесь используется драйвер driver virtualbox**
 
-Если использовать docker или kvm, можно посмотреть [здесь](/tools/containers/kubernetes/minikube/setup/remote-connection-nginx/)
+Если использовать docker или kvm, можно посмотреть [здесь](/tools/containers/kubernetes/minikube/setup/remote-connection-docker/)
 
 <br/>
 

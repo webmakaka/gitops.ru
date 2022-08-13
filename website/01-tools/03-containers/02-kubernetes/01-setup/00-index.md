@@ -14,7 +14,7 @@ permalink: /tools/containers/kubernetes/setup/
 
 ### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/tools/containers/kubernetes/minikube/setup/)
 
-### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/tools/containers/kubernetes/minikube/setup/remote-connection-nginx/)
+### [Удаленное подключение к хосту с minikube в ubuntu 20.04](/tools/containers/kubernetes/minikube/setup/remote-connection-docker/)
 
 <br/>
 

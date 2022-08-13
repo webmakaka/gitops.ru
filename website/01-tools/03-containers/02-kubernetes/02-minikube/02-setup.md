@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-11.08.2022
+13.08.2022
 
 <br/>
 
@@ -103,7 +103,7 @@ $ export \
     MEMORY=22528 \
     HDD=60G \
     CPUS=8 \
-    DRIVER=virtualbox \
+    DRIVER=docker \
     KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
 ```
 

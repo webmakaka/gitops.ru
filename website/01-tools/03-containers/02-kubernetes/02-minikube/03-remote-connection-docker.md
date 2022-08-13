@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
-description: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
+title: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Docker)
+description: Удаленное подключение к хосту с minikube в ubuntu 20.04 (Docker)
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu, remote
-permalink: /tools/containers/kubernetes/minikube/setup/remote-connection-nginx/
+permalink: /tools/containers/kubernetes/minikube/setup/remote-connection-docker/
 ---
 
-# Удаленное подключение к хосту с minikube в ubuntu 20.04 (Nginx)
+# Удаленное подключение к хосту с minikube в ubuntu 20.04 (Docker)
 
 <br/>
 
 **Делаю:**  
-11.08.2022
+13.08.2022
 
 <br/>
 
@@ -74,7 +74,7 @@ $ sudo cp nginx.conf nginx.conf.orig
 <br/>
 
 ```
-$ sudo vi nginx.conf
+$ sudo vi /etc/nginx/nginx.conf
 ```
 
 <br/>
@@ -126,7 +126,7 @@ $ sudo ufw status verbose
 
 <br/>
 
-### Проверка
+### Проверка на minikube хосте
 
 <br/>
 
@@ -134,7 +134,6 @@ $ sudo ufw status verbose
 $ kubectl cluster-info
 Kubernetes control plane is running at https://192.168.1.101:51999
 CoreDNS is running at https://192.168.1.101:51999/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
 ```
 
 <br/>
@@ -149,7 +148,19 @@ $ telnet 192.168.1.101 51999
 
 <br/>
 
-Копирую ~/.kube/config с хоста с minikube на хост с которого буду выполнять команды.
+```
+// Копирую ~/.kube/config с хоста с minikube на хост с которого буду выполнять команды.
+$ scp 192.168.1.101:/home/marley/.kube/config ~/.kube/config
+```
+
+<br/>
+
+```
+$ kubectl cluster-info
+Kubernetes control plane is running at https://192.168.1.101:51999
+CoreDNS is running at https://192.168.1.101:51999/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+```
 
 <br/>
 
