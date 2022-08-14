@@ -108,23 +108,37 @@ docker:x:126:username
 
 ### (При необходимости!) Изменить каталог по умолчанию для хранения контейнеров и имиджей
 
-<br/>
-
-    # mkdir -p /mnt/dsk1/docker
-    # chown -R <username> /mnt/dsk1/docker
-
-    # vi /etc/default/docker
-
-    DOCKER_OPTS="-g /mnt/dsk1/docker"
+Делаю:  
+13.08.2022
 
 <br/>
 
-    # service docker restart
+```
+$ sudo mkdir -p /etc/systemd/system/docker.service.d
+$ sudo vi /etc/systemd/system/docker.service.d/docker-storage.conf
+```
 
 <br/>
 
-    # ps auxwww | grep docker
-    root      2476  0.0  0.1 274324 29896 ?        Ssl  10:10   0:00 /usr/bin/docker daemon -g /mnt/dsk1/docker
+```
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// --data-root="/mnt/dsk1/docker"
+```
+
+<br/>
+
+```
+# systemctl daemon-reload
+# systemctl restart docker
+```
+
+```
+# ps auxwww | grep docker
+root       14893  0.7  0.4 1382816 77408 ?       Ssl  23:49   0:00 /usr/bin/dockerd -H fd:// --data-root=/mnt/dsk1/docker
+root       15005  0.0  0.0   9048   656 pts/8    S+   23:49   0:00 grep --color=auto docker
+
+```
 
 <br/>
 
