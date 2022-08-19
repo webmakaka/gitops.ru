@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-13.08.2022
+20.08.2022
 
 <br/>
 
@@ -64,7 +64,7 @@ commit: 62e108c3dfdec8029a890ad6d8ef96b6461426dc
 <br/>
 
 ```
-// v1.24.3
+// v1.24.4
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -72,14 +72,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.24.3
+v1.24.4
 ```
 
 <br/>
 
 ```
-// Если младше v1.24.3
-$ LATEST_KUBERNETES_VERSION=v1.24.3
+// Если младше v1.24.4
+$ LATEST_KUBERNETES_VERSION=v1.24.4
 ```
 
 <br/>
@@ -88,7 +88,7 @@ $ LATEST_KUBERNETES_VERSION=v1.24.3
 $ export \
     PROFILE=${USER}-minikube \
     CPUS=4 \
-    MEMORY=8192 \
+    MEMORY=8G \
     HDD=20G \
     DRIVER=docker \
     KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
