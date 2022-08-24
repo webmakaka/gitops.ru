@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 # Инсталляция kubectl в ubuntu 20.04
 
 Делаю:  
-20.08.2022
+24.08.2022
 
 <br/>
 
@@ -18,7 +18,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 <br/>
 
 ```shell
-// Текущая стабильная версия kubectl (v1.24.4)
+// Текущая стабильная версия kubectl (v1.25.0)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -30,9 +30,22 @@ $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s h
 
 ```
 $ kubectl version --client --short
-Client Version: v1.24.4
-Kustomize Version: v4.5.4
+Client Version: v1.25.0
+Kustomize Version: v4.5.7
 
 // Если будет нужно удалить
 // $ sudo rm -rf /usr/local/bin/kubectl
+```
+
+<br/>
+
+### Вариант установки из репо (Не проверялось)
+
+```
+$ sudo apt-get update && sudo apt-get install -y apt-transport-https
+$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+$ sudo touch /etc/apt/sources.list.d/kubernetes.list
+$ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+$ sudo apt-get update
+$ sudo apt-get install -y kubectl
 ```
