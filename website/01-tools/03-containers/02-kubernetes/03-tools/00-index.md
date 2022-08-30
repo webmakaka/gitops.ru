@@ -12,6 +12,8 @@ permalink: /tools/containers/kubernetes/tools/
 
 ### [Инсталляция kubectl в ubuntu 20.04](/tools/containers/kubernetes/tools/kubectl/)
 
+### [Инсталляция kustomize в ubuntu 20.04](/tools/containers/kubernetes/tools/kustomize/)
+
 ### [Инсталляция Metal LB](/tools/containers/kubernetes/tools/metal-lb/)
 
 ### [k9s - инструмент для визуальной работы с кластером](/tools/containers/kubernetes/tools/k9s/)

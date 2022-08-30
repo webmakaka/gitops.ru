@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 # Инсталляция kubectl в ubuntu 20.04
 
 Делаю:  
-24.08.2022
+27.08.2022
 
 <br/>
 

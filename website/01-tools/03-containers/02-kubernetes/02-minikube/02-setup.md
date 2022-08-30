@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-24.08.2022
+27.08.2022
 
 <br/>
 
@@ -94,30 +94,7 @@ $ export \
     KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
 ```
 
-<!--
-
-
-```
-$ export \
-    PROFILE=${USER}-minikube \
-    MEMORY=22528 \
-    HDD=60G \
-    CPUS=8 \
-    DRIVER=docker \
-    KUBERNETES_VERSION=${LATEST_KUBERNETES_VERSION}
-```
-
--->
-
 <br/>
-
-<!--
-
---apiserver-ips=192.168.1.101
-
- docker network create --driver=bridge --subnet=192.168.1.0/24 --gateway=192.168.1.1 minikube
---network minikube
--->
 
 ```
 $ {
@@ -165,7 +142,6 @@ $ kubectl config current-context
 <br/>
 
 ```
-
 $ minikube docker-env --profile ${PROFILE}
 
 export ****
