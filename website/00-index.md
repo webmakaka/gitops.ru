@@ -43,6 +43,8 @@ IaC
 
 Может у кого в pdf есть?
 
+https://github.com/PacktPublishing/Kubernetes---An-Enterprise-Guide-2E
+
 https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 
 
