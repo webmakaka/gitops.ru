@@ -147,6 +147,13 @@ root       15005  0.0  0.0   9048   656 pts/8    S+   23:49   0:00 grep --color=
 <br/>
 
 ```
+**Текст ошибки:**
+http: server gave HTTP response to HTTPS client
+```
+
+<br/>
+
+```
 $ sudo vi /etc/docker/daemon.json
 ```
 

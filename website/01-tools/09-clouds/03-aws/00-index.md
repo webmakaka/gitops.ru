@@ -10,6 +10,30 @@ permalink: /tools/clouds/aws/
 
 <br/>
 
+https://discord.com/channels/1018779355155013693/1023168134775054356/1023168593996808223
+
+```
+// Инсталляция cli в ubuntu linux
+
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+
+$ sudo ./aws/install
+
+$ aws --version
+
+$ aws configure
+```
+
+```
+AWS Access Key ID [None]: <type key ID here>
+AWS Secret Access Key [None]: <type access key>
+Default region name [None]: <choose region (e.g. "us-east-1", "eu-west-1")>
+Default output format [None]: <leave blank>
+```
+
+<br/>
+
 [Прикрутить свой домен к AWS без переноса его в AWS и использованием CloudFlare](https://medium.com/@bobthomas295/combining-aws-serverless-with-cloudflare-sub-domains-338a1b7b2bd)
 
 <br/>
