@@ -15,6 +15,12 @@ permalink: /tools/clouds/aws/kubernetes/setup/manual/
 
 <br/>
 
+Ссыдка не открывается!
+
+https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
+
+<br/>
+
 **По материалам из курса The Ultimate Kubernetes Administrator Course**
 
 Chapter 2: Build a K8s Cluster from Scratch
