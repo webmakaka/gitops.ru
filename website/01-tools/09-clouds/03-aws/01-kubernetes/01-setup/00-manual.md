@@ -15,12 +15,6 @@ permalink: /tools/clouds/aws/kubernetes/setup/manual/
 
 <br/>
 
-Ссыдка не открывается!
-
-https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
-
-<br/>
-
 **По материалам из курса The Ultimate Kubernetes Administrator Course**
 
 Chapter 2: Build a K8s Cluster from Scratch
@@ -29,7 +23,7 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
-**Имеем аккаунт учебный аккаунт aws**
+**Имеем учебный аккаунт aws**
 
 <br/>
 
@@ -41,6 +35,10 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
+По клику на open console открывается обычная консоль AWS с правами самого главного пользователя, который только может быть предоставлен пользовательской учетной записи в облках AWS.
+
+<br/>
+
 ![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-03.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
@@ -49,7 +47,7 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
-**Создаем пользователя (admin), для того, чтобы не работат под главным пользователем.**
+**Создаем пользователя (admin), для того, чтобы не работать под главным пользователем.**
 
 <br/>
 
@@ -101,6 +99,13 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
+```
+1 master Ubuntu 2t.medium
+2 worker Ubuntu 2t.large
+```
+
+<br/>
+
 ![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-14.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
@@ -131,7 +136,10 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 **Security -> Edit inbound rules**
 
+```
+// Порты берем здесь
 https://kubernetes.io/docs/reference/ports-and-protocols/
+```
 
 172.31.0.0/16 - см. в VPC
 
@@ -145,7 +153,7 @@ https://kubernetes.io/docs/reference/ports-and-protocols/
 
 <br/>
 
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-23.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }Security -> Edit inbound rules
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-23.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
 
@@ -187,7 +195,7 @@ $ chmod 400 ~/.ssh/k8s-node.pem
 
 <br/>
 
-### workstation + все узлы
+### [Все узлы + Host машина] Прописываем узлы в /etc/hosts
 
 <br/>
 
@@ -238,7 +246,7 @@ $ sudo hostnamectl set-hostname worker2
 
 <br/>
 
-### Инсталляция container-d на всех узлах
+### [Все узлы] Инсталляция container-d
 
 <br/>
 
@@ -289,9 +297,17 @@ $ ./install.sh
 
 <br/>
 
-### Install kubeadm kubelet and kubectl на всех узлах
+### [Все узлы] Install kubeadm kubelet and kubectl
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+<br/>
+
+```
+// Если нужно подобрать пакеты определенных версий
+// $ apt-cache madison kubeadm
+// $ sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
+```
 
 <br/>
 
@@ -320,14 +336,6 @@ sudo apt-mark hold kubelet kubeadm kubectl
 <br/>
 
 ```
-// Если нужно подобрать пакеты определенных версий
-// $ apt-cache madison kubeadm
-// $ sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
-```
-
-<br/>
-
-```
 $ chmod +x install-k8s-components.sh
 $ ./install-k8s-components.sh
 ```
@@ -340,7 +348,7 @@ $ systemctl status kubelet
 
 <br/>
 
-### master
+### [master]
 
 ```
 $ sudo kubeadm init
@@ -453,13 +461,14 @@ coredns должны появиться
 
 <br/>
 
-### Подключени узлов к master
+### [Worker узлы] Подключение узлов к master
 
 ```
 // master
+// Если нужно заново запустить процедуру
 $ kubeadm token create --print-join-command
 
-// nodes
+// worker nodes
 sudo kubeadm join \*\*\*
 ```
 
