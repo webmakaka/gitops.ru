@@ -11,7 +11,7 @@ permalink: /tools/clouds/aws/kubernetes/setup/manual/
 <br/>
 
 Делаю:  
-02.10.2022
+09.10.2022
 
 <br/>
 
@@ -55,6 +55,10 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
+Users -> Add User
+
+<br/>
+
 ![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-05.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
@@ -75,6 +79,17 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
+Записываем куда-нибудь.
+
+- Username
+- Secret access key
+- Pass
+
+Кликаем по ссылке вида:
+https://069940897088.signin.aws.amazon.com/console
+
+<br/>
+
 ![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-10.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
@@ -83,15 +98,9 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-12.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-13.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
 ### EC2
+
+EC2 -> Instancec -> Launch an instance
 
 <br/>
 
@@ -103,6 +112,12 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 1 master Ubuntu 2t.medium
 2 worker Ubuntu 2t.large
 ```
+
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-12.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
+
+<br/>
+
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-13.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
 
@@ -126,14 +141,6 @@ https://www.techworld-with-nana.com/kubernetes-administrator-cka
 
 <br/>
 
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-19.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-20.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
 **Security -> Edit inbound rules**
 
 ```
@@ -143,17 +150,15 @@ https://kubernetes.io/docs/reference/ports-and-protocols/
 
 172.31.0.0/16 - см. в VPC
 
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-19.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
+
+<br/>
+
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-20.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
+
 <br/>
 
 ![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-21.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-22.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-23.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
 
@@ -161,6 +166,12 @@ https://kubernetes.io/docs/reference/ports-and-protocols/
 // + Для всех узлов weave
 - 6783 Custom 172.31.0.0/16
 ```
+
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-22.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
+
+<br/>
+
+![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-23.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
 
 <br/>
 
@@ -180,11 +191,7 @@ https://kubernetes.io/docs/reference/ports-and-protocols/
 
 <br/>
 
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-28.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
-### Подготовка узлов
+### [Host машина]
 
 <br/>
 
@@ -217,6 +224,14 @@ $ sudo vi /etc/hosts
 
 <br/>
 
+```
+52.59.210.154 master
+18.156.83.149 worker1
+3.68.93.13 worker2
+```
+
+<br/>
+
 **Подключение к узлам**
 
 ```
@@ -235,7 +250,6 @@ $ ssh -i ~/.ssh/k8s-node.pem ubuntu@worker2
 <br/>
 
 ```
-$ sudo apt update -y
 $ sudo apt update -y && sudo apt upgrade -y
 $ sudo swapoff -a
 
@@ -255,6 +269,9 @@ https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cont
 <br/>
 
 ```
+$ mkdir ~/tmp
+$ cd ~/tmp
+
 $ vi install.sh
 ```
 
@@ -306,7 +323,6 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-ku
 ```
 // Если нужно подобрать пакеты определенных версий
 // $ apt-cache madison kubeadm
-// $ sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
 ```
 
 <br/>
@@ -327,7 +343,7 @@ sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://pack
 echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt-get update
-sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-get install -y kubelet=1.25.2-00 kubeadm=1.25.2-00 kubectl=1.25.2-00
 
 # // фиксирует версии пакетов, чтобы они не обновлялись
 sudo apt-mark hold kubelet kubeadm kubectl
@@ -340,11 +356,11 @@ $ chmod +x install-k8s-components.sh
 $ ./install-k8s-components.sh
 ```
 
-<br/>
+<!-- <br/>
 
 ```
 $ systemctl status kubelet
-```
+``` -->
 
 <br/>
 
@@ -377,16 +393,14 @@ $ ls -l ~/.kube/config
 
 ```
 $ kubectl get node
-```
+NAME     STATUS     ROLES           AGE     VERSION
+master   NotReady   control-plane   3m34s   v1.25.2
 
-```
-// Перестартовать
-$ sudo systemctl restart kubelet
 ```
 
 <br/>
 
-### Установка и настройка драйвера сети weave (Не заработало!)
+### Установка и настройка драйвера сети weave
 
 <br/>
 
@@ -395,32 +409,7 @@ https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
 <br/>
 
 ```
-$ kubectl version --output=yaml
-```
-
-<br/>
-
-```
-$ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-```
-
-<br/>
-
-```
-// Не отработало
-// $ wget "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')" -O weave.yaml
-```
-
-<br/>
-
-```
-$ wget "https://cloud.weave.works/k8s/net?k8s-version=1.21" -O weave.yaml
-```
-
-<br/>
-
-```
-https://weave.works/docs/net/latest/kubernetes/kube-addon/
+$ wget "https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml" -O weave.yaml
 ```
 
 <br/>
@@ -432,8 +421,10 @@ vi weave.yaml
 <br/>
 
 ```
-- /home/weave/launch.sh
-
+          containers:
+            - name: weave
+              command:
+                - /home/weave/launch.sh
 ```
 
 <br/>
@@ -443,21 +434,34 @@ vi weave.yaml
 <br/>
 
 ```
-- /home/weave/launch.sh
-- --ipalloc-range=100.32.0.0/12
+          containers:
+            - name: weave
+              command:
+                - /home/weave/launch.sh
+                - --ipalloc-range=100.32.0.0/12
 ```
 
 <br/>
 
 ```
-kubectl apply -f weave.yaml
+$ kubectl apply -f weave.yaml
+```
 
-kubectl get node
+<br/>
 
-kubectl get pod -n kube-system
+```
+$ kubectl get node
+NAME     STATUS   ROLES           AGE   VERSION
+master   Ready    control-plane   24m   v1.25.2
+```
+
+<br/>
+
+```
+$ kubectl get pod -n kube-system
+```
 
 coredns должны появиться
-```
 
 <br/>
 
@@ -475,17 +479,41 @@ sudo kubeadm join \*\*\*
 <br/>
 
 ```
+// master
+$ kubectl get node
+NAME      STATUS     ROLES           AGE   VERSION
+master    Ready      control-plane   53m   v1.25.2
+worker1   Ready      <none>          86s   v1.25.2
+worker2   NotReady   <none>          17s   v1.25.2
+```
+
+<!-- <br/>
+
+```
 $ kubectl get pod -n kube-syste -o wide | grep weave
 
 $ kubectl exec -n kube-system weave-net-hxjdd -c weave -- /home/weave/weave --local status
-```
+``` -->
+
+<!-- // local
+$ scp -i ~/.ssh/k8s-node.pem ubuntu@master:/home/ubuntu/.kube/config ~/.kube/config -->
 
 <br/>
 
 ### Test
 
 ```
-$ kubectl run test --image=nginx
+$ git clone https://github.com/webmakaka/cats-app
+$ cd cats-app/k8s/
+$ kubect apply -f ./
+```
 
-$ kubectl get pod
+<br/>
+
+### Перестартовка kubelet
+
+```
+// Перестартовать
+$ sudo systemctl status kubelet
+$ sudo systemctl restart kubelet
 ```
