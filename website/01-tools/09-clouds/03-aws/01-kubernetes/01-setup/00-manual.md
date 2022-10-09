@@ -187,10 +187,6 @@ https://kubernetes.io/docs/reference/ports-and-protocols/
 
 <br/>
 
-![Clouds Amazon (AWS) - Kubernetes Setup (AWS)](/img/tools/clouds/aws/kubernetes/setup/manual/pic-27.png 'Clouds Amazon (AWS) - Kubernetes Setup (AWS)'){: .center-image }
-
-<br/>
-
 ### [Host машина]
 
 <br/>
