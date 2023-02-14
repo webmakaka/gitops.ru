@@ -9,11 +9,11 @@ permalink: /tools/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 20.04
 
 Делаю:  
-16.08.2022
+06.02.2023
 
 <br/>
 
-### Инсталляция Docker версии 19.x
+### Инсталляция Docker
 
 <br/>
 
@@ -70,10 +70,10 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 20.10.17, build 100c701
+Docker version 23.0.0, build e92dd87
 
 $ docker-compose --version
-Docker Compose version v2.9.0
+Docker Compose version v2.15.1
 ```
 
 <br/>
