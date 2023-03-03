@@ -35,18 +35,19 @@ IaC
 
 -->
 
+<br/>
+
+### GitOps Testing in Kubernetes with Flux & Testkube
+
+https://www.youtube.com/watch?v=jxsFePSmWx0
 
 <br/>
 
-
 ### Kubernetes – An Enterprise Guide: Effectively containerize applications, integrate enterprise systems, and scale applications in your enterprise, 2nd Edition
-
-Может у кого в pdf есть?
 
 https://github.com/PacktPublishing/Kubernetes---An-Enterprise-Guide-2E
 
 https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
-
 
 <br/>
 
