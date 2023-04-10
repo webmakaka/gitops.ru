@@ -13,27 +13,13 @@ permalink: /
 Здесь просто собираются записи, по автоматизации развертывания приложений. Если интересно, подключайтесь!
 Просто, очередная записная книжка. Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи, максимально удобный способ для этого выбран - github. Можно предлагать и обновлять то, что устарело.
 
-<!--
 
-!Alertmanager
+<br/>
 
+### [DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
 
-UseTech
+https://www.youtube.com/watch?v=b38k2GiLDdc
 
-Используемые технологии:
-
-Kubernetes, Helm, Docker, Istio
-Prometheus/Grafana/Alertmanager, Dynatrace
-ELK Opendistro
-Ansible/Terraform
-Python/Bash
-Github/Jenkins/Artifactory/Xray/SonarQube/Hashicorp Vault
-Jira/Confluence
-VMWare/Openstack/Yandex Cloud
-Nginx/Nginx+/Openresty
-IaC
-
--->
 
 <br/>
 
