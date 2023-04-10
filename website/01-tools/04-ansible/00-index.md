@@ -30,7 +30,7 @@ permalink: /tools/ansible/
 
 <br/>
 
-### [Ansible применительно к сетям](https://pyneng.github.io/pyneng-5/lecture-19/)
+### [Ansible применительно к сетям](https://github.com/pyneng)
 
 <br/>
 
