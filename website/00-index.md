@@ -11,15 +11,26 @@ permalink: /
 ### Пару слов о сайте
 
 Здесь просто собираются записи, по автоматизации развертывания приложений. Если интересно, подключайтесь!
-Просто, очередная записная книжка. Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи, максимально удобный способ для этого выбран - github. Можно предлагать и обновлять то, что устарело.
 
+Ничего особенного! Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи и исправлениями с помощью pull requests, максимально удобный способ для работы - vscode + github. Можно предлагать и обновлять то, что устарело. Осбуждать <a href="https://github.com/webmakaka/gitops.ru/discussions">здесь</a>. Неугодные комментарии удаляются. Недовольные и бесящие пользователи - банятся.
+
+<br/>
+
+### [Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023]
+
+<br/>
+
+![Automating Kubernetes with GitOps](/img/courses/Automating-Kubernetes-with-GitOps.jpeg 'Automating Kubernetes with GitOps'){: .center-image }
+
+<br/>
+
+Предлагаю выкачивать и изучать!
 
 <br/>
 
 ### [DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
 
 https://www.youtube.com/watch?v=b38k2GiLDdc
-
 
 <br/>
 
