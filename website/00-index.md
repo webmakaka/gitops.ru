@@ -16,7 +16,7 @@ permalink: /
 
 <br/>
 
-### [Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][7h 40m]
+### [Video Course][Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][7h 40m]
 
 <br/>
 
@@ -34,13 +34,13 @@ www.informit.com/store/automating-kubernetes-with-gitops-video-training-97801382
 
 <br/>
 
-### [DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
+### [YouTube][DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
 
 https://www.youtube.com/watch?v=b38k2GiLDdc
 
 <br/>
 
-### GitOps Testing in Kubernetes with Flux & Testkube
+### [YouTube] GitOps Testing in Kubernetes with Flux & Testkube
 
 https://www.youtube.com/watch?v=jxsFePSmWx0
 
@@ -67,11 +67,7 @@ https://www.youtube.com/watch?v=kAT4qAb-HVw
 
 <br/>
 
-### [TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
-
-**Надо надыбать и изучить!**
-
-Upd. Найдено!
+### [Video Course][TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/F7WMRXLUQRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -79,7 +75,7 @@ Upd. Найдено!
 
 <br/>
 
-### What is GitOps, How GitOps works and Why it's so useful
+### [YouTube] What is GitOps, How GitOps works and Why it's so useful
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/f5EpcWp0THw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -114,7 +110,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
+### [YouTube] Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/R6OeIgb7lUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -126,11 +122,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### Предлагайте интересные материалы для коллективного разбора
-
-<br/>
-
-### [Предлагаю коллективно изучить видеокурс] [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
+### [Video Course][Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]
 
 <br/>
 
@@ -162,19 +154,13 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### Почти все материалы в настоящее время лежат на сайте [sysadm.ru](//sysadm.ru)
-
-Если будет что добавить, задать вопрос или обсудить, пишите в телеграм, что указан на сайте sysadm.ru
-
-<br/>
-
 [Docker / Kubernetes](/tools/containers/)
 
 [CI/CD](/tools/ci-cd/jenkins/)
 
 <br/>
 
-## [A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
+## [Video Course][A Cloud Guru, Linux Academy] Внедрение полного конвейера CI/CD [RUS, 2020]
 
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
