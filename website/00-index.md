@@ -46,7 +46,7 @@ https://www.youtube.com/watch?v=jxsFePSmWx0
 
 <br/>
 
-### Kubernetes – An Enterprise Guide: Effectively containerize applications, integrate enterprise systems, and scale applications in your enterprise, 2nd Edition
+### [Book] Kubernetes – An Enterprise Guide: Effectively containerize applications, integrate enterprise systems, and scale applications in your enterprise, 2nd Edition
 
 https://github.com/PacktPublishing/Kubernetes---An-Enterprise-Guide-2E
 
@@ -138,7 +138,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### [Предлагаю коллективно поичать книгу] [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
+### [Book] [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
 
 <br/>
 
@@ -146,7 +146,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### [Предлагаю коллективно поичать книгу] Effortless Cloud-Native App Development Using Skaffold
+### [Book] Effortless Cloud-Native App Development Using Skaffold
 
 <br/>
 
@@ -154,7 +154,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-### [Предлагаю коллективно поичать книгу] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers
+### [Book] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers
 
 <br/>
 
