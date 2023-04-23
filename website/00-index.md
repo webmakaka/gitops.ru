@@ -10,9 +10,37 @@ permalink: /
 
 ### Пару слов о сайте
 
-Здесь просто собираются записи, по автоматизации развертывания приложений. Если интересно, подключайтесь!
+Привет! Я Marley - WebMakaka!
 
-Ничего особенного! Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи и исправлениями с помощью pull requests, максимально удобный способ для работы - vscode + github. Можно предлагать и обновлять то, что устарело. Осбуждать <a href="https://github.com/webmakaka/gitops.ru/discussions">здесь</a>. Неугодные комментарии удаляются. Недовольные и бесящие пользователи - банятся.
+А здесь просто собираются записи, по автоматизации развертывания приложений.
+
+Если интересно, подключайтесь!
+
+Ничего особенного! Хотите - пользуйтесь, не хотите не пользуйтесь. Можете добавлять свои записи и исправления с помощью pull requests, максимально удобный способ для работы - vscode + github. Можно предлагать и обновлять то, что устарело. Осбуждать <a href="https://github.com/webmakaka/gitops.ru/discussions">здесь</a>. Неугодные комментарии удаляются. Недовольные и бесящие пользователи - банятся.
+
+Я не особо разбираюсь в разнице между devops и gitops. Поэтому здесь это +- одно и тоже. Смысл, чтобы по коммиту в репо git, происходила "магия". А как вы это будете называть, (наверное) мало кого интересует. В gitops (как я понял) просто описание инфраструктуры также хранится в git репо и при изменениях, запускается процесс ее изменения. Вся инфраструктура в GitOps - код.
+
+В общем если будете копать тему и у вас будут интересные решения, я тоже готов понажимать кнопки и добавить свои особо важные правки в ваши решения.
+
+В общем я готов поучавствовать "во всей движухе", где можно было бы что-то заработать "больше чем на пачку чипсов"! Пишите, если есть что по сотрудничеству! Может быть возможна какая-нибудь координация с инженерами разных IT направлений.
+
+<br/>
+
+**Интересы админа сайта:**
+
+- Linux, Docker, Kubernetes
+- Rust, Node.js, React / Angular
+- Machine Learning / BigData
+- Clouds
+
+<br/>
+
+**Приходится работать:**
+
+- Linux, Docker, Kubernetes
+- Python, SpringBoot, React / Angular
+- Kafka
+- Machine Learning
 
 <br/>
 
@@ -24,13 +52,59 @@ permalink: /
 
 <br/>
 
-// Без VPN не заходит
-
-www.informit.com/store/automating-kubernetes-with-gitops-video-training-9780138230210
+Предлагаю изучать! Улучшать по возможности!
 
 <br/>
 
-Предлагаю выкачивать и изучать! Улучшать по возможности.
+```
+Introduction
+
+Module 1: Understanding the Fundamentals
+
+Lesson 1: Understanding DevOps and GitOps
+
+Lesson 2: Using Pipelines
+
+Module 2: From Code to Image
+
+Lesson 3: Using Git
+
+Lesson 4: Building Container Images
+
+Module 3: Automating Infrastructure
+
+Lesson 5: Infrastructure as Code
+
+Lesson 6: Configuration as Code
+
+Module 4: From Image to Application
+
+Lesson 7: Running Applications in Kubernetes
+
+Lesson 8: Setting up Kubernetes for GitOps
+
+Lesson 9: Controllers and Operators
+
+Lesson 10: Kubernetes CI/CD
+
+Lesson 11: Managing Kubernetes Applications the GitOps Way
+
+Lesson 12: Using Secrets
+
+Lesson 13: Using GitOps to Provide Zero-downtime Application Updates
+
+Lesson 14: Running a GitOps Project
+
+Module 5: Using Kubernetes Ecosystem Solutions
+
+Lesson 15: Implementing Observability
+
+Lesson 16: Integrating Tekton Pipelines
+
+Lesson 17: Automatically Updating Code to Applications
+
+Summary
+```
 
 <br/>
 
