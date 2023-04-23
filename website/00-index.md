@@ -54,19 +54,6 @@ https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 
 <br/>
 
-### Нужно посмотреть
-
-// Introduction to Service monitors for beginners | Kubernetes monitoring  
-https://www.youtube.com/watch?v=_NtRkBipepg
-
-// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
-https://www.youtube.com/watch?v=_aqlanvWL-c
-
-// Поднимаем динамические стенды с помощью GitOps  
-https://www.youtube.com/watch?v=kAT4qAb-HVw
-
-<br/>
-
 ### [Video Course][TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
 
 <div align="center">
@@ -83,7 +70,18 @@ https://www.youtube.com/watch?v=kAT4qAb-HVw
 
 <br/>
 
-### Нужно изучить
+<br/>
+
+### Нужно посмотреть
+
+// Introduction to Service monitors for beginners | Kubernetes monitoring  
+https://www.youtube.com/watch?v=_NtRkBipepg
+
+// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
+https://www.youtube.com/watch?v=_aqlanvWL-c
+
+// Поднимаем динамические стенды с помощью GitOps  
+https://www.youtube.com/watch?v=kAT4qAb-HVw
 
 **How to learn Kubernetes in 2022**  
 https://www.youtube.com/watch?v=JeAHlTYB1Qk
@@ -96,8 +94,6 @@ https://www.youtube.com/watch?v=oBf5lrmquYI
 
 **GitOps (& Flux) for Helm Users with Scott Rigby**  
 https://www.youtube.com/watch?v=sQTkLT-V6sg
-
-**[O’REILLY] GitOps and Kubernetes video edition [2021, ENG]**
 
 **How to deploy Vault for Kubernetes in 2022 and inject secrets**  
 https://www.youtube.com/watch?v=2Owo4Ioo9tQ
