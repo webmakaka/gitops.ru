@@ -117,16 +117,20 @@ $ {
 
 <br/>
 
-    // При необходимости можно будет удалить профиль и все созданное в профиле следующей командой
-    // $ minikube --profile ${PROFILE} stop && minikube --profile ${PROFILE} delete
+```
+// При необходимости можно будет удалить профиль и все созданное в профиле следующей командой
+// $ minikube --profile ${PROFILE} stop && minikube --profile ${PROFILE} delete
 
-    // Стартовать остановленный minikube
-    // $ minikube --profile ${PROFILE} start
+// Стартовать остановленный minikube
+// $ minikube --profile ${PROFILE} start
+```
 
 <br/>
 
-    // Получить список установленных расширений
-    $ minikube addons --profile ${PROFILE} list
+```
+// Получить список установленных расширений
+$ minikube addons --profile ${PROFILE} list
+```
 
 <br/>
 

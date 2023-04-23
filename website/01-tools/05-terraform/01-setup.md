@@ -13,22 +13,33 @@ permalink: /tools/terraform/setup/
 
 <br/>
 
-**v1.0.5**
-
-(Последняя на сегодня 1.0.7)
+```
+// Лучше с сайта:
+https://developer.hashicorp.com/terraform/downloads?product_intent=terraform
+```
 
 <br/>
 
-    $ echo LATEST_VERSION=$(curl --silent "https://api.github.com/repos/hashicorp/tools/terraform/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+### Установка terraform из github
 
-    $ wget https://releases.hashicorp.com/tools/terraform/1.0.5/terraform_1.0.5_linux_amd64.zip
+**v1.0.5**
 
-    $ unzip terraform_1.0.5_linux_amd64.zip
+(Последняя на сегодня 1.4.5)
 
-    $ sudo mv terraform /usr/local/bin/
+<br/>
 
-    $ terraform version
-    Terraform v1.0.5
+```
+$ echo LATEST_VERSION=$(curl --silent "https://api.github.com/repos/hashicorp/terraform/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+
+$ wget https://releases.hashicorp.com/tools/terraform/1.0.5/terraform_1.0.5_linux_amd64.zip
+
+$ unzip terraform_1.0.5_linux_amd64.zip
+
+$ sudo mv terraform /usr/local/bin/
+
+$ terraform version
+Terraform v1.0.5
+```
 
 <br/>
 

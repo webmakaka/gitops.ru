@@ -1,16 +1,13 @@
 ---
 layout: page
-title: Инсталляция Ansible в Centos 7.3
-description: Инсталляция Ansible в Centos 7.3
+title: Инсталляция Ansible в Centos
+description: Инсталляция Ansible в Centos
 keywords: tools, ansible, setup, centos
 permalink: /tools/ansible/setup/centos/
 ---
 
-# Инсталляция Ansible в Centos 7.3
+# Инсталляция Ansible в Centos
 
-    $ su -
-    # usermod -aG wheel user
-
-    # yum install -y python2 epel-release
-
-    # yum install -y ansible
+```
+$ sudo dnf install -y ansible-core
+```

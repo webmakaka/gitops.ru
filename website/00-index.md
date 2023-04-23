@@ -12,7 +12,7 @@ permalink: /
 
 Привет! Я Marley - WebMakaka!
 
-А здесь просто собираются записи, по автоматизации развертывания приложений.
+А здесь просто собираются записи, по автоматизации развертывания приложений (которыми можно делиться без ограничений).
 
 Если интересно, подключайтесь!
 
@@ -30,6 +30,7 @@ permalink: /
 
 - Linux, Docker, Kubernetes
 - Rust, Node.js, React / Angular
+- PostgreSQL
 - Machine Learning / BigData
 - Clouds
 
@@ -38,9 +39,10 @@ permalink: /
 **Приходится работать:**
 
 - Linux, Docker, Kubernetes
-- Python, SpringBoot, React / Angular
-- Kafka
+- Python, SpringBoot, Angular
+- PostgreSQL
 - Machine Learning
+- Kafka
 
 <br/>
 
@@ -105,6 +107,10 @@ Lesson 17: Automatically Updating Code to Applications
 
 Summary
 ```
+
+<br/>
+
+[GitHub](https://github.com/sandervanvugt/gitops/)
 
 <br/>
 

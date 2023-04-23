@@ -16,6 +16,17 @@ permalink: /tools/containers/docker/
 
 <br/>
 
+### Посмотреть содержимое
+
+<br/>
+
+```
+$ docker inspect mariadb | less
+$ docker image history mariadb
+```
+
+<br/>
+
 ### Удаление всех созданных ресурсов Docker
 
 <br/>

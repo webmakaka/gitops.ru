@@ -98,11 +98,22 @@ docker:x:126:username
 
 Перелогиниваемся, иначе не будет работать
 
-    $ logout
+```
+$ logout
+```
 
 Лучше даже сделать reboot.
 
-    $ sudo reboot
+```
+$ sudo reboot
+```
+
+<br/>
+
+```
+// Но можно и
+$ newgrp docker
+```
 
 <br/>
 

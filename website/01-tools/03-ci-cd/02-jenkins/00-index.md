@@ -9,22 +9,36 @@ permalink: /tools/ci-cd/jenkins/
 # Jenkins
 
 Делаю:  
-13.09.2021
+23.04.2023
 
 <br/>
 
-### Запуск Jenkins с помощью docker-compose
+### Инсталляция в linux
+
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 
 <br/>
 
-    $ cd ~/projects/
-    $ mkdir -p ./ci-cd/jenkins/
-    $ cd ci-cd/jenkins/
+```
+// Если нужно добавить пользователя
+$ sudo usermod -aG docker jenkins
+$ sudo systemctl restart jenkins
+```
 
-    $ mkdir jenkins_home
-    $ sudo chown -R 1000:1000 jenkins_home
+<br/>
 
-    $ vi docker-compose.yml
+### Запуск Jenkins в docker с помощью docker-compose
+
+<br/>
+
+```
+$ cd ~/projects/
+$ mkdir -p ./ci-cd/jenkins/
+$ cd ci-cd/jenkins/
+
+$ mkdir jenkins_home
+$ sudo chown -R 1000:1000 jenkins_home
+```
 
 <br/>
 
@@ -33,13 +47,19 @@ permalink: /tools/ci-cd/jenkins/
 <br/>
 
 ```
+$ vi docker-compose.yml
+```
+
+<br/>
+
+```yaml
 version: '3'
 services:
   jenkins:
     container_name: jenkins
     image: jenkins/jenkins
     ports:
-      - "8080:8080"
+      - '8080:8080'
     volumes:
       - $PWD/jenkins_home:/var/jenkins_home
     networks:
@@ -57,6 +77,35 @@ $ docker-compose up
 <br/>
 
 localhost:8080
+
+Устанавливаем plugin'ы
+
+Админ не особо нужен.
+
+<br/>
+
+### Запуск примера с локальной установкой jenkins
+
+С вариантом инсталляции с docker не пройдет, т.к. внутри нет docker.
+
+<br/>
+
+New Item ->
+
+```
+name: jenkins-pipeline
+type: Pipeline
+```
+
+<br/>
+
+Configure -> Pipeline ->
+
+Definition: Pipeline script
+
+https://github.com/sandervanvugt/gitops/blob/main/jenkinspipe
+
+Save -> Build Now
 
 <br/>
 
