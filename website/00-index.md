@@ -16,7 +16,7 @@ permalink: /
 
 <br/>
 
-### [Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023]
+### [Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][7h 40m]
 
 <br/>
 
@@ -24,7 +24,13 @@ permalink: /
 
 <br/>
 
-Предлагаю выкачивать и изучать!
+// Без VPN не заходит
+
+www.informit.com/store/automating-kubernetes-with-gitops-video-training-9780138230210
+
+<br/>
+
+Предлагаю выкачивать и изучать! Улучшать по возможности.
 
 <br/>
 
@@ -116,7 +122,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-Разбираемся [здесь](/study/videos/tools/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+Разбираемся [здесь](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
 
 <br/>
 
@@ -128,7 +134,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/videos/tools/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
+[Разбор](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
 
 <br/>
 
@@ -136,7 +142,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/containers/kubernetes/kubernetes-in-production-best-practices/)
+[Разбор](/books/containers/kubernetes/kubernetes-in-production-best-practices/)
 
 <br/>
 
@@ -144,7 +150,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор](/study/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
+[Разбор](/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
 
 <br/>
 
@@ -152,7 +158,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 <br/>
 
-[Разбор завершен](/study/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
+[Разбор завершен](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
 
 <br/>
 
@@ -172,7 +178,7 @@ https://www.youtube.com/watch?v=cR2eCMbiZg4
 
 Самый полный курс по созданию конвейера непрерывной интеграции и непрерывной доставки (CI/CD) от одной из самых лучших образовательных платформ в мире — Linux Academy
 
-[Подробнее](/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/)
+[Подробнее](/courses/ci-cd/implementing-a-full-ci-cd-pipeline/)
 
 <br/>
 

@@ -26,7 +26,7 @@ permalink: /tools/ansible/
 
 <br/>
 
-### [Обучающие видео по работе с Ansible](/tools/ansible/study/videos/)
+### [Обучающие видео по работе с Ansible](/tools/ansible/courses/)
 
 <br/>
 

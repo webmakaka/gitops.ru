@@ -3,7 +3,7 @@ layout: page
 title: Обучающие видео по работе с Ansible
 description: Обучающие видео по работе с Ansible
 keywords: Обучающие видео по работе с Ansible
-permalink: /tools/ansible/study/videos/
+permalink: /tools/ansible/courses/
 ---
 
 # Обучающие видео по работе с Ansible

@@ -244,7 +244,7 @@ kubectl describe pod grafana-7f58b98f94-8szjv --namespace grafana
 
 ### Пример запуска приложения с метриками:
 
-<a href="/study/videos/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/">Здесь</a>
+<a href="/courses/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/">Здесь</a>
 
 <!--
 <br>
