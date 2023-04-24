@@ -114,6 +114,12 @@ Summary
 
 <br/>
 
+Пока материал кажется бесполезным как для новичков, так и для людей с каким-либо опытом.
+
+Просмотрено до lesson 8.
+
+<br/>
+
 ### [YouTube][DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
 
 https://www.youtube.com/watch?v=b38k2GiLDdc
