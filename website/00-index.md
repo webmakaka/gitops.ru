@@ -46,15 +46,17 @@ permalink: /
 
 <br/>
 
+### [Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][6h]
+
+Качаемс...
+
+<br/>
+
 ### [Video Course][Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][7h 40m]
 
 <br/>
 
 ![Automating Kubernetes with GitOps](/img/courses/Automating-Kubernetes-with-GitOps.jpeg 'Automating Kubernetes with GitOps'){: .center-image }
-
-<br/>
-
-Предлагаю изучать! Улучшать по возможности!
 
 <br/>
 
@@ -114,7 +116,9 @@ Summary
 
 <br/>
 
-Пока материал разочароывает. Просмотрено 10 уроков.
+Пока материал разочароывает. Просмотрено 10 уроков из 17.
+
+Смотрел материалы этого автора. Ну думал,в этот то раз норм сделает. Похоже, хрен там.
 
 <br/>
 
