@@ -10,13 +10,33 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/
 
 <br/>
 
-### [FluxCD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
+
+<br/>
+
+### [YouTube] FluxCD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/R6OeIgb7lUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
+Разбираемся [здесь](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
+
+<br/>
 
 ### [Supercharge your Kubernetes deployments with Flux v2 and GitHub](/courses/containers/kubernetes/ci-cd/fluxcd/supercharge-your-kubernetes-deployments-with-flux-v2-and-github/)
 
 <br/>
 
-### GitOps Days 2021 Handling Dependencies with Flux - Jason Morgan
+### [YouTube] GitOps Testing in Kubernetes with Flux & Testkube
+
+https://www.youtube.com/watch?v=jxsFePSmWx0
+
+<br/>
+
+### [YouTube] GitOps Days 2021 Handling Dependencies with Flux - Jason Morgan
 
 https://www.youtube.com/watch?v=laMwuG8r7Tw
 
@@ -114,7 +134,7 @@ $ linkerd viz dashboard
 
 <br/>
 
-### Cloud Native Applications Gitops with Flux and Flagger
+### [YouTube] Cloud Native Applications Gitops with Flux and Flagger
 
 https://www.youtube.com/watch?v=kbAKUKaMA1w
 

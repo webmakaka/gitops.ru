@@ -46,13 +46,19 @@ permalink: /
 
 <br/>
 
-### [Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][6h]
+### [Video Course][George Alonge] Kustomize Mastery: Manage Kubernetes Configuration with Ease [ENG, 2023][~4h 30m]
 
-Качаемс...
+```
+Планируемс...
+```
 
 <br/>
 
-### [Video Course][Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][7h 40m]
+### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
+
+<br/>
+
+### [Video Course][Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][~7h 40m]
 
 <br/>
 
@@ -128,12 +134,6 @@ https://www.youtube.com/watch?v=b38k2GiLDdc
 
 <br/>
 
-### [YouTube] GitOps Testing in Kubernetes with Flux & Testkube
-
-https://www.youtube.com/watch?v=jxsFePSmWx0
-
-<br/>
-
 ### [Book] Kubernetes – An Enterprise Guide: Effectively containerize applications, integrate enterprise systems, and scale applications in your enterprise, 2nd Edition
 
 https://github.com/PacktPublishing/Kubernetes---An-Enterprise-Guide-2E
@@ -150,59 +150,11 @@ https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 
 <br/>
 
-### [YouTube] What is GitOps, How GitOps works and Why it's so useful
+### [YouTube] What is GitOps, How GitOps works and Why it's so useful [ENG]
 
 <div align="center">
     <iframe width="853" height="480" src="https://www.youtube.com/embed/f5EpcWp0THw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-<br/>
-
-<br/>
-
-### Нужно посмотреть
-
-// Introduction to Service monitors for beginners | Kubernetes monitoring  
-https://www.youtube.com/watch?v=_NtRkBipepg
-
-// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
-https://www.youtube.com/watch?v=_aqlanvWL-c
-
-// Поднимаем динамические стенды с помощью GitOps  
-https://www.youtube.com/watch?v=kAT4qAb-HVw
-
-**How to learn Kubernetes in 2022**  
-https://www.youtube.com/watch?v=JeAHlTYB1Qk
-
-**Kubernetes Notifications, Troubleshooting, And Automation With Robusta**  
-https://www.youtube.com/watch?v=2P76WVVua8w
-
-**Kubernetes Security Best Practices you need to know | THE Guide for securing your K8s cluster!**  
-https://www.youtube.com/watch?v=oBf5lrmquYI
-
-**GitOps (& Flux) for Helm Users with Scott Rigby**  
-https://www.youtube.com/watch?v=sQTkLT-V6sg
-
-**How to deploy Vault for Kubernetes in 2022 and inject secrets**  
-https://www.youtube.com/watch?v=2Owo4Ioo9tQ
-
-**What is SRE | Tasks and Responsibilities of an SRE | SRE vs DevOps**  
-https://www.youtube.com/watch?v=OnK4IKgLl24
-
-**GitOps with GitHub Actions & Flux with Kingdon Barrett**  
-https://www.youtube.com/watch?v=cR2eCMbiZg4
-
-<br/>
-
-### [YouTube] Flux CD v2 With GitOps Toolkit - Kubernetes Deployment And Sync Mechanism
-
-<div align="center">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/R6OeIgb7lUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br/>
-
-Разбираемся [здесь](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-toolkit/)
 
 <br/>
 
@@ -309,3 +261,37 @@ https://www.youtube.com/watch?v=euggUTPJzro
 
 **Intro to Kubernetes and GitOps + Free GitOps Workshop!**  
 https://www.youtube.com/watch?v=PE3yuEXmr40
+
+<br/>
+
+### Нужно посмотреть
+
+// Introduction to Service monitors for beginners | Kubernetes monitoring  
+https://www.youtube.com/watch?v=_NtRkBipepg
+
+// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
+https://www.youtube.com/watch?v=_aqlanvWL-c
+
+// Поднимаем динамические стенды с помощью GitOps  
+https://www.youtube.com/watch?v=kAT4qAb-HVw
+
+**How to learn Kubernetes in 2022**  
+https://www.youtube.com/watch?v=JeAHlTYB1Qk
+
+**Kubernetes Notifications, Troubleshooting, And Automation With Robusta**  
+https://www.youtube.com/watch?v=2P76WVVua8w
+
+**Kubernetes Security Best Practices you need to know | THE Guide for securing your K8s cluster!**  
+https://www.youtube.com/watch?v=oBf5lrmquYI
+
+**GitOps (& Flux) for Helm Users with Scott Rigby**  
+https://www.youtube.com/watch?v=sQTkLT-V6sg
+
+**How to deploy Vault for Kubernetes in 2022 and inject secrets**  
+https://www.youtube.com/watch?v=2Owo4Ioo9tQ
+
+**What is SRE | Tasks and Responsibilities of an SRE | SRE vs DevOps**  
+https://www.youtube.com/watch?v=OnK4IKgLl24
+
+**GitOps with GitHub Actions & Flux with Kingdon Barrett**  
+https://www.youtube.com/watch?v=cR2eCMbiZg4
