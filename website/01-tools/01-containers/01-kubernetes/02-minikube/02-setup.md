@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-03.03.2023
+29.04.2023
 
 <br/>
 
@@ -24,7 +24,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 ```shell
-// Узнать последнюю версию (v1.29.0):
+// Узнать последнюю версию (v1.30.1):
 $ curl -s https://api.github.com/repos/kubernetes/minikube/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 
 // Установка
@@ -35,8 +35,8 @@ $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/mini
 
 ```
 $ minikube version
-minikube version: v1.29.0
-commit: ddac20b4b34a9c8c857fc602203b6ba2679794d3
+minikube version: v1.30.1
+commit: 08896fd1dc362c097c925146c4a0d0dac715ace0
 ```
 
 <br/>
@@ -64,7 +64,7 @@ commit: ddac20b4b34a9c8c857fc602203b6ba2679794d3
 <br/>
 
 ```
-// v1.25.6
+// v1.27.1
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -72,14 +72,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.25.6
+v1.27.1
 ```
 
 <br/>
 
 ```
-// Если младше v1.25.6
-$ LATEST_KUBERNETES_VERSION=v1.25.6
+// Если младше v1.27.1
+$ LATEST_KUBERNETES_VERSION=v1.27.1
 ```
 
 <br/>
@@ -184,11 +184,11 @@ CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/se
 
 ```
 $ minikube --profile ${PROFILE} config view
-- vm-driver: docker
+- driver: docker
+- kubernetes-version: v1.27.1
+- memory: 8G
 - cpus: 4
-- disk-size: 20g
-- kubernetes-version: v1.23.4
-- memory: 8192
+- disk-size: 20G
 ```
 
 <br/>
