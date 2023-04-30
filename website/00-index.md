@@ -8,7 +8,7 @@ permalink: /
 
 <br/>
 
-![What is GitOps](/img/courses/gitops.png 'What is GitOps'){: .center-image }
+![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
 <br/>
 
