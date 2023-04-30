@@ -337,6 +337,10 @@ $ flux create kustomization infra-database-kustomize-git-mysql \
 
 <br/>
 
+commit / push
+
+<br/>
+
 ```
 $ flux reconcile source git flux-system
 ```
@@ -359,4 +363,123 @@ infra-database-kustomize-git-mysql	infrastructure@sha1:9d811936	False    	True 	
 
 <br/>
 
+**Если не будет подключаться, можно попробовать сделать следующее! У меня заработало.**
+
+<br/>
+
+github.com -> bb-app-source -> infrastructure -> database -> secret-mysql.yaml
+
+<br/>
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-mysql
+  namespace: database
+stringData:
+  password: mysql-password-0123456789
+```
+
+<br/>
+
+```
+// OK!
+// # mysql --host=localhost --user=root --password=mysql-password-0123456789 bricks
+# mysql --host=mysql.database.svc.cluster.local --user=root --password=mysql-password-0123456789 bricks
+```
+
+<br/>
+
+М.б. еще придется пересоздать приложение с указанием нужного пароля.
+
+<br/>
+
 ### 10. DEMO - Flux Pull and Deploy from OCI Registry
+
+<br/>
+
+```
+$ flux create secret oci ghcr-auth \
+  --url ghcr.io \
+  --username wildmakaka \
+  --password <GITHUB_TOKEN>
+```
+
+<br/>
+
+```
+$ kubectl -n flux-system get secrets
+***
+ghcr-auth
+***
+```
+
+<br/>
+
+```
+// tag взять в packages на github
+$ flux create source oci 7-demo-source-oci-bb-app-7-7-0 \
+  --url oci://ghcr.io/wildmakaka/bb-app \
+  --tag 7.7.0-0bb2691 \
+  --secret-ref ghcr-auth \
+  --provider generic \
+  --export > 7-demo-source-oci-bb-app-7-7-0.yaml
+```
+
+<br/>
+
+```
+$ flux create kustomization 7-demo-kustomize-oci-bb-app-7-7-0 \
+  --source OCIRepository/7-demo-source-oci-bb-app-7-7-0 \
+  --target-namespace 7-demo \
+  --interval 10s \
+  --prune false \
+  --health-check='Deployment/block-buster-7-7-0.7-demo' \
+  --depends-on infra-database-kustomize-git-mysql \
+  --timeout 2m \
+  --export > 7-demo-kustomize-oci-bb-app-7-7-0.yaml
+```
+
+<br/>
+
+commit / push
+
+<br/>
+
+```
+$ flux get kustomization 7-demo-kustomize-oci-bb-app-7-7-0
+NAME                             	REVISION	SUSPENDED	READY  	MESSAGE
+7-demo-kustomize-oci-bb-app-7-7-0	        	False    	Unknown	Reconciliation in progress
+```
+
+<br/>
+
+```
+$ kubectl -n flux-system get kustomizations.kustomize.toolkit.fluxcd.io
+NAME                                 AGE    READY     STATUS
+7-demo-kustomize-oci-bb-app-7-7-0    10m    Unknown   Reconciliation in progress
+flux-system                          26h    True      Applied revision: main@sha1:9ba1fed9213b525c556776a983d5c9784d296bcc
+infra-database-kustomize-git-mysql   142m   True      Applied revision: infrastructure@sha1:9d811936cedf54261faf3786c042d9b35cce950f
+```
+
+<br/>
+
+```
+// Чекаем ошибку
+$ kubectl -n flux-system get kustomizations.kustomize.toolkit.fluxcd.io 7-demo-kustomize-oci-bb-app-7-7-0 -o yaml
+```
+
+<br/>
+
+```
+$ flux reconcile source git flux-system
+$ flux reconcile kustomization 7-demo-kustomize-oci-bb-app-7-7-0
+```
+
+<br/>
+
+```
+// OK!
+http://192.168.49.2:30770/
+```
