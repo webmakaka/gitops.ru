@@ -8,6 +8,10 @@ permalink: /
 
 <br/>
 
+![What is GitOps](/img/courses/gitops.png 'What is GitOps'){: .center-image }
+
+<br/>
+
 ### Пару слов о сайте
 
 Привет! Я Marley - WebMakaka!
@@ -55,6 +59,8 @@ permalink: /
 <br/>
 
 ### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
+
+Мне пока нравится этот курс!
 
 <br/>
 

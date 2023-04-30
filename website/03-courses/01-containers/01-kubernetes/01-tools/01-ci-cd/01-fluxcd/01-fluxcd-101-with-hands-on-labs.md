@@ -8,7 +8,9 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 
 # [Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]
 
-Repo:
+<br/>
+
+**Rep'ы автора:**
 
 ```
 https://github.com/sid-demo?tab=repositories
@@ -34,8 +36,8 @@ flux version 2.0.0-rc.1
 <br/>
 
 ```
-export GITHUB_USER=wildmakaka
-export REPOSITORY_NAME=block-buster
+$ export GITHUB_USER=wildmakaka
+$ export REPOSITORY_NAME=block-buster
 ```
 
 <br/>
@@ -53,6 +55,12 @@ $ flux bootstrap github \
 
 ```
 $ git clone git@github.com:wildmakaka/block-buster.git
+```
+
+<br/>
+
+```
+$ LATEST_KUBERNETES_VERSION=v1.27.1
 ```
 
 <br/>
@@ -120,19 +128,7 @@ commit / push
 $ kubectl get ns
 NAME                        STATUS   AGE
 1-demo                      Active   28s
-auth                        Active   54d
-cert-manager                Active   54d
-default                     Active   54d
-flux-system                 Active   133m
-ingress-nginx               Active   54d
-istio-system                Active   54d
-knative-eventing            Active   54d
-knative-serving             Active   54d
-kube-node-lease             Active   54d
-kube-public                 Active   54d
-kube-system                 Active   54d
-kubeflow                    Active   54d
-kubeflow-user-example-com   Active   54d
+***
 ```
 
 <br/>
@@ -169,6 +165,7 @@ http://192.168.49.2:30001
 <br/>
 
 ```
+// Посмотреть где в итоге хранятся манифесты
 $ kubectl -n flux-system get pods
 $ kubectl -n flux-system exec -it source-controller-664f9c8869-c6nj8 -- sh
 $ cd data/gitrepository/flux-system/flux-system/
@@ -250,7 +247,7 @@ $ flux create source git 2-demo-source-git-bb-app \
   --url https://github.com/wildmakaka/bb-app-source \
   --branch=2-demo \
   --timeout 10s \
-  --export > 2-demo-source-git-bb-app.yml
+  --export > 2-demo-source-git-bb-app.yaml
 ```
 
 <br/>
@@ -263,7 +260,7 @@ $ flux create kustomization 2-demo-source-git-bb-app \
   --interval 10s \
   --target-namespace 2-demo \
   --path manifests \
-  --export > 2-demo-kustomize-git-bb-app.yml
+  --export > 2-demo-kustomize-git-bb-app.yaml
 ```
 
 <br/>
@@ -328,7 +325,7 @@ $ flux create source git 3-demo-source-git-bb-app \
   --url https://github.com/wildmakaka/bb-app-source \
   --branch=3-demo \
   --timeout 10s \
-  --export > 3-demo-source-git-bb-app.yml
+  --export > 3-demo-source-git-bb-app.yaml
 ```
 
 <br/>
@@ -340,7 +337,7 @@ $ flux create kustomization 3-demo-source-git-bb-app \
   --interval 10s \
   --target-namespace 3-demo \
   --path kustomize \
-  --export > 3-demo-kustomize-git-bb-app.yml
+  --export > 3-demo-kustomize-git-bb-app.yaml
 ```
 
 <br/>
@@ -378,7 +375,7 @@ $ git switch 4-demo
 <br/>
 
 ```
-$ kubectl apply -f minio/minio-s3.yml
+$ kubectl apply -f minio/minio-s3.yaml
 ```
 
 <br/>
@@ -435,7 +432,7 @@ $ flux create kustomization 4-demo-kustomize-minio-s3-bucket-bb-app \
   --target-namespace 4-demo \
   --path ./app-740 \
   --prune true \
-  --export > 4-demo-kustomize-minio-s3-bucket-bb-app.yml
+  --export > 4-demo-kustomize-minio-s3-bucket-bb-app.yaml
 ```
 
 <br/>
@@ -478,3 +475,232 @@ $ kubectl -n 4-demo get all
 // OK!
 http://192.168.49.2:30004
 ```
+
+<br/>
+
+## 04. Helm Controller and OCI Registry
+
+<br/>
+
+### LAB 5 - Deploy Helm Charts from a Helm Repository
+
+<br/>
+
+**Чистка от предыдущих лаб**
+
+```
+$ flux get sources all
+```
+
+```
+$ flux get sources bucket
+$ flux delete source bucket 4-demo-source-minio-s3-bucket-bb-app
+```
+
+```
+$ flux get sources git
+$ flux delete source git 2-demo-source-git-bb-app
+$ flux delete source git 3-demo-source-git-bb-app
+```
+
+<br/>
+
+```
+$ flux get kustomization
+$ flux delete kustomization 2-demo-source-git-bb-app
+$ flux delete kustomization 3-demo-source-git-bb-app
+$ flux delete kustomization 4-demo-kustomize-minio-s3-bucket-bb-app
+```
+
+<br/>
+
+```
+$ git switch 5-demo
+```
+
+<br/>
+
+```
+$ flux create source git 5-demo-source-git-helm-bb-app \
+  --url https://github.com/wildmakaka/bb-app-source \
+  --branch=5-demo \
+  --timeout 10s \
+  --export > 5-demo-source-git-helm-bb-app.yaml
+```
+
+<br/>
+
+```
+$ vi 5-demo-values.yaml
+```
+
+```yaml
+replicaCount: 2
+
+service:
+  type: NodePort
+  nodePort: 30005
+
+namespace:
+  name: 5-demo
+
+labels:
+  app:
+    name: block-buster
+    version: 7.5.0
+    env: dev
+```
+
+<br/>
+
+```
+$ flux create helmrelease 5-demo-helm-release-git-helm-bb-app \
+  --chart helm-chart \
+  --interval 10s \
+  --target-namespace 5-demo \
+  --source GitRepository/5-demo-source-git-helm-bb-app \
+  --values 5-demo-values.yaml \
+  --export > 5-demo-helm-release-git-helm-bb-app.yaml
+```
+
+<br/>
+
+```
+// Пока не удалил файл 5-demo-values.yaml, ничего не запускалось:
+$ rm 5-demo-values.yaml
+```
+
+<br/>
+
+commit / push
+
+<br/>
+
+```
+$ flux get sources git 5-demo-source-git-helm-bb-app
+NAME                         	REVISION            	SUSPENDED	READY	MESSAGE
+5-demo-source-git-helm-bb-app	5-demo@sha1:d327af27	False    	True 	stored artifact for revision '5-demo@sha1:d327af27'
+```
+
+<br/>
+
+```
+$ flux get helmreleases
+NAME                               	REVISION	SUSPENDED	READY	MESSAGE
+5-demo-helm-release-git-helm-bb-app	7.5.0   	False    	True 	Release reconciliation succeeded
+```
+
+<br/>
+
+```
+// OK!
+http://192.168.49.2:30005/
+```
+
+<br/>
+
+```
+// labels подтянулись из файла 5-demo-values.yaml
+$ kubectl -n 5-demo get pods --show-labels
+NAME                                     READY   STATUS    RESTARTS   AGE    LABELS
+block-buster-helm-app-6d69ff466d-bjq5x   1/1     Running   0          7m4s   app=block-buster,env=dev,pod-template-hash=6d69ff466d,version=7.5.0
+block-buster-helm-app-6d69ff466d-vfhn2   1/1     Running   0          7m4s   app=block-buster,env=dev,pod-template-hash=6d69ff466d,version=7.5.0
+```
+
+<br/>
+
+```
+$ flux get sources chart
+NAME                                           	REVISION	SUSPENDED	READY	MESSAGE
+flux-system-5-demo-helm-release-git-helm-bb-app	7.5.0   	False    	True 	packaged 'block-buster-helm-app' chart with version '7.5.0'
+```
+
+<br/>
+
+```
+$ kubectl -n flux-system get helmcharts.source.toolkit.fluxcd.io
+NAME                                              CHART        VERSION   SOURCE KIND     SOURCE NAME                     AGE   READY   STATUS
+flux-system-5-demo-helm-release-git-helm-bb-app   helm-chart   *         GitRepository   5-demo-source-git-helm-bb-app   12m   True    packaged 'block-buster-helm-app' chart with version '7.5.0'
+```
+
+<br/>
+
+```
+$ kubectl -n flux-system get helmcharts.source.toolkit.fluxcd.io -o yaml
+```
+
+<br/>
+
+### Продолжение
+
+<br/>
+
+https://sidd-harth.github.io/block-buster-helm-app/
+
+https://artifacthub.io/packages/helm/block-buster-app/block-buster-helm-app
+
+<br/>
+
+```
+$ flux create source helm 6-demo-source-helm-bb-app \
+  --url https://sidd-harth.github.io/block-buster-helm-app \
+  --timeout 10s \
+  --export > 6-demo-source-helm-bb-app.yaml
+```
+
+<br/>
+
+```
+$ vi 6-demo-values.yaml
+```
+
+```yaml
+replicaCount: 1
+
+service:
+  type: NodePort
+  nodePort: 30006
+
+namespace:
+  name: 6-demo
+
+labels:
+  app:
+    name: block-buster
+    version: 7.6.0
+    env: dev
+```
+
+<br/>
+
+```
+$ flux create helmrelease 6-demo-helm-release-bb-app \
+  --chart block-buster-helm-app \
+  --interval 10s \
+  --target-namespace 6-demo \
+  --source HelmRepository/6-demo-source-helm-bb-app \
+  --values 6-demo-values.yaml \
+  --export > 6-demo-helm-release-bb-app.yaml
+```
+
+<br/>
+
+```
+$ rm 6-demo-values.yaml
+```
+
+<br/>
+
+```
+// OK!
+http://192.168.49.2:30006/
+```
+
+<br/>
+
+```
+$ flux get helmreleases
+NAME                      	REVISION	SUSPENDED	READY	MESSAGE
+6-demo-helm-release-bb-app	7.6.0   	False    	True 	Release reconciliation succeeded
+```
+
