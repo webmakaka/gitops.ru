@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/helm/setup/
 <br/>
 
 Делаю:  
-30.05.2022
+30.04.2023
 
 <br/>
 
@@ -19,7 +19,7 @@ permalink: /tools/containers/kubernetes/tools/helm/setup/
 $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
 $ helm version --short --client
-v3.9.0+g7ceeda6
+v3.11.3+g3232493
 ```
 
 <br/>
