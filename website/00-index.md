@@ -33,8 +33,8 @@ permalink: /
 **Интересы админа сайта:**
 
 - Linux, Docker, Kubernetes
-- Rust, Node.js, React / Angular
-- PostgreSQL
+- Rust, Node.js / Nest.js, React / Angular
+- PostgreSQL, OracleDB
 - Machine Learning / BigData
 - Clouds
 

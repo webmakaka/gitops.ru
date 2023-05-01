@@ -13,7 +13,7 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 **Делаю:**  
 01.05.2023
 
-### [Подготовка окружения](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/setup/)
+### [00. Подготовка окружения](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/setup/)
 
 ### [03. Source and Kustomize Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/source-and-kustomize-controller/)
 

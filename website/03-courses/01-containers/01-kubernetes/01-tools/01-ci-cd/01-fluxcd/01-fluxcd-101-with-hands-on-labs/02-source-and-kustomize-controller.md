@@ -269,7 +269,6 @@ $ flux create kustomization 3-demo-source-git-bb-app \
 
 ```
 $ flux get sources git
-$ flux get sources git
 $ kubectl get ns
 ```
 

@@ -15,6 +15,12 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-v2-with-gitops-too
 
 <br/>
 
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/R6OeIgb7lUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<br/>
+
 ### Не работает! Нужно обновить конфиги для ingress.
 
 <br/>

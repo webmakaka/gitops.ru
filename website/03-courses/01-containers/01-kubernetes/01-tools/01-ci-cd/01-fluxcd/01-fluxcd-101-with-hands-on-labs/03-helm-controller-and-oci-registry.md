@@ -14,10 +14,6 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 
 <br/>
 
-### LAB 5 - Deploy Helm Charts from a Helm Repository
-
-<br/>
-
 **Чистка от предыдущих лаб**
 
 ```
@@ -47,6 +43,10 @@ $ flux delete kustomization 2-demo-source-git-bb-app
 $ flux delete kustomization 3-demo-source-git-bb-app
 $ flux delete kustomization 4-demo-kustomize-minio-s3-bucket-bb-app
 ```
+
+<br/>
+
+### LAB 5 - Deploy Helm Charts from a Helm Repository
 
 <br/>
 
@@ -102,7 +102,7 @@ $ flux create helmrelease 5-demo-helm-release-git-helm-bb-app \
 <br/>
 
 ```
-// Пока не удалил файл 5-demo-values.yaml, ничего не запускалось:
+// Пока не удалил файл 5-demo-values.yaml, ничего не запускалось
 $ rm 5-demo-values.yaml
 ```
 
