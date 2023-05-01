@@ -18,9 +18,9 @@ permalink: /
 
 А здесь просто собираются записи, по автоматизации развертывания приложений (которыми можно делиться без ограничений).
 
-Если интересно, подключайтесь! Я заинтересован в обмене полезных для себя знаний и best practice.
+Если интересно, подключайтесь! Я заинтересован в обмене знаниями.
 
-Вы можете добавлять свои записи и исправления с помощью pull requests, максимально удобный способ для работы - vscode + github. Можно предлагать и обновлять то, что устарело. Осбуждать <a href="https://github.com/webmakaka/gitops.ru/discussions">здесь</a>. Неугодные комментарии удаляются. Недовольные и бесящие пользователи - банятся.
+Вы можете добавлять свои записи и исправлять ошибки и неточности с помощью pull request's, максимально удобный способ для работы - vscode + github. Осбуждать можно <a href="https://github.com/webmakaka/gitops.ru/discussions">здесь</a>. Неугодные комментарии удаляются. Недовольные и бесящие пользователи - банятся.
 
 Я не особо разбираюсь в тонкой границе между devops и gitops. Поэтому здесь это +- одно и тоже. Смысл, чтобы по коммиту в репо git, происходила "магия". А как вы это будете называть, (наверное) мало кого интересует. В gitops (как я понял) описание инфраструктуры также хранится в git репо и при изменениях, запускается процесс ее изменения. Вся инфраструктура в GitOps - код.
 
@@ -50,13 +50,21 @@ permalink: /
 
 <br/>
 
+### [YouTube][DevOps Toolkit] How To Shift Left Infrastructure Management Using Crossplane Compositions [ENG, 2022]
+
+```
+Планируемс...
+https://www.youtube.com/watch?v=AtbS1u2j7po
+```
+
+<br/>
+
 ### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
 
 ```
 Планируемс...
-```
-
 https://www.youtube.com/watch?v=f931M4-my1k
+```
 
 <br/>
 
@@ -164,14 +172,6 @@ https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 
 <br/>
 
-### [Video Course][TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
-
-<div align="center">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/F7WMRXLUQRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<br/>
-
 ### [YouTube] What is GitOps, How GitOps works and Why it's so useful [ENG]
 
 <div align="center">
@@ -209,12 +209,6 @@ https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 <br/>
 
 [Разбор завершен](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
-
-<br/>
-
-[Docker / Kubernetes](/tools/containers/)
-
-[CI/CD](/tools/ci-cd/jenkins/)
 
 <br/>
 

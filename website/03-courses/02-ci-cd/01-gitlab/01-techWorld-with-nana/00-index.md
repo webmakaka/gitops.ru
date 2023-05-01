@@ -6,7 +6,13 @@ keywords: Видеокурсы по DevOps, TechWorld with Nana, GitLab CI/CD
 permalink: /courses/ci-cd/gitlab/techWorld-with-nana/
 ---
 
-# [TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
+# [Video Course][TechWorld with Nana] GitLab CI/CD Full Course released - CI/CD with Docker | K8s | Microservices! [ENG, 2022]
+
+<br/>
+
+<div align="center">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/F7WMRXLUQRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <br/>
 
