@@ -184,33 +184,6 @@ mysql-password-0123456789
 
 <br/>
 
-**Т.к. ранее удалил 8-\***
-
-<br/>
-
-```
-$ flux create source git 8-demo-source-git-bb-app \
-  --url ssh://git@github.com/wildmakaka/bb-app-source.git \
-  --branch 8-demo \
-  --timeout 10s \
-  --secret-ref 8-demo-git-bb-app-auth \
-  --export > 8-demo-source-git-bb-app.yaml
-```
-
-<br/>
-
-```
-$ flux create kustomization 8-demo-kustomize-git-bb-app \
-  --source GitRepository/8-demo-source-git-bb-app \
-  --target-namespace 8-demo \
-  --prune true \
-  --interval 10s \
-  --path manifests \
-  --export > 8-demo-kustomize-git-bb-app.yaml
-```
-
-<br/>
-
 ```
 // OK!
 http://192.168.49.2:30008/

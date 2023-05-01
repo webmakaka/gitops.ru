@@ -18,13 +18,7 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 
 <br/>
 
-Fork -> https://github.com/sidd-harth/bb-app-source
-
-<br/>
-
 ```
-$ cd ~/projects/dev/fluxcd
-$ git clone git@github.com:wildmakaka/bb-app-source.git
 $ cd bb-app-source/
 $ git switch 1-demo
 $ git pull

@@ -367,6 +367,8 @@ $ flux create secret git 8-demo-git-bb-app-auth \
 
 Output вставляем в github.
 
+GITHUB_USERNAME -> bb-app-source -> Settings -> Deploy keys -> Add deploy key
+
 ```
 Title: FLUX UPDATE DEPLOY KEY
 

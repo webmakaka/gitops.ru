@@ -10,15 +10,8 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 
 <br/>
 
-**Rep'ы автора:**
-
-```
-https://github.com/sid-demo?tab=repositories
-https://github.com/sidd-harth/block-buster
-https://github.com/sidd-harth-2
-```
-
-<br/>
+**Делаю:**  
+01.05.2023
 
 ### [Подготовка окружения](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/setup/)
 

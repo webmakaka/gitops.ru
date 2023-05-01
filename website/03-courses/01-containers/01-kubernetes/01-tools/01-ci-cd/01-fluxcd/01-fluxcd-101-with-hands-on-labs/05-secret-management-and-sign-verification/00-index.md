@@ -12,7 +12,10 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 
 ## 06. Secret Management & Sign Verification
 
+### [Подготовка окружения](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/setup/)
+
 ### [Bitnami Sealed](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/bitnami-sealed/)
 
-- Mozilla SOPS
-- Cosign
+### [Mozilla SOPS (Нужно переделать)](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/mozilla-sops/)
+
+### [Cosign](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/сosign/)
