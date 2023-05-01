@@ -22,3 +22,7 @@ permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-
 ### [05. Image Automation Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/image-automation-controller/)
 
 ### [06. Secret Management & Sign Verification](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/)
+
+### [07. Notification Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/notification-controller/)
+
+### [08. Monitoring & User Interface](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/monitoring-and-user-interface/)

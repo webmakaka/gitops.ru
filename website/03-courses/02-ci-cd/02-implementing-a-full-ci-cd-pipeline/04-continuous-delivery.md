@@ -260,7 +260,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd
 
 В
 
-https://github.com/webmak1/cicd-pipeline-train-schedule-cd
+https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
 
 Удалить все бранчи кроме мастер.
 
@@ -323,7 +323,7 @@ Description: GitHub API Key 2
 
 Credentials: GitHub API Key 2
 
-Repostitory HTTPS URL: https://github.com/webmak1/cicd-pipeline-train-schedule-cd
+Repostitory HTTPS URL: https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
 
 <br/>
 
@@ -351,7 +351,7 @@ https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd/blob/example-sol
 
 **Меняю текст**
 
-https://github.com/webmak1/cicd-pipeline-train-schedule-cd/blob/master/views/index.jade
+https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd/blob/master/views/index.jade
 
 <br/>
 

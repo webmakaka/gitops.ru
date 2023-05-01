@@ -235,7 +235,7 @@ spec:
   interval: 30s
   ref:
     branch: master
-  url: https://github.com/webmak1/realtimeapp-infra
+  url: https://github.com/wildmakaka/realtimeapp-infra
 ```
 
 <br/>
@@ -399,7 +399,7 @@ Publish
 
 Должен сработать kustomize edit который поменяет версию.
 
-https://github.com/webmak1/realtimeapp-infra/blob/master/deploy/overlays/prd/kustomization.yaml
+https://github.com/wildmakaka/realtimeapp-infra/blob/master/deploy/overlays/prd/kustomization.yaml
 
 Но я поменяю ее руками. На 1.0.1 т.к. 1.0.3 просто нет в репо автора.
 

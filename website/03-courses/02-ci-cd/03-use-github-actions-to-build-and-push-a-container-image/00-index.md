@@ -28,7 +28,7 @@ https://github.com/gbaeke/python-msi
 
 <br/>
 
-https://github.com/webmak1/python-msi/settings/secrets/actions
+https://github.com/wildmakaka/python-msi/settings/secrets/actions
 
 <br/>
 

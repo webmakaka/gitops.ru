@@ -32,7 +32,7 @@ AWS
 <br/>
 
     $ cd ~/tmp
-    $ git clone https://github.com/webmak1/terraform-up-and-running-code
+    $ git clone https://github.com/wildmakaka/terraform-up-and-running-code
 
 <br/>
 

@@ -76,7 +76,7 @@ GITHUB_USERNAME -> bb-app-source -> Settings -> Deploy keys -> Add deploy key
 ```
 Title: FLUX UPDATE DEPLOY KEY
 
-v allow write
++ allow write
 ```
 
 <br/>

@@ -272,7 +272,7 @@ Branch Source -> GitHub
 
 Repository HTTPS URL
 
-https://github.com/webmak1/cicd-pipeline-train-schedule-kubernetes
+https://github.com/wildmakaka/cicd-pipeline-train-schedule-kubernetes
 
 validate.
 

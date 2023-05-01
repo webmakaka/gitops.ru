@@ -143,7 +143,7 @@ Source Code Management
 
 <br/>
 
-Git (Форкнутый репо) -> https://github.com/webmak1/cicd-pipeline-train-schedule-jenkins
+Git (Форкнутый репо) -> https://github.com/wildmakaka/cicd-pipeline-train-schedule-jenkins
 
 <br/>
 

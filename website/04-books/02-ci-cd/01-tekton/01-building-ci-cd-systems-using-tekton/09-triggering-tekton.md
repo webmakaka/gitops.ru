@@ -289,6 +289,6 @@ something-pushed-run-6zfvs   10 minutes ago   14 seconds   Succeeded
 $ tkn pipelinerun logs something-pushed-nsfzl
 [log-push : log] ++ date '+%d/%m/%Y %T'
 [log-push : log] + DATE='09/10/2021 18:05:27'
-[log-push : log] [09/10/2021 18:05:27] - A push happened in https://github.com/webmak1/cicd-pipeline-train-schedule-cd
-[log-push : log] + echo '[09/10/2021' '18:05:27]' - A push happened in https://github.com/webmak1/cicd-pipeline-train-schedule-cd
+[log-push : log] [09/10/2021 18:05:27] - A push happened in https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
+[log-push : log] + echo '[09/10/2021' '18:05:27]' - A push happened in https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
 ```
