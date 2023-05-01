@@ -25,3 +25,5 @@ https://github.com/sidd-harth-2
 ### [03. Source and Kustomize Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/source-and-kustomize-controller/)
 
 ### [04. Helm Controller and OCI Registry](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/helm-controller-and-oci-registry/)
+
+### [05. Image Automation Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/image-automation-controller/)

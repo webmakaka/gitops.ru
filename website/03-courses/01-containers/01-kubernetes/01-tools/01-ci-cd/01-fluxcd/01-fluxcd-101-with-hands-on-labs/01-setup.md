@@ -51,8 +51,9 @@ $ flux bootstrap github \
   --owner=${GITHUB_USER} \
   --repository=${REPOSITORY_NAME} \
   --branch=main \
-  --path=./clusters/my-cluster \
-  --personal
+  --path=flux-clusters/dev-cluster \
+  --personal \
+  --private=false
 ```
 
 <br/>
@@ -127,7 +128,7 @@ flux-system	main@sha1:9f2d417a	False    	True 	Applied revision: main@sha1:9f2d4
 
 <br/>
 
-Скопировали манифесты из bb-app-source/manifests в каталог clusters/my-cluster/1-demo
+Скопировали манифесты из bb-app-source/manifests в каталог flux-clusters/dev-cluster/1-demo
 
 commit / push
 
