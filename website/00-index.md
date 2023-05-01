@@ -50,6 +50,16 @@ permalink: /
 
 <br/>
 
+### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
+
+```
+Планируемс...
+```
+
+https://www.youtube.com/watch?v=f931M4-my1k
+
+<br/>
+
 ### [Video Course][George Alonge] Kustomize Mastery: Manage Kubernetes Configuration with Ease [ENG, 2023][~4h 30m]
 
 ```
@@ -58,9 +68,15 @@ permalink: /
 
 <br/>
 
-### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
+### [Video Course][Siddharth Barahalikar] DevSecOps - Kubernetes DevOps & Security with Hands-On Labs [ENG, 2022][~13h]
 
-Мне пока нравится этот курс!
+```
+Планируемс...
+```
+
+<br/>
+
+### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
 
 <br/>
 
@@ -128,7 +144,7 @@ Summary
 
 <br/>
 
-Пока материал разочароывает. Просмотрено 10 уроков из 17.
+Пока материал разочароывает. Просмотрено 13 уроков из 17.
 
 Смотрел материалы этого автора. Ну думал,в этот то раз норм сделает. Похоже, хрен там.
 
