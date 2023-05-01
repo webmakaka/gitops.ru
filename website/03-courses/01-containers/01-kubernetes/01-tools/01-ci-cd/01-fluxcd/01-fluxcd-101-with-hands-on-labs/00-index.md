@@ -2,7 +2,7 @@
 layout: page
 title: FluxCD 101 with Hands-On Labs
 description: FluxCD 101 with Hands-On Labs
-keywords: linux, kubernetes, FluxCD
+keywords: linux, kubernetes, FluxCD, FluxCD 101 with Hands-On Labs
 permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/
 ---
 
@@ -27,3 +27,5 @@ https://github.com/sidd-harth-2
 ### [04. Helm Controller and OCI Registry](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/helm-controller-and-oci-registry/)
 
 ### [05. Image Automation Controller](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/image-automation-controller/)
+
+### [06. Secret Management & Sign Verification](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/secret-management-and-sign-verification/)

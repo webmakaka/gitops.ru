@@ -2,7 +2,7 @@
 layout: page
 title: FluxCD 101 with Hands-On Labs
 description: FluxCD 101 with Hands-On Labs
-keywords: linux, kubernetes, FluxCD
+keywords: linux, kubernetes, FluxCD, Source and Kustomize Controller
 permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/source-and-kustomize-controller/
 ---
 

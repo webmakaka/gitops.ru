@@ -2,7 +2,7 @@
 layout: page
 title: FluxCD 101 with Hands-On Labs
 description: FluxCD 101 with Hands-On Labs
-keywords: linux, kubernetes, FluxCD, Helm Controller and OCI Registry
+keywords: linux, kubernetes, FluxCD, Image Automation Controller
 permalink: /courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/image-automation-controller/
 ---
 
@@ -384,7 +384,7 @@ NAME                     TYPE     DATA   AGE
 <br/>
 
 ```
-// По http перестае работать, нужно сделать по ssh
+// По http перестает работать, нужно сделать по ssh
 $ flux create source git 8-demo-source-git-bb-app \
   --url ssh://git@github.com/wildmakaka/bb-app-source.git \
   --branch 8-demo \
@@ -423,7 +423,6 @@ NAME                      	LAST RUN                 	SUSPENDED	READY	MESSAGE
 $ kubectl -n 8-demo get deploy -o wide
 NAME           READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES                                       SELECTOR
 block-buster   1/1     1            1           137m   app          docker.io/webmakaka/bb-app-flux-demo:7.8.1   app=block-buster
-
 ```
 
 <br/>
