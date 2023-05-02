@@ -1,49 +1,48 @@
 <footer class="site-footer">
-    <div class="wrapper">
-        <!-- hypercomments -->
+  <div class="wrapper">
+    <!-- hypercomments -->
 
-        <!-- hypercomments -->
+    <!-- hypercomments -->
 
-        <!-- Google Analitics -->
+    <!-- Google Analitics -->
 
-        <!-- Google Analitics -->
+    <!-- Google Analitics -->
 
-        {% if page.keywords %}
+    {% if page.keywords %}
 
-        <div align="center">
-            <p>
-                <strong>Tags:</strong> {{ page.keywords | strip_html |
-                strip_newlines | truncate: 160 }}
-            </p>
-        </div>
-
-        {% endif %}
-
-        <h2 class="footer-heading">{{ site.title }}</h2>
-
-        <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-3">
-                <p class="text">
-                    OpenSource проект с исходниками на
-                    <a
-                        href="https://github.com/webmakaka/gitops.ru"
-                        rel="nofollow"
-                        >github</a
-                    >.
-                </p>
-
-                <p class="text">
-                    <strong
-                        >Желающие поделиться своим опытом, могут добавлять свои
-                        знания и исправлять ошибки, создавая Pull Request's
-
-                        <br />
-
-                        Для общения, создана группа в телеграм:
-                        https://t.me/devops_community.</strong
-                    >
-                </p>
-            </div>
-        </div>
+    <div align="center">
+      <p>
+        <strong>Tags:</strong> {{ page.keywords | strip_html | strip_newlines |
+        truncate: 160 }}
+      </p>
     </div>
+
+    {% endif %}
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-3">
+        <p class="text">
+          OpenSource проект с исходниками на
+          <a href="https://github.com/webmakaka/gitops.ru" rel="nofollow"
+            >github</a
+          >.
+        </p>
+
+        <p class="text">
+          <strong
+            >Желающие поделиться своим опытом, могут добавлять свои знания и
+            исправлять ошибки, создавая Pull Request's
+
+            <br />
+
+            Для общения, создана группа в телеграм:
+            https://t.me/devops_community.</strong
+          >
+          <img src="/img/a3333333mail.gif" alt="Marley" />
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
