@@ -64,7 +64,13 @@ https://www.youtube.com/watch?v=AtbS1u2j7po
 ```
 Планируемс...
 https://www.youtube.com/watch?v=f931M4-my1k
+
+https://gist.github.com/vfarcic/0a322f969368bec74b75677da217291c
+
 ```
+
+<!-- Signing And Verifying Container Images With Sigstore Cosign And Kyverno
+https://www.youtube.com/watch?v=HLb1Q086u6M&t=0s -->
 
 <br/>
 
@@ -80,7 +86,43 @@ https://www.youtube.com/watch?v=f931M4-my1k
 
 ```
 Планируемс...
+
+https://github.com/sidd-harth/kubernetes-devops-security
+
 ```
+
+<!--
+
+
+Выполнили:
+https://github.com/sidd-harth/kubernetes-devops-security/blob/main/setup/vm-install-script/install-script.sh
+
+https://github.com/sidd-harth/kubernetes-devops-security/blob/main/setup/jenkins-plugins/installer.sh
+
++ kubernetes-cli докинули руками
+
+$ cat /root/.kube/config
+
+Jenkins -> Dashboard -> Manage Jekniks -> Manage Credentials
+
+
+Jenkins -> Global credentials -> Add Credentials
+
+Secret file -> kube.configfile
+
+id: kubeconfig
+Description: kubeconfig
+
+====
+
+src sprigboot
+https://github.com/sidd-harth/kubernetes-devops-security/tree/main/src
+
+docker run -p 8787:5000 siddharth67/node-service:v1
+
+curl localhost:8787/plusone/99
+
+-->
 
 <br/>
 
@@ -282,17 +324,14 @@ https://www.youtube.com/watch?v=PE3yuEXmr40
 
 ### Нужно посмотреть
 
-// Introduction to Service monitors for beginners | Kubernetes monitoring  
+**Introduction to Service monitors for beginners | Kubernetes monitoring**  
 https://www.youtube.com/watch?v=_NtRkBipepg
 
-// Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu  
+**Creating Serverless CI/CD on Kubernetes using GitOps by Avik Kundu**  
 https://www.youtube.com/watch?v=_aqlanvWL-c
 
-// Поднимаем динамические стенды с помощью GitOps  
+**Поднимаем динамические стенды с помощью GitOps**  
 https://www.youtube.com/watch?v=kAT4qAb-HVw
-
-**How to learn Kubernetes in 2022**  
-https://www.youtube.com/watch?v=JeAHlTYB1Qk
 
 **Kubernetes Notifications, Troubleshooting, And Automation With Robusta**  
 https://www.youtube.com/watch?v=2P76WVVua8w
@@ -300,14 +339,8 @@ https://www.youtube.com/watch?v=2P76WVVua8w
 **Kubernetes Security Best Practices you need to know | THE Guide for securing your K8s cluster!**  
 https://www.youtube.com/watch?v=oBf5lrmquYI
 
-**GitOps (& Flux) for Helm Users with Scott Rigby**  
-https://www.youtube.com/watch?v=sQTkLT-V6sg
-
 **How to deploy Vault for Kubernetes in 2022 and inject secrets**  
 https://www.youtube.com/watch?v=2Owo4Ioo9tQ
-
-**What is SRE | Tasks and Responsibilities of an SRE | SRE vs DevOps**  
-https://www.youtube.com/watch?v=OnK4IKgLl24
 
 **GitOps with GitHub Actions & Flux with Kingdon Barrett**  
 https://www.youtube.com/watch?v=cR2eCMbiZg4
