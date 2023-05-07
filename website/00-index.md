@@ -74,11 +74,7 @@ https://www.youtube.com/watch?v=HLb1Q086u6M&t=0s -->
 
 <br/>
 
-### [Video Course][George Alonge] Kustomize Mastery: Manage Kubernetes Configuration with Ease [ENG, 2023][~4h 30m]
-
-```
-Планируемс...
-```
+### [[Video Course][George Alonge] Kustomize Mastery: Manage Kubernetes Configuration with Ease [ENG, 2023][~4h 30m]](/courses/containers/kubernetes/packages/kustomize/kustomize-mastery/)
 
 <br/>
 
