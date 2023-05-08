@@ -9,7 +9,7 @@ permalink: /devops/containers/docker/
 # Docker в Linux
 
 Offtopic:  
-[Docker в Windows](/windows/servers/containers/docker/)
+[Docker в Windows](//sysadm.ru/windows/servers/containers/docker/)
 
 <br/>
 

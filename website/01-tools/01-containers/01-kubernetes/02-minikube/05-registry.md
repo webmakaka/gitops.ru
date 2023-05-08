@@ -67,13 +67,13 @@ $ cd minikube-registry-aliases-demo
 <br/>
 
 ```
-eval $(minikube --profile ${PROFILE} docker-env)
+$ eval $(minikube --profile ${PROFILE} docker-env)
 ```
 
 <br/>
 
 ```
-skaffold dev --port-forward
+$ skaffold dev --port-forward
 ```
 
 <br/>
