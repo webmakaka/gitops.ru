@@ -52,7 +52,7 @@ permalink: /
 
 ### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
 
-[Пока не заработало](/tools/containers/kubernetes/tools/registries/harbor/)
+[Разбор](/tools/containers/kubernetes/tools/registries/harbor/)
 
 <br/>
 

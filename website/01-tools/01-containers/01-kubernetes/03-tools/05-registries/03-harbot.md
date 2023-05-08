@@ -10,9 +10,26 @@ permalink: /tools/containers/kubernetes/tools/registries/harbor/
 
 <br/>
 
-// Не заработало!  
 **Делаю:**  
 08.05.2023
+
+<br/>
+
+```
+$ sudo vi /etc/docker/daemon.json
+```
+
+<br/>
+
+```
+{ "insecure-registries":["harbor.192.168.49.2.nip.io"] }
+```
+
+<br/>
+
+```
+$ sudo service docker restart
+```
 
 <br/>
 
@@ -21,6 +38,10 @@ permalink: /tools/containers/kubernetes/tools/registries/harbor/
 **Испольновалась версия KUBERNETES_VERSION=v1.27.1**
 
 <br/>
+
+<div align="center">
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/f931M4-my1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 https://www.youtube.com/watch?v=f931M4-my1k
 
@@ -64,6 +85,8 @@ $ vi values.yaml
 
 <br/>
 
+roxy-body-size возможно нужно поправить!
+
 ```yaml
 expose:
   tls:
@@ -72,7 +95,7 @@ expose:
     annotations:
       ingress.kubernetes.io/proxy-body-size: '0'
       ingress.kubernetes.io/ssl-redirect: 'false'
-      nginx.ingress.kubernetes.io/proxy-body-size: 0                                │
+      nginx.ingress.kubernetes.io/proxy-body-size: '0'
       nginx.ingress.kubernetes.io/ssl-redirect: 'false'
 harborAdminPassword: Harbor12345
 ```
@@ -131,24 +154,21 @@ $ echo harbor.$INGRESS_HOST.nip.io
 ```
 // admin / Harbor12345
 $ docker login --username admin harbor.$INGRESS_HOST.nip.io
-Error response from daemon: Get "https://harbor.192.168.49.2.nip.io/v2/": x509: certificate is valid for ingress.local, not harbor.192.168.49.2.nip.io
 ```
 
 <br/>
 
-```
-// admin / Harbor12345
-$ docker login --username admin harbor.$INGRESS_HOST.nip.io --insecure-registry
-unknown flag: --insecure-registry
-See 'docker login --help'.
-```
-
-<!-- <br/>
-<br/>
+### push image
 
 ```
 $ git clone https://github.com/vfarcic/harbor-demo
 $ cd harbor-demo/
+```
+
+<br/>
+
+```
+$ cp go.mod.orig go.mod
 ```
 
 <br/>
@@ -161,4 +181,43 @@ $ yq --inplace \
 $ yq --inplace \
     ".ingress.host = \"silly-demo.$INGRESS_HOST.nip.io\"" \
     helm/values.yaml
-``` -->
+```
+
+<br/>
+
+```
+$ docker image build \
+    --tag harbor.$INGRESS_HOST.nip.io/dot/silly-demo:v0.0.1 .
+
+
+// OK!
+$ docker image push \
+    harbor.$INGRESS_HOST.nip.io/dot/silly-demo:v0.0.1
+```
+
+<br/>
+
+### Store Helm Charts And Other Artifacts In Harbor
+
+```
+$ cat helm/values.yaml
+
+$ yq --inplace ".image.tag = \"v0.0.2\"" helm/values.yaml
+
+$ yq --inplace ".version = \"0.0.2\"" helm/Chart.yaml
+
+
+// admin / Harbor12345
+$ helm registry login harbor.$INGRESS_HOST.nip.io --insecure
+
+$ helm package helm
+
+$ helm push silly-demo-0.0.2.tgz \
+    oci://harbor.$INGRESS_HOST.nip.io/dot \
+    --insecure-skip-tls-verify
+```
+
+<br/>
+
+**Configure HTTPS Access to Harbor**  
+https://goharbor.io/docs/2.5.0/install-config/configure-https/
