@@ -35,78 +35,7 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
-#### Инсталляция Tekton CLI
-
-<br/>
-
-```
-$ mkdir ~/tmp
-$ cd ~/tmp/
-```
-
-<br/>
-
-```
-$ vi tekton-setup.sh
-```
-
-<br/>
-
-```
-#!/bin/bash
-
-export LATEST_VERSION=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
-
-export LATEST_VERSION_SHORT=$(curl --silent "https://api.github.com/repos/tektoncd/cli/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/' | cut -c 2-)
-
-curl -LO "https://github.com/tektoncd/cli/releases/download/${LATEST_VERSION}/tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz"
-
-sudo tar xvzf tkn_${LATEST_VERSION_SHORT}_$(uname -s)_$(uname -m).tar.gz -C /usr/local/bin/ tkn
-```
-
-<br/>
-
-```
-$ chmod +x tekton-setup.sh
-$ ./tekton-setup.sh
-```
-
-<br/>
-
-```
-$ tkn version
-Client version: 0.23.1
-```
-
-<br/>
-
-#### Добавляем Tekton CRD в MiniKube
-
-<br/>
-
-```
-$ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
-```
-
-<br/>
-
-#### Добавление Tekton Dashboard в MiniKube (Если нужно)
-
-<br/>
-
-```
-$ kubectl apply --filename https://github.com/tektoncd/dashboard/releases/latest/download/tekton-dashboard-release.yaml
-```
-
-<br/>
-
-**Подключиться к dashboard**
-
-<br/>
-
-```
-$ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 8080:9097
-```
+#### [Инсталляция Tekton CLI](/tools/containers/kubernetes/tools/ci-cd/tekton/)
 
 <br/>
 

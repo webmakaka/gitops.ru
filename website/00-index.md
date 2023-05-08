@@ -50,27 +50,9 @@ permalink: /
 
 <br/>
 
-### [YouTube][DevOps Toolkit] How To Shift Left Infrastructure Management Using Crossplane Compositions [ENG, 2022]
-
-```
-Планируемс...
-https://www.youtube.com/watch?v=AtbS1u2j7po
-```
-
-<br/>
-
 ### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
 
-```
-Планируемс...
-https://www.youtube.com/watch?v=f931M4-my1k
-
-https://gist.github.com/vfarcic/0a322f969368bec74b75677da217291c
-
-```
-
-<!-- Signing And Verifying Container Images With Sigstore Cosign And Kyverno
-https://www.youtube.com/watch?v=HLb1Q086u6M&t=0s -->
+[Пока не заработало](/tools/containers/kubernetes/tools/registries/harbor/)
 
 <br/>
 

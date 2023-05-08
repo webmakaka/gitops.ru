@@ -334,25 +334,33 @@ service1
 
 На всех:
 
-    $ sudo su -
+```
+$ sudo su -
+```
 
 <br/>
 
-    # vi /etc/docker/daemon.json
+```
+# vi /etc/docker/daemon.json
 
-    {
-        "insecure-registries":["192.168.56.105:5000"]
-    }
-
-<br/>
-
-    # vi /etc/default/docker
-
-    DOCKER_OPTS='--insecure-registry 192.168.56.105:5000'
+{
+    "insecure-registries":["192.168.56.105:5000"]
+}
+```
 
 <br/>
 
-    # systemctl restart docker
+```
+# vi /etc/default/docker
+
+DOCKER_OPTS='--insecure-registry 192.168.56.105:5000'
+```
+
+<br/>
+
+```
+# systemctl restart docker
+```
 
 <br/>
 
