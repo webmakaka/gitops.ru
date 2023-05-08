@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция ArgoCD на Minikube
 description: Инсталляция ArgoCD на Minikube
 keywords: devops, containers, kubernetes, ci-cd, argocd, setup, minikube
-permalink: /devops/containers/kubernetes/ci-cd/argocd/setup/
+permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup/
 ---
 
 # Инсталляция ArgoCD на Minikube

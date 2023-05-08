@@ -287,3 +287,33 @@ $ cd ../lec-15-namespaces/
 ```
 $ cd ../lec-16-labels-and-annotations/
 ```
+
+<br/>
+
+## 04. Working with Patches
+
+<br/>
+
+### 01. Patches Overview
+
+<br/>
+
+### 02. Patches - Strategic Merge
+
+```
+$ cd 4-patches/wordpress/kustomize/lec-18-strategic-merge
+$ kustomize build .
+```
+
+<br/>
+
+### 03. Patches - JSON6902
+
+```
+$ cd ../lec-19-json-6902/
+$ kustomize build .
+```
+
+<br/>
+
+## 05. Working with Custom Resource Definitions - CRDs

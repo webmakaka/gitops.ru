@@ -3,7 +3,7 @@ layout: page
 title: Kubernetes ArgoCD
 description: Kubernetes ArgoCD
 keywords: devops, contaiers, kubernetes, ci-cd, argocd
-permalink: /devops/containers/kubernetes/ci-cd/argocd/using-argo-cd-to-apply-gitops-principles-on-previews/
+permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/using-argo-cd-to-apply-gitops-principles-on-previews/
 ---
 
 # Kubernetes ArgoCD
