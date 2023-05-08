@@ -317,3 +317,24 @@ $ kustomize build .
 <br/>
 
 ## 05. Working with Custom Resource Definitions - CRDs
+
+```
+$ cd udemy-kustomize-mastery/code-samples/5-crds/wordpress/kustomize/lec-20-crds
+```
+
+<br/>
+
+```
+kubectl api-resources | grep apps
+controllerrevisions                            apps/v1                                true         ControllerRevision
+daemonsets                        ds           apps/v1                                true         DaemonSet
+deployments                       deploy       apps/v1                                true         Deployment
+replicasets                       rs           apps/v1                                true         ReplicaSet
+statefulsets                      sts          apps/v1                                true         StatefulSet
+```
+
+<br/>
+
+```
+$ kustomize build .
+```

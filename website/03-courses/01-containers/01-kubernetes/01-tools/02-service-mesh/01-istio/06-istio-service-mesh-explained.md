@@ -19,7 +19,7 @@ permalink: /courses/containers/kubernetes/service-mesh/istio/istio-service-mesh-
 
 <br/>
 
-Поднимаю как <a href="/courses/containers/kubernetes/service-mesh/istio/minikube/setup/">здесь</a>
+Поднимаю как <a href="/tools/containers/kubernetes/tools/service-mesh/istio/setup/">здесь</a>
 
 <br/>
 
