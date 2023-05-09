@@ -41,7 +41,7 @@ $ echo ${INGRESS_HOST}
 
 <br/>
 
-```
+```yaml
 $ cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
@@ -92,7 +92,7 @@ EOF
 
 <br/>
 
-```
+```yaml
 $ cat << EOF | kubectl apply -f -
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
@@ -138,7 +138,7 @@ EOF
 
 <br/>
 
-```
+```yaml
 $ cat << EOF | kubectl apply -f -
 apiVersion: v1
 kind: Service
@@ -189,7 +189,7 @@ EOF
 
 <br/>
 
-```
+```yaml
 $ cat << EOF | kubectl apply -f -
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService

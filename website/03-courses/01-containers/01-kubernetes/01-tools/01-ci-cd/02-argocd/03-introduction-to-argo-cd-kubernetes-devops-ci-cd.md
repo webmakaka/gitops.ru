@@ -3,7 +3,7 @@ layout: page
 title: Introduction to Argo CD Kubernetes DevOps CI CD
 description: Introduction to Argo CD Kubernetes DevOps CI CD
 keywords: devops, contaiers, kubernetes, ci-cd, argocd
-permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/introduction-to-argo-cd-kubernetes-devops-ci-cd/
+permalink: /courses/containers/kubernetes/ci-cd/argocd/introduction-to-argo-cd-kubernetes-devops-ci-cd/
 ---
 
 # Introduction to Argo CD Kubernetes DevOps CI/CD

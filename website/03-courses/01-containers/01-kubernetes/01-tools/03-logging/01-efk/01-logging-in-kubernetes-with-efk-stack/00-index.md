@@ -50,9 +50,9 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
 
 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
-3. Инсталляция [Helm](/tools/containers/kubernetes/tools/helm/setup/)
+3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
 
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/helm/logging/)
+4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/packages/helm/logging/)
 
 <br/>
 

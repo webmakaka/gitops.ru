@@ -3,7 +3,7 @@ layout: page
 title: Kubernetes ArgoCD
 description: Kubernetes ArgoCD
 keywords: devops, contaiers, kubernetes, ci-cd, argocd
-permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/5/
+permalink: /courses/containers/kubernetes/ci-cd/argocd/automation-of-everything/
 ---
 
 # Kubernetes ArgoCD

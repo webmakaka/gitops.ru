@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция с помощью Helm инструментов логирования
 description: Инсталляция с помощью Helm инструментов логирования
 keywords: gitops, containers, helm, logging, elastic search, kibana, fluentd
-permalink: /tools/containers/kubernetes/tools/helm/logging/
+permalink: /tools/containers/kubernetes/tools/packages/helm/logging/
 ---
 
 # Инсталляция с помощью Helm инструментов логирования
