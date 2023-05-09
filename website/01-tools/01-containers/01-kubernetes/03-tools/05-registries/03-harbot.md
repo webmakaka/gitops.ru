@@ -188,8 +188,11 @@ $ yq --inplace \
 ```
 $ docker image build \
     --tag harbor.$INGRESS_HOST.nip.io/dot/silly-demo:v0.0.1 .
+```
 
+<br/>
 
+```
 // OK!
 $ docker image push \
     harbor.$INGRESS_HOST.nip.io/dot/silly-demo:v0.0.1

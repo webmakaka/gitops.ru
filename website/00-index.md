@@ -50,9 +50,25 @@ permalink: /
 
 <br/>
 
+### [Video Course][Ardanlabs] Intensive Kubernetes Advanced Concepts [ENG, 202X]
+
+<br/>
+
+### [Video Course][Burr Sutter] 11 Steps to Awesome with Kubernetes, Istio, and Knative LiveLessons [ENG, 2019]
+
+Самый офигенный курс по kubernetes. Надо пересмотреть!
+
+<br/>
+
+### [YouTube][DevOps Toolkit] How To Do Canary Deployments In Kubernetes Using Flagger And Linkerd? [ENG, 2022]
+
+https://www.youtube.com/watch?v=NrytqS43dgw
+
+<br/>
+
 ### [Video Course][Ahmed Elfakharany] Mastering GitOps with Argo CD [ENG, 2023]
 
-<!-- [Разбор](/tools/containers/kubernetes/tools/registries/harbor/) -->
+[Разбор](/courses/containers/kubernetes/ci-cd/argocd/introduction-to-argo-cd-kubernetes-devops-ci-cd/deploying-a-sample-application/)
 
 <br/>
 
