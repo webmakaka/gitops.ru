@@ -54,21 +54,7 @@ sealed-secrets-keyxkmnn   kubernetes.io/tls               2      64s
 
 <br/>
 
-```
-// Установка kubeseal
-// https://github.com/bitnami-labs/sealed-secrets/releases
-$ cd ~/tmp
-$ wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.20.5/kubeseal-0.20.5-linux-amd64.tar.gz
-$ tar -xvzf kubeseal-0.20.5-linux-amd64.tar.gz
-$ sudo mv kubeseal /usr/local/bin/kubeseal
-```
-
-<br/>
-
-```
-kubeseal --version
-kubeseal version: 0.20.5
-```
+### [Установка kubeseal](/tools/containers/kubernetes/tools/security/bitnami-seal/)
 
 <br/>
 
