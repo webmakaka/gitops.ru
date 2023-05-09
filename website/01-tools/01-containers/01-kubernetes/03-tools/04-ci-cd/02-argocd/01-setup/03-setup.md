@@ -17,9 +17,7 @@ https://argo-cd.readthedocs.io/en/stable/getting_started/
 
 <br/>
 
-```
-$ brew install argocd
-```
+### [Install Argo CD CLI](/tools/containers/kubernetes/tools/ci-cd/argocd/setup/argocd-cli/)
 
 <br/>
 

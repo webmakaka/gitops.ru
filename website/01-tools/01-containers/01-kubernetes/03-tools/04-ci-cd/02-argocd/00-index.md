@@ -10,7 +10,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/
 
 ### [Инсталляция ArgoCD на Minikube](/tools/containers/kubernetes/tools/ci-cd/argocd/setup/)
 
-### [Инсталляция ArgoCD с помощью Helm на Minikube](/tools/containers/kubernetes/tools/ci-cd/argocd/helm-installation/)
+### [Инсталляция ArgoCD с помощью Helm на Minikube](/tools/containers/kubernetes/tools/ci-cd/argocd/setup-argocd-using-helm/)
 
 ### [Introduction to Argo CD Kubernetes DevOps CI/CD](/tools/containers/kubernetes/tools/ci-cd/argocd/introduction-to-argo-cd-kubernetes-devops-ci-cd/)
 

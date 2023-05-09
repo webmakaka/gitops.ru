@@ -50,6 +50,12 @@ permalink: /
 
 <br/>
 
+### [Video Course][Ahmed Elfakharany] Mastering GitOps with Argo CD [ENG, 2023]
+
+<!-- [Разбор](/tools/containers/kubernetes/tools/registries/harbor/) -->
+
+<br/>
+
 ### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
 
 [Разбор](/tools/containers/kubernetes/tools/registries/harbor/)
@@ -255,6 +261,8 @@ https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 <br/>
 
 ### Наиболее интересные OpenSource проекты, которые можно посмотреть
+
+[Микросервисы от гугла](https://github.com/GoogleCloudPlatform/microservices-demo)
 
 [[NewLine] TinyHouse: A Fullstack React Masterclass with TypeScript and GraphQL [ENG, 2020]](https://github.com/webmakaka/TinyHouse-A-Fullstack-React-Masterclass-with-TypeScript-and-GraphQL)
 

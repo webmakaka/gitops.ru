@@ -338,3 +338,71 @@ statefulsets                      sts          apps/v1                          
 ```
 $ kustomize build .
 ```
+
+<br/>
+
+## 06. Managing Multiple Environments with Overlays
+
+```
+$ cd udemy-kustomize-mastery/code-samples/6-multiple-envs/base
+```
+
+<br/>
+
+```
+$ kubectl apply -k .
+```
+
+<br/>
+
+```
+$ kubectl get svc,pod -o wide
+```
+
+<br/>
+
+```
+$ kubectl port-forward svc/frontend-external 30219:80
+```
+
+```
+// OK!
+http://localhost:30219/
+```
+
+<br/>
+
+```
+$ kubectl delete -k .
+```
+
+<br/>
+
+```
+$ cd ../day1/dev/
+```
+
+<br/>
+
+```
+$ kubectl apply -k .
+```
+
+<br/>
+
+```
+$ kubectl delete -k .
+```
+
+<br/>
+
+```
+$ cd ../stage/
+$ kubectl apply -k .
+```
+
+<br/>
+
+```
+$ kubectl delete -k .
+```
