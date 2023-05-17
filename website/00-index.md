@@ -50,6 +50,13 @@ permalink: /
 
 <br/>
 
+### [YouTube] Develop, build, deploy Node.js microservices w/ NestJS & Pulumi [RUS, 2023]
+
+* https://www.youtube.com/watch?v=aQ5ycXwDepU
+* https://www.youtube.com/watch?v=3oSt-evzV1c
+
+<br/>
+
 ### [Video Course][Ardanlabs] Intensive Kubernetes Advanced Concepts [ENG, 202X]
 
 <br/>
