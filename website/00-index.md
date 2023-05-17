@@ -55,6 +55,8 @@ permalink: /
 * https://www.youtube.com/watch?v=aQ5ycXwDepU
 * https://www.youtube.com/watch?v=3oSt-evzV1c
 
+https://xtechnology.dev/pulumi.html
+
 <br/>
 
 ### [Video Course][Ardanlabs] Intensive Kubernetes Advanced Concepts [ENG, 202X]
