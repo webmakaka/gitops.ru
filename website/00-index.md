@@ -50,6 +50,12 @@ permalink: /
 
 <br/>
 
+### [YouTube] Help! I'm a developer and I need to deploy an application on Kubernetes [ENG, 2023]
+
+* https://www.youtube.com/watch?v=8O0FXivfisY
+
+<br/>
+
 ### [YouTube] Develop, build, deploy Node.js microservices w/ NestJS & Pulumi [RUS, 2023]
 
 * https://www.youtube.com/watch?v=aQ5ycXwDepU
