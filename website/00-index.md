@@ -50,6 +50,12 @@ permalink: /
 
 <br/>
 
+### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
+
+* [link](https://www.youtube.com/watch?v=Ny9RxM6H6Hg)
+
+<br/>
+
 ### [YouTube] Help! I'm a developer and I need to deploy an application on Kubernetes [ENG, 2023]
 
 * https://www.youtube.com/watch?v=8O0FXivfisY
