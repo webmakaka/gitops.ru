@@ -48,6 +48,13 @@ permalink: /
 - Machine Learning
 - Kafka
 
+
+<br/>
+
+### [Book] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]
+
+English | 2023 | ISBN: 978-1492097471 | 242 Pages | PDF, EPUB | 17 MB
+
 <br/>
 
 ### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
