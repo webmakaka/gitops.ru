@@ -109,7 +109,7 @@ Save -> Build Now
 
 <br/>
 
-### Указать правильную версию jDK
+### Указать правильную версию JDK
 
 Скорее всего, нужно указать версию JDK 1.8
 
@@ -128,3 +128,7 @@ Version 8u221
 <br/>
 
 **Save**
+
+<br/>
+
+### [Learn DevOps: CI/CD with Jenkins using Pipelines and Docker](https://github.com/wildmakaka/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)

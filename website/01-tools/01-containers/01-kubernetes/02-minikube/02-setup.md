@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-09.05.2023
+21.05.2023
 
 <br/>
 
@@ -64,7 +64,7 @@ commit: 08896fd1dc362c097c925146c4a0d0dac715ace0
 <br/>
 
 ```
-// v1.27.1
+// v1.27.2
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -72,14 +72,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.27.1
+v1.27.2
 ```
 
 <br/>
 
 ```
-// Если младше v1.27.1
-$ LATEST_KUBERNETES_VERSION=v1.27.1
+// Если младше v1.27.2
+$ LATEST_KUBERNETES_VERSION=v1.27.2
 ```
 
 <br/>

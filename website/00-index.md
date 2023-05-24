@@ -52,14 +52,14 @@ permalink: /
 
 ### [YouTube] Help! I'm a developer and I need to deploy an application on Kubernetes [ENG, 2023]
 
-* https://www.youtube.com/watch?v=8O0FXivfisY
+- https://www.youtube.com/watch?v=8O0FXivfisY
 
 <br/>
 
 ### [YouTube] Develop, build, deploy Node.js microservices w/ NestJS & Pulumi [RUS, 2023]
 
-* https://www.youtube.com/watch?v=aQ5ycXwDepU
-* https://www.youtube.com/watch?v=3oSt-evzV1c
+- https://www.youtube.com/watch?v=aQ5ycXwDepU
+- https://www.youtube.com/watch?v=3oSt-evzV1c
 
 https://xtechnology.dev/pulumi.html
 
@@ -142,76 +142,6 @@ curl localhost:8787/plusone/99
 <br/>
 
 ### [[Video Course][Siddharth Barahalikar] FluxCD 101 with Hands-On Labs [ENG, 2023][~5h 45m]](/courses/containers/kubernetes/ci-cd/fluxcd/fluxcd-101-with-hands-on-labs/)
-
-<br/>
-
-### [Video Course][Sander van Vugt] Automating Kubernetes with GitOps [ENG, Apr 14, 2023][~7h 40m]
-
-<br/>
-
-![Automating Kubernetes with GitOps](/img/courses/Automating-Kubernetes-with-GitOps.jpeg 'Automating Kubernetes with GitOps'){: .center-image }
-
-<br/>
-
-```
-Introduction
-
-Module 1: Understanding the Fundamentals
-
-Lesson 1: Understanding DevOps and GitOps
-
-Lesson 2: Using Pipelines
-
-Module 2: From Code to Image
-
-Lesson 3: Using Git
-
-Lesson 4: Building Container Images
-
-Module 3: Automating Infrastructure
-
-Lesson 5: Infrastructure as Code
-
-Lesson 6: Configuration as Code
-
-Module 4: From Image to Application
-
-Lesson 7: Running Applications in Kubernetes
-
-Lesson 8: Setting up Kubernetes for GitOps
-
-Lesson 9: Controllers and Operators
-
-Lesson 10: Kubernetes CI/CD
-
-Lesson 11: Managing Kubernetes Applications the GitOps Way
-
-Lesson 12: Using Secrets
-
-Lesson 13: Using GitOps to Provide Zero-downtime Application Updates
-
-Lesson 14: Running a GitOps Project
-
-Module 5: Using Kubernetes Ecosystem Solutions
-
-Lesson 15: Implementing Observability
-
-Lesson 16: Integrating Tekton Pipelines
-
-Lesson 17: Automatically Updating Code to Applications
-
-Summary
-```
-
-<br/>
-
-[GitHub](https://github.com/sandervanvugt/gitops/)
-
-<br/>
-
-Пока материал разочароывает. Просмотрено 13 уроков из 17.
-
-Смотрел материалы этого автора. Ну думал,в этот то раз норм сделает. Похоже, хрен там.
 
 <br/>
 
