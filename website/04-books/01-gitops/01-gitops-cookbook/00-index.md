@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Книги GitOps
-description: Книги GitOps
-keywords: Книги GitOps
+title: GitOps Cookbook
+description: GitOps Cookbook
+keywords: GitOps Cookbook
 permalink: /books/gitops/gitops-cookbook/
 ---
 

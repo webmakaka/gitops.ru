@@ -1,14 +1,19 @@
 ---
 layout: page
-title: Building a Container Using Shipwright and kaniko in Kubernetes
-description: Building a Container Using Shipwright and kaniko in Kubernetes
-keywords: Building a Container Using Shipwright and kaniko in Kubernetes
+title: GitOps Cookbook - Building a Container Using Shipwright and kaniko in Kubernetes
+description: GitOps Cookbook - Building a Container Using Shipwright and kaniko in Kubernetes
+keywords: GitOps Cookbook, Building a Container Using Shipwright and kaniko in Kubernetes
 permalink: /books/gitops/gitops-cookbook/building-a-container-using-shipwright-and-kaniko-in-kubernetes/
 ---
 
 <br/>
 
 # Building a Container Using Shipwright and kaniko in Kubernetes
+
+<br/>
+
+**Делаю:**  
+25.05.2023
 
 <br/>
 
@@ -139,5 +144,5 @@ $ kubectl logs -f kaniko-nodejs-buildrun-qgnct-nw46r-pod -c step-build-and-push
 ```
 $ kubectl get buildruns
 NAME                           SUCCEEDED   REASON   STARTTIME   COMPLETIONTIME
-kaniko-nodejs-buildrun-qgnct   False       Failed   4m24s       3m48s
+kaniko-nodejs-buildrun-qj8wh   True        Succeeded   22m         20m
 ```
