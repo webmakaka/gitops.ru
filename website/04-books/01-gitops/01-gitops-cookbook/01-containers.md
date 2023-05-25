@@ -3,12 +3,16 @@ layout: page
 title: GitOps Cookbook - Building a Container Using Shipwright and kaniko in Kubernetes
 description: GitOps Cookbook - Building a Container Using Shipwright and kaniko in Kubernetes
 keywords: GitOps Cookbook, Building a Container Using Shipwright and kaniko in Kubernetes
-permalink: /books/gitops/gitops-cookbook/building-a-container-using-shipwright-and-kaniko-in-kubernetes/
+permalink: /books/gitops/gitops-cookbook/containers/
 ---
 
 <br/>
 
-# Building a Container Using Shipwright and kaniko in Kubernetes
+# 03.Containers
+
+<br/>
+
+## 03.5 - Building a Container Using Shipwright and kaniko in Kubernetes
 
 <br/>
 

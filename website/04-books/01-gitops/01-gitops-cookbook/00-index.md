@@ -16,4 +16,4 @@ https://github.com/gitops-cookbook
 
 <br/>
 
-### [Building a Container Using Shipwright and kaniko in Kubernetes](/books/gitops/gitops-cookbook/building-a-container-using-shipwright-and-kaniko-in-kubernetes/)
+### [03. Contrainers](/books/gitops/gitops-cookbook/containers/)
