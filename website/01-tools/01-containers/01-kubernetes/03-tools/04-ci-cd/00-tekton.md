@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 <br/>
 
 Делаю:  
-08.05.2023
+25.05.2023
 
 <br/>
 
@@ -60,25 +60,26 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeli
 
 ```
 $ tkn version
-Client version: 0.30.1
-Pipeline version: v0.47.0
+Client version: 0.31.0
+Pipeline version: v0.48.0
 ```
 
 <br/>
 
 ```
-$ watch kubectl get deployments,pods,services --namespace tekton-pipelines
-NAME                                          READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/tekton-pipelines-controller   1/1     1            1           45s
-deployment.apps/tekton-pipelines-webhook      1/1     1            1           44s
+$ kubectl get pods -n tekton-pipelines
+NAME                                           READY   STATUS    RESTARTS   AGE
+tekton-events-controller-54854b8875-t4v88      1/1     Running   0          101s
+tekton-pipelines-controller-58f8d4f964-6sm7z   1/1     Running   0          101s
+tekton-pipelines-webhook-7db988ddc6-jfwn5      1/1     Running   0          98s
+```
 
-NAME                                               READY   STATUS    RESTARTS   AGE
-pod/tekton-pipelines-controller-66754f98bb-mjbsw   1/1     Running   0          45s
-pod/tekton-pipelines-webhook-5dd964c86c-2f7r9      1/1     Running   0          44s
+<br/>
 
-NAME                                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                              AGE
-service/tekton-pipelines-controller   ClusterIP   10.102.53.122   <none>        9090/TCP,8008/TCP,8080/TCP           45s
-service/tekton-pipelines-webhook      ClusterIP   10.111.71.150   <none>        9090/TCP,8008/TCP,443/TCP,8080/TCP   44s
+```
+$ kubectl get pods -n tekton-pipelines-resolvers
+NAME                                                 READY   STATUS    RESTARTS   AGE
+tekton-pipelines-remote-resolvers-85d9686f77-prnvh   1/1     Running   0          2m9s
 ```
 
 <br/>
@@ -86,15 +87,14 @@ service/tekton-pipelines-webhook      ClusterIP   10.111.71.150   <none>        
 ```
 $ kubectl get crds
 NAME                                       CREATED AT
-clustertasks.tekton.dev                    2023-05-08T15:34:44Z
-customruns.tekton.dev                      2023-05-08T15:34:44Z
-pipelineruns.tekton.dev                    2023-05-08T15:34:44Z
-pipelines.tekton.dev                       2023-05-08T15:34:44Z
-resolutionrequests.resolution.tekton.dev   2023-05-08T15:34:45Z
-taskruns.tekton.dev                        2023-05-08T15:34:45Z
-tasks.tekton.dev                           2023-05-08T15:34:45Z
-verificationpolicies.tekton.dev            2023-05-08T15:34:45Z
-
+clustertasks.tekton.dev                    2023-05-25T18:14:16Z
+customruns.tekton.dev                      2023-05-25T18:14:16Z
+pipelineruns.tekton.dev                    2023-05-25T18:14:17Z
+pipelines.tekton.dev                       2023-05-25T18:14:16Z
+resolutionrequests.resolution.tekton.dev   2023-05-25T18:14:17Z
+taskruns.tekton.dev                        2023-05-25T18:14:17Z
+tasks.tekton.dev                           2023-05-25T18:14:17Z
+verificationpolicies.tekton.dev            2023-05-25T18:14:17Z
 ```
 
 <br/>
