@@ -2,11 +2,11 @@
 layout: page
 title: Инсталляция Tekton
 description: Инсталляция Tekton
-keywords: linux, kubernetes, Tekton
+keywords: linux, kubernetes, tekton, инсталляция
 permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 ---
 
-# Tekton
+# Инсталляция Tekton
 
 <br/>
 

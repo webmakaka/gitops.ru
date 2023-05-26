@@ -17,3 +17,7 @@ https://github.com/gitops-cookbook
 <br/>
 
 ### [03. Contrainers](/books/gitops/gitops-cookbook/containers/)
+
+### [04. Kustomize](/books/gitops/gitops-cookbook/kustomize/)
+
+### [05. Helm](/books/gitops/gitops-cookbook/helm/)

@@ -8,7 +8,7 @@ permalink: /books/gitops/gitops-cookbook/containers/
 
 <br/>
 
-# 03.Containers
+# 03. Containers
 
 <br/>
 
