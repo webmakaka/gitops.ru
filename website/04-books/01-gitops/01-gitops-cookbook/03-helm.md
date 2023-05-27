@@ -12,11 +12,6 @@ permalink: /books/gitops/gitops-cookbook/helm/
 
 <br/>
 
-**Делаю:**  
-26.05.2023
-
-<br/>
-
 ```
 // scaffold the project
 $ helm create <name>
@@ -121,6 +116,11 @@ $ helm verify pacman-0.1.0.tgz
 
 <br/>
 
+**Делаю:**  
+26.05.2023
+
+<br/>
+
 ```
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
@@ -185,6 +185,11 @@ $ helm show values bitnami/postgresql
 <br/>
 
 ### [OK!] 5.6 Deploying a Chart with a Dependency
+
+<br/>
+
+**Делаю:**  
+26.05.2023
 
 <br/>
 
@@ -441,4 +446,331 @@ $ curl localhost:8080/song | jq
 
 <br/>
 
-### 5.7 Triggering a Rolling Update Automatically
+### [OK!] 5.7 Triggering a Rolling Update Automatically
+
+<br/>
+
+**Делаю:**  
+27.05.2023
+
+<br/>
+
+```
+$ cd ~/tmp
+$ mkdir -p greetings/templates
+$ cd greetings
+```
+
+<br/>
+
+```yaml
+$ cat > templates/deployment.yaml << EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name}}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name}}
+    {{- if .Chart.AppVersion }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+    {{- end }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .Chart.Name}}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ .Chart.Name}}
+    spec:
+      containers:
+          - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion}}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            securityContext:
+              {{- toYaml .Values.securityContext | nindent 14 }}
+            name: {{ .Chart.Name}}
+            ports:
+              - containerPort: {{ .Values.image.containerPort }}
+                name: http
+                protocol: TCP
+            env:
+              - name: GREETING
+                valueFrom:
+                  configMapKeyRef:
+                    name: {{ .Values.configmap.name}}
+                    key: greeting
+EOF
+```
+
+<br/>
+
+```yaml
+$ cat > templates/service.yaml << EOF
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+  name: {{ .Chart.Name }}
+spec:
+  ports:
+    - name: http
+      port: {{ .Values.image.containerPort }}
+      targetPort: {{ .Values.image.containerPort }}
+  selector:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+EOF
+```
+
+<br/>
+
+```yaml
+$ cat > templates/configmap.yaml << EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: greeting-config
+data:
+  greeting: Aloha
+EOF
+```
+
+<br/>
+
+```yaml
+$ cat > Chart.yaml << EOF
+apiVersion: v2
+name: greetings
+description: A Helm chart for Greetings service
+
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+EOF
+```
+
+<br/>
+
+```yaml
+$ cat > values.yaml << EOF
+image:
+  repository: quay.io/gitops-cookbook/greetings
+  tag: "1.0.0"
+  pullPolicy: Always
+  containerPort: 8080
+
+replicaCount: 1
+
+configmap:
+  name: greeting-config
+EOF
+```
+
+<br/>
+
+```
+$ helm install greetings .
+```
+
+<br/>
+
+```
+$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+greetings-6df4d99d46-vzrj9   1/1     Running   0          29s
+```
+
+<br/>
+
+```
+$ kubectl port-forward service/greetings 8080:8080
+```
+
+```
+$ curl localhost:8080
+```
+
+**returns**
+
+```
+Aloha Ada
+```
+
+<br/>
+
+**Update the ConfigMap**
+
+<br/>
+
+```yaml
+$ cat > templates/configmap.yaml << EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: greeting-config
+data:
+  greeting: Hola
+EOF
+```
+
+<br/>
+
+```
+$ helm upgrade greetings .
+```
+
+<br/>
+
+```
+$ kubectl port-forward service/greetings 8080:8080
+```
+
+```
+$ curl localhost:8080
+```
+
+**returns**
+
+```
+Aloha Alexandra⏎
+```
+
+<br/>
+
+There are no changes in the Deployment object, there is no restart of the pod;
+
+<br/>
+
+```yaml
+$ cat > templates/deployment.yaml << EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name}}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name}}
+    {{- if .Chart.AppVersion }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+    {{- end }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .Chart.Name}}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ .Chart.Name}}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+      containers:
+          - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion}}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            securityContext:
+              {{- toYaml .Values.securityContext | nindent 14 }}
+            name: {{ .Chart.Name}}
+            ports:
+              - containerPort: {{ .Values.image.containerPort }}
+                name: http
+                protocol: TCP
+            env:
+              - name: GREETING
+                valueFrom:
+                  configMapKeyRef:
+                    name: {{ .Values.configmap.name}}
+                    key: greeting
+EOF
+```
+
+<br/>
+
+```yaml
+$ cat > templates/configmap.yaml << EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: greeting-config
+data:
+  greeting: Namaste
+EOF
+```
+
+<br/>
+
+```
+$ helm upgrade greetings .
+```
+
+<br/>
+
+```
+$ kubectl port-forward service/greetings 8080:8080
+```
+
+<br/>
+
+```
+$ curl localhost:8080
+```
+
+<br/>
+
+**returns**
+
+```
+Namaste Ada⏎
+```
+
+<br/>
+
+```
+$ kubectl describe pod greetings-bd8c9c4df-59xrj
+```
+
+<br/>
+
+```
+***
+Annotations:      checksum/config:
+***
+```
+
+<br/>
+
+```yaml
+$ cat > templates/configmap.yaml << EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: greeting-config
+data:
+  greeting: Привет!
+EOF
+```
+
+<br/>
+
+```
+$ helm upgrade greetings .
+```
+
+<br/>
+
+```
+$ kubectl port-forward service/greetings 8080:8080
+```
+
+<br/>
+
+```
+// Нужно подождать перестартовки пода
+$ curl localhost:8080
+```
+
+<br/>
+
+```
+Привет! Ada⏎
+```
