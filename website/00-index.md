@@ -58,6 +58,10 @@ permalink: /
 
 <br/>
 
+Предлагаю разбирать, улучшать, обновлять. Есть что, т.к. часть конфигов только в pdf. Незаметно присоединяйтесь. Прислыайте толковые PR.
+
+<br/>
+
 ### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
 
 - [link](https://www.youtube.com/watch?v=Ny9RxM6H6Hg)
