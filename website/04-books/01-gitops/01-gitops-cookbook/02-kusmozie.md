@@ -8,6 +8,6 @@ permalink: /books/gitops/gitops-cookbook/kustomize/
 
 <br/>
 
-# 04. Kustomize
+# [Book] GitOps Cookbook: 04. Kustomize
 
 <br/>

@@ -8,7 +8,7 @@ permalink: /books/gitops/gitops-cookbook/helm/
 
 <br/>
 
-# 04. Helm
+# [Book] GitOps Cookbook: 04. Helm
 
 <br/>
 
@@ -58,7 +58,7 @@ $ helm history pacman
 $ helm uninstall pacman
 ```
 
-<br/p>
+<br/>
 
 ### 5.3 Updating a Container Image in Helm
 

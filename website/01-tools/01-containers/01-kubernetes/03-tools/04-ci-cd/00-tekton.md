@@ -15,6 +15,10 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 
 <br/>
 
+### Инсталляция Tekton CLI
+
+<br/>
+
 ```
 $ mkdir ~/tmp
 $ cd ~/tmp/
@@ -48,7 +52,7 @@ $ bash tekton-setup.sh
 
 <br/>
 
-#### Добавляем Tekton CRD в MiniKube
+### Добавляем Tekton CRD в MiniKube
 
 <br/>
 
@@ -99,7 +103,7 @@ verificationpolicies.tekton.dev            2023-05-25T18:14:17Z
 
 <br/>
 
-#### Добавление Tekton Dashboard в MiniKube (Если нужно)
+### Добавление Tekton Dashboard в MiniKube (Если нужно)
 
 <br/>
 
@@ -115,4 +119,40 @@ $ kubectl apply --filename https://github.com/tektoncd/dashboard/releases/latest
 
 ```
 $ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 8080:9097
+```
+
+<br/>
+
+### Installing Tekton Triggers (Если нужно)
+
+<br/>
+
+```
+// install the trigger custom resource definitions (CRDs)
+$ kubectl apply -f https://storage.googleapis.com/tekton-releases/triggers/latest/release.yaml
+
+// An interceptor is an object that contains the logic necessary to validate and filter webhooks coming from various sources.
+$ kubectl apply -f https://storage.googleapis.com/tekton-releases/triggers/latest/interceptors.yaml
+```
+
+<br/>
+
+```
+$ kubectl apply -f https://raw.githubusercontent.com/tektoncd/triggers/main/examples/rbac.yaml
+```
+
+<br/>
+
+Now that Triggers is installed, you will be able to listen for events from GitHub, but for the webhooks to reach your cluster, you will need to expose a route to the outside world.
+
+<br/>
+
+```
+$ kubectl get pods -w -n tekton-pipelines
+```
+
+<br/>
+
+```
+$ tkn version
 ```

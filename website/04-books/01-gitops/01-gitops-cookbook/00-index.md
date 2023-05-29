@@ -21,3 +21,5 @@ https://github.com/gitops-cookbook
 ### [04. Kustomize](/books/gitops/gitops-cookbook/kustomize/)
 
 ### [05. Helm](/books/gitops/gitops-cookbook/helm/)
+
+### [06. Cloud Native CI/CD](/books/gitops/gitops-cookbook/cloud-native-cicd/)
