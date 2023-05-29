@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 <br/>
 
 Делаю:  
-25.05.2023
+29.05.2023
 
 <br/>
 
@@ -108,7 +108,7 @@ verificationpolicies.tekton.dev            2023-05-25T18:14:17Z
 <br/>
 
 ```
-$ kubectl apply --filename https://github.com/tektoncd/dashboard/releases/latest/download/tekton-dashboard-release.yaml
+$ kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashboard/latest/release.yaml
 ```
 
 <br/>
@@ -149,10 +149,23 @@ Now that Triggers is installed, you will be able to listen for events from GitHu
 
 ```
 $ kubectl get pods -w -n tekton-pipelines
+NAME                                                READY   STATUS    RESTARTS   AGE
+tekton-dashboard-675769bb7c-8c5n5                   1/1     Running   0          12s
+tekton-events-controller-54854b8875-mrpws           1/1     Running   0          3m48s
+tekton-pipelines-controller-58f8d4f964-xl59v        1/1     Running   0          3m48s
+tekton-pipelines-webhook-7db988ddc6-bhjg2           1/1     Running   0          3m47s
+tekton-triggers-controller-6b6fcd7d6f-l4p8w         1/1     Running   0          2m49s
+tekton-triggers-core-interceptors-b777b979c-pttxt   1/1     Running   0          2m43s
+tekton-triggers-webhook-6fd5f94f75-ppvmm            1/1     Running   0          2m49s
+
 ```
 
 <br/>
 
 ```
 $ tkn version
+Client version: 0.31.0
+Pipeline version: v0.48.0
+Triggers version: v0.24.0
+Dashboard version: v0.35.0
 ```

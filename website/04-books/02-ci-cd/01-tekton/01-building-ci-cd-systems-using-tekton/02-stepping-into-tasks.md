@@ -10,6 +10,11 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into
 
 <br/>
 
+Делаю:  
+29.05.2023
+
+<br/>
+
 ### Building your first task
 
 <br/>
@@ -36,6 +41,14 @@ EOF
 $ tkn task ls
 NAME    DESCRIPTION   AGE
 hello                 5 seconds ago
+```
+
+<br/>
+
+```
+$ kubectl get tasks
+NAME    AGE
+hello   29s
 ```
 
 <br/>
