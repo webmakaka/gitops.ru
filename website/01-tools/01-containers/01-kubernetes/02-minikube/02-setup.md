@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-27.05.2023
+30.05.2023
 
 <br/>
 

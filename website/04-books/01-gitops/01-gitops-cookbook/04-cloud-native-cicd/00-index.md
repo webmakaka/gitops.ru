@@ -10,4 +10,6 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/
 
 # [Book] GitOps Cookbook: 06. Cloud Native CI/CD
 
+<br/>
+
 ### [Tekton](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/)

@@ -10,8 +10,8 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 
 <br/>
 
-Делаю:  
-29.05.2023
+**Делаю:**  
+30.05.2023
 
 <br/>
 
@@ -119,6 +119,12 @@ $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashbo
 
 ```
 $ kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 8080:9097
+```
+
+<br/>
+
+```
+$ localhost:8080
 ```
 
 <br/>
