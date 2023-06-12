@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 <br/>
 
 **Делаю:**  
-30.05.2023
+12.06.2023
 
 <br/>
 
@@ -134,7 +134,7 @@ $ localhost:8080
 <br/>
 
 ```
-// install the trigger custom resource definitions (CRDs)
+// Install the trigger custom resource definitions (CRDs)
 $ kubectl apply -f https://storage.googleapis.com/tekton-releases/triggers/latest/release.yaml
 
 // An interceptor is an object that contains the logic necessary to validate and filter webhooks coming from various sources.
