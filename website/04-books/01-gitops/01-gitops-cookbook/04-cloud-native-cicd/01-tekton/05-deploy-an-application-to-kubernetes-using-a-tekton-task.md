@@ -12,8 +12,8 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/deploy-an-appl
 
 <br/>
 
-**Делаю:**  
-30.05.2023
+Делаю:  
+12.06.2023
 
 <br/>
 
@@ -46,7 +46,7 @@ $ kubectl create serviceaccount tekton-deployer-sa
 
 <br/>
 
-Define a Role named pipeline-role for the ServiceAccount
+**Define a Role named pipeline-role for the ServiceAccount**
 
 <br/>
 
@@ -91,7 +91,7 @@ EOF
 
 <br/>
 
-Bind the Role to the ServiceAccount :
+**Bind the Role to the ServiceAccount**
 
 ```yaml
 $ cat << 'EOF' | kubectl create -f -
@@ -111,7 +111,7 @@ EOF
 
 <br/>
 
-Define a TaskRun
+**Define a TaskRun**
 
 <br/>
 
@@ -128,13 +128,14 @@ spec:
   params:
     - name: SCRIPT
       value: |
-        kubectl create deploy tekton-greeter --image=quay.io/gitops-cookbook/tekton-greeter:latest
+        kubectl create deploy tekton-greeter --image=webmakaka/tekton-greeter:latest
 EOF
 ```
 
 <br/>
 
 ```
+// wait for 30 sec
 $ tkn taskrun logs kubectl-taskrun -f
 ```
 
@@ -156,6 +157,6 @@ $ kubectl port-forward svc/tekton-greeter 8080:8080
 <br/>
 
 ```
-curl localhost:8080
+$ curl localhost:8080
 Meeow!! from Tekton 😺🚀⏎
 ```
