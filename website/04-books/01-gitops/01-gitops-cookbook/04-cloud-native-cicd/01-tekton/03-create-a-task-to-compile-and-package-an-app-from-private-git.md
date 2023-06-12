@@ -1,18 +1,14 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Private Git
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Private Git
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Create a Task to Compile and Package an App from Private Git
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-task-to-compile-and-package-an-app-from-private-git/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
-
-<br/>
-
-## [OK!] 6.4 Create a Task to Compile and Package an App from Private Git
+# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.4 Create a Task to Compile and Package an App from Private Git
 
 <br/>
 

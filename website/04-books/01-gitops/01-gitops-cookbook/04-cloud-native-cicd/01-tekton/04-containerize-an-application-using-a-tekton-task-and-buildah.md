@@ -1,18 +1,14 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Containerize an Application Using a Tekton Task and Buildah
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Containerize an Application Using a Tekton Task and Buildah
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Containerize an Application Using a Tekton Task and Buildah
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/containerize-an-application-using-a-tekton-task-and-buildah/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
-
-<br/>
-
-## [OK!] 6.5 Containerize an Application Using a Tekton Task and Buildah
+# [Book] OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.5 Containerize an Application Using a Tekton Task and Buildah
 
 <br/>
 

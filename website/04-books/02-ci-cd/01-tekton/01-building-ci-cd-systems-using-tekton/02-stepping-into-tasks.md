@@ -10,12 +10,12 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into
 
 <br/>
 
-Делаю:  
-29.05.2023
+### [OK!] Building your first task
 
 <br/>
 
-### Building your first task
+Делаю:  
+12.06.2023
 
 <br/>
 

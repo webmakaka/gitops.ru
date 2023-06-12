@@ -1,18 +1,14 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-triggers-to-compile-and-package-an-application-automatically-when-a-change-occurs-on-git/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
-
-<br/>
-
-## [FAIL!] 6.8 Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
+# [Book] [FAIL!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.8 Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
 
 <br/>
 

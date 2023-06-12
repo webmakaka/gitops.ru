@@ -1,18 +1,14 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-tekton-pipeline-to-build-and-deploy-an-app-to-kubernetes/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
-
-<br/>
-
-## [FAIL!] 6.7 Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
+# [Book] [FAIL!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.7 Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
 
 Наверное, шаги из предыдущего параграфа тоже нужны.
 

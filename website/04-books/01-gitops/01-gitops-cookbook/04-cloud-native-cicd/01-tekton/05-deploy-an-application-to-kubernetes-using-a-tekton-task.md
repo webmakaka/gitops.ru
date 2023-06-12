@@ -1,18 +1,14 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Deploy an Application to Kubernetes Using a Tekton Task
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Deploy an Application to Kubernetes Using a Tekton Task
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Deploy an Application to Kubernetes Using a Tekton Task
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/deploy-an-application-to-kubernetes-using-a-tekton-task/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
-
-<br/>
-
-## [OK!] 6.6 Deploy an Application to Kubernetes Using a Tekton Task
+# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.6 Deploy an Application to Kubernetes Using a Tekton Task
 
 <br/>
 

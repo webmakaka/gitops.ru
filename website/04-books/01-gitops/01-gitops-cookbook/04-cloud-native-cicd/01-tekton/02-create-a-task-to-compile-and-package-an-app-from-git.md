@@ -1,18 +1,19 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Git
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Git
+keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Create a Task to Compile and Package an App from Git
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-task-to-compile-and-package-an-app-from-git/
 ---
 
 <br/>
 
-# [Book] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton
+# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.3 Create a Task to Compile and Package an App from Git
 
 <br/>
 
-## [OK!] 6.3 Create a Task to Compile and Package an App from Git
+Делаю:  
+12.06.2023
 
 <br/>
 
@@ -139,10 +140,11 @@ build-app-run-f5ctk   3 minutes ago    1m38s      Succeeded
 
 ```
 $ tkn taskrun logs build-app-run-f5ctk -f
+***
 [build-sources] [INFO] ------------------------------------------------------------------------
 [build-sources] [INFO] BUILD SUCCESS
 [build-sources] [INFO] ------------------------------------------------------------------------
-[build-sources] [INFO] Total time:  47.200 s
-[build-sources] [INFO] Finished at: 2023-05-29T10:18:22Z
+[build-sources] [INFO] Total time:  42.504 s
+[build-sources] [INFO] Finished at: 2023-06-12T14:46:17Z
 [build-sources] [INFO] ------------------------------------------------------------------------
 ```
