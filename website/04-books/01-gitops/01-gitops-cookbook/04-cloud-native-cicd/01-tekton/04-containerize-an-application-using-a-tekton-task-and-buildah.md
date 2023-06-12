@@ -8,23 +8,24 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/containerize-a
 
 <br/>
 
-# [Book] OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.5 Containerize an Application Using a Tekton Task and Buildah
+# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.5 Containerize an Application Using a Tekton Task and Buildah
 
 <br/>
 
-// Насколько понимаю, email нужен
+Делаю:  
+12.06.2023
+
+<br/>
 
 ```
 $ {
     export REGISTRY_SERVER=https://index.docker.io/v1/
     export REGISTRY_USER=webmakaka
     export REGISTRY_PASSWORD=webmakaka-password
-    export EMAIL=webmakaka-email@mail.ru
 
     echo ${REGISTRY_SERVER}
     echo ${REGISTRY_USER}
     echo ${REGISTRY_PASSWORD}
-    echo ${EMAIL}
 }
 ```
 
@@ -34,8 +35,7 @@ $ {
 $ kubectl create secret docker-registry container-registry-secret \
     --docker-server=${REGISTRY_SERVER} \
     --docker-username=${REGISTRY_USER} \
-    --docker-password=${REGISTRY_PASSWORD} \
-    --docker-email=${EMAIL}
+    --docker-password=${REGISTRY_PASSWORD}
 ```
 
 <br/>
@@ -46,6 +46,19 @@ $ kubectl get secrets
 
 <br/>
 
+```yaml
+$ cat << 'EOF' | kubectl create -f -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tekton-registry-sa
+secrets:
+  - name: container-registry-secret
+EOF
+```
+
+<!-- <br/>
+
 ```
 $ kubectl create serviceaccount tekton-registry-sa
 ```
@@ -55,7 +68,7 @@ $ kubectl create serviceaccount tekton-registry-sa
 ```
 $ kubectl patch serviceaccount tekton-registry-sa \
 -p '{"secrets": [{"name": "container-registry-secret"}]}'
-```
+``` -->
 
 <br/>
 
@@ -201,4 +214,11 @@ $ tkn task start build-push-app \
 [build-and-push-image] Copying config sha256:a3ac36b0d6c97b37e6bcb3193637e3e81777ec0fac5cd60fa89dcf4d7625b11f
 [build-and-push-image] Writing manifest to image destination
 [build-and-push-image] Storing signatures
+```
+
+<br/>
+
+```
+OK
+https://hub.docker.com/r/webmakaka/tekton-greeter
 ```

@@ -172,6 +172,6 @@ tekton-triggers-webhook-6fd5f94f75-ppvmm            1/1     Running   0         
 $ tkn version
 Client version: 0.31.0
 Pipeline version: v0.48.0
-Triggers version: v0.24.0
-Dashboard version: v0.35.0
+Triggers version: v0.24.1
+Dashboard version: v0.36.1
 ```

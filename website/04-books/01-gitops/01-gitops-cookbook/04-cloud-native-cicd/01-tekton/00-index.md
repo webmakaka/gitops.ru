@@ -30,6 +30,10 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/
 
 <br/>
 
+Переделываем!
+
+<br/>
+
 ### [[OK!] 6.6 Deploy an Application to Kubernetes Using a Tekton Task](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/deploy-an-application-to-kubernetes-using-a-tekton-task/)
 
 <br/>
