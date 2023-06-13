@@ -154,7 +154,7 @@ Now that Triggers is installed, you will be able to listen for events from GitHu
 <br/>
 
 ```
-$ kubectl get pods -n tekton-pipelines -w
+$ kubectl get pods -n tekton-pipelines
 NAME                                                READY   STATUS    RESTARTS   AGE
 tekton-dashboard-675769bb7c-8c5n5                   1/1     Running   0          12s
 tekton-events-controller-54854b8875-mrpws           1/1     Running   0          3m48s

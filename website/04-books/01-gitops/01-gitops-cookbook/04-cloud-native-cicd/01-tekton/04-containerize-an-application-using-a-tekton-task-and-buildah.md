@@ -57,19 +57,6 @@ secrets:
 EOF
 ```
 
-<!-- <br/>
-
-```
-$ kubectl create serviceaccount tekton-registry-sa
-```
-
-<br/>
-
-```
-$ kubectl patch serviceaccount tekton-registry-sa \
--p '{"secrets": [{"name": "container-registry-secret"}]}'
-``` -->
-
 <br/>
 
 ```yaml
