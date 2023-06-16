@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-13.06.2023
+16.06.2023
 
 <br/>
 
@@ -78,8 +78,8 @@ v1.27.2
 <br/>
 
 ```
-// Если младше v1.27.2
-$ LATEST_KUBERNETES_VERSION=v1.27.2
+// Если младше v1.27.3
+$ LATEST_KUBERNETES_VERSION=v1.27.3
 ```
 
 <br/>

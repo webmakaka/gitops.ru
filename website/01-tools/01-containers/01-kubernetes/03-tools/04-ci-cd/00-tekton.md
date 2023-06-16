@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/tekton/
 <br/>
 
 **Делаю:**  
-12.06.2023
+16.06.2023
 
 <br/>
 

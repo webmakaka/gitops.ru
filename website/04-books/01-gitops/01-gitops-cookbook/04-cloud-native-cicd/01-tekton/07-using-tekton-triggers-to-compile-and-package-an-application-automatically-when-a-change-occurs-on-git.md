@@ -13,7 +13,7 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-t
 <br/>
 
 **Делаю:**  
-12.06.2023
+16.06.2023
 
 <br/>
 
@@ -141,15 +141,21 @@ $ kubectl port-forward svc/el-tekton-greeter-eventlistener 8080
 <br/>
 
 ```
-// $ tkn pipelinerun delete -n myspace --keep 5
-$ tkn pipelinerun delete --keep 1
-```
-
-```
 $ curl -X POST \
   http://localhost:8080 \
   -H 'Content-Type: application/json' \
-  -d '{ "after": "d9291c456db1ce29177b77ffeaa9b71ad80a50e6", "repository": { "clone_url" : "https://github.com/gitops-cookbook/tekton-tutorial-greeter.git" } }'
+  -d '{ "after": "d9291c456db1ce29177b77ffeaa9b71ad80a50e6", "repository": { "clone_url" : "https://github.com/gitops-cookbook/tekton-tutorial-greeter.git" } }' | jq
+```
+
+<br/>
+
+```
+{
+  "eventListener": "tekton-greeter-eventlistener",
+  "namespace": "default",
+  "eventListenerUID": "210d2e53-d96d-4096-b2d7-4af7239d86b3",
+  "eventID": "3ad8301f-43b1-40cb-8a08-b646b99ea4cc"
+}
 ```
 
 <br/>
@@ -157,4 +163,42 @@ $ curl -X POST \
 ```
 // Ничего не произошло
 $ tkn pipelinerun ls
+```
+
+<br/>
+
+```
+$ kubectl get pods
+$ kubectl logs el-tekton-greeter-eventlistener-79f47f896-kvjx7 | jq
+```
+
+<br/>
+
+```json
+{
+  "severity": "error",
+  "timestamp": "2023-06-16T17:01:16.960Z",
+  "logger": "eventlistener",
+  "caller": "sink/sink.go:606",
+  "message": "problem creating obj: &errors.errorString{s:\"couldn't create resource with group version kind \\\"tekton.dev/v1beta1, Resource=pipelineruns\\\": admission webhook \\\"validation.webhook.pipeline.tekton.dev\\\" denied the request: validation failed: Invalid resource name: length must be no more than 63 characters: metadata.name\"}",
+  "commit": "2ec8bc6-dirty",
+  "eventlistener": "tekton-greeter-eventlistener",
+  "namespace": "default",
+  "/triggers-eventid": "30b02245-1943-4db5-96fb-a5e9aa50f1a2",
+  "eventlistenerUID": "210d2e53-d96d-4096-b2d7-4af7239d86b3",
+  "/trigger": ""
+}
+{
+  "severity": "error",
+  "timestamp": "2023-06-16T17:01:16.960Z",
+  "logger": "eventlistener",
+  "caller": "sink/sink.go:446",
+  "message": "couldn't create resource with group version kind \"tekton.dev/v1beta1, Resource=pipelineruns\": admission webhook \"validation.webhook.pipeline.tekton.dev\" denied the request: validation failed: Invalid resource name: length must be no more than 63 characters: metadata.name",
+  "commit": "2ec8bc6-dirty",
+  "eventlistener": "tekton-greeter-eventlistener",
+  "namespace": "default",
+  "/triggers-eventid": "30b02245-1943-4db5-96fb-a5e9aa50f1a2",
+  "eventlistenerUID": "210d2e53-d96d-4096-b2d7-4af7239d86b3",
+  "/trigger": ""
+}
 ```
