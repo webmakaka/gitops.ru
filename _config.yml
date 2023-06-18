@@ -1,9 +1,9 @@
 # Site settings
 title: gitops.ru на русском языке
 
-description: Собираем материалы связанные с разработкой и развертыванием приложений вокруг экосистемы Git
+description: Собираем материалы по развертыванию приложений с помощью самых современных инструментова автоматизации
 
-keywords: GitOps, Clouds, Linux, Docker, Kubernetes, GitHub Actions, FluxCD
+keywords: GitOps, DevOps, SRE, Clouds, Linux, Docker, Kubernetes, Git, FluxCD, ArgoCD
 
 baseurl: '' # the subpath of your site, e.g. /blog/
 url: 'https://gitops.ru' # the base hostname & protocol for your site
@@ -12,4 +12,4 @@ url: 'https://gitops.ru' # the base hostname & protocol for your site
 markdown: kramdown
 
 plugins:
-    - jekyll-sitemap
+  - jekyll-sitemap
