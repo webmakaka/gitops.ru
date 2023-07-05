@@ -50,6 +50,10 @@ permalink: /
 
 <br/>
 
+### The Kubernetes Operator Framework Book: Overcome complex Kubernetes cluster management challenges with automation toolkits English | 2022 | ISBN: 978-1803232850 | 328 Pages.
+
+<br/>
+
 ### [[Book] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
 
 <br/>
