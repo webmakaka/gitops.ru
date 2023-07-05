@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция и Upgrade Docker в Ubuntu 20.04
-description: Инсталляция и Upgrade Docker в Ubuntu 20.04
+title: Инсталляция и Upgrade Docker в Ubuntu 22.04
+description: Инсталляция и Upgrade Docker в Ubuntu 22.04
 keywords: gitops, docker, docker-compose, инсталляция, linux, ubuntu, bash скрипт
 permalink: /tools/containers/docker/setup/ubuntu/
 ---
 
-# Инсталляция / Upgrade Docker в Ubuntu 20.04
+# Инсталляция / Upgrade Docker в Ubuntu 22.04
 
 Делаю:  
-06.02.2023
+29.06.2023
 
 <br/>
 
@@ -70,10 +70,10 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 23.0.0, build e92dd87
+Docker version 24.0.2, build cb74dfc
 
 $ docker-compose --version
-Docker Compose version v2.15.1
+Docker Compose version v2.19.0
 ```
 
 <br/>
@@ -91,7 +91,7 @@ $ sudo usermod -aG docker ${USER}
 
 ```
 $ cat /etc/group | grep docker
-docker:x:126:username
+docker:x:999:marley
 ```
 
 <br/>

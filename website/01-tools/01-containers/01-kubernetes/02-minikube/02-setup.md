@@ -1,21 +1,21 @@
 ---
 layout: page
-title: Инсталляция и подготовка minikube для работы в ubuntu 20.04
-description: Инсталляция и подготовка minikube для работы в ubuntu 20.04
+title: Инсталляция и подготовка minikube для работы в ubuntu 22.04
+description: Инсталляция и подготовка minikube для работы в ubuntu 22.04
 keywords: gitops, containers, kubernetes, setup, minikube, ubuntu
 permalink: /tools/containers/kubernetes/minikube/setup/
 ---
 
-# Инсталляция и подготовка minikube для работы в ubuntu 20.04
+# Инсталляция и подготовка minikube для работы в ubuntu 22.04
 
 <br/>
 
-## Инсталляция minikube в ubuntu 20.04
+## Инсталляция minikube в ubuntu 22.04
 
 <br/>
 
 **Делаю:**  
-16.06.2023
+29.06.2023
 
 <br/>
 

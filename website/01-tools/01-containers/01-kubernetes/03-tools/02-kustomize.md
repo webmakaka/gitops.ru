@@ -37,7 +37,14 @@ v5.0.0
 ### Версия 4.5.7
 
 ```
-$ curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/kustomize/v4.5.7/hack/install_kustomize.sh 4.5.7"  | bash && chmod +x kustomize && sudo mv kustomize /usr/local/bin/
+$ wget "https://raw.githubusercontent.com/\
+kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
+
+$ chmod +x ./install_kustomize.sh
+
+$ ./install_kustomize.sh 4.5.7
+
+$ chmod +x kustomize && sudo mv kustomize /usr/local/bin/
 ```
 
 <br/>
