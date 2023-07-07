@@ -257,3 +257,7 @@ https://github.com/burrsutter/9stepsawesome/
 <br/>
 
 ### [Registry в Minikube](/tools/containers/kubernetes/minikube/setup/registry/)
+
+
+
+
