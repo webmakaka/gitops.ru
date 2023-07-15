@@ -249,11 +249,7 @@ $ minikube profile list
 
 <br/>
 
-**Дополнительно:**
-
-<!--
-https://github.com/burrsutter/9stepsawesome/
--->
+## Дополнительно:
 
 <br/>
 
