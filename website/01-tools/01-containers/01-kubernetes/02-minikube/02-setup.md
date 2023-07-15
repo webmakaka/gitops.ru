@@ -45,6 +45,11 @@ commit: 08896fd1dc362c097c925146c4a0d0dac715ace0
 
 <br/>
 
+**Делаю:**  
+15.07.2023
+
+<br/>
+
 Можно использовать VirtualBox или Docker.
 Для всех случаев, когда нужно работать не с каким-то выделенным сервером на виртуалке с minikube, стоит использовать docker.
 
@@ -258,6 +263,6 @@ https://github.com/burrsutter/9stepsawesome/
 
 ### [Registry в Minikube](/tools/containers/kubernetes/minikube/setup/registry/)
 
+<br/>
 
-
-
+### [Ngrok Ingress Controller for Kubernetes (Доступ к kubernetes кластеру из интернетов)](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/)
