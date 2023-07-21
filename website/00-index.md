@@ -62,11 +62,7 @@ permalink: /
 
 <br/>
 
-### [Book] The Kubernetes Operator Framework Book: Overcome complex Kubernetes cluster management challenges with automation toolkits [ENG, 2022]
-
-ISBN: 978-1803232850 | 328 Pages
-
-Нужно почитать.
+### [[Books] Kubernetes](/books/containers/kubernetes/)
 
 <br/>
 
@@ -174,14 +170,6 @@ curl localhost:8787/plusone/99
 ### [YouTube][DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
 
 https://www.youtube.com/watch?v=b38k2GiLDdc
-
-<br/>
-
-### [Book] Kubernetes – An Enterprise Guide: Effectively containerize applications, integrate enterprise systems, and scale applications in your enterprise, 2nd Edition
-
-https://github.com/PacktPublishing/Kubernetes---An-Enterprise-Guide-2E
-
-https://www.youtube.com/channel/UCK__yS63yrSI8vavJzainEQ/videos
 
 <br/>
 
