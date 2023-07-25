@@ -30,4 +30,4 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
 
 <br/>
 
-### [Примеры использования](https://github.com/webmak1/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)
+### [Примеры использования](https://github.com/webmakaka/Learn-DevOps-CI-CD-with-Jenkins-using-Pipelines-and-Docker)
