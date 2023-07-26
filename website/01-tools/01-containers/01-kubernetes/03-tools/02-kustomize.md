@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/kustomize/
 # Инсталляция kustomize в ubuntu 20.04
 
 Date:  
-03.03.2023
+26.07.2023
 
 <br/>
 
@@ -22,7 +22,7 @@ kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x 
 
 ```
 $ kustomize version
-v5.0.0
+v5.1.0
 ```
 
 <br/>
