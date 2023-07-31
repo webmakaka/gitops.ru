@@ -10,7 +10,13 @@ permalink: /books/gitops/gitops-cookbook/
 
 # [Book] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]
 
-English | 2023 | ISBN: 978-1492097471 | 242 Pages | PDF, EPUB | 17 MB
+<br/>
+
+![GitOps Cookbook](/img/books/covers/gitops-cookbook-kubernetes-automation.jpg 'GitOps Cookbook'){: .center-image }
+
+<br/>
+
+**English | 2023 | ISBN: 978-1492097471 | 242 Pages | PDF, EPUB | 17 MB**
 
 https://github.com/gitops-cookbook
 

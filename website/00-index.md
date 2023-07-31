@@ -28,6 +28,10 @@ permalink: /
 
 <br/>
 
+![Building CI/CD Systems Using Tekton](/img/books/covers/building-ci-cd-systems-using-tekton.jpg 'Building CI/CD Systems Using Tekton'){: .center-image }
+
+<br/>
+
 [Разбор завершен](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
 
 <br/>
