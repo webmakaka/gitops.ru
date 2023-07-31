@@ -10,6 +10,11 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/getting-start
 
 <br/>
 
+Делаю:  
+31.08.2023
+
+<br/>
+
 ### Installing Tekton Triggers
 
 <br/>
@@ -63,19 +68,15 @@ $ ./ngrok authtoken <YOUR_TOKEN>
 
 **Тест:**
 
-```
-$ python -m SimpleHTTPServer
-```
-
 <br/>
 
 ```
-$ ./ngrok http 8000
+$ python -m http.server 8000
 ```
 
 OK!
 
-<br/>
+<!-- <br/>
 
 **Cloud-based clusters (GKE)**
 
@@ -113,4 +114,4 @@ spec:
 
 ```
 $ kubectl get ingress el-ingress
-```
+``` -->

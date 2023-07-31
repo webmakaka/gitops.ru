@@ -6,22 +6,16 @@ keywords: books, ci-cd, tekton, Preparing for a New Pipeline
 permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/preparing-for-a-new-pipeline/
 ---
 
-# Chapter 12. Preparing for a New Pipeline
+# [OK!] Chapter 12. Preparing for a New Pipeline
 
 <br/>
 
-**Делаю:**  
-04.05.2022
+Делаю:  
+31.08.2023
 
 <br/>
 
 Ничего интересного. Здесь просто запускаем приложение без использования Tekton. Просто собираем в контейнере и запускаем в kubernetes.
-
-<br/>
-
-```
-$ gcloud cloud-shell ssh
-```
 
 <br/>
 
@@ -57,9 +51,9 @@ $ kubectl create clusterrolebinding \
 
 ```
 $ tkn version
-Client version: 0.23.1
-Pipeline version: v0.35.0
-Triggers version: v0.19.1
+Client version: 0.31.0
+Pipeline version: v0.50.0
+Triggers version: v0.24.1
 ```
 
 <br/>
@@ -78,9 +72,6 @@ https://github.com/PacktPublishing/tekton-book-app
 
 ```
 $ cd ~/tmp/
-
-// По https нужно еще и key настраивать
-// $ git clone git@github.com:<YOUR_USERNAME>/tekton-book-app
 $ git clone https://github.com/<YOUR_USERNAME>/tekton-book-app
 ```
 
@@ -95,13 +86,6 @@ $ cd tekton-book-app
 ```
 $ npm install
 $ npm start
-```
-
-<br/>
-
-```
-// Подключаемся еще 1 терминалом
-$ gcloud cloud-shell ssh
 ```
 
 <br/>
@@ -139,7 +123,7 @@ $ docker push ${DOCKER_USERNAME}/tekton-lab-app
 
 <br/>
 
-**Не забыть заменить <YOUR_USERNAME> на свой.**
+**Не забыть заменить <DOCKER_USERNAME> на свой.**
 
 <br/>
 
@@ -206,7 +190,13 @@ tekton-deployment-5d5d5fd747-9dcn4   1/1     Running   0          78s
 ```
 // Убеждаемся, что значение профиля установлено
 $ echo ${PROFILE}
+```
+
+<br/>
+
+```
 $ curl $(minikube --profile ${PROFILE} ip)
+{"message":"Hello","change":"что-то"}
 ```
 
 <br/>

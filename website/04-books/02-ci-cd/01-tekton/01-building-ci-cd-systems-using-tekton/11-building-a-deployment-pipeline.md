@@ -6,16 +6,23 @@ keywords: books, ci-cd, tekton, Building a Deployment Pipeline
 permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/building-a-deployment-pipeline/
 ---
 
-# Chapter 13. Building a Deployment Pipeline
+# [OK!] Chapter 13. Building a Deployment Pipeline
 
 <br/>
 
 **Делаю:**  
-04.05.2022
+31.08.2023
 
 <br/>
 
-**Нужно обновить версии v1alpha1!**
+С нуля (вроде).
+
+<br/>
+
+```
+// Использую
+$ LATEST_KUBERNETES_VERSION=v1.27.4
+```
 
 <br/>
 
@@ -56,9 +63,6 @@ $ tkn hub install task kubernetes-actions
 https://buildah.io/
 
 <br/>
-
-**Вернуть, если не будет работать!**  
-image: quay.io/buildah/stable:v1.18.0
 
 ```yaml
 $ cat << 'EOF' | kubectl apply -f -
@@ -203,9 +207,13 @@ $ kubectl create secret generic git-secret --from-literal=secretToken=${TEKTON_S
 
 <br/>
 
+v1alpha1 заменить на v1beta1 не удалось. С v1alpha1 работает. С v1beta1 нужно обновлять манифест.
+
+<br/>
+
 ```yaml
 $ cat << 'EOF' | envsubst | kubectl apply -f -
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
   name: event-binding
@@ -214,7 +222,7 @@ spec:
     - name: gitrepositoryurl
       value: $(body.repository.url)
 ---
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
 metadata:
   name: commit-tt
@@ -281,16 +289,28 @@ $ kubectl port-forward svc/el-listener 8080
 
 <br/>
 
-```
-// Подключаемся еще 1 терминалом
-$ gcloud cloud-shell ssh
-```
+Нужно зарегаться  
+https://ngrok.com/download
 
 <br/>
 
 ```
 $ cd ~/tmp
+$ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+$ unzip ngrok-stable-linux-amd64.zip
+$ ./ngrok authtoken <YOUR_TOKEN>
+```
+
+<br/>
+
+```
 $ ./ngrok http 8080
+```
+
+<br/>
+
+```
+Fork -> https://github.com/PacktPublishing/tekton-book-app
 ```
 
 <br/>
@@ -311,16 +331,11 @@ Which events would you like to trigger this webhook?
 
 <br/>
 
-**Создать**
+Add Webhook
 
 <br/>
 
-```
-// Подключаемся еще 1 терминалом
-$ gcloud cloud-shell ssh
-```
-
-<br/>
+Вносим изменения в исходный код.
 
 https://github.com/<YOUR_USERNAME>/tekton-book-app/blob/main/server.js
 
@@ -341,15 +356,25 @@ change: "the end"
 <br/>
 
 ```
-$ tkn pipelineruns ls
-NAME                  STARTED         DURATION    STATUS
-tekton-deploy-zzvxv   4 minutes ago   4 minutes   Succeeded
+Commit changes
 ```
 
 <br/>
 
 ```
-$ tkn pipelinerun logs tekton-deploy-zzvxv
+$ tkn pipelineruns ls tekton-deploy
+NAME                  STARTED         DURATION   STATUS
+tekton-deploy-69n84   4 minutes ago   4m37s      Succeeded
+
+```
+
+<br/>
+
+```
+$ tkn pipelinerun logs tekton-deploy-69n84
+
+****
+[deploy : kubectl] deployment.apps/tekton-deployment restarted
 ```
 
 <br/>
@@ -371,6 +396,7 @@ $ curl $(minikube --profile ${PROFILE} ip)
 <br/>
 
 ```
+// Приблизительный ответ
 $ kubectl get pods
 NAME                                 READY   STATUS      RESTARTS   AGE
 el-listener-65c9dd676b-2zzkt         1/1     Running     0          41m

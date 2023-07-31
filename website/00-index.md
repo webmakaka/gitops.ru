@@ -12,7 +12,7 @@ permalink: /
 
 <br/>
 
-### [[Book] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
+### [[Book][Natale Vinto] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
 
 <br/>
 
@@ -24,7 +24,7 @@ permalink: /
 
 <br/>
 
-### [Book] [Joel Lord] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]
+### [Book][Joel Lord] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]
 
 <br/>
 

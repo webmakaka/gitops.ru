@@ -46,7 +46,7 @@ commit: 08896fd1dc362c097c925146c4a0d0dac715ace0
 <br/>
 
 **Делаю:**  
-15.07.2023
+31.07.2023
 
 <br/>
 
@@ -69,7 +69,7 @@ commit: 08896fd1dc362c097c925146c4a0d0dac715ace0
 <br/>
 
 ```
-// v1.27.2
+// v1.27.4
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -83,8 +83,8 @@ v1.27.2
 <br/>
 
 ```
-// Если младше v1.27.3
-$ LATEST_KUBERNETES_VERSION=v1.27.3
+// Если младше v1.27.4
+$ LATEST_KUBERNETES_VERSION=v1.27.4
 ```
 
 <br/>

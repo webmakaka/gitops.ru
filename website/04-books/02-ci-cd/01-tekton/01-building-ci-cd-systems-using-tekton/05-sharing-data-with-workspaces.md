@@ -10,6 +10,11 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/sharing-data-
 
 <br/>
 
+Делаю:  
+31.08.2023
+
+<br/>
+
 Workspaces are shared volumes used to transfer data between the various steps of a task.
 
 <br/>
@@ -68,6 +73,22 @@ $ tkn task start clone-and-list -w name=source,emptyDir="" --showlog
 
 <br/>
 
+```
+TaskRun started: clone-and-list-run-6j24m
+Waiting for logs to be available...
+[clone] Cloning into './source'...
+[clone] POST git-upload-pack (175 bytes)
+[clone] POST git-upload-pack (667 bytes)
+
+[list] README.md
+[list] app
+[list] demo
+[list] installation
+
+```
+
+<br/>
+
 ### Using workspaces with task runs
 
 <br/>
@@ -99,6 +120,20 @@ $ kubectl create -f ~/tmp/clone-and-list-tr.yaml
 
 ```
 $ tkn taskrun logs git-clone-tr-c22wd
+```
+
+<br/>
+
+```
+[clone] Cloning into './source'...
+[clone] POST git-upload-pack (175 bytes)
+[clone] POST git-upload-pack (667 bytes)
+
+[list] README.md
+[list] app
+[list] demo
+[list] installation
+
 ```
 
 <br/>
@@ -201,9 +236,14 @@ $ tkn pipeline start clone-and-list --showlog
 <br/>
 
 ```
+[clone : clone] Cloning into './source'...
+[clone : clone] POST git-upload-pack (175 bytes)
+[clone : clone] POST git-upload-pack (667 bytes)
+
 [list : list] ls: ./source: No such file or directory
 
-failed to get logs for task list : container step-list has failed  : [{"key":"StartedAt","value":"2021-10-02T21:09:56.952Z","type":3}]
+failed to get logs for task list : container step-list has failed  : [{"key":"StartedAt","value":"2023-07-31T12:05:12.310Z","type":3}]
+
 ```
 
 <br/>
@@ -258,6 +298,21 @@ EOF
 $ tkn pipeline start clone-and-list \
   -w name=codebase,claimName=tekton-pvc \
   --showlog
+```
+
+<br/>
+
+```
+PipelineRun started: clone-and-list-run-m9bf8
+Waiting for logs to be available...
+[clone : clone] Cloning into './source'...
+[clone : clone] POST git-upload-pack (175 bytes)
+[clone : clone] POST git-upload-pack (667 bytes)
+
+[list : list] README.md
+[list : list] app
+[list : list] demo
+[list : list] installation
 ```
 
 <br/>
@@ -341,6 +396,17 @@ $ tkn pipeline start clone-and-list \
   --showlog
 ```
 
+```
+PipelineRun started: clone-and-list-run-cdbxj
+Waiting for logs to be available...
+task clone has failed: "step-clone" exited with code 128 (image: "docker-pullable://alpine/git@sha256:7ee4031c1e08fb1646878c53059535b5e88bcf1f0ccb3aad3485362e2039d886"); for logs run: kubectl -n default logs clone-and-list-run-cdbxj-clone-pod -c step-clone
+
+[clone : clone] fatal: destination path './source' already exists and is not an empty directory.
+
+
+[clean : message] All files were deleted
+```
+
 <br/>
 
 ### Using workspaces in pipeline runs
@@ -376,7 +442,21 @@ $ kubectl create -f ~/tmp/pipelinerun.yaml
 <br/>
 
 ```
-$ tkn pr logs clone-and-ls-pr-hsqfz -f
+$ tkn pr logs -f clone-and-ls-pr-hsqfz
+```
+
+```
+[clone : clone] Cloning into './source'...
+[clone : clone] POST git-upload-pack (175 bytes)
+[clone : clone] POST git-upload-pack (667 bytes)
+
+[list : list] README.md
+[list : list] app
+[list : list] demo
+[list : list] installation
+
+
+[clean : message] All files were deleted
 ```
 
 <br/>
@@ -438,6 +518,17 @@ $ kubectl create -f ~/tmp/pvc-template.yaml
 
 ```
 $ tkn pr logs -f clone-and-ls-pr-xwsnd
+```
+
+```
+[clone : clone] Cloning into './source'...
+[clone : clone] POST git-upload-pack (175 bytes)
+[clone : clone] POST git-upload-pack (667 bytes)
+
+[list : list] README.md
+[list : list] app
+[list : list] demo
+[list : list] installation
 ```
 
 <br/>
@@ -584,31 +675,19 @@ EOF
 
 ```
 $ tkn pipeline start pick-a-card --showlog
-Please give specifications for the workspace: api-data
-? Name for the workspace : api-data
-? Value of the Sub Path :
-? Type of the Workspace : emptyDir
-? Type of EmptyDir :
-PipelineRun started: pick-a-card-run-5kmmq
-Waiting for logs to be available...
-[create-deck : create-deck] + curl https://deckofcardsapi.com/api/deck/new/shuffle/ -o /workspace/deck/deck-id.txt
-[create-deck : create-deck]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-[create-deck : create-deck]                                  Dload  Upload   Total   Spent    Left  Speed
-100    79  100    79    0     0    292      0 --:--:-- --:--:-- --:--:--   292
-
 [pick-card : draw] internal/fs/utils.js:332
 [pick-card : draw]     throw err;
 [pick-card : draw]     ^
 [pick-card : draw]
 [pick-card : draw] Error: ENOENT: no such file or directory, open '/workspace/deck/deck-id.txt'
-[pick-card : draw]     at Object.openSync (fs.js:497:3)
-[pick-card : draw]     at Object.readFileSync (fs.js:393:35)
-[pick-card : draw]     at Object.<anonymous> (/tekton/scripts/script-0-mg6rh:4:17)
-[pick-card : draw]     at Module._compile (internal/modules/cjs/loader.js:1085:14)
-[pick-card : draw]     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
-[pick-card : draw]     at Module.load (internal/modules/cjs/loader.js:950:32)
-[pick-card : draw]     at Function.Module._load (internal/modules/cjs/loader.js:790:12)
-[pick-card : draw]     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+[pick-card : draw]     at Object.openSync (fs.js:498:3)
+[pick-card : draw]     at Object.readFileSync (fs.js:394:35)
+[pick-card : draw]     at Object.<anonymous> (/tekton/scripts/script-0-4wfnl:4:17)
+[pick-card : draw]     at Module._compile (internal/modules/cjs/loader.js:1114:14)
+[pick-card : draw]     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1143:10)
+[pick-card : draw]     at Module.load (internal/modules/cjs/loader.js:979:32)
+[pick-card : draw]     at Function.Module._load (internal/modules/cjs/loader.js:819:12)
+[pick-card : draw]     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
 [pick-card : draw]     at internal/main/run_main_module.js:17:47 {
 [pick-card : draw]   errno: -2,
 [pick-card : draw]   syscall: 'open',
@@ -616,7 +695,7 @@ Waiting for logs to be available...
 [pick-card : draw]   path: '/workspace/deck/deck-id.txt'
 [pick-card : draw] }
 
-failed to get logs for task pick-card : container step-draw has failed  : [{"key":"StartedAt","value":"2021-10-24T12:47:27.107Z","type":3}]
+failed to get logs for task pick-card : container step-draw has failed  : [{"key":"StartedAt","value":"2023-07-31T12:12:06.068Z","type":3}]
 ```
 
 <br/>
@@ -717,18 +796,16 @@ EOF
 
 ```
 $ tkn pipeline start admin-or-not --showlog
-? Value for param `username` of type `string`? (Default is `user`) user
-Please give specifications for the workspace: message-map
+? Value for param `username` of type `string`? (Default is `user`) [user]
+Please give specifications for the workspace: [message-map]
 ? Name for the workspace : message-map
 ? Value of the Sub Path :
 ? Type of the Workspace : emptyDir
 ? Type of EmptyDir :
-PipelineRun started: admin-or-not-run-rcjzn
+PipelineRun started: admin-or-not-run-lknhx
 Waiting for logs to be available...
 
-[greetings : greet] + ROLE=user
-[greetings : greet] + cat /workspace/messages/user-welcome
 [greetings : greet] cat: /workspace/messages/user-welcome: No such file or directory
 
-failed to get logs for task greetings : container step-greet has failed  : [{"key":"StartedAt","value":"2021-10-24T12:58:28.817Z","type":3}]
+failed to get logs for task greetings : container step-greet has failed  : [{"key":"StartedAt","value":"2023-07-31T12:14:06.534Z","type":3}]
 ```

@@ -6,7 +6,12 @@ keywords: books, ci-cd, tekton, Triggering Tekton
 permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/triggering-tekton/
 ---
 
-# Chapter 11. Triggering Tekton
+# [OK!] Chapter 11. Triggering Tekton
+
+<br/>
+
+Делаю:  
+31.08.2023
 
 <br/>
 
@@ -58,16 +63,13 @@ $ tkn pipeline start something-pushed --showlog
 <br/>
 
 ```
-? Value for param `repository` of type `string`? myrepo
+? Value for param `repository` of type `string`? [<myrepo>]
 ```
 
 <br/>
 
 ```
-[log-push : log] ++ date '+%d/%m/%Y %T'
-[log-push : log] + DATE='09/10/2021 17:55:20'
-[log-push : log] + echo '[09/10/2021' '17:55:20]' - A push happened in myrepo
-[log-push : log] [09/10/2021 17:55:20] - A push happened in myrepo
+[log-push : log] [31/07/2023 12:57:45] - A push happened in https://github.com/wildmakaka/tekton-book-app
 ```
 
 <br/>
@@ -87,7 +89,7 @@ https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-pay
 
 ```yaml
 $ cat << 'EOF' | kubectl apply -f -
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
   name: event-binding
@@ -106,7 +108,7 @@ EOF
 
 ```yaml
 $ cat << 'EOF' | kubectl apply -f -
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
 metadata:
   name: push-trigger-template
@@ -199,13 +201,6 @@ $ kubectl port-forward svc/el-listener 8080
 
 <br/>
 
-```
-// Подключаемся еще 1 терминалом
-$ gcloud cloud-shell ssh
-```
-
-<br/>
-
 Any incoming request on port 8080 on your local machine will now be redirected to this service and potentially trigger the pipeline.
 
 ```
@@ -233,7 +228,7 @@ $ cd ~/tmp
 $ ./ngrok http 8080
 ```
 
-Пробую подключиться по предложенному url с локального хоста.  
+Пробую подключиться по предложенному url с локального хоста.
 ОК!
 
 <br/>
@@ -258,20 +253,13 @@ Which events would you like to trigger this webhook?
 
 <br/>
 
-Создать
+Add Webhook
 
 <br/>
 
 ### Triggering the pipeline
 
 Сделать коммит в репо.
-
-<br/>
-
-```
-// Подключаемся еще 1 терминалом
-$ gcloud cloud-shell ssh
-```
 
 <br/>
 
@@ -286,9 +274,6 @@ something-pushed-run-6zfvs   10 minutes ago   14 seconds   Succeeded
 <br/>
 
 ```
-$ tkn pipelinerun logs something-pushed-nsfzl
-[log-push : log] ++ date '+%d/%m/%Y %T'
-[log-push : log] + DATE='09/10/2021 18:05:27'
-[log-push : log] [09/10/2021 18:05:27] - A push happened in https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
-[log-push : log] + echo '[09/10/2021' '18:05:27]' - A push happened in https://github.com/wildmakaka/cicd-pipeline-train-schedule-cd
+$ tkn pipelinerun logs something-pushed-9v2fp
+[log-push : log] [31/07/2023 13:08:46] - A push happened in https://github.com/wildmakaka/tekton-book-app
 ```

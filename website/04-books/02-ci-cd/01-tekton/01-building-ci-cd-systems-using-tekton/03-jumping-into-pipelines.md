@@ -10,6 +10,11 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-
 
 <br/>
 
+Делаю:  
+31.08.2023
+
+<br/>
+
 ### Building your first pipeline
 
 <br/>
@@ -304,16 +309,11 @@ $ tkn pipeline start task-reuse --showlog
 <br/>
 
 ```
-PipelineRun started: task-reuse-run-27qr6
+PipelineRun started: task-reuse-run-qtbbv
 Waiting for logs to be available...
-[say-hello : log] ++ date '+%d/%m/%Y %T'
-[say-hello : log] + DATE='17/10/2021 14:34:46'
-[say-hello : log] + echo '[17/10/2021' '14:34:46]' - Hello
-[say-hello : log] [17/10/2021 14:34:46] - Hello
-[log-something : log] ++ date '+%d/%m/%Y %T'
-[log-something : log] + DATE='17/10/2021 14:34:46'
-[log-something : log] + echo '[17/10/2021' '14:34:46]' - Something else being logged
-[log-something : log] [17/10/2021 14:34:46] - Something else being logged
+[say-hello : log] [31/07/2023 10:23:31] - Hello
+
+[log-something : log] [31/07/2023 10:23:32] - Something else being logged
 ```
 
 <br/>
@@ -417,29 +417,25 @@ $ tkn pipeline start ordered-tasks --showlog
 <br/>
 
 ```
-PipelineRun started: ordered-tasks-run-6lxzh
-Waiting for logs to be available...
-[first : init] [17/10/2021 14:35:36] - Task A Started
+[first : init] [31/07/2023 10:24:41] - Task A Started
 
 
-[first : log] [17/10/2021 14:35:40] - Task A Completed
+[first : log] [31/07/2023 10:24:44] - Task A Completed
 
-[second : init] [17/10/2021 14:35:49] - Task B Started
+[second : init] [31/07/2023 10:24:51] - Task B Started
 
-[third : init] [17/10/2021 14:35:50] - Task C Started
+[third : init] [31/07/2023 10:24:53] - Task C Started
 
-[second : log] [17/10/2021 14:35:50] - Task B Completed
+[second : log] [31/07/2023 10:24:53] - Task B Completed
 
 
 
-[third : log] [17/10/2021 14:35:54] - Task C Completed
+[third : log] [31/07/2023 10:24:57] - Task C Completed
 
-[fourth : init] [17/10/2021 14:36:00] - Task D Started
-
-
-[fourth : log] [17/10/2021 14:36:02] - Task D Completed
+[fourth : init] [31/07/2023 10:25:03] - Task D Started
 
 
+[fourth : log] [31/07/2023 10:25:06] - Task D Completed
 ```
 
 <br/>
@@ -526,20 +522,13 @@ $ tkn pipeline start results --showlog
 
 ```
 ? Value for param `sides` of type `string`? (Default is `6`) 6
-PipelineRun started: results-run-ln86k
+PipelineRun started: results-run-gnxch
 Waiting for logs to be available...
-[intro : log] ++ date '+%d/%m/%Y %T'
-[intro : log] [17/10/2021 14:36:44] - Preparing to roll the 6-sided dice
-[intro : log] + DATE='17/10/2021 14:36:44'
-[intro : log] + echo '[17/10/2021' '14:36:44]' - Preparing to roll the 6-sided dice
+[intro : log] [31/07/2023 10:26:00] - Preparing to roll the 6-sided dice
 
 [roll : generate-random-number] Dice rolled
 
-[result : log] ++ date '+%d/%m/%Y %T'
-[result : log] [17/10/2021 14:36:55] - Result from dice roll was 0
-[result : log] + DATE='17/10/2021 14:36:55'
-[result : log] + echo '[17/10/2021' '14:36:55]' - Result from dice roll was 0
-
+[result : log] [31/07/2023 10:26:13] - Result from dice roll was 5
 ```
 
 <br/>
@@ -611,12 +600,9 @@ $ tkn pipeline start back-to-basics --showlog
 
 ```
 ? Value for param `who` of type `string`? (Default is `World`) World
-PipelineRun started: back-to-basics-run-7f8rf
+PipelineRun started: back-to-basics-run-9wfsx
 Waiting for logs to be available...
-[say-hello : log] ++ date '+%d/%m/%Y %T'
-[say-hello : log] + DATE='17/10/2021 14:26:48'
-[say-hello : log] + echo '[17/10/2021' '14:26:48]' - Hello World
-[say-hello : log] [17/10/2021 14:26:48] - Hello World
+[say-hello : log] [31/07/2023 10:27:22] - Hello World
 ```
 
 <br/>
@@ -684,17 +670,11 @@ $ tkn pipeline start count-files --showlog
 
 ```
 ? Value for param `repo-to-analyze` of type `string`? https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
-PipelineRun started: count-files-run-nmcvf
+PipelineRun started: count-files-run-k5fnr
 Waiting for logs to be available...
-[get-list : clone-and-ls] + git clone https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton .
 [get-list : clone-and-ls] Cloning into '.'...
-[get-list : clone-and-ls] + ls
-[get-list : clone-and-ls] + wc -l
 
-[output-count : log] ++ date '+%d/%m/%Y %T'
-[output-count : log] + DATE='17/10/2021 14:26:08'
-[output-count : log] [17/10/2021 14:26:08] - Number of files in https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton: 11
-[output-count : log] + echo '[17/10/2021' '14:26:08]' - Number of files in https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton: 11
+[output-count : log] [31/07/2023 10:28:25] - Number of files in https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton: 11
 ```
 
 <br/>
@@ -790,18 +770,5 @@ $ tkn pipeline start weather --showlog
 ? Value for param `city` of type `string`? (Default is `Ottawa`) Ottawa
 PipelineRun started: weather-run-cv4sk
 Waiting for logs to be available...
-[get-weather : get-weather] + curl 'wttr.in/Ottawa?format=4' -o /tekton/results/weather
-[get-weather : get-weather]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-[get-weather : get-weather]                                  Dload  Upload   Total   Spent    Left  Speed
-100    46  100    46    0     0    282      0 --:--:-- --:--:-- --:--:--   282
-
-[extract-data : extract-data] + echo 'Ottawa: ⛅️  🌡️+8°C 🌬️→11km/h
-[extract-data : extract-data] + awk '{print $3}'
-[extract-data : extract-data] '
-
-[current-temperature : log] ++ date '+%d/%m/%Y %T'
-[current-temperature : log] + DATE='17/10/2021 14:29:20'
-[current-temperature : log] + echo '[17/10/2021' '14:29:20]' - Current temperature in Ottawa is $'\360\237\214\241\357\270\217+8\302\260C'
-[current-temperature : log] [17/10/2021 14:29:20] - Current temperature in Ottawa is 🌡️+8°C
-
+[current-temperature : log] [31/07/2023 10:30:02] - Current temperature in Ottawa is 🌡️+14°C
 ```

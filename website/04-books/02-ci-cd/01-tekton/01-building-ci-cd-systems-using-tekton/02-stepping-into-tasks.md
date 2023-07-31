@@ -15,7 +15,7 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into
 <br/>
 
 Делаю:  
-12.06.2023
+31.08.2023
 
 <br/>
 
@@ -219,7 +219,7 @@ EOF
 <br/>
 
 ```
-$ tkn task start groceries --showlog
+$ tkn task start groceries --showlog -p grocery-items='1 2 3 4 5 6 7 8 9 10'
 ```
 
 <br/>
@@ -258,7 +258,7 @@ $ tkn task start hello-param --showlog --use-param-defaults
 
 ### Sharing data
 
-(Не отработало)
+(Не отработало). Или устарело или нужно настраивать PersistentVolumeClaim.
 
 <br/>
 
@@ -275,12 +275,12 @@ spec:
       script: |
         cd ~
         echo Getting ready to write to $(pwd)
-        echo "Secret Message" > message.txt
+        echo "Secret Message" > /message.txt
     - name: read
       image: registry.access.redhat.com/ubi8/ubi-minimal
       command:
         - /bin/bash
-      args: ["-c", "cat ~/message.txt"]
+      args: ["-c", "cat /message.txt"]
 EOF
 ```
 
@@ -406,7 +406,7 @@ $ tkn task start failing
 <br/>
 
 ```
-$ kubectl get tr failing-run-mgk2t -o yaml
+$ kubectl get tr failing-run-fcj95 -o yaml
 ```
 
 <br/>

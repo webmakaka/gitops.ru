@@ -10,6 +10,11 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/debugging-and
 
 <br/>
 
+Делаю:  
+31.08.2023
+
+<br/>
+
 ### Debugging pipelines
 
 <br/>
@@ -324,15 +329,9 @@ $ tkn pipeline start check-root --showlog
 <br/>
 
 ```
-PipelineRun started: check-root-run-s54n4
+PipelineRun started: check-root-run-g475m
 Waiting for logs to be available...
-[is-root : fail-if-root] ++ whoami
 [is-root : fail-if-root] User is root
-[is-root : fail-if-root] + '[' root == root ']'
-[is-root : fail-if-root] + echo 'User is root'
-[is-root : fail-if-root] + exit 1
-
-failed to get logs for task is-root : container step-fail-if-root has failed  : [{"key":"StartedAt","value":"2021-10-17T14:41:34.467Z","type":3}]
 ```
 
 <br/>
@@ -420,21 +419,11 @@ $ tkn pipeline start make-your-bets --showlog
 <br/>
 
 ```
-PipelineRun started: make-your-bets-run-hr8zr
+PipelineRun started: make-your-bets-run-kqmqk
 Waiting for logs to be available...
 
-[check : add-card] New hand value is 21
+[check : add-card] New hand value is 18
 [check : add-card] You won
-[check : add-card] + HAND=17
-[check : add-card] + NEWCARD=4
-[check : add-card] + NEWHAND=21
-[check : add-card] + echo 'New hand value is 21'
-[check : add-card] + (( 21 > 21 ))
-[check : add-card] + echo 'You won'
-[check : add-card] + exit 0
 
-[clean : log] ++ date '+%d/%m/%Y %T'
-[clean : log] + DATE='17/10/2021 14:43:54'
-[clean : log] + echo '[17/10/2021' '14:43:54]' - Cleaning up the table
-[clean : log] [17/10/2021 14:43:54] - Cleaning up the table
+[clean : log] [31/07/2023 12:01:18] - Cleaning up the table
 ```

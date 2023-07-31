@@ -11,38 +11,14 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 <br/>
 
 Делаю:  
-24.10.2021
+31.08.2023
 
 <br/>
 
-### Подключение к бесплатному облаку от Google
+### 1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/) (Ingress и остальное можно не устанавливать)
 
-Описание [здесь](/tools/containers/kubernetes/google-cloud-shell/)
+**Испольновалась версия KUBERNETES_VERSION=v1.27.4**
 
-<br/>
+### 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
-```
-$ gcloud cloud-shell ssh
-```
-
-<br/>
-
-1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/) (Ingress и остальное можно не устанавливать)
-
-**Испольновалась версия KUBERNETES_VERSION=v1.22.2**
-
-2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
-
-<br/>
-
-#### [Инсталляция Tekton CLI](/tools/containers/kubernetes/tools/ci-cd/tekton/)
-
-<br/>
-
-https://shell.cloud.google.com/
-
-Вверху справа 3-й значок слева
-
-Preview on port 8080
-
-Открывается окно Tekton Dashboard
+### 3. Инсталляция [ Tekton CLI](/tools/containers/kubernetes/tools/ci-cd/tekton/)
