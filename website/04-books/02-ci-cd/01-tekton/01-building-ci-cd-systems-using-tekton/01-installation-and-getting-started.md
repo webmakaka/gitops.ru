@@ -15,7 +15,7 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 
 <br/>
 
-### 1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/) (Ingress и остальное можно не устанавливать)
+### 1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
 
 **Испольновалась версия KUBERNETES_VERSION=v1.27.4**
 
