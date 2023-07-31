@@ -1,6 +1,8 @@
 ---
 layout: page
-title: GitOps
+title: GitOps - Что не поместилось на главной странице
+description: GitOps - Что не поместилось на главной странице
+keywords: GitOps, other
 permalink: /other/
 ---
 
