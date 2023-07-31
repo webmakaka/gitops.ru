@@ -6,11 +6,11 @@ keywords: books, ci-cd, tekton
 permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/
 ---
 
-# Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]
+# [Book] [Joel Lord] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]
 
 <br/>
 
-ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB
+**ISBN: 978-1801078214 | 278 Pages | PDF, EPUB | 10 MB**
 
 <br/>
 

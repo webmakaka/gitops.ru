@@ -8,7 +8,7 @@ permalink: /other/
 
 <br/>
 
-### [[Books] Kubernetes](/books/containers/kubernetes/)
+### Kubernetes [[Books]](/books/containers/kubernetes/)
 
 <br/>
 
