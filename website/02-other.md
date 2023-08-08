@@ -10,6 +10,10 @@ permalink: /other/
 
 <br/>
 
+### [Books] Python и DevOps: Ключ к автоматизации Linux. [RUS, 2022] [544 с.]
+
+<br/>
+
 ### Kubernetes [[Books]](/books/containers/kubernetes/)
 
 <br/>
