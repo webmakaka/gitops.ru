@@ -501,7 +501,7 @@ $ scp -i ~/.ssh/k8s-node.pem ubuntu@master:/home/ubuntu/.kube/config ~/.kube/con
 ```
 $ git clone https://github.com/webmakaka/cats-app
 $ cd cats-app/k8s/
-$ kubect apply -f ./
+$ kubectl apply -f ./
 ```
 
 <br/>
