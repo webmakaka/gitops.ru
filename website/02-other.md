@@ -18,6 +18,11 @@ permalink: /other/
 
 <br/>
 
+### [[YuTube] [Nana] Kubernetes Roadmap - Complete Step-by-Step Learning Path](https://www.youtube.com/watch?v=S8eX0MxfnB4)
+
+
+<br/>
+
 ### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
 
 - [link](https://www.youtube.com/watch?v=Ny9RxM6H6Hg)
