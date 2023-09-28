@@ -13,7 +13,7 @@ permalink: /tools/cvs/gitlab/setup/ubuntu/
 
 <br/>
 
-Предполагается что уже установлен <a href="//sysadm.ru/adm/virtual/virtualbox/setup/">VirtualBox</a>, <a href="//sysadm.ru/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="//sysadm.ru/virtual/virtualbox/setup/">VirtualBox</a>, <a href="//sysadm.ru/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 
