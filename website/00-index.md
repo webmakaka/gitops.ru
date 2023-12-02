@@ -10,6 +10,13 @@ permalink: /
 
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
+
+
+<br/>
+
+### [[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
+
+
 <br/>
 
 ### [[Book][Natale Vinto] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
