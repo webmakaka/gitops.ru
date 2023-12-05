@@ -110,9 +110,8 @@ https://acloudguru.com/course/implementing-a-full-ci-cd-pipeline
 
 <br/>
 
-**Обсуждение:**
-
-https://t.me/devops_community
+**Обсуждение:**  
+https://t.me/sysadm_ru
 
 <br/>
 

@@ -2,12 +2,12 @@
 layout: page
 title: Git
 description: Git
-keywords: Git
-permalink: /git/
+keywords: cvs, git
+permalink: /cvs/git/
 ---
 
 # Git
 
 <br/>
 
-### [Настройки git для работы с github](/git/github/setup/)
+### [Настройки git для работы с github](/cvs/git/github/)

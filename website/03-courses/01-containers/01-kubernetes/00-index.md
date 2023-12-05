@@ -11,3 +11,6 @@ permalink: /courses/containers/kubernetes/
 <br/>
 
 ### [[Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/)
+
+
+

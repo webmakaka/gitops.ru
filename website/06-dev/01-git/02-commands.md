@@ -272,15 +272,19 @@ If you're already in conflicted state, and you want to just accept all of theirs
 
 Принять их сторону
 
-    git checkout --theirs .
-    git add .
+```
+$ git checkout --theirs .
+$ git add .
+```
 
 If you want to do the opposite:
 
 Принять нашу сторону
 
-    git checkout --ours .
-    git add .
+```
+$ git checkout --ours .
+$ git add .
+```
 
 This is pretty drastic, so make sure you really want to wipe everything out like this before doing it.
 

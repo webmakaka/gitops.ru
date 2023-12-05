@@ -3,7 +3,7 @@ layout: page
 title: Настройки git для работы с github
 description: Настройки git для работы с github
 keywords: Настройки git для работы с github
-permalink: /github/setup/
+permalink: /cvs/git/github/
 ---
 
 # Настройки git для работы с github
@@ -68,28 +68,36 @@ $ git config --global user.email "<GITHUB_EMAIL>"
 
 <br/>
 
-    $ cd ~/.ssh/
+```
+$ cd ~/.ssh/
+```
 
 <br/>
 
-    $ ssh-keygen \
-    -t rsa \
-    -b 4096 \
-    -C "example@gmail.com" \
-    -f webmakaka
+```
+$ ssh-keygen \
+-t rsa \
+-b 4096 \
+-C "example@gmail.com" \
+-f webmakaka
+```
 
 <br/>
 
-    $ chmod 0600 webmakaka*
-    $ eval "$(ssh-agent -s)"
+```
+$ chmod 0600 webmakaka*
+$ eval "$(ssh-agent -s)"
+```
 
 <br/>
 
-    // Добавить ключ
-    $ ssh-add ~/.ssh/webmakaka
+```
+// Добавить ключ
+$ ssh-add ~/.ssh/webmakaka
 
-    // Проверка, что ключ добавлен
-    $ ssh-add -l -E md5
+// Проверка, что ключ добавлен
+$ ssh-add -l -E md5
+```
 
 <br/>
 
@@ -111,6 +119,9 @@ New SSH key
 ```
 // Проверка возможности подключиться
 $ ssh -T git@github.com
+
+// При необходимости использовать токен
+$ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' ssh -T git@github.com
 ```
 
 <br/>
