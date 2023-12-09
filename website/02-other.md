@@ -20,7 +20,6 @@ permalink: /other/
 
 ### [[YuTube] [Nana] Kubernetes Roadmap - Complete Step-by-Step Learning Path](https://www.youtube.com/watch?v=S8eX0MxfnB4)
 
-
 <br/>
 
 ### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
@@ -186,7 +185,15 @@ https://www.youtube.com/watch?v=b38k2GiLDdc
 
 [[Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux & Node.js [ENG, 2019]](https://github.com/webmakaka/MERN-Stack-Front-To-Back-v2.0)
 
-[[microservices-demo]](https://microservices-demo.github.io/)
+<br/>
+
+**microservices-demo**
+
+// Походу грохнули
+https://microservices-demo.github.io/
+
+// Исходники
+https://github.com/microservices-demo/microservices-demo
 
 <br/>
 

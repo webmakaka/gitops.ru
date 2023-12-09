@@ -16,16 +16,16 @@ permalink: /devops/
 
 <br/>
 
-### [Continuous integration / Continuous delivery (CI/CD)](/devops/ci-cd/)
+### [Continuous integration / Continuous delivery (CI/CD)](/tools/ci-cd/)
 
 <br/>
 
-### [Автоматизация Ansible, Puppet, Chef, Terraform](//gitops.ru/)
+### [Автоматизация Ansible, Puppet, Chef, Terraform](/tools/ansible/)
 
 <br/>
 
-### [Docker](/devops/containers/docker/)
+### [Docker](/tools/containers/docker/)
 
 <br/>
 
-### [Kubernetes](/devops/containers/kubernetes/)
+### [Kubernetes](/tools/containers/kubernetes/)
