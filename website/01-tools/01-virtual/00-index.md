@@ -10,12 +10,10 @@ permalink: /tools/virtual/
 
 <br/>
 
-### [Virtual Box](/tools/virtual/virtualbox/)
-
-### [KVM на Centos 6](/tools/virtual/kvm/)
+### [VirtualBox](/tools/virtual/virtualbox/setup/ubuntu/)
 
 <br/>
 
 ### Инструменты
 
-### [Vagrant](/tools/virtual/vagrant/)
+### [Vagrant](/tools/virtual/vagrant/setup/ubuntu/)
