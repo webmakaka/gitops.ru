@@ -34,7 +34,9 @@ Default output format [None]: <leave blank>
 
 <br/>
 
-[Прикрутить свой домен к AWS без переноса его в AWS и использованием CloudFlare](https://medium.com/@bobthomas295/combining-aws-serverless-with-cloudflare-sub-domains-338a1b7b2bd)
+### Прикрутить свой домен к AWS без переноса его в AWS и использованием CloudFlare
+
+https://medium.com/@bobthomas295/combining-aws-serverless-with-cloudflare-sub-domains-338a1b7b2bd
 
 <br/>
 
