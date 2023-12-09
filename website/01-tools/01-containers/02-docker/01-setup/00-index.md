@@ -8,5 +8,4 @@ permalink: /tools/containers/docker/setup/
 
 # Инсталляция Docker
 
-[Инсталляция и Upgrade Docker в Ubuntu 20.04](/tools/containers/docker/setup/ubuntu/)  
-[Инсталляция Docker в CentOS 7](/tools/containers/docker/setup/centos/7/)
+[Инсталляция и Upgrade Docker в Ubuntu 22.04](/tools/containers/docker/setup/ubuntu/)

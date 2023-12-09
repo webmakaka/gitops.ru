@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция kubectl в ubuntu 20.04
-description: Инсталляция kubectl в ubuntu 20.04
+title: Инсталляция kubectl в ubuntu 22.04
+description: Инсталляция kubectl в ubuntu 22.04
 keywords: gitops, containers, kubernetes, setup, kubectl
 permalink: /tools/containers/kubernetes/tools/kubectl/
 ---
 
-# Инсталляция kubectl в ubuntu 20.04
+# Инсталляция kubectl в ubuntu 22.04
 
 Делаю:  
-2023.10.03
+2023.12.09
 
 <br/>
 
@@ -18,7 +18,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 <br/>
 
 ```shell
-// Текущая стабильная версия kubectl (v1.28.2)
+// Текущая стабильная версия kubectl (v1.28.4)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -30,7 +30,7 @@ $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s h
 
 ```
 $ kubectl version --client
-Client Version: v1.28.2
+Client Version: v1.28.4
 Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
 
 // Если будет нужно удалить
@@ -50,41 +50,4 @@ $ sudo touch /etc/apt/sources.list.d/kubernetes.list
 $ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 $ sudo apt-get update
 $ sudo apt-get install -y kubectl
-```
-
-<br/>
-
-### Команды
-
-```
-// Скачать лог
-
-$ export NAME_SPACE=myspace
-$ export POD=mypod
-
-$ kubectl --namespace ${NAME_SPACE} logs $(kubectl get pods --namespace ${NAME_SPACE} -l "app=${POD}" -o jsonpath="{.items[0].metadata.name}") > ~/logs/${POD}.logs.txt
-```
-
-<br/>
-
-```
-// Скачать каталог
-$ kubectl cp myns/mypod-with-id:/app ~/tmp/myappname/
-```
-
-<br/>
-
-```
-// Посмотреть image у pod
-$ kubectl --kubeconfig ~/.kube/config_mynamespace -n mynamespace get pod podname-755f6ff87b-79vc6 -o jsonpath="{..image}"
-
-
-// Тоже самое, но подлиннее
-
-$ export KUBECONFIG=config_my
-$ export NAME_SPACE=namespace_my
-$ export POD=pod_my
-
-
-$ kubectl --kubeconfig ~/.kube/${KUBECONFIG} --namespace ${NAME_SPACE} get pod $(kubectl --kubeconfig ~/.kube/${KUBECONFIG} get pods --namespace ${NAME_SPACE} -l "app=${POD}" -o jsonpath="{.items[0].metadata.name}") -o jsonpath="{..image}"
 ```
