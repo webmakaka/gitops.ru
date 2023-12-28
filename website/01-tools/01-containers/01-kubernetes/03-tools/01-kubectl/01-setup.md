@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 # Инсталляция kubectl в ubuntu 22.04
 
 Делаю:  
-2023.12.09
+2023.12.27
 
 <br/>
 
