@@ -19,7 +19,8 @@ ENV LANGUAGE en_US.UTF-8
 
 RUN mkdir -p /project
 WORKDIR /project
-RUN gem install bundler
+# RUN gem install bundler
+RUN gem install bundler -v 2.4.22
 COPY Gemfile Gemfile
 RUN bundle install
 COPY . .
