@@ -192,3 +192,16 @@ Insecure Registries:
 localhost:5000
 127.0.0.0/8
 ```
+
+<br/>
+
+### Отключить автозапуск контейнеров docker-compose
+
+```
+// We can stop specific container by going to the specific directory and then running the following command
+$ docker-compose down
+
+
+// To prevent a specific container from auto starting when a system is powered on
+$ docker update --restart=no [container id]
+```
