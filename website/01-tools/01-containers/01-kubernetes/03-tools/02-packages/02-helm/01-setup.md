@@ -10,8 +10,8 @@ permalink: /tools/containers/kubernetes/tools/packages/helm/setup/
 
 <br/>
 
-Делаю:  
-30.04.2023
+**Делаю:**  
+2024.02.02
 
 <br/>
 
@@ -19,7 +19,7 @@ permalink: /tools/containers/kubernetes/tools/packages/helm/setup/
 $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
 $ helm version --short --client
-v3.11.3+g3232493
+v3.14.0+g3fc9f4b
 ```
 
 <br/>
@@ -45,4 +45,24 @@ $ helm repo add stable https://charts.helm.sh/stable
 ```
 // UPDATE
 $ helm repo update
+```
+
+<br/>
+
+### Команды, которые приходилось выполнять
+
+```
+$ helm pull --insecure-skip-tls-verify oci://registry/release/service-helmchart --version 24020104 --untar
+```
+
+<br/>
+
+```
+$ helm template . -f servicename-3.yaml
+```
+
+<br/>
+
+```
+$ helm install -n myNS servicename . -f servicename-3.yaml
 ```
