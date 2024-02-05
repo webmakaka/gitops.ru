@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/packages/helm/setup/
 <br/>
 
 **Делаю:**  
-2024.02.02
+2024.02.05
 
 <br/>
 
