@@ -8,6 +8,11 @@ permalink: /
 
 <br/>
 
+Привет! <br/>
+Если копаете тему devops/ gitops / secops / mlops и д.р., давайте дружить и делиться знаниями.
+
+<br/>
+
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
 
