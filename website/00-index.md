@@ -32,7 +32,13 @@ https://github.com/kubernetes-sigs/kubespray
 
 <br/>
 
-### [[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
+### Kubescape 3.0
+
+
+[[YouTube] Kubescape | Kubernetes security platform (jmos/kube/119) [ENG, 2024]](https://www.youtube.com/watch?v=8NlEgjhE-mg)
+
+[[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
+
 
 
 <br/>
