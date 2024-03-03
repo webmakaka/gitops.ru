@@ -18,6 +18,13 @@ permalink: /
 
 <br/>
 
+### Local Kubernetes (Нужно чекнуть)
+
+[[YouTube] How to set up production-like Kubernetes environments on local machines [ENG, 2024]](https://www.youtube.com/watch?v=Bh0Uw9111yg)
+
+
+<br/>
+
 ### Crossplane
 
 [[YouTube] Getting Started with Crossplane [ENG, 2024]](https://www.youtube.com/watch?v=bBpE0rfE-JM)
