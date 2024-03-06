@@ -54,6 +54,12 @@ https://github.com/kubernetes-sigs/kubespray
 [[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
 
 
+<br/>
+
+### k6 (тесты)
+
+[[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt))
+
 
 <br/>
 
