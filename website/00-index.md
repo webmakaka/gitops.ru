@@ -22,6 +22,8 @@ permalink: /
 
 [[YouTube] How to set up production-like Kubernetes environments on local machines [ENG, 2024]](https://www.youtube.com/watch?v=Bh0Uw9111yg)
 
+https://github.com/beneiltis/-2024-meetup-local-dev/tree/main
+
 
 <br/>
 
