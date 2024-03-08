@@ -2,14 +2,14 @@
 layout: page
 title: Инсталляция kubectl в ubuntu 22.04
 description: Инсталляция kubectl в ubuntu 22.04
-keywords: gitops, containers, kubernetes, setup, kubectl
-permalink: /tools/containers/kubernetes/tools/kubectl/
+keywords: tools, containers, kubernetes, kubectl, setup
+permalink: /tools/containers/kubernetes/tools/kubectl/setup/
 ---
 
 # Инсталляция kubectl в ubuntu 22.04
 
 Делаю:  
-2023.12.27
+2024.03.08
 
 <br/>
 
@@ -18,7 +18,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/
 <br/>
 
 ```shell
-// Текущая стабильная версия kubectl (v1.28.4)
+// Текущая стабильная версия kubectl (v1.29.2)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -30,7 +30,7 @@ $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s h
 
 ```
 $ kubectl version --client
-Client Version: v1.28.4
+Client Version: v1.29.2
 Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
 
 // Если будет нужно удалить

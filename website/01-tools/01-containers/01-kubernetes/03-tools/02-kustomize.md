@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Инсталляция kustomize в ubuntu 20.04
-description: Инсталляция kustomize в ubuntu 20.04
+title: Инсталляция kustomize в ubuntu 22.04
+description: Инсталляция kustomize в ubuntu 22.04
 keywords: gitops, containers, kubernetes, setup, kustomize
 permalink: /tools/containers/kubernetes/tools/kustomize/
 ---
 
-# Инсталляция kustomize в ubuntu 20.04
+# Инсталляция kustomize в ubuntu 22.04
 
 Date:  
-26.07.2023
+2024.03.08
 
 <br/>
 
@@ -22,7 +22,7 @@ kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && chmod +x 
 
 ```
 $ kustomize version
-v5.1.0
+v5.3.0
 ```
 
 <br/>
@@ -34,7 +34,7 @@ v5.1.0
 
 <br/>
 
-### Версия 4.5.7
+### Если нужна версия, например, 4.5.7
 
 ```
 $ wget "https://raw.githubusercontent.com/\

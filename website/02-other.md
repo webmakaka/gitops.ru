@@ -16,48 +16,7 @@ permalink: /other/
 
 ### [[Video Courses]](/courses/)
 
-<br/>
 
-### [[YuTube] [Nana] Kubernetes Roadmap - Complete Step-by-Step Learning Path](https://www.youtube.com/watch?v=S8eX0MxfnB4)
-
-<br/>
-
-### [YouTube][DevOps Toolkit] Should We Run Databases In Kubernetes? CloudNativePG PostgreSQL [ENG, 2023]
-
-- [link](https://www.youtube.com/watch?v=Ny9RxM6H6Hg)
-
-<br/>
-
-### [YouTube] Help! I'm a developer and I need to deploy an application on Kubernetes [ENG, 2023]
-
-- https://www.youtube.com/watch?v=8O0FXivfisY
-
-<br/>
-
-### [YouTube] Develop, build, deploy Node.js microservices w/ NestJS & Pulumi [RUS, 2023]
-
-- https://www.youtube.com/watch?v=aQ5ycXwDepU
-- https://www.youtube.com/watch?v=3oSt-evzV1c
-
-https://xtechnology.dev/pulumi.html
-
-<br/>
-
-### [YouTube][DevOps Toolkit] How To Do Canary Deployments In Kubernetes Using Flagger And Linkerd? [ENG, 2022]
-
-https://www.youtube.com/watch?v=NrytqS43dgw
-
-<br/>
-
-### [YouTube][DevOps Toolkit] Manage Container (Docker) Images, Helm, CNAB, and Other Artifacts With Harbor [ENG, 2022]
-
-[Разбор](/tools/containers/kubernetes/tools/registries/harbor/)
-
-<br/>
-
-### [YouTube][DevOps Toolkit] What Is Mutual TLS (mTLS), Why Do We Need It, And How Do We Get It?
-
-https://www.youtube.com/watch?v=b38k2GiLDdc
 
 <br/>
 
