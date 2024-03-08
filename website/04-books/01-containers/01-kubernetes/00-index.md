@@ -10,6 +10,34 @@ permalink: /books/containers/kubernetes/
 
 <br/>
 
+## RUS
+
+<br/>
+
+### [Book] Python и DevOps: Ключ к автоматизации Linux. [RUS, 2022] [544 с.]
+
+<br/>
+
+## ENG
+
+<br/>
+
+### [Book] [Aly Saleh, Murat Karslioglu] Kubernetes in Production Best Practices: Build and manage highly available production-ready Kubernetes clusters [ENG, 2021]
+
+<br/>
+
+[Разбор](/books/containers/kubernetes/kubernetes-in-production-best-practices/)
+
+<br/>
+
+### [Book] Effortless Cloud-Native App Development Using Skaffold
+
+<br/>
+
+[Разбор](/books/containers/kubernetes/tools/skaffold/effortless-cloud-native-development-skaffold/)
+
+<br/>
+
 ### [Book] The Kubernetes Operator Framework Book: Overcome complex Kubernetes cluster management challenges with automation toolkits [ENG, 2022]
 
 ISBN: 978-1803232850 | 328 Pages
