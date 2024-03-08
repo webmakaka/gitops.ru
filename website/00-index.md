@@ -8,8 +8,9 @@ permalink: /
 
 <br/>
 
-Привет! <br/>
-Если копаете тему devops / gitops / secops / mlops и д.р., давайте дружить и делиться знаниями.
+Привет!  
+Если копаете тему devops / gitops / secops / mlops и д.р., давайте обсуждать и делиться знаниями.  
+Группа в телеграм https://t.me/techline_ru
 
 <br/>
 
@@ -60,7 +61,7 @@ https://github.com/kubernetes-sigs/kubespray
 
 ### k6 (тесты)
 
-[[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt))
+[[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt)
 
 
 <br/>
