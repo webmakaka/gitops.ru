@@ -13,7 +13,27 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-tekto
 <br/>
 
 Делаю:  
-13.06.2023
+2024.03.08
+
+<br/>
+
+Пушим image в dockerhub
+
+<br/>
+
+```
+$ docker login
+
+***
+Login Succeeded
+```
+
+<br/>
+
+```
+REGISTRY_USER=<your own docker login>
+REGISTRY_PASSWORD=<your own docker password>
+```
 
 <br/>
 
@@ -118,7 +138,7 @@ EOF
 
 <br/>
 
-### Пример 1
+## Пример 1
 
 <br/>
 
@@ -288,12 +308,6 @@ EOF
 
 <br/>
 
-```
-$ export NEW_IMAGE=webmakaka/tekton-greeter:latest
-```
-
-<br/>
-
 ```yaml
 $ envsubst << 'EOF' | cat | kubectl create -f -
 apiVersion: tekton.dev/v1beta1
@@ -308,10 +322,10 @@ spec:
   - name: GIT_REF
     value: "master"
   - name: DESTINATION_IMAGE
-    value: ${NEW_IMAGE}
+    value: webmakaka/tekton-greeter:latest
   - name: SCRIPT
     value: |
-      kubectl create deploy tekton-greeter --image=${NEW_IMAGE}
+      kubectl create deploy tekton-greeter --image=webmakaka/tekton-greeter:latest
   pipelineRef:
     name: tekton-greeter-pipeline
   workspaces:
@@ -353,13 +367,13 @@ Meeow!! from Tekton 😺🚀⏎
 <br/>
 
 ```
-OK
+OK!
 https://hub.docker.com/r/webmakaka/tekton-greeter
 ```
 
 <br/>
 
-### Пример 2
+## Пример 2 с использованием специально созданных task
 
 <br/>
 
@@ -417,12 +431,6 @@ app-source-pvc   Bound    pvc-c675c620-2268-43a3-835d-8a99743edf69   1Gi        
 
 <br/>
 
-```
-$ export NEW_IMAGE=webmakaka/tekton-greeter:latest
-```
-
-<br/>
-
 ```yaml
 $ envsubst << 'EOF' | cat | kubectl create -f -
 apiVersion: tekton.dev/v1beta1
@@ -437,10 +445,10 @@ spec:
   - default: master
     name: GIT_REF
     type: string
-  - default: ${NEW_IMAGE}
+  - default: webmakaka/tekton-greeter:latest
     name: DESTINATION_IMAGE
     type: string
-  - default: kubectl create deploy tekton-greeter --image=${NEW_IMAGE}
+  - default: kubectl create deploy tekton-greeter --image=webmakaka/tekton-greeter:latest
     name: SCRIPT
     type: string
   - default: ./Dockerfile
@@ -522,7 +530,6 @@ EOF
 <br/>
 
 ```
-// Не удалось переменной задать image
 // OK!
 $ tkn pipeline start tekton-greeter-pipeline-hub \
     --serviceaccount='tekton-deployer-sa' \

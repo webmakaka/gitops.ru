@@ -13,7 +13,7 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-task-
 <br/>
 
 Делаю:  
-12.06.2023
+2024.03.08
 
 <br/>
 
@@ -144,7 +144,7 @@ $ tkn taskrun logs build-app-run-f5ctk -f
 [build-sources] [INFO] ------------------------------------------------------------------------
 [build-sources] [INFO] BUILD SUCCESS
 [build-sources] [INFO] ------------------------------------------------------------------------
-[build-sources] [INFO] Total time:  42.504 s
-[build-sources] [INFO] Finished at: 2023-06-12T14:46:17Z
+[build-sources] [INFO] Total time:  02:35 min
+[build-sources] [INFO] Finished at: 2024-03-08T10:14:04Z
 [build-sources] [INFO] ------------------------------------------------------------------------
 ```

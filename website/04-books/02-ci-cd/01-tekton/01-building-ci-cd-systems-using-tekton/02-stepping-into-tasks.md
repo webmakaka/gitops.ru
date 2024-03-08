@@ -15,7 +15,7 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into
 <br/>
 
 Делаю:  
-31.08.2023
+2024.03.08
 
 <br/>
 
@@ -55,6 +55,15 @@ hello   29s
 
 ```
 $ tkn task start hello --showlog
+```
+
+<br/>
+
+```
+TaskRun started: hello-run-c7fnz
+Waiting for logs to be available...
+
+[unnamed-0] Hello World
 ```
 
 <br/>

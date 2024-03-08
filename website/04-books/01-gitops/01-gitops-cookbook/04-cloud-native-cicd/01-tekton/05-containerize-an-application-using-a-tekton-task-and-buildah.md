@@ -12,8 +12,28 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/containerize-a
 
 <br/>
 
+Собираем и отправляем docker image в registry
+
+<br/>
+
 Делаю:  
-12.06.2023
+2024.03.08
+
+<br/>
+
+```
+$ docker login
+
+***
+Login Succeeded
+```
+
+<br/>
+
+```
+REGISTRY_USER= <your own docker login>
+REGISTRY_PASSWORD= <your own docker password>
+```
 
 <br/>
 
@@ -42,6 +62,9 @@ $ kubectl create secret docker-registry container-registry-secret \
 
 ```
 $ kubectl get secrets
+
+***
+container-registry-secret
 ```
 
 <br/>
@@ -159,6 +182,15 @@ EOF
 <br/>
 
 ```
+$ kubectl get tasks
+NAME             AGE
+***
+build-push-app   36s
+```
+
+<br/>
+
+```
 // OK!
 $ tkn task start build-push-app \
   --serviceaccount='tekton-registry-sa' \
@@ -176,36 +208,35 @@ $ tkn task start build-push-app \
 [build-sources] [INFO] ------------------------------------------------------------------------
 [build-sources] [INFO] BUILD SUCCESS
 [build-sources] [INFO] ------------------------------------------------------------------------
-[build-sources] [INFO] Total time:  36.180 s
-[build-sources] [INFO] Finished at: 2023-05-29T14:01:04Z
+[build-sources] [INFO] Total time:  44.860 s
+[build-sources] [INFO] Finished at: 2024-03-08T11:14:16Z
 [build-sources] [INFO] ------------------------------------------------------------------------
 
 [build-and-push-image] STEP 1/2: FROM registry.access.redhat.com/ubi8/openjdk-11
 [build-and-push-image] Trying to pull registry.access.redhat.com/ubi8/openjdk-11:latest...
 [build-and-push-image] Getting image source signatures
 [build-and-push-image] Checking if image destination supports signatures
-[build-and-push-image] Copying blob sha256:d09aca24592b99820eb623c3a56914ab82562e5a4e37aa67ece0402d832e3100
-[build-and-push-image] Copying blob sha256:06f86e50a0b74ff9eb161a7d781228877c90e8ff57e9689e8cb8b0f092a2a9f9
-[build-and-push-image] Copying config sha256:d1ce871371c268991ea2f4c4dd5b5dcd972f9a68bc55f48b320afe6fa43482b9
+[build-and-push-image] Copying blob sha256:0bb48edf8994fcf133c612f92171d68f572091fb0b1113715eab5f3e5e7f54e5
+[build-and-push-image] Copying blob sha256:74e0c06e5eac269967e6970582b9b25168177df26dffed37ccde09369302a87a
+[build-and-push-image] Copying config sha256:a6b53e10c7678edc1d2e8090ed0a0b40d147f8e110ac2277931828ef11276f96
 [build-and-push-image] Writing manifest to image destination
 [build-and-push-image] Storing signatures
 [build-and-push-image] STEP 2/2: COPY target/quarkus-app /deployments/
 [build-and-push-image] COMMIT webmakaka/tekton-greeter:latest
-[build-and-push-image] --> a3ac36b0d6c9
+[build-and-push-image] --> 8c78b1bd65c9
 [build-and-push-image] Successfully tagged localhost/webmakaka/tekton-greeter:latest
-[build-and-push-image] a3ac36b0d6c97b37e6bcb3193637e3e81777ec0fac5cd60fa89dcf4d7625b11f
+[build-and-push-image] 8c78b1bd65c9c547a574e12c5e57344740915dced67ca6b1e11117c04250273a
 [build-and-push-image] Getting image source signatures
-[build-and-push-image] Copying blob sha256:a02aa3b0d74d2d11c65b91ed11d8e477d0dcfaa532ed44d3ea851fef827e399b
-[build-and-push-image] Copying blob sha256:969795712c492f0c43031ce89dfb3d6ca2c08221fc28fb4479c7e0a370af7342
-[build-and-push-image] Copying blob sha256:65e05838a57a7ebfcc49994779f4a29e3548b78e9d12542320d0fbc79dc555c3
-[build-and-push-image] Copying config sha256:a3ac36b0d6c97b37e6bcb3193637e3e81777ec0fac5cd60fa89dcf4d7625b11f
+[build-and-push-image] Copying blob sha256:00a9cea1d198bc0374806979feb9b0ec58e2d38b036ecb4e522f21b953b987de
+[build-and-push-image] Copying blob sha256:6344c4480048e2ab532a9015ac326b4b24ed43b1fed6756848b81b40a49075d9
+[build-and-push-image] Copying blob sha256:f61c43e793f68bde6557f1f0662ea7c8c9078c66a1b69840d48b14a6ea79d724
+[build-and-push-image] Copying config sha256:8c78b1bd65c9c547a574e12c5e57344740915dced67ca6b1e11117c04250273a
 [build-and-push-image] Writing manifest to image destination
-[build-and-push-image] Storing signatures
 ```
 
 <br/>
 
 ```
-OK
+OK!
 https://hub.docker.com/r/webmakaka/tekton-greeter
 ```

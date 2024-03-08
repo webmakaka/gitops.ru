@@ -28,7 +28,7 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/
 
 ### [[OK!] 6.7 Create a Tekton Pipeline to Build and Deploy an App to Kubernetes](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-tekton-pipeline-to-build-and-deploy-an-app-to-kubernetes/)
 
-### [[FAIL!] 6.8 Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-triggers-to-compile-and-package-an-application-automatically-when-a-change-occurs-on-git/)
+### [[OK!] 6.8 Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-triggers-to-compile-and-package-an-application-automatically-when-a-change-occurs-on-git/)
 
 ### [UNKNOWN!] 6.9 Update a Kubernetes Resource Using Kustomize and Push the Change to Git
 

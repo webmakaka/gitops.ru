@@ -12,8 +12,12 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/deploy-an-appl
 
 <br/>
 
+Запускаем шагом ранее созданный image в kubernetes
+
+<br/>
+
 Делаю:  
-12.06.2023
+2024.03.08
 
 <br/>
 
@@ -137,6 +141,9 @@ EOF
 ```
 // wait for 30 sec
 $ tkn taskrun logs kubectl-taskrun -f
+
+***
+[oc] deployment.apps/tekton-greeter created
 ```
 
 <br/>
