@@ -31,3 +31,5 @@ https://github.com/gitops-cookbook
 ### [05. Helm](/books/gitops/gitops-cookbook/helm/)
 
 ### [06. Cloud Native CI/CD](/books/gitops/gitops-cookbook/cloud-native-cicd/)
+
+### [07. Argo CD](/books/gitops/gitops-cookbook/argo-cd/)

@@ -1,19 +1,81 @@
 ---
 layout: page
-title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Git
-description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Git
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Create a Task to Compile and Package an App from Git
-permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-task-to-compile-and-package-an-app-from-git/
+title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Private Git
+description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Task to Compile and Package an App from Private Git
+keywords: books, gitops, cloud-native-cicd, tekton, Create a Task to Compile and Package an App from Private Git
+permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-task-to-compile-and-package-an-app-from-private-git/
 ---
 
 <br/>
 
-# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.3 Create a Task to Compile and Package an App from Git
+# [Book] [OK!] GitOps Cookbook: 06. Cloud Native CI/CD: Tekton: 6.4 Create a Task to Compile and Package an App from Private Git
 
 <br/>
 
 Делаю:  
 2024.03.08
+
+<br/>
+
+Пересоздал minikube
+
+<br/>
+
+1. Создаю private repo https://github.com/wildmakaka/wildmakaka-tekton-greeter-private.git
+2. Копирую в него https://github.com/gitops-cookbook/tekton-tutorial-greeter в ветку main.
+
+<br/>
+
+3. Создаю токен для работы с приватным repo
+
+https://github.com/settings/tokens
+
+<br/>
+
+Или можно кликать по иконкам:
+
+**GithubUserName -> Settings -> Developer Settings -> Personal access token -> Tokens (classic) ->**
+
+<br/>
+
+**Genereate new token (classic) -> TEKTON_TOKEN**
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl create -f -
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github-secret
+  annotations:
+    tekton.dev/git-0: https://github.com
+type: kubernetes.io/basic-auth
+stringData:
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
+EOF
+```
+
+<br/>
+
+```
+YOUR_USERNAME - github username
+YOUR_PASSWORD - GitHub personal access token
+```
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl create -f -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tekton-bot-sa
+secrets:
+  - name: github-secret
+EOF
+```
 
 <br/>
 
@@ -36,9 +98,9 @@ spec:
       type: string
       default: "false"
     - name: url
-      default: https://github.com/gitops-cookbook/tekton-tutorial-greeter.git
+      default: https://github.com/wildmakaka/wildmakaka-tekton-greeter-private.git
     - name: revision
-      default: master
+      default: main
     - name: subdirectory
       default: ""
     - name: sslVerify
@@ -89,6 +151,14 @@ EOF
 
 <br/>
 
+### Запуск
+
+```
+$ kubectl get tasks
+```
+
+<br/>
+
 ```yaml
 $ cat << 'EOF' | kubectl create -f -
 apiVersion: tekton.dev/v1beta1
@@ -99,11 +169,12 @@ metadata:
     app.kubernetes.io/managed-by: tekton-pipelines
     tekton.dev/task: build-app
 spec:
+  serviceAccountName: tekton-bot-sa
   params:
   - name: contextDir
     value: quarkus
   - name: revision
-    value: master
+    value: main
   - name: sslVerify
     value: "false"
   - name: subdirectory
@@ -111,7 +182,7 @@ spec:
   - name: tlsVerify
     value: "false"
   - name: url
-    value: https://github.com/gitops-cookbook/tekton-tutorial-greeter.git
+    value: https://github.com/wildmakaka/wildmakaka-tekton-greeter-private.git
   taskRef:
     kind: Task
     name: build-app
@@ -124,27 +195,32 @@ EOF
 <br/>
 
 ```
-$ kubectl get tasks
-build-app   36s
-```
-
-<br/>
-
-```
 $ tkn taskrun ls
 NAME                  STARTED          DURATION   STATUS
-build-app-run-f5ctk   3 minutes ago    1m38s      Succeeded
+build-app-run-28gtk   54 seconds ago   48s        Succeeded
 ```
 
 <br/>
 
 ```
-$ tkn taskrun logs build-app-run-f5ctk -f
-***
+$ tkn taskrun logs build-app-run-28gtk -f
 [build-sources] [INFO] ------------------------------------------------------------------------
 [build-sources] [INFO] BUILD SUCCESS
 [build-sources] [INFO] ------------------------------------------------------------------------
-[build-sources] [INFO] Total time:  02:35 min
-[build-sources] [INFO] Finished at: 2024-03-08T10:14:04Z
-[build-sources] [INFO] ------------------------------------------------------------------------
+[build-sources] [INFO] Total time:  42.830 s
+[build-sources] [INFO] Finished at: 2024-03-08T11:03:27Z
+[build-sources] [INFO] ---------------------------------------------------------
+```
+
+<br/>
+
+### Запуск как в книге
+
+```
+$ tkn task start build-app \
+--serviceaccount='tekton-bot-sa' \
+--param url='https://github.com/wildmakaka/wildmakaka-tekton-greeter-private.git' \
+--param contextDir='quarkus' \
+--workspace name=source,emptyDir="" \
+--showlog
 ```

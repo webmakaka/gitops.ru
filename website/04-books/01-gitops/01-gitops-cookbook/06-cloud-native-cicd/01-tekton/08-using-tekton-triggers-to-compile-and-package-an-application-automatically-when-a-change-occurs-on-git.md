@@ -2,7 +2,7 @@
 layout: page
 title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
 description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
+keywords: books, gitops, cloud-native-cicd, tekton, Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-triggers-to-compile-and-package-an-application-automatically-when-a-change-occurs-on-git/
 ---
 
@@ -278,7 +278,7 @@ EOF
 
 <br/>
 
-### Текущий шаг
+### Выполняем шаги текущего параграфа
 
 <br/>
 
@@ -314,16 +314,13 @@ tekton-triggers-webhook-689688fc54-bvmq5            1/1     Running   0         
 <br/>
 
 <!--
-
 ```
 name: tekton-greeter-pipeline-webhook-$(uid)
 ```
 -->
-
 <!--
-
+В оригинале был прописан:
 serviceAccountName: tekton-triggers-example-sa
-
 -->
 
 ```yaml

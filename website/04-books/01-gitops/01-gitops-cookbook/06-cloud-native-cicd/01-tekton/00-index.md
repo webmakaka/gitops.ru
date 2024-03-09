@@ -2,7 +2,7 @@
 layout: page
 title: GitOps Cookbook - Cloud Native CI/CD - Tekton
 description: GitOps Cookbook - Cloud Native CI/CD - Tekton
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton
+keywords: books, gitops, cloud-native-cicd, tekton
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/
 ---
 
@@ -30,6 +30,6 @@ permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/
 
 ### [[OK!] 6.8 Using Tekton Triggers to Compile and Package an Application Automatically When a Change Occurs on Git](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/using-tekton-triggers-to-compile-and-package-an-application-automatically-when-a-change-occurs-on-git/)
 
-### [UNKNOWN!] 6.9 Update a Kubernetes Resource Using Kustomize and Push the Change to Git
+### [[UNKNOWN!] 6.9 Update a Kubernetes Resource Using Kustomize and Push the Change to Git](/books/gitops/gitops-cookbook/cloud-native-cicd/tekton/update-a-kubernetes-resource-using-kustomize-and-push-the-change-to-git/)
 
 ### [UNKNOWN!] 6.10 Update a Kubernetes Resource Using Helm and Create a Pull Request

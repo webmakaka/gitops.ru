@@ -2,7 +2,7 @@
 layout: page
 title: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
 description: GitOps Cookbook - Cloud Native CI/CD - Tekton - Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
-keywords: GitOps Cookbook - Cloud Native CI/CD, Tekton, Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
+keywords: books, gitops, cloud-native-cicd, tekton, Create a Tekton Pipeline to Build and Deploy an App to Kubernetes
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/tekton/create-a-tekton-pipeline-to-build-and-deploy-an-app-to-kubernetes/
 ---
 

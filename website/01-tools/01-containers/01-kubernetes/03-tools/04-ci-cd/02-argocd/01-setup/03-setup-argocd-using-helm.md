@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup-argocd-using-he
 <br/>
 
 Делаю:  
-09.05.2023
+2023.05.09
 
 <br/>
 

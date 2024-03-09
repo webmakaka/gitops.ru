@@ -2,7 +2,7 @@
 layout: page
 title: GitOps Cookbook - Cloud Native CI/CD
 description: GitOps Cookbook - Cloud Native CI/CD
-keywords: GitOps Cookbook - Cloud Native CI/CD,
+keywords: GitOps Cookbook - Cloud Native CI/CD
 permalink: /books/gitops/gitops-cookbook/cloud-native-cicd/
 ---
 
