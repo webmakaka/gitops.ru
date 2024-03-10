@@ -195,7 +195,7 @@ Why unusable:
 ### Инсталляция Guest Additions в командной строке
 
 Делаю:  
-2023.12.25
+2024.03.10
 
 **Нужно устанавливать в виртуальной машине!**
 
@@ -233,12 +233,12 @@ $ sudo su -
 
 # cd /tmp
 
-# wget http://download.virtualbox.org/virtualbox/7.0.12/VBoxGuestAdditions_7.0.12.iso
+# wget http://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
 
 
-# 7z x ./VBoxGuestAdditions_7.0.12.iso -o./VBoxGuestAdditions_7.0.12/
+# 7z x ./VBoxGuestAdditions_7.0.14.iso -o./VBoxGuestAdditions_7.0.14/
 
-# cd VBoxGuestAdditions_7.0.12/
+# cd VBoxGuestAdditions_7.0.14/
 
 # chmod +x ./VBoxLinuxAdditions.run
 
