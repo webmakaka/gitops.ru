@@ -9,7 +9,7 @@ permalink: /tools/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 22.04
 
 Делаю:  
-2023.12.09
+2024.03.23
 
 <br/>
 
@@ -70,10 +70,10 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 24.0.7, build afdd53b
+Docker version 26.0.0, build 2ae903e
 
 $ docker-compose --version
-Docker Compose version v2.23.3
+Docker Compose version v2.26.0
 ```
 
 <br/>

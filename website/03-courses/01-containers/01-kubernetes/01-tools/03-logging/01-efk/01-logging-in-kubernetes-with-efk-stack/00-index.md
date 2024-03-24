@@ -2,7 +2,7 @@
 layout: page
 title: Logging in Kubernetes with EFK Stack | The Complete Guide
 description: Logging in Kubernetes with EFK Stack | The Complete Guide
-keywords: containers, kubernetes, linode, elastic, fluentd, kibana
+keywords: courses, containers, kubernetes, tools, logging, elastic, fluentd, kibana
 permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/
 ---
 

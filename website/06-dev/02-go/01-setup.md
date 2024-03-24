@@ -15,23 +15,29 @@ permalink: /dev/go/setup/
 <br/>
 
 **Делаю:**  
-10.07.2022
+2024.03.22
 
 <br/>
 
 ```
 $ mkdir ~/tmp
 $ cd ~/tmp/
-$ wget --no-check-certificate https://golang.org/dl/go1.18.3.linux-amd64.tar.gz
+$ wget --no-check-certificate https://golang.org/dl/go1.22.1.linux-amd64.tar.gz
 ```
 
 <br/>
 
 ```
-$ tar -xvzpf go1.18.3.linux-amd64.tar.gz
-$ sudo mkdir -p /opt/go.1.18
-$ sudo mv go/* /opt/go.1.18/
-$ sudo ln -s /opt/go.1.18/ /opt/go
+$ tar -xvzpf go1.22.1.linux-amd64.tar.gz
+$ sudo mkdir -p /opt/go.1.22
+$ sudo mv go/* /opt/go.1.22/
+$ sudo ln -s /opt/go.1.22/ /opt/go
+```
+
+<br/>
+
+```
+$ mkdir -p ~/projects/golang/
 ```
 
 <br/>
@@ -43,12 +49,15 @@ $ sudo vi /etc/profile.d/golang.sh
 <br/>
 
 ```
-#### GO 1.18 ########################
+#### GO 1.22 ########################
 
 export GO_HOME=/opt/go
 export PATH=${GO_HOME}/bin:$PATH
 
-#### GO 1.18 ########################
+export GOPATH=~/projects/golang/
+export PATH=${GOPATH}/bin:$PATH
+
+#### GO 1.22 ########################
 ```
 
 <br/>
@@ -62,7 +71,7 @@ $ source /etc/profile.d/golang.sh
 
 ```
 $ go version
-go version go1.18.3 linux/amd64
+go version go1.22.1 linux/amd64
 ```
 
 <br/>

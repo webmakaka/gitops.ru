@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup/
 <br/>
 
 Делаю:  
-2024.03.09
+2024.03.24
 
 <br/>
 
@@ -49,12 +49,6 @@ argocd-server-5fd847d6bc-28frv                      1/1     Running   0         
 
 <br/>
 
-```
-$ kubectl port-forward svc/argocd-server -n argocd 8080:443
-```
-
-<br/>
-
 ### Получаем пароль
 
 <br/>
@@ -63,6 +57,12 @@ $ kubectl port-forward svc/argocd-server -n argocd 8080:443
 // Получить пароль для входа
 $ kubectl -n argocd get secret argocd-initial-admin-secret \
           -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+<br/>
+
+```
+$ kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
 <br/>

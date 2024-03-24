@@ -135,6 +135,8 @@ http://192.168.49.2:30411
 
 # Обновление
 
+<br/>
+
 https://github.com/wildmakaka/gitops-cookbook-sc/blob/main/ch07/bgd/bgd-deployment.yaml
 
 Меняю:

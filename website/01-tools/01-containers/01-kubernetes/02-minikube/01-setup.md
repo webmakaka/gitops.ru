@@ -46,7 +46,7 @@ commit: 8220a6eb95f0a4d75f7f2d7b14cef975f050512d
 <br/>
 
 **Делаю:**  
-2024.03.09
+2024.03.24
 
 <br/>
 
@@ -69,7 +69,7 @@ commit: 8220a6eb95f0a4d75f7f2d7b14cef975f050512d
 <br/>
 
 ```
-// v1.29.2
+// v1.29.3
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -77,14 +77,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.29.2
+v1.29.3
 ```
 
 <br/>
 
 ```
-// Если младше 1.29.2
-$ LATEST_KUBERNETES_VERSION=1.29.2
+// Если младше 1.29.3
+$ LATEST_KUBERNETES_VERSION=1.29.3
 ```
 
 <br/>

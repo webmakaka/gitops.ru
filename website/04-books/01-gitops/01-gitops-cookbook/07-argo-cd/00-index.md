@@ -35,12 +35,13 @@ https://github.com/wildmakaka/gitops-cookbook-sc.git
 
 ### [[OK!] 7.2 Automatic Synchronization](/books/gitops/gitops-cookbook/argo-cd/automatic-synchronization/)
 
+### [[OK!] 7.3 Kustomize Integration](/books/gitops/gitops-cookbook/argo-cd/kustomize-integration/)
+
+### [[OK!] 7.4 Helm Integration](/books/gitops/gitops-cookbook/argo-cd/helm-integration/)
+
 <br/>
 
 ```
-
-7.3 Kustomize Integration
-7.4 Helm Integration
 7.5 Image Updater
 7.6 Deploy from a Private Git Repository
 7.7 Order Kubernetes Manifests
