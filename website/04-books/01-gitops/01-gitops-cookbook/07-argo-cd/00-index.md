@@ -39,10 +39,11 @@ https://github.com/wildmakaka/gitops-cookbook-sc.git
 
 ### [[OK!] 7.4 Helm Integration](/books/gitops/gitops-cookbook/argo-cd/helm-integration/)
 
+### [[OK!] 7.5 Image Updater](/books/gitops/gitops-cookbook/argo-cd/image-updater/)
+
 <br/>
 
 ```
-7.5 Image Updater
 7.6 Deploy from a Private Git Repository
 7.7 Order Kubernetes Manifests
 7.8 Define Synchronization Windows

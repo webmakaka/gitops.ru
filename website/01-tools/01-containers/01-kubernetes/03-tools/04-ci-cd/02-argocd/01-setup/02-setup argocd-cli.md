@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup/argocd-cli/
 <br/>
 
 Делаю:  
-2024.03.24
+2024.03.25
 
 <br/>
 

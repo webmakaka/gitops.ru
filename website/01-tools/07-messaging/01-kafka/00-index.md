@@ -18,15 +18,17 @@ https://github.com/marcel-dempers/docker-development-youtube-series/tree/master/
 
 <br/>
 
-    $ cd ~/tmp/
+```
+$ cd ~/tmp/
 
-    $ git clone https://github.com/marcel-dempers/docker-development-youtube-series
+$ git clone https://github.com/marcel-dempers/docker-development-youtube-series
 
-    $ cd docker-development-youtube-series/tools/messaging/kafka/
+$ cd docker-development-youtube-series/tools/messaging/kafka/
 
-    $ docker-compose up --build
+$ docker-compose up --build
 
-    $ docker ps
+$ docker ps
+```
 
 <br/>
 
@@ -47,7 +49,9 @@ ff179d11e800   aimvector/kafka:2.7.0       "start-kafka.sh"       32 seconds ago
 
 <br/>
 
-    $ docker exec -it zookeeper-1 bash
+```
+$ docker exec -it zookeeper-1 bash
+```
 
 <br/>
 
@@ -86,7 +90,9 @@ Topic: Orders	PartitionCount: 3	ReplicationFactor: 1	Configs:
 
 <br/>
 
-    $ docker exec -it zookeeper-1 bash
+```
+$ docker exec -it zookeeper-1 bash
+```
 
 <br/>
 
@@ -104,7 +110,9 @@ Topic: Orders	PartitionCount: 3	ReplicationFactor: 1	Configs:
 
 <br/>
 
-    $ docker exec -it kafka-producer bash
+```
+$ docker exec -it kafka-producer bash
+```
 
 <br/>
 
@@ -140,12 +148,16 @@ Topic: Orders	PartitionCount: 3	ReplicationFactor: 1	Configs:
 
 ###
 
-    $ docker exec -it kafka-1 bash
+```
+$ docker exec -it kafka-1 bash
+```
 
 <br/>
 
-    # apt install -y tree
-    # tree /tmp/kafka-logs/
+```
+# apt install -y tree
+# tree /tmp/kafka-logs/
+```
 
 <br/>
 
@@ -273,15 +285,17 @@ https://github.com/marcel-dempers/docker-development-youtube-series/blob/master/
 
 <br/>
 
-    $ cd ~/tmp/
+```
+$ cd ~/tmp/
 
-    $ git clone https://github.com/marcel-dempers/docker-development-youtube-series
+$ git clone https://github.com/marcel-dempers/docker-development-youtube-series
 
-    $ cd docker-development-youtube-series/tools/messaging/kafka/
+$ cd docker-development-youtube-series/tools/messaging/kafka/
 
-    $ docker-compose up zookeeper-1 kafka-1 kafka-2 kafka-3
+$ docker-compose up zookeeper-1 kafka-1 kafka-2 kafka-3
 
-    $ docker ps
+$ docker ps
+```
 
 <br/>
 
@@ -295,7 +309,9 @@ ff179d11e800 aimvector/kafka:2.7.0 "start-kafka.sh" 34 minutes ago Up 8 seconds 
 
 ### Create a Topic: Orders
 
-    $ docker exec -it zookeeper-1 bash
+```
+$ docker exec -it zookeeper-1 bash
+```
 
 <br/>
 
@@ -322,13 +338,15 @@ exit
 
 ## Building a consumer in Go
 
-    $ cd ~/tmp/docker-development-youtube-series/tools/messaging/kafka/
+```
+$ cd ~/tmp/docker-development-youtube-series/tools/messaging/kafka/
 
-    $ docker-compose up kafka-consumer-go
+$ docker-compose up kafka-consumer-go
 
-    $ docker-compose up kafka-producer
+$ docker-compose up kafka-producer
 
-    $ docker exec -it kafka-producer bash
+$ docker exec -it kafka-producer bash
+```
 
 <br/>
 
@@ -419,9 +437,11 @@ kafka-consumer-go    |
 
 <br/>
 
-    $ docker-compose up kafka-consumer
+```
+$ docker-compose up kafka-consumer
 
-    $ docker exec -it kafka-consumer bash
+$ docker exec -it kafka-consumer bash
+```
 
 <br/>
 

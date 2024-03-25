@@ -11,12 +11,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup/
 <br/>
 
 Делаю:  
-2024.03.24
-
-<br/>
-
-**Original:**
-https://gist.github.com/vfarcic/84324e2d6eb1e62e3569846a741cedea
+2024.03.25
 
 <br/>
 
@@ -49,7 +44,7 @@ argocd-server-5fd847d6bc-28frv                      1/1     Running   0         
 
 <br/>
 
-### Получаем пароль
+### Получаем пароль для подключения к UI
 
 <br/>
 
