@@ -16,6 +16,9 @@ permalink: /
 
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
+<br/>
+
+### [Book] Грокаем Continuous Delivery. Кристи Уилсон [RUS] (Нужно почитать)
 
 <br/>
 
