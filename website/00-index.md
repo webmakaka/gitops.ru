@@ -18,7 +18,7 @@ permalink: /
 
 <br/>
 
-### [Book] Грокаем Continuous Delivery. Кристи Уилсон [RUS] (Нужно почитать)
+### [Book] Грокаем Continuous Delivery. Кристи Уилсон [RUS, 2024] (Нужно почитать)
 
 <br/>
 
