@@ -15,23 +15,6 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 
 <br/>
 
-### Ссылки
-
-**node app:**  
-https://gitlab.com/nanuchi/node-app
-
-<br/>
-
-**java app**
-https://gitlab.com/nanuchi/java-app
-
-<br/>
-
-**Промо на облачный kubernetes от linode на $100**  
-https://gitlab.com/nanuchi/efk-course-commands/-/tree/master
-
-<br/>
-
 **Еще какие-то полезные ссылки**  
 https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/links.md
 
@@ -42,88 +25,27 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
 
 <br/>
 
-1. [Подключение к бесплатному облаку от Google](/tools/containers/kubernetes/google-cloud-shell/)
+### [Подготовка окружения](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/env/)
 
-1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
-
-**Испольновалась версия KUBERNETES_VERSION=v1.22.2**
-
-2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
-
-3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
-
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/packages/helm/logging/)
+### [Подготавливаем образы и выкладываем на hub.docker.com](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/build-and-push-docker-images/)
 
 <br/>
 
-### Подготавливаем образы и выкладываем на hub.docker.com
-
-<br/>
-
-```
-$ export DOCKER_HUB_LOGIN=webmakaka
-```
-
-<br/>
-
-Для меня образы в публичном регистри - норм.
-
-<br/>
-
-```
-$ docker login
-```
-
-<br/>
-
-**Приватные репо не нужны:**
-
-<br/>
-
-**node-app**
-
-```
-$ cd ~/tmp
-$ git clone https://gitlab.com/nanuchi/node-app.git
-$ cd node-app
-$ docker build -t node-app .
-$ docker tag node-app ${DOCKER_HUB_LOGIN}/node-1.0:latest
-$ docker push ${DOCKER_HUB_LOGIN}/node-1.0
-```
-
-<br/>
-
-**java-app**
-
-```
-$ cd ~/tmp
-$ git clone https://gitlab.com/nanuchi/java-app.git
-$ cd java-app
-$ ./gradlew build
-$ docker build -t java-app .
-$ docker tag java-app ${DOCKER_HUB_LOGIN}/java-1.0:latest
-$ docker push ${DOCKER_HUB_LOGIN}/java-1.0
-```
-
-<br/>
-
-### Create docker-registry secret for dockerHub (Пропускаю)
-
-Не нужно выполнять, если image хранятся в публичном registry.
+### Create docker-registry secret for dockerHub
 
 <br/>
 
 ```
 $ export DOCKER_REGISTRY_SERVER=docker.io
-$ export DOCKER_USER=your dockerID, same as for `docker login`
-$ export DOCKER_EMAIL=your dockerhub email, same as for `docker login`
-$ export DOCKER_PASSWORD=your dockerhub pwd, same as for `docker login`
+$ export DOCKER_USER=<YOUR_DOCKERHUB_LOGIN>
+$ export DOCKER_EMAIL=<YOUR_DOCKERHUB_LOGIN>
+$ export DOCKER_PASSWORD=<YOUR_DOCKERHUB_PASSWORD>
 
 $ kubectl create secret docker-registry myregistrysecret \
---docker-server=${DOCKER_REGISTRY_SERVER} \
---docker-username=${DOCKER_USER} \
---docker-password=${DOCKER_PASSWORD} \
---docker-email=${DOCKER_EMAIL}
+    --docker-server=${DOCKER_REGISTRY_SERVER} \
+    --docker-username=${DOCKER_USER} \
+    --docker-password=${DOCKER_PASSWORD} \
+    --docker-email=${DOCKER_EMAIL}
 
 $ kubectl get secret
 ```
@@ -131,8 +53,6 @@ $ kubectl get secret
 <br/>
 
 ### Deploy
-
-Оригинальные конфиги лежат в репо проектов.
 
 <br/>
 
@@ -197,6 +117,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: myregistrysecret
 EOF
 ```
 
