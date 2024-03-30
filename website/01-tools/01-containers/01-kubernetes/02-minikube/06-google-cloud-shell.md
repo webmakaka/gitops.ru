@@ -68,7 +68,18 @@ $ source ~/.bashrc
 ```
 $ gcloud auth login
 $ gcloud cloud-shell ssh
+
+// В debug режиме
+// $ gcloud cloud-shell ssh --ssh-flag="-vvv"
 ```
+
+<br/>
+
+**P.S.**
+
+1. Виртуальную машинку можно рестартовать и откатить в начальное состояние в UI
+
+2. При необходимости, удалить google ключи из каталога ~/.ssh/
 
 <br/>
 
