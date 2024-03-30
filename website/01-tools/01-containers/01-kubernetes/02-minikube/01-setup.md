@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/minikube/setup/
 <br/>
 
 **Делаю:**  
-2024.03.08
+2024.03.30
 
 <br/>
 
@@ -46,7 +46,7 @@ commit: 8220a6eb95f0a4d75f7f2d7b14cef975f050512d
 <br/>
 
 **Делаю:**  
-2024.03.25
+2024.03.30
 
 <br/>
 
@@ -133,8 +133,17 @@ $ {
 <br/>
 
 ```
+$ kubectl version
+Client Version: v1.29.2
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.29.3
+```
+
+<br/>
+
+```
 // Получить список установленных расширений
-$ minikube addons --profile ${PROFILE} list
+// $ minikube addons --profile ${PROFILE} list
 ```
 
 <br/>
@@ -145,17 +154,18 @@ $ minikube addons --profile ${PROFILE} list
 
 ```
 // Получить текущий контекст
-$ kubectl config current-context
+// $ kubectl config current-context
 ```
 
 <br/>
 
+### Сделать, чтобы Docker images хранились в выделенном ранее storage внутри контейнера, а не на основном хосте.
+
 ```
-$ minikube docker-env --profile ${PROFILE}
+// Посмотреть команды которые установят переменные окружения
+// $ minikube docker-env --profile ${PROFILE}
 
-export ****
-
-// Docker images будут храниться в выделенном ранее storage внутри контейнера, а не на основном хосте.
+// Команда, которая установит нужные переменные
 $ eval $(minikube -p ${PROFILE} docker-env)
 ```
 

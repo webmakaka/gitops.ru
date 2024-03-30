@@ -2,8 +2,8 @@
 layout: page
 title: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml (только для теста)
 description: Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml (только для теста)
-keywords: gitops, containers, helm, logging, elastic search, kibana, fluentd
-permalink: /tools/containers/kubernetes/tools/packages/helm/monitoring/
+keywords: tools, containers, kubernetes, monitoring, prometheus, grafana, setup, helm
+permalink: /tools/containers/kubernetes/tools/monitoring/prometheus-grafana/setup/helm/
 ---
 
 # Инсталляция с помощью Helm инструментов мониторинга

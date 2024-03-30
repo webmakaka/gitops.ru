@@ -9,7 +9,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/setup/
 # Инсталляция kubectl в ubuntu 22.04
 
 Делаю:  
-2024.03.08
+2024.03.30
 
 <br/>
 
@@ -18,7 +18,7 @@ permalink: /tools/containers/kubernetes/tools/kubectl/setup/
 <br/>
 
 ```shell
-// Текущая стабильная версия kubectl (v1.29.2)
+// Текущая стабильная версия kubectl (v1.29.3)
 $ echo $(curl -sS https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 
 
@@ -30,7 +30,7 @@ $ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s h
 
 ```
 $ kubectl version --client
-Client Version: v1.29.2
+Client Version: v1.29.3
 Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
 
 // Если будет нужно удалить

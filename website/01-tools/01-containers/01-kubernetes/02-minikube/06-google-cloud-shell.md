@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/google-cloud-shell/
 <br/>
 
 **Делаю:**  
-02.05.2022
+2024.03.30
 
 <br/>
 
@@ -36,7 +36,12 @@ https://shell.cloud.google.com/
 
 <br/>
 
-#### Подключиться по ssh
+### Подключиться по ssh
+
+<br/>
+
+**Инструкция:**  
+https://cloud.google.com/sdk/docs/install
 
 <br/>
 
@@ -47,9 +52,9 @@ https://shell.cloud.google.com/
 ```
 $ cd ~/tmp
 
-$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-383.0.1-linux-x86_64.tar.gz
+$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-linux-x86_64.tar.gz
 
-$ tar -zxvf google-cloud-cli-383.0.1-linux-x86_64.tar.gz
+$ tar -zxvf google-cloud-cli-470.0.0-linux-x86_64.tar.gz
 
 $ cd google-cloud-sdk/
 
@@ -57,11 +62,6 @@ $ ./install.sh
 
 $ source ~/.bashrc
 ```
-
-<br/>
-
-**Инструкция:**  
-https://cloud.google.com/sdk/docs/install
 
 <br/>
 

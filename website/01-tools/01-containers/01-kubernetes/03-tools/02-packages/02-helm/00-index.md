@@ -28,9 +28,9 @@ https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
 
 <br/>
 
-### [Инсталляция с помощью Helm инструментов мониторинга (Prometheus, Grafana)](/tools/containers/kubernetes/tools/packages/helm/monitoring/)
+### [Инсталляция с помощью Helm инструментов мониторинга (Prometheus, Grafana)](/tools/containers/kubernetes/tools/monitoring/prometheus-grafana/setup/helm/)
 
-### [Инсталляция с помощью Helm инструментов логирования (Elastic Search, Kibana, FluentD)](/tools/containers/kubernetes/tools/packages/helm/logging/)
+### [Инсталляция с помощью Helm инструментов логирования (Elastic Search, Kibana, FluentD)](/tools/containers/kubernetes/tools/logging/elastic/setup/helm/)
 
 ### [[Philippe Collignon] Packaging Applications with Helm for Kubernetes [ENG, 30 Jul 2019]](https://github.com/webmakaka/Packaging-Applications-with-Helm-for-Kubernetes)
 

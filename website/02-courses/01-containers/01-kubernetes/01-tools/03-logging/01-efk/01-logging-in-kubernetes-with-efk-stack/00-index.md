@@ -11,17 +11,17 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-05.11.2021
+2024.03.30
 
-<br/>
+<!-- <br/>
 
-**Еще какие-то полезные ссылки**  
+**Еще какие-то полезные ссылки**
 https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/links.md
 
 <br/>
 
-**Set up elastic stack in kubernetes cluster**  
-https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md
+**Set up elastic stack in kubernetes cluster**
+https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md -->
 
 <br/>
 

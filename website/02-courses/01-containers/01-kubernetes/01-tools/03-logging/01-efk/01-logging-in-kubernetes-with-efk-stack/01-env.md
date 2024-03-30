@@ -11,19 +11,19 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-05.11.2021
+2024.03.30
 
 <br/>
 
 1. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
 
-**Испольновалась версия KUBERNETES_VERSION=v1.22.2**
+**Испольновалась версия KUBERNETES_VERSION=v1.29.3**
 
 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
 3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
 
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/packages/helm/logging/)
+4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/helm/)
 
 <br/>
 
