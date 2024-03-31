@@ -256,3 +256,56 @@ $ curl \
   --data '{"password": "test123"}' \
   http://192.168.56.11:8200/v1/auth/userpass/login/test_user | jq
 ```
+
+<br/>
+
+### Lab 05 - Vault Policies
+
+<br/>
+
+```
+$ vault read sys/policy/default
+$ vault read sys/policy/root
+
+$ vault read sys/policy/default >> default.hcl
+```
+
+<br/>
+
+```
+$ vault server -dev
+
+$ export VAULT_ADDR='http://127.0.0.1:8200'
+$ export VAULT_TOKEN=<Root Token>
+$ vault status
+
+
+$ git clone https://github.com/daveprowse/vac-course
+$ cd vac-course/lab-05/
+
+$ vault policy write admin admin-policy.hcl
+$ vault policy list
+
+$ vault policy read admin
+$ vault read sys/policy/admin
+
+$ curl --header "X-Vault-Token: $VAULT_TOKEN" $VAULT_ADDR/v1/sys/policies/acl/admin | jq
+```
+
+<br/>
+
+```
+$ vault token create -policy=admin
+
+ADMIN_TOKEN=$(vault token create -format=json -policy="admin" | jq -r ".auth.client_token")
+
+$ echo ${ADMIN_TOKEN}
+
+$ vault token lookup $ADMIN_TOKEN
+
+$ vault token capabilities $ADMIN_TOKEN sys/auth/approle
+
+$ vault token capabilities $ADMIN_TOKEN sys/auth
+$ vault token capabilities $ADMIN_TOKEN auth/
+
+```

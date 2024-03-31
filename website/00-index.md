@@ -18,6 +18,30 @@ permalink: /
 
 <br/>
 
+### [Book][Alexander Shuiskov] Microservices with Go [ENG, 2022]
+
+<br/>
+
+Предлагаю коллективно почитать и обсудить при необходимости.
+
+<br/>
+
+![Microservices with Go](/img/books/covers/microservices-with-go 'Microservices with Go'){: .center-image }
+
+<br/>
+
+https://github.com/PacktPublishing/microservices-with-go
+
+<br/>
+
+### [Статья] (Нужно попробовать)
+
+https://phoenixnap.com/kb/kubernetes-ssl-certificates
+
+https://phoenixnap.com/kb/kubernetes-canary-deployments
+
+<br/>
+
 ### [Book] Грокаем Continuous Delivery. Кристи Уилсон [RUS, 2024] (Нужно почитать)
 
 <br/>
@@ -28,13 +52,11 @@ permalink: /
 
 https://github.com/beneiltis/-2024-meetup-local-dev/tree/main
 
-
 <br/>
 
 ### Crossplane
 
 [[YouTube] Getting Started with Crossplane [ENG, 2024]](https://www.youtube.com/watch?v=bBpE0rfE-JM)
-
 
 <br/>
 
@@ -48,24 +70,19 @@ https://kubearmor.io/
 
 https://github.com/kubernetes-sigs/kubespray
 
-
-
 <br/>
 
 ### Kubescape 3.0
 
-
 [[YouTube] Kubescape - Kubernetes security platform [ENG, 2024]](https://www.youtube.com/watch?v=8NlEgjhE-mg)
 
 [[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
-
 
 <br/>
 
 ### k6 (тесты)
 
 [[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt)
-
 
 <br/>
 
