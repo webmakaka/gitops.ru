@@ -22,11 +22,11 @@ permalink: /
 
 <br/>
 
-Предлагаю коллективно почитать и обсудить при необходимости.
+Предлагаю коллективно почитать и обсудить, при необходимости.
 
 <br/>
 
-![Microservices with Go](/img/books/covers/microservices-with-go 'Microservices with Go'){: .center-image }
+![Microservices with Go](/img/books/covers/microservices-with-go.jpg 'Microservices with Go'){: .center-image }
 
 <br/>
 
