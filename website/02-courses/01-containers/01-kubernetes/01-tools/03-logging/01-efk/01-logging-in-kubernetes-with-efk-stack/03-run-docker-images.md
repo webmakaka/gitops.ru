@@ -11,7 +11,7 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.03.30
+2024.03.31
 
 <br/>
 
@@ -21,15 +21,13 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 
 ```
 $ export DOCKER_REGISTRY_SERVER=docker.io
-$ export DOCKER_USER=<YOUR_DOCKERHUB_LOGIN>
-$ export DOCKER_EMAIL=<YOUR_DOCKERHUB_LOGIN>
+$ export DOCKER_USERNAME=<YOUR_DOCKERHUB_LOGIN>
 $ export DOCKER_PASSWORD=<YOUR_DOCKERHUB_PASSWORD>
 
 $ kubectl create secret docker-registry myregistrysecret \
     --docker-server=${DOCKER_REGISTRY_SERVER} \
-    --docker-username=${DOCKER_USER} \
-    --docker-password=${DOCKER_PASSWORD} \
-    --docker-email=${DOCKER_EMAIL}
+    --docker-username=${DOCKER_USERNAME} \
+    --docker-password=${DOCKER_PASSWORD}
 
 $ kubectl get secret
 ```
@@ -45,7 +43,7 @@ $ kubectl get secret
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ envsubst << 'EOF' | cat | kubectl create -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -64,7 +62,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: ${DOCKER_HUB_LOGIN}/node-1.0
+          image: ${DOCKER_USERNAME}/node-1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
@@ -78,7 +76,7 @@ EOF
 <br/>
 
 ```yaml
-$ cat << EOF | kubectl apply -f -
+$ envsubst << 'EOF' | cat | kubectl create -f -
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -97,7 +95,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: ${DOCKER_HUB_LOGIN}/java-1.0
+          image: ${DOCKER_USERNAME}/java-1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

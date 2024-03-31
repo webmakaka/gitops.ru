@@ -15,6 +15,8 @@ permalink: /tools/containers/kubernetes/tools/logging/elastic/setup/helm/
 
 **Из за бана РФ, ничего не работает с российских IP**
 
+С 8 версией чего-то не оч. все хорошо! Нужно разбираться!
+
 <br/>
 
 ### Elastic Search

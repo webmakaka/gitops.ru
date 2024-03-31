@@ -11,7 +11,7 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.03.30
+2024.03.31
 
 <br/>
 
@@ -23,17 +23,4 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 
 3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
 
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/helm/)
-
-<br/>
-
-```
-$ kubectl --namespace logging get pods
-NAME                             READY   STATUS    RESTARTS      AGE
-elasticsearch-master-0           1/1     Running   0             3m58s
-elasticsearch-master-1           1/1     Running   0             3m58s
-elasticsearch-master-2           1/1     Running   0             3m58s
-fluentd-0                        1/1     Running   0             2m44s
-fluentd-hvntt                    1/1     Running   3 (48s ago)   2m45s
-kibana-kibana-56689685dc-8prxl   1/1     Running   0             3m17s
-```
+4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/)
