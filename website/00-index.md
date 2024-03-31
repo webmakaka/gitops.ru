@@ -42,7 +42,7 @@ https://phoenixnap.com/kb/kubernetes-canary-deployments
 
 <br/>
 
-### [Book] Грокаем Continuous Delivery. Кристи Уилсон [RUS, 2024] (Нужно почитать)
+### [Book] [Кристи Уилсон] Грокаем Continuous Delivery [RUS, 2024] (Нужно почитать)
 
 <br/>
 
