@@ -16,7 +16,7 @@ permalink: /
 
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
-<br/>
+<!-- <br/>
 
 ### [Book][Alexander Shuiskov] Microservices with Go [ENG, 2022]
 
@@ -30,7 +30,7 @@ permalink: /
 
 <br/>
 
-https://github.com/PacktPublishing/microservices-with-go
+https://github.com/PacktPublishing/microservices-with-go -->
 
 <br/>
 
