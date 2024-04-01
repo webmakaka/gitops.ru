@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Подготовка окружения для программирование в Linux на GO
-description: Подготовка окружения для программирование в Linux на GO
-keywords: Подготовка окружения для программирование в Linux на GO
+title: Подготовка окружения запуска приложений и программирования в Linux на Golang
+description: Подготовка окружения запуска приложений и программирования в Linux на Golang
+keywords: dev, golag, linux, setup
 permalink: /dev/go/setup/
 ---
 
-# Подготовка окружения для программирование в Linux на GO
+# Подготовка окружения запуска приложений и программирования в Linux на Golang
 
 <br/>
 
@@ -15,7 +15,7 @@ permalink: /dev/go/setup/
 <br/>
 
 **Делаю:**  
-2024.03.22
+2024.03.31
 
 <br/>
 
@@ -76,59 +76,58 @@ go version go1.22.1 linux/amd64
 
 <br/>
 
-### Какие-то другие варианты
+### Пример компиляции
 
-<div align="center">
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/9Pk7xAT_aCU" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<br/>
-
-https://gitlab.com/rvasily/msu-go-11/tree/master
+```
+$ cd ~/tmp/
+$ vi ./main.go
+```
 
 <br/>
 
-**Инсталляция:**
+```go
+package main
 
-Вариант 1:
+import (
+	"fmt"
+	"net/http"
+)
 
-    $ sudo apt install golang
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello, world!")
+	})
 
-Вариант 2:
-
-    # cd /tmp/
-    # wget --no-check-certificate https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz
-    # tar -C /usr/local -xzf go1.11.5.linux-amd64.tar.gz
-
-    # echo '
-    ####################################
-    export PATH=$PATH:/usr/local/go/bin
-    export GOPATH=$HOME/GO
-    export PATH=$PATH:$GOPATH/bin
-    ####################################' >> /etc/profile
-
-    # source /etc/profile
-
-    # go version
-    go version go1.11.5 linux/amd64
+	http.ListenAndServe(":3000", nil)
+}
+```
 
 <br/>
 
-### Пример компиляции из примера к видео
+```
+$ curl localhost:3000
+Hello, world!
+```
 
-    # cd /tmp/
-    # git clone https://gitlab.com/rvasily/msu-go-11
-    # cd /tmp/msu-go-11/1/
+<br/>
 
-    # go run ./0_hello/main.go
-    Hello, World!
+```
+^C
+```
 
-    # go build ./0_hello/main.go
+<br/>
 
-// Получился main
+```
+$ go build ./main.go
+$ ./main
+```
 
-    # ./main
-    Hello, World!
+<br/>
+
+```
+$ curl localhost:3000
+Hello, world!
+```
 
 <br/>
 

@@ -34,6 +34,20 @@ https://github.com/PacktPublishing/microservices-with-go
 
 <br/>
 
+### [YouTube] [Слёрм] Открытая вечерняя школа. Kubernetes для разработчиков [RUS, 2022]
+
+https://www.youtube.com/playlist?list=PL8D2P0ruohOBSA_CDqJLflJ8FLJNe26K-
+
+<br/>
+
+### [YouTube] [МГТУ.им. Баумана] DevOps [RUS, 2022]
+
+https://www.youtube.com/playlist?list=PLLELLTvDgUQ-iwnE9coLhb-ynyZUGzW6q
+
+https://github.com/iu5git/DevOps
+
+<br/>
+
 ### [Статья] (Нужно попробовать)
 
 https://phoenixnap.com/kb/kubernetes-ssl-certificates
