@@ -11,7 +11,7 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.03.31
+2024.04.06
 
 <br/>
 
@@ -21,6 +21,6 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 
 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
-3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
+// 3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
 
 4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/)

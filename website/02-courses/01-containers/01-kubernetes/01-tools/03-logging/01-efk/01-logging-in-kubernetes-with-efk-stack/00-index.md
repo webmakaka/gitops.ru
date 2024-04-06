@@ -36,3 +36,5 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md -->
 Переделываю отсюда!
 
 ### [Остальное](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/other/)
+
+### [Настройка Fluentd](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/fluentd/)

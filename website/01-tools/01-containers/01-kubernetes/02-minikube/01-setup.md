@@ -46,7 +46,7 @@ commit: 8220a6eb95f0a4d75f7f2d7b14cef975f050512d
 <br/>
 
 **Делаю:**  
-2024.03.31
+2024.04.06
 
 <br/>
 
@@ -172,6 +172,14 @@ $ eval $(minikube -p ${PROFILE} docker-env)
 <br/>
 
 ### Подключиться к UI (Не нужно, но можно)
+
+<br/>
+
+```
+$ minikube addons --profile ${PROFILE} enable dashboard
+```
+
+<br/>
 
 ```
 // Подключиться к dashboard можно следующей командой

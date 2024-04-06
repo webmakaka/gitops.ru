@@ -65,6 +65,9 @@ $ source ~/.bashrc
 
 <br/>
 
+**Делаю:**  
+2024.04.06
+
 ```
 $ gcloud auth login
 $ gcloud cloud-shell ssh
