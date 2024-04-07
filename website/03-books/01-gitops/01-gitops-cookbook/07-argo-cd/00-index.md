@@ -13,7 +13,7 @@ permalink: /books/gitops/gitops-cookbook/argo-cd/
 <br/>
 
 Делаю:  
-2024.03.09
+2024.04.07
 
 <br/>
 
@@ -41,10 +41,8 @@ https://github.com/wildmakaka/gitops-cookbook-sc.git
 
 ### [[OK!] 7.5 Image Updater](/books/gitops/gitops-cookbook/argo-cd/image-updater/)
 
-<br/>
+### [[OK!] 7.6 Deploy from a Private Git Repository](/books/gitops/gitops-cookbook/argo-cd/deploy-from-a-private-git-repository/)
 
-```
-7.6 Deploy from a Private Git Repository
-7.7 Order Kubernetes Manifests
-7.8 Define Synchronization Windows
-```
+### [[OK!] 7.7 Order Kubernetes Manifests](/books/gitops/gitops-cookbook/argo-cd/order-kubernetes-manifests/)
+
+### [[OK!] 7.8 Define Synchronization Windows](/books/gitops/gitops-cookbook/argo-cd/define-synchronization-windows/)

@@ -33,3 +33,5 @@ https://github.com/gitops-cookbook
 ### [06. Cloud Native CI/CD](/books/gitops/gitops-cookbook/cloud-native-cicd/)
 
 ### [07. Argo CD](/books/gitops/gitops-cookbook/argo-cd/)
+
+### [08. Advanced Topics](/books/gitops/gitops-cookbook/advanced-topics/)

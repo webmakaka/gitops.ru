@@ -9,7 +9,7 @@ permalink: /
 <br/>
 
 Привет!  
-Если копаете тему devops / gitops / secops / mlops и д.р., давайте обсуждать и делиться знаниями.  
+Если копаете тему devops / gitops / secops / sysops / mlops / aiops и д.р., давайте обсуждать и делиться знаниями.  
 Группа в телеграм https://t.me/techline_ru
 
 <br/>
