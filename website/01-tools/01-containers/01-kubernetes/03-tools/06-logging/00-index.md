@@ -11,9 +11,11 @@ permalink: /tools/containers/kubernetes/tools/logging/elastic/setup/
 <br/>
 
 Делаю:  
-2024.04.06
+2024.04.07
 
 **Из за бана РФ, ничего не работает с российских IP**
+
+Не удается запустить. Ошибки.
 
 <br/>
 
@@ -33,6 +35,8 @@ https://github.com/Bhoopesh123/efk-setup
 webmakaka/elasticsearch:7.14.0
 ```
 
+<br/>
+
 ```
 webmakaka/kibana:7.14.0
 ```
@@ -42,7 +46,7 @@ webmakaka/kibana:7.14.0
 ### Предустановки
 
 ```
-// Не знаю зачем могут требоваться
+// In order to properly support the required persistent volume claims for the Elasticsearch StatefulSet, the default-storageclass and storage-provisioner minikube addons must be enabled.
 $ minikube --profile ${PROFILE} addons enable default-storageclass
 $ minikube --profile ${PROFILE} addons enable storage-provisioner
 ```
@@ -77,6 +81,26 @@ NAME           READY   STATUS    RESTARTS   AGE
 es-cluster-0   1/1     Running   0          91s
 es-cluster-1   1/1     Running   0          20s
 es-cluster-2   1/1     Running   0          11s
+```
+
+<br/>
+
+```
+$ kubectl get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                       STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+pvc-281d88e2-4eeb-44db-a06a-cb239cf7bea0   3Gi        RWO            Delete           Bound    default/data-es-cluster-0   standard       <unset>                          108s
+pvc-527fda76-f9a6-46f7-aaad-0641f3dc5863   3Gi        RWO            Delete           Bound    default/data-es-cluster-2   standard       <unset>                          25s
+pvc-ccdaa703-8f54-405c-ae8f-48b36098e100   3Gi        RWO            Delete           Bound    default/data-es-cluster-1   standard       <unset>                          37s
+```
+
+<br/>
+
+```
+$ kubectl get pvc
+NAME                STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+data-es-cluster-0   Bound    pvc-281d88e2-4eeb-44db-a06a-cb239cf7bea0   3Gi        RWO            standard       <unset>                 2m22s
+data-es-cluster-1   Bound    pvc-ccdaa703-8f54-405c-ae8f-48b36098e100   3Gi        RWO            standard       <unset>                 71s
+data-es-cluster-2   Bound    pvc-527fda76-f9a6-46f7-aaad-0641f3dc5863   3Gi        RWO            standard       <unset>                 58s
 ```
 
 <br/>
@@ -137,55 +161,7 @@ $ curl localhost:9200/_cluster/health?pretty
 
 <br/>
 
-```
-$ curl http://localhost:9200
-{
-  "name" : "es-cluster-0",
-  "cluster_name" : "k8s-logs",
-  "cluster_uuid" : "ca__gfA_RH6Dq9P1nsW8Ww",
-  "version" : {
-    "number" : "7.14.0",
-    "build_flavor" : "default",
-    "build_type" : "docker",
-    "build_hash" : "dd5a0a2acaa2045ff9624f3729fc8a6f40835aa1",
-    "build_date" : "2021-07-29T20:49:32.864135063Z",
-    "build_snapshot" : false,
-    "lucene_version" : "8.9.0",
-    "minimum_wire_compatibility_version" : "6.8.0",
-    "minimum_index_compatibility_version" : "6.0.0-beta1"
-  },
-  "tagline" : "You Know, for Search"
-}
-```
-
-<br/>
-
-```
-$ curl localhost:9200/_cluster/health?pretty
-{
-  "cluster_name" : "k8s-logs",
-  "status" : "red",
-  "timed_out" : false,
-  "number_of_nodes" : 3,
-  "number_of_data_nodes" : 3,
-  "active_primary_shards" : 0,
-  "active_shards" : 0,
-  "relocating_shards" : 0,
-  "initializing_shards" : 0,
-  "unassigned_shards" : 6,
-  "delayed_unassigned_shards" : 0,
-  "number_of_pending_tasks" : 0,
-  "number_of_in_flight_fetch" : 0,
-  "task_max_waiting_in_queue_millis" : 0,
-  "active_shards_percent_as_number" : 0.0
-}
-```
-
-<br/>
-
 A red status means one or more primary shards are unassigned.
-
-<br/>
 
 <br/>
 
