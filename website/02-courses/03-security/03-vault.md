@@ -307,5 +307,56 @@ $ vault token capabilities $ADMIN_TOKEN sys/auth/approle
 
 $ vault token capabilities $ADMIN_TOKEN sys/auth
 $ vault token capabilities $ADMIN_TOKEN auth/
+```
 
+<br/>
+
+### Lab 06 - Vault Token
+
+<br/>
+
+```
+$ vault server -dev
+$ export VAULT_ADDR='http://127.0.0.1:8200'
+$ export VAULT_TOKEN=<ROOT_TOKEN>
+```
+
+<br/>
+
+```
+$ vault token create
+$ vault token revoke <CREATED_TOKEN>
+```
+
+<br/>
+
+```
+$ vault token create -ttl=1h -use-limit=3 -policy=default
+$ export LIMITED_TOKEN=<CREATED_TOKEN_ID>
+
+$ vault token lookup $LIMITED_TOKEN
+$ VAULT_TOKEN=$LIMITED_TOKEN vault token lookup
+$ VAULT_TOKEN=$LIMITED_TOKEN vault token lookup
+$ VAULT_TOKEN=$LIMITED_TOKEN vault token lookup
+$ vault token lookup $LIMITED_TOKEN
+```
+
+<br/>
+
+```
+$ vault token create -ttl=1h -policy=default
+$ vault token renew <CREATED_TOKEN_ID>
+$ vault token lookup <CREATED_TOKEN_ID>
+```
+
+<br/>
+
+```
+$ vault list auth/token/accessors
+
+$ vault token revoke <CREATED_TOKEN_ID>
+
+$ vault list auth/token/accessors
+
+$ vault token revoke ${ROOT_TOKEN}
 ```
