@@ -360,3 +360,9 @@ $ vault list auth/token/accessors
 
 $ vault token revoke ${ROOT_TOKEN}
 ```
+
+<br/>
+
+### Lab 07 - Vault Leases
+
+AWS не особо сейчас актуален.

@@ -6,12 +6,12 @@ keywords: courses, containers, kubernetes, tools, logging, elastic, fluentd, kib
 permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/run-docker-images/
 ---
 
-# [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]: Запускаем image на kubernetes
+# [Nana Janashia] Logging in Kubernetes with EFK Stack : Запускаем image на kubernetes: Запускаем image на kubernetes
 
 <br/>
 
 Делаю:  
-2024.03.31
+2024.04.13
 
 <br/>
 

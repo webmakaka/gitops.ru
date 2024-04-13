@@ -49,16 +49,18 @@ EOF
 
 <br/>
 
-    $ minikube --profile marley-minikube addons list
-    - ingress: disabled
+```
+$ minikube --profile marley-minikube addons list
+- ingress: disabled
 
-    // Включение функционала Ingress в Minikube
-    $ minikube addons --profile marley-minikube enable ingress
+// Включение функционала Ingress в Minikube
+$ minikube addons --profile marley-minikube enable ingress
 
-    $ kubectl get po --all-namespaces | grep ingress-nginx-controller
-    ingress-nginx          ingress-nginx-controller-69bdbc4d57-zxn77    1/1     Running     0             45m
+$ kubectl get po --all-namespaces | grep ingress-nginx-controller
+ingress-nginx          ingress-nginx-controller-69bdbc4d57-zxn77    1/1     Running     0             45m
 
-    $ kubectl get pods -n ingress-nginx
+$ kubectl get pods -n ingress-nginx
+```
 
 <br/>
 
@@ -129,17 +131,21 @@ EOF
 
 <br/>
 
-    $ kubectl get ingresses
-    NAME                      HOSTS                         ADDRESS   PORTS   AGE
-    nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      23s
+```
+$ kubectl get ingresses
+NAME                      HOSTS                         ADDRESS   PORTS   AGE
+nodejs-cats-app-ingress   nodejs-cats-app.example.com             80      23s
+```
 
 <br/>
 
-    // Для minikube
-    $ minikube --profile marley-minikube ip
-    192.168.49.2
+```
+// Для minikube
+$ minikube --profile marley-minikube ip
+192.168.49.2
 
-    // В других случая прописать IP из ADDRESS
+// В других случая прописать IP из ADDRESS
+```
 
 <br/>
 
@@ -161,18 +167,22 @@ http://nodejs-cats-app.example.com
 
 <br/>
 
-    // Удалить ingress
-    $ kubectl delete ingress nodejs-cats-app-ingress
+```
+// Удалить ingress
+$ kubectl delete ingress nodejs-cats-app-ingress
 
-    // И остальное
-    $ kubectl delete svc nodejs-cats-app-cluster-ip
-    $ kubectl delete deployment nodejs-cats-app
+// И остальное
+$ kubectl delete svc nodejs-cats-app-cluster-ip
+$ kubectl delete deployment nodejs-cats-app
+```
 
 <br/>
 
 ### Debug
 
-    $ kubectl describe ingress nodejs-cats-app-ingress
+```
+$ kubectl describe ingress nodejs-cats-app-ingress
+```
 
 <br/>
 
@@ -226,6 +236,7 @@ nodejs-cats-app-ingress   <none>   192.168.49.2.nip.io             80      8s
 
 <br/>
 
+```
+// [OK!]
 http://192.168.49.2.nip.io/
-
-**OK!**
+```

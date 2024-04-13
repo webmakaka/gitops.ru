@@ -11,7 +11,7 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.04.06
+2024.04.13
 
 <br/>
 

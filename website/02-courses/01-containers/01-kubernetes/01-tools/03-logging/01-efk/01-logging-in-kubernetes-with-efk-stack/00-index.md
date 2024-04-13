@@ -33,8 +33,8 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md -->
 
 ### [Запускаем image на kubernetes](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/run-docker-images/)
 
-Переделываю отсюда!
+### [Запускаем kibana ingress](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/kibana-ingress/)
 
-### [Остальное](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/other/)
+Переделываю отсюда!
 
 ### [Настройка Fluentd](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/fluentd/)

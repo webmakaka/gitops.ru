@@ -6,7 +6,7 @@ keywords: courses, containers, kubernetes, tools, logging, elastic, fluentd, kib
 permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/build-and-push-docker-images/
 ---
 
-# [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021]: Подготавливаем образы и выкладываем на hub.docker.com
+# [Nana Janashia] Logging in Kubernetes with EFK Stack : Подготавливаем образы и выкладываем на hub.docker.com
 
 <br/>
 

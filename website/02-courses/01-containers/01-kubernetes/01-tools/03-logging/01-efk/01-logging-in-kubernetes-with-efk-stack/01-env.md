@@ -6,7 +6,7 @@ keywords: courses, containers, kubernetes, tools, logging, elastic, fluentd, kib
 permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/env/
 ---
 
-# [Nana Janashia] Logging in Kubernetes with EFK Stack | The Complete Guide [ENG, 2021] : Подготовка окружения
+# [Nana Janashia] Logging in Kubernetes with EFK Stack : Подготовка окружения
 
 <br/>
 
@@ -21,6 +21,4 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 
 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
 
-// 3. Инсталляция [Helm](/tools/containers/kubernetes/tools/packages/helm/setup/)
-
-4. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/)
+3. Инсталляция [Elastic Search, Kibana, Fluentd](/tools/containers/kubernetes/tools/logging/elastic/setup/)
