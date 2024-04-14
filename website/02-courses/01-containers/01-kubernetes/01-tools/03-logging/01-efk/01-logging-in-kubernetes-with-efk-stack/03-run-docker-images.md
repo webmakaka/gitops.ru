@@ -11,7 +11,15 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.04.13
+2024.04.14
+
+<br/>
+
+### Создаем NameSpace для приложений
+
+```
+$ kubectl create namespace apps
+```
 
 <br/>
 
@@ -24,12 +32,18 @@ $ export DOCKER_REGISTRY_SERVER=docker.io
 $ export DOCKER_USERNAME=<YOUR_DOCKERHUB_LOGIN>
 $ export DOCKER_PASSWORD=<YOUR_DOCKERHUB_PASSWORD>
 
-$ kubectl create secret docker-registry myregistrysecret \
+$ kubectl create secret docker-registry myregistrysecret -n apps \
     --docker-server=${DOCKER_REGISTRY_SERVER} \
     --docker-username=${DOCKER_USERNAME} \
     --docker-password=${DOCKER_PASSWORD}
+```
 
-$ kubectl get secret
+<br/>
+
+```
+$ kubectl get secret -n apps
+NAME               TYPE                             DATA   AGE
+myregistrysecret   kubernetes.io/dockerconfigjson   1      8s
 ```
 
 <br/>
@@ -48,6 +62,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-app
+  namespace: apps
   labels:
     app: node-app
 spec:
@@ -81,6 +96,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: java-app
+  namespace: apps
   labels:
     app: java-app
 spec:
@@ -107,8 +123,8 @@ EOF
 <br/>
 
 ```
-$ kubectl get pods
+$ kubectl get pods -n apps
 NAME                        READY   STATUS    RESTARTS   AGE
-java-app-85b44765bb-rqlwk   1/1     Running   0          6s
-node-app-6c87fddb75-wn285   1/1     Running   0          12s
+java-app-c9458c656-j79jp   1/1     Running   0          25s
+node-app-859cc5fcb-gl45n   1/1     Running   0          6m6s
 ```

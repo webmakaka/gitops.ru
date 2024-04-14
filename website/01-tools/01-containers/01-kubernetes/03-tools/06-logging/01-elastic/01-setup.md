@@ -11,26 +11,7 @@ permalink: /tools/containers/kubernetes/tools/logging/elastic/setup/
 <br/>
 
 Делаю:  
-2024.04.13
-
-**Из за бана РФ, ничего не работает с российских IP**
-
-Не удается запустить. Ошибки.
-
-<br/>
-
-**YouTube**
-
-https://www.youtube.com/watch?v=d7IATODGxUI
-
-https://www.youtube.com/watch?v=rnKNfLArS7M
-
-https://www.youtube.com/watch?v=fb3CKSJTV-Q
-
-**GIT**  
-https://github.com/wildmakaka/efk-setup
-
-https://github.com/TechonTerget/efk_on_k8s/tree/feature
+2024.04.14
 
 <br/>
 
@@ -48,8 +29,14 @@ $ minikube --profile ${PROFILE} addons enable storage-provisioner
 
 ```
 $ cd ~/tmp
-$ git clone https://github.com/wildmakaka/efk-setup
-$ cd efk-setup
+$ git clone https://github.com/wildmakaka/efk7-setup
+$ cd efk7-setup
+```
+
+<br/>
+
+```
+$ kubectl create namespace logging
 ```
 
 <br/>
@@ -67,36 +54,37 @@ $ kubectl create -f service.yaml
 <br/>
 
 ```
-$ kubectl get pods
+$ kubectl get pods -n logging
 NAME           READY   STATUS    RESTARTS   AGE
-es-cluster-0   1/1     Running   0          91s
-es-cluster-1   1/1     Running   0          20s
-es-cluster-2   1/1     Running   0          11s
+es-cluster-0   1/1     Running   0          78s
+es-cluster-1   1/1     Running   0          26s
+es-cluster-2   1/1     Running   0          15s
+
 ```
 
 <br/>
 
 ```
-$ kubectl port-forward svc/elasticsearch 9200
+$ kubectl port-forward svc/elasticsearch 9200 -n logging
 ```
 
 <br/>
 
-```
+```json
 // Получить инфу по elastic
 $ curl http://localhost:9200
 {
   "name" : "es-cluster-0",
   "cluster_name" : "k8s-logs",
-  "cluster_uuid" : "RdKE7J6wTXqI2C_uPLLUeQ",
+  "cluster_uuid" : "v8O0rwX2QfS25HtG7HH-aA",
   "version" : {
-    "number" : "7.14.0",
+    "number" : "7.17.20",
     "build_flavor" : "default",
     "build_type" : "docker",
-    "build_hash" : "dd5a0a2acaa2045ff9624f3729fc8a6f40835aa1",
-    "build_date" : "2021-07-29T20:49:32.864135063Z",
+    "build_hash" : "b26557f585b7d95c71a5549e571a6bcd2667697d",
+    "build_date" : "2024-04-08T08:34:31.070382898Z",
     "build_snapshot" : false,
-    "lucene_version" : "8.9.0",
+    "lucene_version" : "8.11.3",
     "minimum_wire_compatibility_version" : "6.8.0",
     "minimum_index_compatibility_version" : "6.0.0-beta1"
   },
@@ -106,25 +94,25 @@ $ curl http://localhost:9200
 
 <br/>
 
-```
+```json
 // Получить инфу по статусу работы elastic
 $ curl localhost:9200/_cluster/health?pretty
 {
   "cluster_name" : "k8s-logs",
-  "status" : "red",
+  "status" : "yellow",
   "timed_out" : false,
   "number_of_nodes" : 3,
   "number_of_data_nodes" : 3,
-  "active_primary_shards" : 0,
-  "active_shards" : 0,
+  "active_primary_shards" : 3,
+  "active_shards" : 3,
   "relocating_shards" : 0,
   "initializing_shards" : 0,
-  "unassigned_shards" : 2,
+  "unassigned_shards" : 3,
   "delayed_unassigned_shards" : 0,
   "number_of_pending_tasks" : 0,
   "number_of_in_flight_fetch" : 0,
   "task_max_waiting_in_queue_millis" : 0,
-  "active_shards_percent_as_number" : 0.0
+  "active_shards_percent_as_number" : 50.0
 }
 ```
 
@@ -135,30 +123,115 @@ $ curl localhost:9200/_cluster/health?pretty
 ```
 $ cd kibana
 $ kubectl create -f deployment.yaml
-$ kubectl create -f service.yaml
+// $ kubectl create -f service.yaml
+```
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-cluster-ip
+  namespace: logging
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    targetPort: 5601
+  selector:
+    app: kibana
+EOF
 ```
 
 <br/>
 
 ```
-$ kubectl port-forward svc/kibana 8080
+$ kubectl port-forward svc/kibana-cluster-ip 8080 -n logging
+// $ kubectl port-forward svc/kibana 8080
 ```
 
 <br/>
 
 ```
-[OK!]
-$ curl localhost:8080
+// [OK!]
+localhost:8080
 ```
+
+<br/>
+
+```
+$ export INGRESS_HOST=$(minikube --profile ${PROFILE} ip)
+$ echo ${INGRESS_HOST}
+192.168.49.2
+```
+
+<br/>
+
+```yaml
+$ envsubst << 'EOF' | cat | kubectl create -f -
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kibana-ingress
+  namespace: logging
+  annotations:
+    nginx.ingress.kubernetes.io/default-backend: ingress-nginx-controller
+    kubernetes.io/ingress.class: nginx
+    ## tells ingress to check for regex in the config file
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - host: ${INGRESS_HOST}.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kibana-cluster-ip
+            port:
+              number: 8080
+EOF
+```
+
+<br/>
+
+```
+$ kubectl get ingress -n logging
+NAME             CLASS    HOSTS                 ADDRESS        PORTS   AGE
+kibana-ingress   <none>   192.168.49.2.nip.io   192.168.49.2   80      35s
+```
+
+<br/>
+
+```
+$ echo ${INGRESS_HOST}.nip.io
+```
+
+<br/>
+
+```
+// [OK!]
+http://192.168.49.2.nip.io/
+```
+
+<br/>
+
+```
+// Удалить, если не нужен
+// $ kubectl delete ingress kibana-ingress
+```
+
+<br/>
+
+Можно попробовать вместо kibana-cluster-ip настроить externalName
+
+https://github.com/webmakaka/gitops.ru/blob/febabfe6f2f6559f2319feed5760063a82ac4fc6/website/02-courses/01-containers/01-kubernetes/01-tools/03-logging/01-efk/01-logging-in-kubernetes-with-efk-stack/04-other.md
 
 <br/>
 
 ### Fluentd
 
-```
-$ cd fluentd
-$ kubectl create -f clusterrole.yaml
-$ kubectl create -f serviceaccount.yaml
-$ kubectl create -f clusterrolebinding.yaml
-$ kubectl create -f daemonset.yaml
-```
+[Взять здесь](/tools/containers/kubernetes/tools/logging/elastic/setup/helm/)

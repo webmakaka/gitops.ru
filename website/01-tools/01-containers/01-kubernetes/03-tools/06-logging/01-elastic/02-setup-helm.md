@@ -13,7 +13,7 @@ permalink: /tools/containers/kubernetes/tools/logging/elastic/setup/helm/
 Делаю:  
 2024.03.30
 
-**Из за бана РФ, ничего не работает с российских IP**
+**Из за бана РФ, ничего не работает с российских IP. Нужно менять image на те, что лежат на dockerhub**
 
 С 8 версией чего-то не оч. все хорошо! Нужно разбираться!
 
@@ -177,7 +177,69 @@ $ helm test kibana
 
 <br/>
 
-### Metricbeat
+### Fluentd
+
+<br/>
+
+Делаю:  
+2024.04.14
+
+<br/>
+
+```
+// $ helm search repo bitnami/fluentd --versions
+```
+
+<br/>
+
+```
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm install fluentd bitnami/fluentd -n logging
+```
+
+<br/>
+
+```
+// $ helm list -n logging
+NAME   	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART        	APP VERSION
+fluentd	logging  	1       	2024-04-14 16:33:36.312796172 +0300 MSK	deployed	fluentd-6.1.1	1.16.5
+```
+
+<br/>
+
+```
+$ kubectl get pods -n logging
+NAME                      READY   STATUS    RESTARTS      AGE
+es-cluster-0              1/1     Running   0             42m
+es-cluster-1              1/1     Running   0             41m
+es-cluster-2              1/1     Running   0             41m
+fluentd-0                 1/1     Running   0             2m39s
+fluentd-p9bd9             1/1     Running   3 (80s ago)   2m39s
+kibana-576c557879-jdjst   1/1     Running   0             39m
+```
+
+<br/>
+
+```
+$ kubectl get configmaps -n logging
+NAME                    DATA   AGE
+fluentd-aggregator-cm   4      2m57s
+fluentd-forwarder-cm    4      2m57s
+kube-root-ca.crt        1      42m
+```
+
+<br/>
+
+```
+$ kubectl get statefulsets -n logging
+NAME         READY   AGE
+es-cluster   3/3     97m
+fluentd      1/1     58m
+```
+
+<br/>
+
+### Metricbeat (Не пробовал)
 
 <br/>
 

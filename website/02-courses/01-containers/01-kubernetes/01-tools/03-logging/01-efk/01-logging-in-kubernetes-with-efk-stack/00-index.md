@@ -11,19 +11,7 @@ permalink: /courses/containers/kubernetes/tools/logging/efk/logging-in-kubernete
 <br/>
 
 Делаю:  
-2024.03.31
-
-Переделываю!
-
-<!-- <br/>
-
-**Еще какие-то полезные ссылки**
-https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/links.md
-
-<br/>
-
-**Set up elastic stack in kubernetes cluster**
-https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md -->
+2024.04.14
 
 <br/>
 
@@ -32,9 +20,5 @@ https://gitlab.com/nanuchi/efk-course-commands/-/blob/master/commands.md -->
 ### [Подготавливаем образы и выкладываем на hub.docker.com](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/build-and-push-docker-images/)
 
 ### [Запускаем image на kubernetes](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/run-docker-images/)
-
-### [Запускаем kibana ingress](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/kibana-ingress/)
-
-Переделываю отсюда!
 
 ### [Настройка Fluentd](/courses/containers/kubernetes/tools/logging/efk/logging-in-kubernetes-with-efk-stack/fluentd/)
