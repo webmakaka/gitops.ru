@@ -16,6 +16,23 @@ permalink: /
 
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
+<br/>
+
+### [YouTube][Anais Urlichs] Full Tutorial: AlertManager Set up and PrometheusRules [ENG, 2024]
+
+https://www.youtube.com/watch?v=HwB2oWUdoT4
+
+<br/>
+
+### [YouTube][That DevOps Guy] How to deploy Vault for Kubernetes in 2022 and inject secrets [ENG, 2022]
+
+https://www.youtube.com/watch?v=2Owo4Ioo9tQ
+
+<br/>
+
+Vault on Kubernetes with PostgreSQL  
+https://www.youtube.com/watch?v=IWCOptiCKqI
+
 <!-- <br/>
 
 ### [Book][Alexander Shuiskov] Microservices with Go [ENG, 2022]
