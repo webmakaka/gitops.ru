@@ -24,14 +24,9 @@ https://www.youtube.com/watch?v=HwB2oWUdoT4
 
 <br/>
 
-### [YouTube][That DevOps Guy] How to deploy Vault for Kubernetes in 2022 and inject secrets [ENG, 2022]
+### [YouTube][That DevOps Guy] Kubernetes Secret Management guide beginners using Vault [ENG, 2022]
 
-https://www.youtube.com/watch?v=2Owo4Ioo9tQ
-
-<br/>
-
-Vault on Kubernetes with PostgreSQL  
-https://www.youtube.com/watch?v=IWCOptiCKqI
+https://www.youtube.com/watch?v=L_o_CG_AGKA&list=PLHq1uqvAteVtq-NRX3yd1ziA_wJSBu3Oj&index=1
 
 <!-- <br/>
 
