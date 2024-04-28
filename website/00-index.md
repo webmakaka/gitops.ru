@@ -18,6 +18,11 @@ permalink: /
 
 <br/>
 
+### [Book] Mastering Prometheus: Gain expert tips to monitoring your infrastructure, applications, and services [ENG, 2024]
+
+
+<br/>
+
 ### [YouTube][Anais Urlichs] Full Tutorial: AlertManager Set up and PrometheusRules [ENG, 2024]
 
 https://www.youtube.com/watch?v=HwB2oWUdoT4
