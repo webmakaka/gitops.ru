@@ -31,7 +31,6 @@ deployment.apps/reactive-web-app   1/1     1            1           25s
 
 NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/reactive-web-app-5b79d5bbd7   1         1         1       25s
-
 ```
 
 <br/>

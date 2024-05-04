@@ -11,7 +11,23 @@ permalink: /tools/containers/kubernetes/tools/security/bitnami-seal/
 <br/>
 
 **Делаю:**  
-XX.05.2023
+2024.05.04
+
+<!--
+
+```
+// ПЕРЕДЕЛАТЬ КАК НА САЙТЕ
+
+
+https://github.com/bitnami-labs/sealed-secrets
+
+KUBESEAL_VERSION='' # Set this to, for example, KUBESEAL_VERSION='0.23.0'
+wget "https://github.com/bitnami-labs/sealed-secrets/releases/download/v${KUBESEAL_VERSION:?}/kubeseal-${KUBESEAL_VERSION:?}-linux-amd64.tar.gz"
+tar -xvzf kubeseal-${KUBESEAL_VERSION:?}-linux-amd64.tar.gz kubeseal
+sudo install -m 755 kubeseal /usr/local/bin/kubeseal
+```
+
+-->
 
 <br/>
 
@@ -20,9 +36,15 @@ https://github.com/bitnami-labs/sealed-secrets/releases
 <br/>
 
 ```
+$ echo LATEST_VERSION=$(curl --silent "https://api.github.com/repos/bitnami-labs/sealed-secrets/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+```
+
+<br/>
+
+```
 $ cd ~/tmp
-$ wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.20.5/kubeseal-0.20.5-linux-amd64.tar.gz
-$ tar -xvzf kubeseal-0.20.5-linux-amd64.tar.gz
+$ wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.26.2/kubeseal-0.26.2-linux-amd64.tar.gz
+$ tar -xvzf kubeseal-0.26.2-linux-amd64.tar.gz
 $ sudo mv kubeseal /usr/local/bin/kubeseal
 $ sudo chmod +x /usr/local/bin/kubeseal
 ```
@@ -30,8 +52,18 @@ $ sudo chmod +x /usr/local/bin/kubeseal
 <br/>
 
 ```
-kubeseal --version
-kubeseal version: 0.20.5
+$ kubeseal --version
+kubeseal version: 0.26.2
+```
+
+<br/>
+
+### Установка контроллера
+
+```
+// Установка контроллера
+$ kubectl create \
+-f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.26.2/controller.yaml
 ```
 
 <br/>

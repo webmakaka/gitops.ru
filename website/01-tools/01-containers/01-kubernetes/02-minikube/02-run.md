@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.04.14
+2024.05.04
 
 <br/>
 
@@ -34,7 +34,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 ```
-// v1.29.3
+// v1.30.0
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -42,14 +42,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.29.3
+v1.30.0
 ```
 
 <br/>
 
 ```
-// Если младше 1.29.3
-$ LATEST_KUBERNETES_VERSION=1.29.3
+// Если младше v1.30.0
+$ LATEST_KUBERNETES_VERSION=1.30.0
 ```
 
 <br/>
@@ -99,9 +99,9 @@ $ {
 
 ```
 $ kubectl version
-Client Version: v1.29.2
+Client Version: v1.30.0
 Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-Server Version: v1.29.3
+Server Version: v1.30.0
 ```
 
 <br/>
