@@ -10,6 +10,8 @@ permalink: /dev/go/
 
 ### [Подготовка окружения для программирование в Linux на GoLang](/dev/go/setup/)
 
+### [Пример компиляции приложения Golang](/dev/go/run/)
+
 ### [Программирование на GoLang - материалы для изучения языка](/dev/go/materials/)
 
 ### [Запуск GoLang программ в контейнере Docker](/dev/go/go-inside-docker/)
