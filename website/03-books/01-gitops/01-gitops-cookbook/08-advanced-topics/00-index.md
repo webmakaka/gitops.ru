@@ -17,8 +17,11 @@ permalink: /books/gitops/gitops-cookbook/advanced-topics/
 
 <br/>
 
+# [[OK!] GitOps Cookbook: 08. Advanced Topics: 8.1 Encrypt Sensitive Data (Sealed Secrets)](/books/gitops/gitops-cookbook/advanced-topics/sealed-secrets/)
+
+<br/>
+
 ```
-8.1 Encrypt Sensitive Data (Sealed Secrets)
 8.2 Encrypt Secrets with ArgoCD (ArgoCD + HashiCorp Vault + External Secret)
 8.3 Trigger the Deployment of an Application Automatically (Argo CD Webhooks)
 8.4 Deploy to Multiple Clusters

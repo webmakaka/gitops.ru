@@ -20,6 +20,7 @@ permalink: /books/gitops/gitops-cookbook/
 
 <br/>
 
+**Оригинальные файлы:**  
 https://github.com/gitops-cookbook
 
 <br/>
