@@ -18,20 +18,6 @@ permalink: /tools/containers/kubernetes/
 
 <br/>
 
-### Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]
-
-https://www.youtube.com/watch?v=X48VuDVv0do
-
-<br/>
-
-### Rust and Skaffold for Iterative Development on Kubernetes - Gastón Kleiman & Gilbert Song
-
-https://www.youtube.com/watch?v=9S1-69Rp1vQ
-
-https://github.com/gkleiman/dcos-k8s-rust-skaffold-demo
-
-<br/>
-
 ### Коды выхода
 
 Коды выхода контейнера используются обработчиками контейнеров, когда контейнер завершает работу, чтобы сообщить, почему он был завершен
