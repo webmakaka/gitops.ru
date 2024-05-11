@@ -3,7 +3,7 @@ layout: page
 title: GitLab - error during connect Post http://docker:2375/v1.24/auth dial tcp lookup docker on 10.0.2.3:53 server misbehaving
 description: GitLab - error during connect Post http://docker:2375/v1.24/auth dial tcp lookup docker on 10.0.2.3:53 server misbehaving
 keywords: devops, gitops, cvs, gitlab, error during connect, server misbehaving
-permalink: /tools/cvs/gitlab/errors/
+permalink: /tools/git/gitlab/errors/
 ---
 
 # [GitLab Error] error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving

@@ -1,20 +1,12 @@
 ---
 layout: page
-title: Основные команды GIT
-description: Основные команды GIT
+title: Основные команды GIT которые я использую
+description: Основные команды GIT которые я использую
 keywords: git, commands
-permalink: /dev/git/commands/
+permalink: /tools/git/commands/
 ---
 
 # Основные команды GIT которые я использую
-
-<br/>
-
-Настройки git для работы с github перенесены [сюда](/tools/github/setup/)
-
-<br/>
-
-## Наиболее часто используемые мной команды при работе с git
 
 <br/>
 

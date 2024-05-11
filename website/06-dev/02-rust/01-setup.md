@@ -2,7 +2,7 @@
 layout: page
 title: Инсталляция rust в linux
 description: Инсталляция rust в linux
-keywords: программирование, языки, rust, Инсталляция rust в linux
+keywords: программирование, языки, rust, инсталляция rust в linux
 permalink: /dev/rust/setup/
 ---
 
@@ -110,7 +110,14 @@ $ rust-analyzer --version
 
 ### VSCode extensions
 
-- Rust (Deprecated)
+<br/>
+
+```
+// rust-analyzer
+ext install rust-lang.rust-analyzer
+```
+
+- Rust (Deprecated заменен на rust-analyzer)
 - CodeLLDB
 - crates
 - Even Better TOML

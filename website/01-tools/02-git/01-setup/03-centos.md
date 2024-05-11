@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция GIT из исходников в Centos
 description: Инсталляция GIT из исходников в Centos
 keywords: Инсталляция GIT из исходников в Centos
-permalink: /dev/git/setup/centos/
+permalink: /tools/git/setup/centos/
 ---
 
 # Инсталляция GIT из исходников в Centos 6.x / 7.x

@@ -3,7 +3,7 @@ layout: page
 title: Попытка запустить Job в ранее установленном GitLab
 description: Попытка запустить Job в ранее установленном GitLab
 keywords: devops, gitops, cvs, gitlab, run job
-permalink: /tools/cvs/gitlab/run-job/
+permalink: /tools/git/gitlab/run-job/
 ---
 
 # Попытка запустить Job в ранее установленном <a href="/tools/cvs/gitlab/setup/ubuntu/">GitLab</a>

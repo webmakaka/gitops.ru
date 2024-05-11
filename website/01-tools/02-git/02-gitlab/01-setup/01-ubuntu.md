@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция GitLab в Ubuntu 20.04 из пакетов
 description: Инсталляция GitLab в Ubuntu 20.04 из пакетов
 keywords: devops, gitops, cvs, gitlab, setup, ubuntu
-permalink: /tools/cvs/gitlab/setup/ubuntu/
+permalink: /tools/git/gitlab/setup/ubuntu/
 ---
 
 # Инсталляция GitLab в Ubuntu 20.04 из пакетов

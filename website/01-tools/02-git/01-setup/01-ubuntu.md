@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция GIT из исходников в Ubuntu
 description: Инсталляция GIT из исходников в Ubuntu
 keywords: Инсталляция GIT из исходников в Ubuntu
-permalink: /dev/git/setup/ubuntu/
+permalink: /tools/git/setup/ubuntu/
 ---
 
 # Инсталляция GIT из исходников в Ubuntu

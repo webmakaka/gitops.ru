@@ -3,7 +3,7 @@ layout: page
 title: Настройки git для работы с github
 description: Настройки git для работы с github
 keywords: Настройки git для работы с github
-permalink: /cvs/git/github/
+permalink: /tools/git/github/
 ---
 
 # Настройки git для работы с github

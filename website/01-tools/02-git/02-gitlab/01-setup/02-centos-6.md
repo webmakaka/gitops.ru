@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция GitLab в centos 6 из пакетов
 description: Инсталляция GitLab в centos 6 из пакетов
 keywords: devops, gitops, cvs, gitlab, setup, centos
-permalink: /tools/cvs/gitlab/setup/centos/6/
+permalink: /tools/git/gitlab/setup/centos/6/
 ---
 
 # Инсталляция GitLab в centos 6 из пакетов

@@ -3,7 +3,7 @@ layout: page
 title: Создание сервера GIT в centos 6 ver2
 description: Создание сервера GIT в centos 6 ver2
 keywords: Создание сервера GIT в centos 6 ver2
-permalink: /dev/git/git-server/centos/6/ver2/
+permalink: /tools/git/git-server/centos/6/ver2/
 ---
 
 # Создание сервера GIT в centos 6

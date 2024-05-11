@@ -3,7 +3,7 @@ layout: page
 title: Ошибки при работе с GIT
 description: Ошибки при работе с GIT
 keywords: Ошибки при работе с GIT
-permalink: /dev/git/errors/
+permalink: /tools/git/errors/
 ---
 
 # Ошибки при работе с GIT

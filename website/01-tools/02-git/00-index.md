@@ -3,8 +3,16 @@ layout: page
 title: Git в Linux
 description: Git в Linux
 keywords: dev, git, linux
-permalink: /dev/git/
+permalink: /tools/git/
 ---
+
+# GitHub
+
+<br/>
+
+### [Настройки git для работы с github](/cvs/git/github/)
+
+<br/>
 
 # Git в Linux
 

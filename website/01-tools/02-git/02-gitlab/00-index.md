@@ -3,7 +3,7 @@ layout: page
 title: GitLab в Linux
 description: GitLab в Linux
 keywords: devops, gitops, cvs, gitlab
-permalink: /tools/cvs/gitlab/
+permalink: /tools/git/gitlab/
 ---
 
 # GitLab в Linux
