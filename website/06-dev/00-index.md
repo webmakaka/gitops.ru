@@ -10,7 +10,7 @@ permalink: /dev/
 
 ### [Текстовый редактор в Linux с подсветкой синтаксиса и парных тегов HTML (аналог notepad++ в Windows)](//sysadm.ru/desktop/linux/code/editors/)
 
-### [GIT](/dev/git/)
+### [GIT](/tools/git/)
 
 ### [GO](/dev/go/)
 

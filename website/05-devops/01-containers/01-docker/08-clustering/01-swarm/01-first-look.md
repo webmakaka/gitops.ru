@@ -18,7 +18,7 @@ permalink: /devops/containers/docker/clustering/swarm/first-look/
 **ПО**
 
 - <a href="//sysadm.ru/server/linux/virtual/vagrant/">Vagrant</a>
-- <a href="/dev/git/">git</a>
+- <a href="/tools/git/">git</a>
 
 <br/>
 

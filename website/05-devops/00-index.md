@@ -12,7 +12,7 @@ permalink: /devops/
 
 <br/>
 
-### [Системы управления версиями (Version Control System, VCS)](/dev/git/)
+### [Системы управления версиями (Version Control System, VCS)](/tools/git/)
 
 <br/>
 

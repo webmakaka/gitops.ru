@@ -16,15 +16,15 @@ permalink: /tools/git/
 
 # Git в Linux
 
-### [Обновление GIT до актуальных версий из ppa в Ubuntu](/dev/git/setup/ubuntu/ppa/)
+### [Обновление GIT до актуальных версий из ppa в Ubuntu](/tools/git/setup/ubuntu/ppa/)
 
-### [Инсталляция GIT из исходников](/dev/git/setup/)
+### [Инсталляция GIT из исходников](/tools/git/setup/)
 
-### [Основные команды GIT](/dev/git/commands/)
+### [Основные команды GIT](/tools/git/commands/)
 
-### [Создание сервера GIT в centos 6 с единственным пользователем git](/dev/git/git-server/centos/6/ver1/)
+### [Создание сервера GIT в centos 6 с единственным пользователем git](/tools/git/git-server/centos/6/ver1/)
 
-### [Создание сервера GIT в centos 6 с несколькими пользователями](/dev/git/git-server/centos/6/ver2/)
+### [Создание сервера GIT в centos 6 с несколькими пользователями](/tools/git/git-server/centos/6/ver2/)
 
 <br/>
 

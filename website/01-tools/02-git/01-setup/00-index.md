@@ -8,8 +8,8 @@ permalink: /tools/git/git/setup/
 
 # Инсталляция GIT из исходников
 
-### [Ubuntu](/dev/git/setup/ubuntu/)
+### [Ubuntu](/tools/git/setup/ubuntu/)
 
-### [Centos](/dev/git/setup/centos/)
+### [Centos](/tools/git/setup/centos/)
 
-### [Ошибки при работе с GIT](/dev/git/errors/)
+### [Ошибки при работе с GIT](/tools/git/errors/)
