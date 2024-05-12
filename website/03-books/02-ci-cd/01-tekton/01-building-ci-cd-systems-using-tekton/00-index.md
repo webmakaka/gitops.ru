@@ -18,6 +18,10 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/
 
 <br/>
 
+Разбор завершен
+
+<br/>
+
 **GitHub:**  
 https://github.com/PacktPublishing/Building-CI-CD-systems-using-Tekton
 
@@ -32,24 +36,32 @@ files/downloads/9781801078214_ColorImages.pdf
 
 ## Section 2: Tekton Building Blocks
 
-• [OK!] [Chapter 3. Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)  
-• [OK!] [Chapter 4. Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)  
-• [OK!] [Chapter 5. Jumping into Pipelines](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)  
-• [OK!] [Chapter 6. Debugging and Cleaning Up Pipelines and Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)  
-• [OK!] [Chapter 7. Sharing Data with Workspaces](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/sharing-data-with-workspaces/)  
-• [OK!] [Chapter 8. Adding when Expressions](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/adding-when-expressions/)  
-• [OK!] [Chapter 9. Securing Authentication](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securing-authentication/)
+### [OK!] [Chapter 3. Installation and Getting Started](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-and-getting-started/)
+
+### [OK!] [Chapter 4. Stepping into Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/stepping-into-tasks/)
+
+### [OK!] [Chapter 5. Jumping into Pipelines](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)
+
+### [OK!] [Chapter 6. Debugging and Cleaning Up Pipelines and Tasks](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/jumping-into-pipelines/)
+
+### [OK!] [Chapter 7. Sharing Data with Workspaces](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/sharing-data-with-workspaces/)
+
+### [OK!] [Chapter 8. Adding when Expressions](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/adding-when-expressions/)
+
+### [OK!] [Chapter 9. Securing Authentication](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securing-authentication/)
 
 <br/>
 
 ## Section 3: Tekton Triggers
 
-• [OK!] [Chapter 10. Getting Started with Triggers](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securing-authentication/)  
-• [OK!] [Chapter 11. Triggering Tekton](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/triggering-tekton/)
+### [OK!] [Chapter 10. Getting Started with Triggers](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/securing-authentication/)
+
+### [OK!] [Chapter 11. Triggering Tekton](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/triggering-tekton/)
 
 <br/>
 
 ## Section 4: Putting It All Together
 
-• [OK!] [Chapter 12. Preparing for a New Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/preparing-for-a-new-pipeline/)  
-• [OK!] [Chapter 13. Building a Deployment Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/building-a-deployment-pipeline/)
+### [OK!] [Chapter 12. Preparing for a New Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/preparing-for-a-new-pipeline/)
+
+### [OK!] [Chapter 13. Building a Deployment Pipeline](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/building-a-deployment-pipeline/)
