@@ -18,114 +18,15 @@ permalink: /
 
 <br/>
 
-### [Book] Mastering Prometheus: Gain expert tips to monitoring your infrastructure, applications, and services [ENG, 2024]
-
-
-<br/>
-
-### [YouTube][Anais Urlichs] Full Tutorial: AlertManager Set up and PrometheusRules [ENG, 2024]
-
-https://www.youtube.com/watch?v=HwB2oWUdoT4
-
-<br/>
-
-### [YouTube][That DevOps Guy] Kubernetes Secret Management guide beginners using Vault [ENG, 2022]
-
-https://www.youtube.com/watch?v=L_o_CG_AGKA&list=PLHq1uqvAteVtq-NRX3yd1ziA_wJSBu3Oj&index=1
-
-<!-- <br/>
-
-### [Book][Alexander Shuiskov] Microservices with Go [ENG, 2022]
-
-<br/>
-
-Предлагаю коллективно почитать и обсудить, при необходимости.
-
-<br/>
-
-![Microservices with Go](/img/books/covers/microservices-with-go.jpg 'Microservices with Go'){: .center-image }
-
-<br/>
-
-https://github.com/PacktPublishing/microservices-with-go -->
-
-<br/>
-
-### [YouTube] [Слёрм] Открытая вечерняя школа. Kubernetes для разработчиков [RUS, 2022]
-
-https://www.youtube.com/playlist?list=PL8D2P0ruohOBSA_CDqJLflJ8FLJNe26K-
-
-<br/>
-
-### [YouTube] [МГТУ.им. Баумана] DevOps [RUS, 2022]
-
-https://www.youtube.com/playlist?list=PLLELLTvDgUQ-iwnE9coLhb-ynyZUGzW6q
-
-https://github.com/iu5git/DevOps
-
-<br/>
-
-### [Статья] (Нужно попробовать)
-
-https://phoenixnap.com/kb/kubernetes-ssl-certificates
-
-https://phoenixnap.com/kb/kubernetes-canary-deployments
-
-<br/>
-
-### [Book] [Кристи Уилсон] Грокаем Continuous Delivery [RUS, 2024] (Нужно почитать)
-
-<br/>
-
-### Local Kubernetes (Нужно чекнуть)
-
-[[YouTube] How to set up production-like Kubernetes environments on local machines [ENG, 2024]](https://www.youtube.com/watch?v=Bh0Uw9111yg)
-
-https://github.com/beneiltis/-2024-meetup-local-dev/tree/main
-
-<br/>
-
-### Crossplane
-
-[[YouTube] Getting Started with Crossplane [ENG, 2024]](https://www.youtube.com/watch?v=bBpE0rfE-JM)
-
-<br/>
-
-### kubearmor
-
-https://kubearmor.io/
-
-<br/>
-
-### kubespray
-
-https://github.com/kubernetes-sigs/kubespray
-
-<br/>
-
-### Kubescape 3.0
-
-[[YouTube] Kubescape - Kubernetes security platform [ENG, 2024]](https://www.youtube.com/watch?v=8NlEgjhE-mg)
-
-[[YouTube] Introducing Kubescape 3.0 [ENG, 2023]](https://www.youtube.com/watch?v=5ZT--gyxVlg)
-
-<br/>
-
-### k6 (тесты)
-
-[[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt)
-
-<br/>
-
 ### [[Book][Natale Vinto] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
 
 <br/>
 
-![GitOps Cookbook](/img/books/covers/gitops-cookbook-kubernetes-automation.jpg 'GitOps Cookbook'){: .center-image }
+Предлагаю разбирать, улучшать, обновлять. Вроде интересная книга. Есть что позапускать. Часть конфигов только в pdf и не все работает. Прислыайте толковые PR.
 
 <br/>
 
-Предлагаю разбирать, улучшать, обновлять. Вроде интересная книга. Есть что позапускать. Часть конфигов только в pdf и не все работает. Прислыайте толковые PR.
+[![GitOps Cookbook](/img/books/covers/gitops-cookbook-kubernetes-automation.jpg 'GitOps Cookbook'){: .center-image }](/books/gitops/gitops-cookbook/)
 
 <br/>
 
@@ -149,5 +50,7 @@ https://github.com/kubernetes-sigs/kubespray
 
 <br/>
 <br/>
+
+### [Выглядит интересно для изучения](/looks-interesting/)
 
 ### [Остальное](/other/)
