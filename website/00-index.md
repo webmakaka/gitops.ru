@@ -12,6 +12,8 @@ permalink: /
 Если копаете тему devops / gitops / secops / sysops / mlops / aiops и д.р., давайте обсуждать и делиться знаниями.  
 Группа в телеграм https://t.me/techline_ru
 
+Можете предложить что-то интересное для изучения!
+
 <br/>
 
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
