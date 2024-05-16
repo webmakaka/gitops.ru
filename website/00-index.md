@@ -32,7 +32,7 @@ permalink: /
 
 <br/>
 
-### [Book][Joel Lord] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]
+### [[Book][Joel Lord] Building CI/CD Systems Using Tekton: Develop flexible and powerful CI/CD pipelines using Tekton Pipelines and Triggers [ENG, 2021]](/books/ci-cd/tekton/building-ci-cd-systems-using-tekton/)
 
 <br/>
 
