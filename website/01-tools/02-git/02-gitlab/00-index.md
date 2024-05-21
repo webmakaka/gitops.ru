@@ -22,7 +22,7 @@ permalink: /tools/git/gitlab/
 
 ### Ошибки
 
-[error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving](/tools/cvs/gitlab/errors/)
+[error during connect: Post http://docker:2375/v1.24/auth: dial tcp: lookup docker on 10.0.2.3:53: server misbehaving](/tools/git/gitlab/errors/)
 
 <br/>
 
