@@ -10,6 +10,11 @@ permalink: /tools/containers/docker/db/postgresql/
 
 <br/>
 
+**Делаю:**  
+2024.06.30
+
+<br/>
+
 ```
 $ mkdir -p ~/projects/dev/db/postgres/
 $ cd ~/projects/dev/db/postgres/
@@ -30,7 +35,7 @@ $ sudo vi /etc/hosts
 <br/>
 
 ```
-127.0.0.1 postgres
+127.0.0.1 postgreshost
 ```
 
 <br/>
@@ -42,7 +47,7 @@ $ vi .env
 <br/>
 
 ```
-DATABASE_HOST=postgres
+DATABASE_HOST=postgreshost
 DATABASE_NAME=postgresdb
 DATABASE_PORT=5432
 DATABASE_USER=admin1
@@ -94,22 +99,22 @@ https://github.com/webmakaka/Uber-Eats-Clone
 $ cd data/
 
 // Connect
-$ PGPASSWORD=pA55w0rd123 psql -U admin1 -h postgres -p 5432 -d postgresdb
+$ PGPASSWORD=pA55w0rd123 psql -U admin1 -h postgreshost -p 5432 -d postgresdb
 
 // Import data from sql
-// $ PGPASSWORD=pA55w0rd123 psql -U admin1 -h postgres -p 5432 -d postgresdb < go_movies.sql
+// $ PGPASSWORD=pA55w0rd123 psql -U admin1 -h postgreshost -p 5432 -d postgresdb < go_movies.sql
 ```
 
 <br/>
 
 ```
-$ PGPASSWORD=pA55w0rd123 psql --host=localhost --username=admin1 --port=5432 --dbname=go_movies -c 'select id, title, description, year, release_date, rating, runtime, mpaa_rating, created_at, updated_at from movies where id = 1'
+$ PGPASSWORD=pA55w0rd123 psql --host=postgreshost --username=admin1 --port=5432 --dbname=go_movies -c 'select id, title, description, year, release_date, rating, runtime, mpaa_rating, created_at, updated_at from movies where id = 1'
 ```
 
 <br/>
 
 ```
-$ PGPASSWORD=pA55w0rd123 psql --host=localhost --username=admin1 --port=5432 --dbname=go_movies -c "INSERT INTO movies_genres (movie_id, genre_id, created_at, updated_at) VALUES (1, 1, '2021-05-19', '2021-05-19');"
+$ PGPASSWORD=pA55w0rd123 psql --host=postgreshost --username=admin1 --port=5432 --dbname=go_movies -c "INSERT INTO movies_genres (movie_id, genre_id, created_at, updated_at) VALUES (1, 1, '2021-05-19', '2021-05-19');"
 ```
 
 <br/>
