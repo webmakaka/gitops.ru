@@ -13,7 +13,7 @@ permalink: /dev/rust/setup/
 <br/>
 
 **Делаю:**  
-2024.05.10
+2024.07.20
 
 <br/>
 
@@ -30,10 +30,10 @@ $ rustup update
 
 ```
 $ rustc --version
-rustc 1.78.0 (9b00956e5 2024-04-29)
+rustc 1.79.0 (129f3b996 2024-06-10)
 
 $ cargo --version
-cargo 1.78.0 (54d8815d0 2024-03-26)
+cargo 1.79.0 (ffa9cf99a 2024-06-03)
 
 $ rustup --version
 rustup 1.27.1 (54dd3d00f 2024-04-24)
@@ -47,7 +47,7 @@ Default host: x86_64-unknown-linux-gnu
 rustup home:  /home/marley/.rustup
 
 stable-x86_64-unknown-linux-gnu (default)
-rustc 1.78.0 (9b00956e5 2024-04-29)
+rustc 1.79.0 (129f3b996 2024-06-10)
 ```
 
 <br/>
@@ -103,7 +103,13 @@ $ cd rust-analyzer/
 
 $ rustup update
 $ cargo xtask install --server
+```
+
+<br/>
+
+```
 $ rust-analyzer --version
+rust-analyzer 0.0.0 (b333f85a9 2024-07-19)
 ```
 
 <br/>

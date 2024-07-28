@@ -14,9 +14,9 @@ permalink: /samples/ci-cd/gitlab/kubernetes/
 
 <br/>
 
-### Инсталляция <a href="//sysadm.ru/tools/cvs/gitlab/setup/ubuntu/">GitLab</a>.
+### Инсталляция <a href="/tools/git/gitlab/setup/ubuntu/">GitLab</a>.
 
-### Настройка <a href="//sysadm.ru/tools/git/gitlab/errors/">docker для запуска job'ов</a>.
+### Настройка <a href="/tools/git/gitlab/errors/">docker для запуска job'ов</a>.
 
 <br/>
 

@@ -17,8 +17,10 @@ permalink: /tools/git/gitlab/setup/ubuntu/
 
 <br/>
 
-    // Также предполагается, что установлен vagrant-hostmanager
-    $ vagrant plugin install vagrant-hostmanager
+```
+// Также предполагается, что установлен vagrant-hostmanager
+$ vagrant plugin install vagrant-hostmanager
+```
 
 <br/>
 

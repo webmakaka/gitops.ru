@@ -8,7 +8,9 @@ permalink: /samples/ci-cd/gitlab/kubernetes/prometheus-and-grafana/
 
 # 06. Prometheus & Grafana
 
-### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml](//sysadm.ru/tools/containers/kubernetes/monitoring/prometheus-and-grafana-test-only/)
+<br/>
+
+### [Запуск Prometheus (мониторинг) и Grafana (визуализация) в kuberntes cluster с помощью heml](/devops/containers/kubernetes/monitoring/prometheus-and-grafana-test-only/)
 
 <br/>
 
