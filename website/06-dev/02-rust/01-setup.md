@@ -13,7 +13,7 @@ permalink: /dev/rust/setup/
 <br/>
 
 **Делаю:**  
-2024.07.20
+2024.09.28
 
 <br/>
 
@@ -30,10 +30,10 @@ $ rustup update
 
 ```
 $ rustc --version
-rustc 1.79.0 (129f3b996 2024-06-10)
+rustc 1.81.0 (eeb90cda1 2024-09-04)
 
 $ cargo --version
-cargo 1.79.0 (ffa9cf99a 2024-06-03)
+cargo 1.81.0 (2dbb1af80 2024-08-20)
 
 $ rustup --version
 rustup 1.27.1 (54dd3d00f 2024-04-24)
@@ -47,7 +47,7 @@ Default host: x86_64-unknown-linux-gnu
 rustup home:  /home/marley/.rustup
 
 stable-x86_64-unknown-linux-gnu (default)
-rustc 1.79.0 (129f3b996 2024-06-10)
+rustc 1.81.0 (eeb90cda1 2024-09-04)
 ```
 
 <br/>
@@ -109,7 +109,7 @@ $ cargo xtask install --server
 
 ```
 $ rust-analyzer --version
-rust-analyzer 0.0.0 (b333f85a9 2024-07-19)
+rust-analyzer 0.0.0 (546339a7b 2024-09-27)
 ```
 
 <br/>
@@ -119,15 +119,20 @@ rust-analyzer 0.0.0 (b333f85a9 2024-07-19)
 <br/>
 
 ```
+Ctrl+P
+
 // rust-analyzer
 ext install rust-lang.rust-analyzer
-```
 
-- Rust (Deprecated заменен на rust-analyzer)
-- CodeLLDB
-- crates
-- Even Better TOML
-- rust-analyzer
+// CodeLLDB
+ext install vadimcn.vscode-lldb
+
+// crates
+ext install serayuzgur.crates
+
+// Even Better TOML
+ext install tamasfe.even-better-toml
+```
 
 <br/>
 
@@ -141,3 +146,9 @@ ext install rust-lang.rust-analyzer
 ```
 "rust-analyzer.check.command": "clippy",
 ```
+
+<br/>
+
+### Приложение для примера
+
+https://github.com/alfredodeza/rust-cli-example/tree/main
