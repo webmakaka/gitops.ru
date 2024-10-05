@@ -195,7 +195,7 @@ Why unusable:
 ### Инсталляция Guest Additions в командной строке
 
 Делаю:  
-2024.03.10
+2024.10.05
 
 **Нужно устанавливать в виртуальной машине!**
 
@@ -225,26 +225,31 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 <br/>
 
 ```
-$ sudo su -
+$ sudo apt-get install -y wget
+$ sudo apt-get install -y gcc make perl
+$ sudo apt-get install -y p7zip-full
 
-# apt-get install -y wget
-# apt-get install -y gcc make perl
-# apt-get install -y p7zip-full
+$ mkdir -p ~/tmp
+$ cd ~/tmp
 
-# cd /tmp
+$ wget http://download.virtualbox.org/virtualbox/7.0.20/VBoxGuestAdditions_7.0.20.iso
 
-# wget http://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
+$ 7z x ./VBoxGuestAdditions_7.0.20.iso -o./VBoxGuestAdditions_7.0.20/
+
+$ cd VBoxGuestAdditions_7.0.20/
+
+$ chmod +x ./VBoxLinuxAdditions.run
+
+$ sudo ./VBoxLinuxAdditions.run
+
+$ sudo reboot
 
 
-# 7z x ./VBoxGuestAdditions_7.0.14.iso -o./VBoxGuestAdditions_7.0.14/
+Если черный экран.
+Накинуть в настройках VirtualBox видео памяти.
+Накидывал 128 MB.
 
-# cd VBoxGuestAdditions_7.0.14/
-
-# chmod +x ./VBoxLinuxAdditions.run
-
-# ./VBoxLinuxAdditions.run
-
-# reboot
+Settings -> Display -> Screen -> 128 MB
 ```
 
 <br/>
