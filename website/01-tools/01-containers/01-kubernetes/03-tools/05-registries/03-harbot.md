@@ -43,8 +43,6 @@ $ sudo service docker restart
   <iframe width="853" height="480" src="https://www.youtube.com/embed/f931M4-my1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-https://www.youtube.com/watch?v=f931M4-my1k
-
 https://gist.github.com/vfarcic/0a322f969368bec74b75677da217291c
 
 <!-- Signing And Verifying Container Images With Sigstore Cosign And Kyverno
@@ -85,7 +83,7 @@ $ vi values.yaml
 
 <br/>
 
-roxy-body-size возможно нужно поправить!
+proxy-body-size возможно нужно поправить!
 
 ```yaml
 expose:
