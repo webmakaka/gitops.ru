@@ -8,6 +8,9 @@ permalink: /looks-interesting/
 
 # Выглядит интересно
 
+
+### [[Youtube][TechWorld with Nana] Consul Service Mesh Tutorial for Beginners [ENG, 2023]](https://www.youtube.com/watch?v=s3I1kKKfjtQ)
+
 <br/>
 
 ### [Book][Nikhil Pathania] Learning Continuous Integration with Jenkins (Third edition) [ENG, 2024]
