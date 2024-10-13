@@ -31,6 +31,9 @@ https://www.youtube.com/watch?v=HwB2oWUdoT4
 
 https://www.youtube.com/watch?v=L_o_CG_AGKA&list=PLHq1uqvAteVtq-NRX3yd1ziA_wJSBu3Oj&index=1
 
+https://developer.hashicorp.com/vault/tutorials/kubernetes
+
+
 <br/>
 
 ### [YouTube] [Слёрм] Открытая вечерняя школа. Kubernetes для разработчиков [RUS, 2022]
