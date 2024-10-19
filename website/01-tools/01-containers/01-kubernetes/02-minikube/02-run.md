@@ -42,14 +42,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.30.0
+v1.31.1
 ```
 
 <br/>
 
 ```
-// Если младше v1.30.0
-$ LATEST_KUBERNETES_VERSION=1.30.0
+// Если младше v1.31.1
+$ LATEST_KUBERNETES_VERSION=1.31.1
 ```
 
 <br/>
@@ -99,9 +99,9 @@ $ {
 
 ```
 $ kubectl version
-Client Version: v1.30.0
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-Server Version: v1.30.0
+Client Version: v1.31.0
+Kustomize Version: v5.4.2
+Server Version: v1.29.3
 ```
 
 <br/>
