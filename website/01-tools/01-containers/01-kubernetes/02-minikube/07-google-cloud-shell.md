@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/google-cloud-shell/
 <br/>
 
 **Делаю:**  
-2024.03.30
+2024.10.19
 
 <br/>
 
@@ -45,16 +45,21 @@ https://cloud.google.com/sdk/docs/install
 
 <br/>
 
-**Инсталлим google-cloud-sdk**
+**Инсталляция google-cloud-sdk**
+
+<br/>
+
+**Делаю:**  
+2024.10.19
 
 <br/>
 
 ```
 $ cd ~/tmp
 
-$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-linux-x86_64.tar.gz
+$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
 
-$ tar -zxvf google-cloud-cli-470.0.0-linux-x86_64.tar.gz
+$ tar -zxvf google-cloud-cli-linux-x86_64.tar.gz
 
 $ cd google-cloud-sdk/
 
@@ -65,8 +70,12 @@ $ source ~/.bashrc
 
 <br/>
 
+**Подключение к google-cloud-sdk**
+
+<br/>
+
 **Делаю:**  
-2024.04.06
+2024.10.19
 
 ```
 $ gcloud auth login
@@ -98,22 +107,27 @@ $ gcloud cloud-shell ssh
 
 <br/>
 
+**Делаю:**  
+2024.10.19
+
+<br/>
+
 Нужно зарегаться  
 https://ngrok.com/download
 
 <br/>
 
 ```
-$ cd ~/tmp
-$ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-$ unzip ngrok-stable-linux-amd64.zip
-$ ./ngrok authtoken <YOUR_TOKEN>
+ $ curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+```
+
+```
+$ ./ngrok authtoken <YOUR_AUTH_TOKEN>
 ```
 
 <br/>
 
 ```
-$ cd ~/tmp
 $ ./ngrok http 8080
 ```
 
