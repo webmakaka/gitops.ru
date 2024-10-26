@@ -25,9 +25,9 @@ https://www.youtube.com/watch?v=CmPdyvgmw-A&list=PL34sAs7_26wNBRWM6BDhnonoA5FMER
 
 <br/>
 
--   Подготовили кластер и окружение
--   Подняли Dynamic NFS
--   Инсталлировали helm
+- Подготовили кластер и окружение
+- Подняли Dynamic NFS
+- Инсталлировали helm
 
 <br/>
 
@@ -41,6 +41,7 @@ UPD. Heml2 выпилен (как ненужное), предлагаю попр
     $ helm inspect values stable/prometheus > /tmp/prometheus.values
 
 <br/>
+
     // я просто создаю файл, чтобы не копаться в куче кода
     $ vi /tmp/prometheus.values.final
 

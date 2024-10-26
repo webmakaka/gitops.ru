@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/ngrok-ingress-controller/
 <br/>
 
 **Делаю:**  
-15.07.2023
+2024.10.26
 
 Ни за что денег не платил. Все бесплатно, т.е. даром!
 
@@ -33,7 +33,10 @@ $ helm repo add ngrok https://ngrok.github.io/kubernetes-ingress-controller
 <br/>
 
 ```
+// https://dashboard.ngrok.com/api-keys
 $ export NGROK_API_KEY=[YOUR Secret API KEY]
+
+// https://dashboard.ngrok.com/get-started/your-authtoken
 $ export NGROK_AUTHTOKEN=[YOUR Secret Auth Token]
 ```
 
@@ -41,8 +44,8 @@ $ export NGROK_AUTHTOKEN=[YOUR Secret Auth Token]
 
 ```
 $ helm install ngrok-ingress-controller ngrok/kubernetes-ingress-controller \
-   --set credentials.apiKey=$NGROK_API_KEY \
-   --set credentials.authtoken=$NGROK_AUTHTOKEN
+   --set credentials.apiKey=${NGROK_API_KEY} \
+   --set credentials.authtoken=${NGROK_AUTHTOKEN}
 ```
 
 <br/>

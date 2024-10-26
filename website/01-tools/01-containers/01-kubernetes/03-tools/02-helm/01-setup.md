@@ -3,7 +3,7 @@ layout: page
 title: Подготовка и установка Helm
 description: Подготовка и установка Helm
 keywords: devops, containers, kubernetes, linux, helm, setup
-permalink: /tools/containers/kubernetes/tools/packages/helm/setup/
+permalink: /tools/containers/kubernetes/tools/helm/setup/
 ---
 
 # Подготовка и установка Helm
@@ -29,6 +29,10 @@ v3.14.3+gf03cc04
 $ helm repo list
 ```
 
+```
+$ helm search repo nginx
+```
+
 <br/>
 
 ### Просто для примера. Репо протухшее!
@@ -45,6 +49,15 @@ $ helm repo add stable https://charts.helm.sh/stable
 ```
 // UPDATE
 $ helm repo update
+```
+
+<br/>
+
+### Helm Installation and Verification (10 points)
+
+```
+$ helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx
+$ helm uninstall my-release
 ```
 
 <br/>

@@ -3,7 +3,7 @@ layout: page
 title: Jenkins
 description: Jenkins
 keywords: Jenkins, cicd, инсталляция, linux
-permalink: /tools/ci-cd/jenkins/2/
+permalink: /tools/ci-cd/jenkins/setup/linux/2/
 ---
 
 # Jenkins

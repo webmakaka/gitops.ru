@@ -15,7 +15,7 @@ permalink: /tools/containers/kubernetes/tools/ci-cd/argocd/setup-argocd-using-he
 
 <br/>
 
-### [Install HELM](/tools/containers/kubernetes/tools/packages/helm/setup/)
+### [Install HELM](/tools/containers/kubernetes/tools/helm/setup/)
 
 ### [Install Argo CD CLI](/tools/containers/kubernetes/tools/ci-cd/argocd/setup/argocd-cli/)
 

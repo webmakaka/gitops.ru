@@ -3,14 +3,14 @@ layout: page
 title: Helm в Linux
 description: Helm в Linux
 keywords: gitops, containers, helm
-permalink: /tools/containers/kubernetes/tools/packages/helm/
+permalink: /tools/containers/kubernetes/tools/helm/
 ---
 
 # Helm
 
 <br/>
 
-### [Инсталляция Helm в linux](/tools/containers/kubernetes/tools/packages/helm/setup/)
+### [Инсталляция Helm в linux](/tools/containers/kubernetes/tools/helm/setup/)
 
 <br/>
 
