@@ -10,7 +10,7 @@ permalink: /tools/containers/kubernetes/minikube/
 
 <br/>
 
-### [Беслпатное облако Google для запуска примеров с kubernetes в minikube](/tools/containers/kubernetes/google-cloud-shell/)
+### [Беслпатное облако Google для запуска примеров с kubernetes в minikube](/tools/clouds/google/google-cloud-shell/setup/)
 
 ### [Инсталляция и подготовка minikube для работы в ubuntu 20.04](/tools/containers/kubernetes/minikube/setup/)
 

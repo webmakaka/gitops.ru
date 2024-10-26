@@ -20,7 +20,7 @@ https://gist.github.com/vfarcic/249f8bb8baa8ca03ff5a1a61f3bda200
 
 **Пример:**
 
-1. [Подключение к бесплатному облаку от Google](/tools/containers/kubernetes/google-cloud-shell/)
+1. [Подключение к бесплатному облаку от Google](/tools/clouds/google/google-cloud-shell/setup/)
 
 2. Инсталляция [MiniKube](/tools/containers/kubernetes/minikube/setup/)
 

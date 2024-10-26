@@ -17,7 +17,7 @@ permalink: /books/containers/kubernetes/tools/skaffold/setup/
 
 ### Подключение к бесплатному облаку от Google
 
-Описание [здесь](/tools/containers/kubernetes/google-cloud-shell/)
+Описание [здесь](/tools/clouds/google/google-cloud-shell/setup/)
 
 <br/>
 

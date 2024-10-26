@@ -58,7 +58,7 @@ https://github.com/gbaeke/realtimeapp-infra
 
 <br/>
 
-### [Используется беслпатное облако Google](/tools/containers/kubernetes/google-cloud-shell/)
+### [Используется беслпатное облако Google](/tools/clouds/google/google-cloud-shell/setup/)
 
 <br/>
 

@@ -1,101 +1,12 @@
 ---
 layout: page
-title: Беслпатное облако Google для запуска примеров с kubernetes в minikube
-description: Беслпатное облако Google для запуска примеров с kubernetes в minikube
-keywords: gitops, containers, kubernetes, setup, google cloud shell
-permalink: /tools/containers/kubernetes/google-cloud-shell/
+title: Получить доступ к сервису HTTP, запущенному в бесплатном облаке google
+description: Получить доступ к сервису HTTP, запущенному в бесплатном облаке google
+keywords: gitops, containers, kubernetes, setup, google cloud shell, access, ngrok
+permalink: /tools/clouds/google/google-cloud-shell/get-access-ngrok/
 ---
 
-# Беслпатное облако Google для запуска примеров с kubernetes в minikube
-
-<br/>
-
-**Делаю:**  
-2024.10.19
-
-<br/>
-
-Нужно иметь гуглопочту. Почти у всех есть.
-
-Если 15-20 минут ничего не делать. Виртуалка удаляется.
-Под домашний каталог дается что-то около 5GB. Эти данные остаются и не удаляются при удалении виртуалки.
-
-4 ядра. 16 GB озу.
-
-То, что перестартовывается, возможно, что даже и к лучшему.
-
-<br/>
-
-### Подключение к бесплатному облаку от Google
-
-<br/>
-
-#### Подключиться по https
-
-https://shell.cloud.google.com/
-
-<br/>
-
-### Подключиться по ssh
-
-<br/>
-
-**Инструкция:**  
-https://cloud.google.com/sdk/docs/install
-
-<br/>
-
-**Инсталляция google-cloud-sdk**
-
-<br/>
-
-**Делаю:**  
-2024.10.19
-
-<br/>
-
-```
-$ cd ~/tmp
-
-$ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
-
-$ tar -zxvf google-cloud-cli-linux-x86_64.tar.gz
-
-$ cd google-cloud-sdk/
-
-$ ./install.sh
-
-$ source ~/.bashrc
-```
-
-<br/>
-
-**Подключение к google-cloud-sdk**
-
-<br/>
-
-**Делаю:**  
-2024.10.19
-
-```
-$ gcloud auth login
-$ gcloud cloud-shell ssh
-
-// В debug режиме
-// $ gcloud cloud-shell ssh --ssh-flag="-vvv"
-```
-
-<br/>
-
-**P.S.**
-
-1. Виртуальную машинку можно рестартовать и откатить в начальное состояние в UI
-
-2. При необходимости, удалить google ключи из каталога ~/.ssh/
-
-<br/>
-
-### Получить доступ к сервису HTTP, запущенному в бесплатном облаке google
+# Получить доступ к сервису HTTP, запущенному в бесплатном облаке google
 
 В веб консоли есть возможность открыть порт, но только для себя. Т.е. удаленные клиенты не смогут подключиться.
 
