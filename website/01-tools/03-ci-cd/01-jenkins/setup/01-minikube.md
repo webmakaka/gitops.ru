@@ -268,3 +268,18 @@ EOF
 <br/>
 
 Заработало!
+
+<!--
+
+```
+$ kubectl get pvc -n jenkins
+
+$ helm list -n jenkins
+
+kubectl get pod -n jenkins -oyaml | grep jenkins-claim -B2
+
+https://github.com/IlyaKozak/rsschool-devops-course-config/pull/1
+
+```
+
+-->
