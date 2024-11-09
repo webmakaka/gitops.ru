@@ -117,7 +117,7 @@ $ helm verify pacman-0.1.0.tgz
 <br/>
 
 **Делаю:**  
-26.05.2023
+2024.11.10
 
 <br/>
 
@@ -141,6 +141,15 @@ $ helm install my-db \
   --namespace postgres \
   --create-namespace \
   --set auth.username=user1,auth.password=postgres1,auth.database=postgresdb1,primary.persistence.enabled=false
+```
+
+<br/>
+
+```
+$ kubectl get pods -n postgres
+NAME                 READY   STATUS    RESTARTS   AGE
+my-db-postgresql-0   1/1     Running   0          23s
+
 ```
 
 <br/>
@@ -172,7 +181,6 @@ $ kubectl port-forward --namespace postgres svc/my-db-postgresql 5432:5432 &
 <br/>
 
 ```
-$ kubectl get pods -n postgres
 $ kubectl get statefulset -n postgres
 ```
 
