@@ -11,7 +11,7 @@ permalink: /tools/ci-cd/jenkins/setup/minikube/
 <br/>
 
 Делаю:  
-2024.10.26
+2024.11.11
 
 <br/>
 
@@ -220,21 +220,12 @@ jenkins-0   2/2     Running   0          7m45s
 
 <br/>
 
-```
-// Get your 'admin' user password by running:
-
-$ jsonpath="{.data.jenkins-admin-password}"
-4 secret=$(kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath)
-$ echo $(echo $secret | base64 --decode)
-```
-
-<br/>
-
 ### [Буду использовать ngrok](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/)
 
 <br/>
 
 ```
+// https://dashboard.ngrok.com/cloud-edge/domains - копируем домен
 $ export NGROK_DOMAIN="hugely-amusing-owl.ngrok-free.app"
 ```
 
@@ -267,7 +258,17 @@ EOF
 
 <br/>
 
+Подкючаюсь: https://hugely-amusing-owl.ngrok-free.app
+
 Заработало!
+
+<br/>
+
+```
+// Get your 'admin' user password by running:
+$ jsonpath="{.data.jenkins-admin-password}" secret=$(kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath)
+$ echo $(echo $secret | base64 --decode)
+```
 
 <!--
 

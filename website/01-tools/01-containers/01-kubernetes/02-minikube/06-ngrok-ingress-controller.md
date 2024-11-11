@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/ngrok-ingress-controller/
 <br/>
 
 **Делаю:**  
-2024.10.26
+2024.11.11
 
 Ни за что денег не платил. Все бесплатно, т.е. даром!
 
@@ -34,6 +34,8 @@ $ helm repo add ngrok https://ngrok.github.io/kubernetes-ingress-controller
 
 ```
 // https://dashboard.ngrok.com/api-keys
+// Я тупанул и вводил Key ID, а оно оказывается != api key (Хоть и копируется)
+// Нужно новый api key создать он будет отображаться пока не покинуть страницу
 $ export NGROK_API_KEY=[YOUR Secret API KEY]
 
 // https://dashboard.ngrok.com/get-started/your-authtoken
@@ -54,7 +56,13 @@ $ helm install ngrok-ingress-controller ngrok/kubernetes-ingress-controller \
 
 <br/>
 
+**Делаю:**  
+2024.11.10
+
+<br/>
+
 ```
+$ cd ~/tmp
 $ git clone https://github.com/webmakaka/cats-app
 $ cd cats-app/k8s/
 ```
@@ -68,11 +76,8 @@ $ kubectl apply -f ./cats-app-cluster-ip-service.yaml
 
 <br/>
 
-https://dashboard.ngrok.com/cloud-edge/domains - копируем домен
-
-<br/>
-
 ```
+// https://dashboard.ngrok.com/cloud-edge/domains - копируем домен
 $ export NGROK_DOMAIN="hugely-amusing-owl.ngrok-free.app"
 ```
 

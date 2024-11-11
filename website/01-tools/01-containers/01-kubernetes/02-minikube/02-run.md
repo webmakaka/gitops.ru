@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.11.10
+2024.11.11
 
 <br/>
 
@@ -42,14 +42,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.31.1
+v1.31.2
 ```
 
 <br/>
 
 ```
-// Если младше v1.31.1
-$ LATEST_KUBERNETES_VERSION=1.31.1
+// Если младше v1.31.2
+$ LATEST_KUBERNETES_VERSION=1.31.2
 ```
 
 <br/>

@@ -23,6 +23,10 @@ permalink: /tools/clouds/google/google-cloud-shell/get-access-ngrok/
 
 <br/>
 
+Если нужно из kubernetes, см. [сюда](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/).
+
+<br/>
+
 Нужно зарегаться  
 https://ngrok.com/download
 
@@ -33,6 +37,7 @@ https://ngrok.com/download
 ```
 
 ```
+// https://dashboard.ngrok.com/get-started/your-authtoken
 $ ./ngrok authtoken <YOUR_AUTH_TOKEN>
 ```
 
