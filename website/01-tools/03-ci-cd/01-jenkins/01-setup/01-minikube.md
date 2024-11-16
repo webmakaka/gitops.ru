@@ -11,7 +11,7 @@ permalink: /tools/ci-cd/jenkins/setup/minikube/
 <br/>
 
 Делаю:  
-2024.11.11
+2024.11.16
 
 <br/>
 
@@ -30,7 +30,7 @@ $ helm repo update
 ```
 $ helm search repo jenkinsci
 NAME             	CHART VERSION	APP VERSION	DESCRIPTION
-jenkinsci/jenkins	5.7.8        	2.462.3    	Jenkins - Build great things at any scale! As t...
+jenkinsci/jenkins	5.7.12       	2.479.1    	Jenkins - Build great things at any scale! As t...
 ```
 
 <br/>
@@ -82,6 +82,7 @@ $ export \
 <br/>
 
 ```
+// Не помню точно нужно это делать или нет
 $ minikube ssh --profile ${PROFILE}
 minikube:~$ sudo mkdir -p /data/jenkins-volume
 minikube:~$ sudo chown -R 1000:1000 /data/jenkins-volume
@@ -220,7 +221,65 @@ jenkins-0   2/2     Running   0          7m45s
 
 <br/>
 
-### [Буду использовать ngrok](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/)
+### Вариант 1. Подключения с использованием обычного ingress
+
+<br/>
+
+```
+$ export INGRESS_HOST=$(minikube --profile ${PROFILE} ip)
+$ echo ${INGRESS_HOST}
+192.168.49.2
+```
+
+<br/>
+
+```yaml
+$ envsubst << 'EOF' | cat | kubectl create -f -
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-ingress-service
+  namespace: jenkins
+  annotations:
+    nginx.ingress.kubernetes.io/default-backend: ingress-nginx-controller
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - host: ${INGRESS_HOST}.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins
+            port:
+              number: 8080
+EOF
+```
+
+<br/>
+
+```
+$ kubectl get ingress -n jenkins
+NAME                      CLASS    HOSTS                 ADDRESS        PORTS   AGE
+jenkins-ingress-service   <none>   192.168.49.2.nip.io   192.168.49.2   80      27s
+```
+
+<br/>
+
+Подкючаюсь: 192.168.49.2.nip.io
+
+Заработало!
+
+<br/>
+
+### Вариант 2. Подключения с использованием ngrok ingress. Вариант когда нужно подключиться из интернета, а белого IP нет.
+
+<br/>
+
+### [Моя дока](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/)
 
 <br/>
 
@@ -263,6 +322,8 @@ EOF
 Заработало!
 
 <br/>
+
+### Получить пароль админа для логина в UI
 
 ```
 // Get your 'admin' user password by running:

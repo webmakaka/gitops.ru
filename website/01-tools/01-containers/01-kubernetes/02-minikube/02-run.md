@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.11.11
+2024.11.16
 
 <br/>
 
@@ -101,7 +101,7 @@ $ {
 $ kubectl version
 Client Version: v1.31.0
 Kustomize Version: v5.4.2
-Server Version: v1.29.3
+Server Version: v1.31.2
 ```
 
 <br/>
@@ -172,11 +172,11 @@ CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/se
 
 ```
 $ minikube --profile ${PROFILE} config view
-- cpus: 4
 - disk-size: 20G
 - driver: docker
-- kubernetes-version: 1.29.2
+- kubernetes-version: v1.31.2
 - memory: 8G
+- cpus: 4
 ```
 
 <br/>
