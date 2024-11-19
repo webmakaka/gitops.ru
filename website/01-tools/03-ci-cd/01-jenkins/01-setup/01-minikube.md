@@ -11,7 +11,7 @@ permalink: /tools/ci-cd/jenkins/setup/minikube/
 <br/>
 
 Делаю:  
-2024.11.16
+2024.11.19
 
 <br/>
 
@@ -210,6 +210,73 @@ $ helm install jenkins -n jenkins -f jenkins-values.yaml jenkinsci/jenkins
 // uninstall
 // $ helm uninstall jenkins -n jenkins
 ```
+
+<!--
+
+https://github.com/bitnami/charts/issues/6875
+
+$ docker build -t myuser/jenkins:latest .
+$ docker push myuser/jenkins:latest
+helm install myjenkins --set image.repository=webmakaka/jenkins-docker --set image.tag=latest bitnami/jenkins
+
+
+
+// $ helm install jenkins -n jenkins --set image.repository=webmakaka/jenkins-docker --set image.tag=latest -f jenkins-values.yaml jenkinsci/jenkins
+
+$ helm install jenkins -n jenkins -f jenkins-values.yaml jenkinsci/jenkins
+
+
+
+jenkins/jnlp-agent-docker
+
+Планигы
+
+Docker
+Version1.7.0
+
+Docker Pipeline
+Version580.vc0c340686b_54
+
+
+
+CloudBees Docker Build and Publish
+
+
+https://www.jenkins.io/doc/book/pipeline/docker/
+
+
+
+
+additionalAgents:
+  docker1:
+    podName: docker1
+    customJenkinsLabels: docker1
+    image:
+      repository: webmakaka/jenkins-docker
+      tag: latest
+
+
+pipeline {
+    agent {
+        docker { image 'node:22.11.0-alpine3.20' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+
+
+dockerContainer
+jenkins/inbound-agent:3273.v4cfe589b_fd83-1
+
+
+jenkins/jnlp-agent-docker
+latest
+-->
 
 <br/>
 
