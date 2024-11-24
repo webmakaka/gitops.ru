@@ -11,7 +11,18 @@ permalink: /tools/ci-cd/jenkins/setup/minikube/
 <br/>
 
 Делаю:  
-2024.11.19
+2024.11.23
+
+<br/>
+
+P.S. Не разобрался как работать с docker в данном конкретном случае!
+Менял агенты, все равно получал ошибку.
+
+<br/>
+
+```
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+```
 
 <br/>
 

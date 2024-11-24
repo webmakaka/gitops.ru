@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.11.19
+2024.11.23
 
 <br/>
 
