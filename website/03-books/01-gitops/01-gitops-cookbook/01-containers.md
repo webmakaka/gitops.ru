@@ -21,7 +21,7 @@ permalink: /books/gitops/gitops-cookbook/containers/
 
 <br/>
 
-[Поставил Tekton](/tools/containers/kubernetes/tools/ci-cd/tekton/)
+[Поставил Tekton](/tools/containers/kubernetes/utils/ci-cd/tekton/)
 
 <br/>
 

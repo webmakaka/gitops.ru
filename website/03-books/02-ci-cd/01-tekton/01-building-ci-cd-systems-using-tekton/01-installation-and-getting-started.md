@@ -19,6 +19,6 @@ permalink: /books/ci-cd/tekton/building-ci-cd-systems-using-tekton/installation-
 
 **Испольновалась версия KUBERNETES_VERSION=v1.27.4**
 
-### 2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
+### 2. Инсталляция [Kubectl](/tools/containers/kubernetes/utils/kubectl/)
 
-### 3. Инсталляция [ Tekton CLI](/tools/containers/kubernetes/tools/ci-cd/tekton/)
+### 3. Инсталляция [ Tekton CLI](/tools/containers/kubernetes/utils/ci-cd/tekton/)

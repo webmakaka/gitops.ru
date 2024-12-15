@@ -30,7 +30,7 @@ minikube version: v1.16.0
 
 <br/>
 
-### [Kubectl installation](/tools/containers/kubernetes/tools/kubectl/)
+### [Kubectl installation](/tools/containers/kubernetes/utils/kubectl/)
 
 <br/>
 

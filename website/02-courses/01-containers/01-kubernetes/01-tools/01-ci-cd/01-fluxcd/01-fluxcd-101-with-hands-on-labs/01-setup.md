@@ -52,7 +52,7 @@ $ export \
 
 ### [Поднимаю Minikube](/tools/containers/kubernetes/minikube/setup/)
 
-### [Устанавливаю FluxCD](/tools/containers/kubernetes/tools/ci-cd/fluxcd/setup/)
+### [Устанавливаю FluxCD](/tools/containers/kubernetes/utils/ci-cd/fluxcd/setup/)
 
 <br/>
 

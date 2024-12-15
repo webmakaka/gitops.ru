@@ -31,9 +31,9 @@ $ gcloud cloud-shell ssh
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
+2. Инсталляция [Kubectl](/tools/containers/kubernetes/utils/kubectl/)
 
-3. Инсталляция [Skaffold](/tools/containers/kubernetes/tools/scaffold/)
+3. Инсталляция [Skaffold](/tools/containers/kubernetes/utils/scaffold/)
 
 4. Инсталляция [JDK17](//javadev.org/devtools/jdk/setup/linux/)
 

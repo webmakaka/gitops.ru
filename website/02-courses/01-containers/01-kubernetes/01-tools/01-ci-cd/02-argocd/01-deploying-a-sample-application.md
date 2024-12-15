@@ -206,4 +206,4 @@ EOF
 
 <br/>
 
-### [Установка kubeseal](/tools/containers/kubernetes/tools/security/bitnami-seal/)
+### [Установка kubeseal](/tools/containers/kubernetes/utils/security/bitnami-seal/)

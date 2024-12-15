@@ -26,4 +26,4 @@ permalink: /tools/containers/kubernetes/setup/
 
 <br/>
 
-## [Инструменты для работы с кластером](/tools/containers/kubernetes/tools/)
+## [Инструменты для работы с кластером](/tools/containers/kubernetes/utils/)

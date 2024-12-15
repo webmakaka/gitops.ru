@@ -26,7 +26,7 @@ permalink: /courses/ci-cd/implementing-a-full-ci-cd-pipeline/monitoring/
 
 <br/>
 
-Устанавливаю [Helm3](/tools/containers/kubernetes/tools/helm/setup/) на localhost.
+Устанавливаю [Helm3](/tools/containers/kubernetes/utils/helm/setup/) на localhost.
 
 <br/>
 

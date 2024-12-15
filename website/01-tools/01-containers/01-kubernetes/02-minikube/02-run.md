@@ -113,7 +113,7 @@ Server Version: v1.31.2
 
 <br/>
 
-Далее нужно установить командную утилиту для работы с кластером - [kubectl](/tools/containers/kubernetes/tools/kubectl/)
+Далее нужно установить командную утилиту для работы с кластером - [kubectl](/tools/containers/kubernetes/utils/kubectl/)
 
 <br/>
 
@@ -236,7 +236,7 @@ $ minikube profile list
 
 <br/>
 
-### [Добавить "Metal LB" (При необходимости)](/tools/containers/kubernetes/tools/metal-lb/)
+### [Добавить "Metal LB" (При необходимости)](/tools/containers/kubernetes/utils/metal-lb/)
 
 <br/>
 
