@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/kind/
 <br/>
 
 **Делаю:**  
-2024.12.18
+2024.12.21
 
 <br/>
 
@@ -52,6 +52,8 @@ $ kind get clusters
 $ kubectl cluster-info --context kind-kind
 ```
 
+<br/>
+
 ```
 $ kubectl get nodes
 NAME                 STATUS   ROLES           AGE   VERSION
@@ -72,6 +74,13 @@ kind-worker2         Ready    <none>          81s   v1.32.0
 <br/>
 
 ```
-kind get clusters
-kind delete cluster --name k8slab
+$ kind get clusters
+kind
+```
+
+<br/>
+
+```
+// Delete cluster
+// $ kind delete cluster --name kind
 ```

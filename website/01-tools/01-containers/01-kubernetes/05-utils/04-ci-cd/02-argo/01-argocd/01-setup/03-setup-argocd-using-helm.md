@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция ArgoCD с помощью Helm на Minikube
 description: Инсталляция ArgoCD с помощью Helm на Minikube
 keywords: devops, containers, kubernetes, ci-cd, argocd, setup, minikube, helm
-permalink: /tools/containers/kubernetes/utils/ci-cd/argocd/setup-argocd-using-helm/
+permalink: /tools/containers/kubernetes/utils/ci-cd/argo/argocd/setup-argocd-using-helm/
 ---
 
 # Инсталляция ArgoCD с помощью Helm на Minikube
@@ -17,7 +17,7 @@ permalink: /tools/containers/kubernetes/utils/ci-cd/argocd/setup-argocd-using-he
 
 ### [Install HELM](/tools/containers/kubernetes/utils/helm/setup/)
 
-### [Install Argo CD CLI](/tools/containers/kubernetes/utils/ci-cd/argocd/setup/argocd-cli/)
+### [Install Argo CD CLI](/tools/containers/kubernetes/utils/ci-cd/argo/argocd/setup/cli/)
 
 <br/>
 
