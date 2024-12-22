@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Инсталляция Argo Rollouts в kind
-description: Инсталляция Argo Rollouts в kind
+title: Blue Green Releases with Argo Rollouts
+description: Blue Green Releases with Argo Rollouts
 keywords: devops, containers, kubernetes, argo, rollouts, setup, blue-green
 permalink: /tools/containers/kubernetes/utils/ci-cd/argo/rollouts/blue-green/
 ---
