@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/utils/ci-cd/argo/argocd/setup/
 <br/>
 
 Делаю:  
-2024.04.07
+2025.03.02
 
 <br/>
 
@@ -65,7 +65,6 @@ argocd-redis                              ClusterIP   10.104.174.108   <none>   
 argocd-repo-server                        ClusterIP   10.98.29.178     <none>        8081/TCP,8084/TCP            26m
 argocd-server                             NodePort    10.109.5.199     <none>        80:32763/TCP,443:31778/TCP   26m
 argocd-server-metrics                     ClusterIP   10.110.183.112   <none>        8083/TCP                     26m
-
 ```
 
 <br/>
@@ -97,23 +96,23 @@ Context '192.168.49.2:32763' updated
 
 ```
 $ argocd version
-argocd: v2.10.2+fcf5d8c
-  BuildDate: 2024-03-01T21:47:51Z
-  GitCommit: fcf5d8c2381b68ab1621b90be63913b12cca2eb7
+argocd: v2.14.3+71fd4e5
+  BuildDate: 2025-02-28T19:21:52Z
+  GitCommit: 71fd4e501d0d688ab0d70cd649fbf5f909cff12b
   GitTreeState: clean
-  GoVersion: go1.21.7
+  GoVersion: go1.23.3
   Compiler: gc
   Platform: linux/amd64
-argocd-server: v2.10.6+d504d2b
-  BuildDate: 2024-04-05T00:27:47Z
-  GitCommit: d504d2b1d92f0cf831a124a5fd1a96ee29fa7679
+argocd-server: v2.14.3+71fd4e5
+  BuildDate: 2025-02-28T18:56:13Z
+  GitCommit: 71fd4e501d0d688ab0d70cd649fbf5f909cff12b
   GitTreeState: clean
-  GoVersion: go1.21.3
+  GoVersion: go1.23.3
   Compiler: gc
   Platform: linux/amd64
-  Kustomize Version: v5.2.1 2023-10-19T20:13:51Z
-  Helm Version: v3.14.3+gf03cc04
-  Kubectl Version: v0.26.11
+  Kustomize Version: v5.4.3 2024-07-19T16:40:33Z
+  Helm Version: v3.16.3+gcfd0749
+  Kubectl Version: v0.31.0
   Jsonnet Version: v0.20.0
 ```
 
@@ -139,5 +138,19 @@ $ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ```
 // admin / результат выполнения команды выше.
-localhost:8080
+http://localhost:8080
+```
+
+<br/>
+
+```
+// swagger
+https://localhost:8080/swagger-ui
+```
+
+<br/>
+
+```
+# Argocd cli command to get the argocd context
+$ argocd context
 ```

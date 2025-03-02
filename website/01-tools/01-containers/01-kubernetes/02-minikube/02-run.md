@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.11.23
+2025.03.02
 
 <br/>
 
@@ -34,7 +34,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 ```
-// v1.30.0
+// v1.32.2
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -42,14 +42,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.31.2
+v1.32.2
 ```
 
 <br/>
 
 ```
-// Если младше v1.31.2
-$ LATEST_KUBERNETES_VERSION=1.31.2
+// Если младше v1.32.2
+$ LATEST_KUBERNETES_VERSION=v1.32.2
 ```
 
 <br/>
@@ -101,7 +101,7 @@ $ {
 $ kubectl version
 Client Version: v1.31.0
 Kustomize Version: v5.4.2
-Server Version: v1.31.2
+Server Version: v1.32.2
 ```
 
 <br/>
@@ -174,9 +174,15 @@ CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/se
 $ minikube --profile ${PROFILE} config view
 - disk-size: 20G
 - driver: docker
-- kubernetes-version: v1.31.2
+- kubernetes-version: v1.32.2
 - memory: 8G
 - cpus: 4
+```
+
+<br/>
+
+```
+$ kubectl api-resources
 ```
 
 <br/>
