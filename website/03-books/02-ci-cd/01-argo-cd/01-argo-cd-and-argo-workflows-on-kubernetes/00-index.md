@@ -14,7 +14,9 @@ permalink: /books/ci-cd/argo-cd/argo-cd-and-argo-workflows-on-kubernetes/
 
 <br/>
 
-<strong>English | 2025 | ISBN: 978-9365899610 | 290 Pages | EPUB | 10 MB</strong>
+<div align="center">
+  <strong>English | 2025 | ISBN: 978-9365899610 | 290 Pages | EPUB | 10 MB</strong>
+</div>
 
 <br/>
 
