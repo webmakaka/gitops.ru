@@ -14,6 +14,11 @@ permalink: /books/ci-cd/argo-cd/argo-cd-and-argo-workflows-on-kubernetes/underst
 
 <br/>
 
+Делаю:  
+2025.03.02
+
+<br/>
+
 ```
 # Create a new application in Argo CD
 # --repo: Source Git repository
