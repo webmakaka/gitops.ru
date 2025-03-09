@@ -19,11 +19,11 @@ permalink: /tools/clouds/google/google-cloud-shell/get-access-ngrok/
 <br/>
 
 **Делаю:**  
-2024.10.19
+2025.03.08
 
 <br/>
 
-Если нужно из kubernetes, см. [сюда](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/).
+Если нужно для kubernetes, см. [сюда](/tools/containers/kubernetes/minikube/ngrok-ingress-controller/).
 
 <br/>
 
@@ -36,18 +36,20 @@ https://ngrok.com/download
  $ curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
 ```
 
+<br/>
+
 ```
 // https://dashboard.ngrok.com/get-started/your-authtoken
-$ ./ngrok authtoken <YOUR_AUTH_TOKEN>
+$ ngrok authtoken <YOUR_AUTH_TOKEN>
 ```
 
 <br/>
 
 ```
-$ ./ngrok http 8080
+$ ngrok http 8080
 ```
 
-<br/>
+<!-- <br/>
 
 ```
 // Пример
@@ -165,4 +167,4 @@ $ ./ngrok http ${INGRESS_HOST}.nip.io:80 --host-header=${INGRESS_HOST}.nip.io
 ```
 // OK!
 http://60ff-34-147-0-94.ngrok.io
-```
+``` -->

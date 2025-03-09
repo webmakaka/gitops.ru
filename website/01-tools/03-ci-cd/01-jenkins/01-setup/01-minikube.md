@@ -2,7 +2,7 @@
 layout: page
 title: Инсталляция Jenkins в Minikube с помощью Helm
 description: Инсталляция Jenkins в Minikube с помощью Helm
-keywords: tools, ci-cd, jenkins, minikube, helm
+keywords: tools, ci-cd, jenkins, setup, minikube, helm
 permalink: /tools/ci-cd/jenkins/setup/minikube/
 ---
 

@@ -25,8 +25,10 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
 
 <br/>
 
-    // Получить пароль
-    $ docker exec <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
+```
+// Получить пароль
+$ docker exec <container_id> cat /var/jenkins_home/secrets/initialAdminPassword
+```
 
 <br/>
 

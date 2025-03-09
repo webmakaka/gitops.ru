@@ -103,6 +103,8 @@ Configure -> Pipeline ->
 
 Definition: Pipeline script
 
+Вставляем контент:
+
 https://github.com/sandervanvugt/gitops/blob/main/jenkinspipe
 
 Save -> Build Now
