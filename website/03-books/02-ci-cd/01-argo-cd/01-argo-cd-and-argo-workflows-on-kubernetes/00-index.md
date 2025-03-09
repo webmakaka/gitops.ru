@@ -33,7 +33,7 @@ https://github.com/bpbpublications/Argo-CD-and-Argo-Workflows-on-Kubernetes
 
 ### [Chapter 2: Understanding Argo CD](/books/ci-cd/argo-cd/argo-cd-and-argo-workflows-on-kubernetes/understanding-argo-cd/)
 
-### Chapter 3: Running Argo CD in Production
+### [Chapter 3: Running Argo CD in Production](/books/ci-cd/argo-cd/argo-cd-and-argo-workflows-on-kubernetes/running-argo-cd-in-production/)
 
 ### Chapter 4: Argo CD Security Consideration
 
