@@ -185,6 +185,14 @@ $ sudo systemctl restart docker
 
 <br/>
 
+### Error response from daemon: Get "https://my-host/v2/": tls: failed to verify certificate: x509: certificate signed by unknown authority
+
+Тоже самое, что и выше.
+
+Но не нужно указывать https:// и /v2/
+
+<br/>
+
 ```
 $ docker info
 ***
