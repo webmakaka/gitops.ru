@@ -10,12 +10,7 @@ permalink: /tools/clouds/google/google-cloud-shell/setup/
 
 <br/>
 
-**Делаю:**  
-2024.10.19
-
-<br/>
-
-**Инсталляция google-cloud-sdk**
+### Инсталляция google-cloud-sdk
 
 <br/>
 
@@ -40,12 +35,12 @@ $ source ~/.bashrc
 
 <br/>
 
-**Подключение к google-cloud-sdk**
+### Подключение к google-cloud-sdk
 
 <br/>
 
 **Делаю:**  
-2024.10.19
+2025.03.08
 
 ```
 // 1 раз нужно залогиниться

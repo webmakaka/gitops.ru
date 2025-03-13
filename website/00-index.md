@@ -19,6 +19,15 @@ permalink: /
 ![What is GitOps](/img/gitops.png 'What is GitOps'){: .center-image }
 
 <br/>
+<br/>
+
+### [[Book][Md Nahidul Kibria] Argo CD and Argo Workflows on Kubernetes: GitOps, workflow automation, and progressive delivery with Argo Rollouts [ENG, 2025]](/books/ci-cd/argo-cd/argo-cd-and-argo-workflows-on-kubernetes/)
+
+<br/>
+
+![Argo CD and Argo Workflows on Kubernetes: GitOps, workflow automation, and progressive delivery with Argo Rollouts ](/img/books/covers/argo-cd-and-argo-workflows-on-kubernetes.jpg 'Argo CD and Argo Workflows on Kubernetes: GitOps, workflow automation, and progressive delivery with Argo Rollouts '){: .center-image }
+
+<br/>
 
 ### [[Book][Natale Vinto] GitOps Cookbook: Kubernetes Automation in Practice [ENG, 2023]](/books/gitops/gitops-cookbook/)
 

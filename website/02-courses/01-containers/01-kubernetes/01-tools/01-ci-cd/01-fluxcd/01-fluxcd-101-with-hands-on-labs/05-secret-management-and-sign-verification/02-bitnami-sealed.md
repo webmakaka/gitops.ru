@@ -54,7 +54,7 @@ sealed-secrets-keyxkmnn   kubernetes.io/tls               2      64s
 
 <br/>
 
-### [Установка kubeseal](/tools/containers/kubernetes/tools/security/bitnami-seal/)
+### [Установка kubeseal](/tools/containers/kubernetes/utils/security/bitnami-seal/)
 
 <br/>
 

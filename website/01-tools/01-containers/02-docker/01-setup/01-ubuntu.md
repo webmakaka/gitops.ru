@@ -9,7 +9,7 @@ permalink: /tools/containers/docker/setup/ubuntu/
 # Инсталляция / Upgrade Docker в Ubuntu 22.04
 
 Делаю:  
-2024.03.23
+2025.03.08
 
 <br/>
 
@@ -70,10 +70,10 @@ $ sudo ./install-docker-and-docker-compose.sh
 
 ```
 $ docker -v
-Docker version 26.0.0, build 2ae903e
+Docker version 28.0.1, build 068a01e
 
 $ docker-compose --version
-Docker Compose version v2.26.0
+Docker Compose version v2.33.1
 ```
 
 <br/>
@@ -182,6 +182,14 @@ $ sudo vi /etc/docker/daemon.json
 $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
+
+<br/>
+
+### Error response from daemon: Get "https://my-host/v2/": tls: failed to verify certificate: x509: certificate signed by unknown authority
+
+Тоже самое, что и выше.
+
+Но не нужно указывать https:// и /v2/
 
 <br/>
 

@@ -14,7 +14,7 @@ permalink: /tools/containers/kubernetes/
 
 ### [Kubernetes сервисы](/tools/containers/kubernetes/svc/)
 
-### [Инструменты для работы с Kubernetes](/tools/containers/kubernetes/tools/)
+### [Инструменты для работы с Kubernetes](/tools/containers/kubernetes/utils/)
 
 <br/>
 

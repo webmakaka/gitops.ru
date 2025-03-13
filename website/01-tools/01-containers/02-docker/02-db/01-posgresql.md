@@ -11,7 +11,7 @@ permalink: /tools/containers/docker/db/postgresql/
 <br/>
 
 **Делаю:**  
-2024.06.30
+2024.11.11
 
 <br/>
 

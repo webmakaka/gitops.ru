@@ -42,7 +42,7 @@ https://gist.github.com/vfarcic/0431989df4836eb82bdac0cc53c7f3d6
 
 **Испольновалась версия KUBERNETES_VERSION=v1.22.2**
 
-2. Инсталляция [Kubectl](/tools/containers/kubernetes/tools/kubectl/)
+2. Инсталляция [Kubectl](/tools/containers/kubernetes/utils/kubectl/)
 
 3. Инсталляция fluxcd
 

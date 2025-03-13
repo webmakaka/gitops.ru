@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 **Делаю:**  
-2024.10.26
+2025.03.02
 
 <br/>
 
@@ -34,7 +34,7 @@ permalink: /tools/containers/kubernetes/minikube/run/
 <br/>
 
 ```
-// v1.30.0
+// v1.32.2
 $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kubernetes/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 ```
 
@@ -42,14 +42,14 @@ $ LATEST_KUBERNETES_VERSION=$(curl -s https://api.github.com/repos/kubernetes/ku
 
 ```
 $ echo ${LATEST_KUBERNETES_VERSION}
-v1.31.1
+v1.32.2
 ```
 
 <br/>
 
 ```
-// Если младше v1.31.1
-$ LATEST_KUBERNETES_VERSION=1.31.1
+// Если младше v1.32.2
+$ LATEST_KUBERNETES_VERSION=v1.32.2
 ```
 
 <br/>
@@ -101,7 +101,7 @@ $ {
 $ kubectl version
 Client Version: v1.31.0
 Kustomize Version: v5.4.2
-Server Version: v1.29.3
+Server Version: v1.32.2
 ```
 
 <br/>
@@ -113,7 +113,7 @@ Server Version: v1.29.3
 
 <br/>
 
-Далее нужно установить командную утилиту для работы с кластером - [kubectl](/tools/containers/kubernetes/tools/kubectl/)
+Далее нужно установить командную утилиту для работы с кластером - [kubectl](/tools/containers/kubernetes/utils/kubectl/)
 
 <br/>
 
@@ -172,11 +172,17 @@ CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/se
 
 ```
 $ minikube --profile ${PROFILE} config view
-- cpus: 4
 - disk-size: 20G
 - driver: docker
-- kubernetes-version: 1.29.2
+- kubernetes-version: v1.32.2
 - memory: 8G
+- cpus: 4
+```
+
+<br/>
+
+```
+$ kubectl api-resources
 ```
 
 <br/>
@@ -236,7 +242,7 @@ $ minikube profile list
 
 <br/>
 
-### [Добавить "Metal LB" (При необходимости)](/tools/containers/kubernetes/tools/metal-lb/)
+### [Добавить "Metal LB" (При необходимости)](/tools/containers/kubernetes/utils/metal-lb/)
 
 <br/>
 

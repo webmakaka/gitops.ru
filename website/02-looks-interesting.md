@@ -8,6 +8,17 @@ permalink: /looks-interesting/
 
 # Выглядит интересно
 
+### [Kubernetes CI/CD Pipeline Using Jenkins | DevOps Tutorial/Project - 2023]
+
+https://www.youtube.com/watch?v=q4g7KJdFSn0
+
+<br/>
+
+### [HashiCorp Live: Developer's Guide [ENG, 2025]]
+
+https://www.youtube.com/playlist?list=PL81sUbsFNc5ZWoz3gpCJgUl3H7yZO_iE7
+
+<br/>
 
 ### [[Youtube][TechWorld with Nana] Consul Service Mesh Tutorial for Beginners [ENG, 2023]](https://www.youtube.com/watch?v=s3I1kKKfjtQ)
 
@@ -32,7 +43,6 @@ https://www.youtube.com/watch?v=HwB2oWUdoT4
 https://www.youtube.com/watch?v=L_o_CG_AGKA&list=PLHq1uqvAteVtq-NRX3yd1ziA_wJSBu3Oj&index=1
 
 https://developer.hashicorp.com/vault/tutorials/kubernetes
-
 
 <br/>
 
@@ -99,19 +109,3 @@ https://github.com/kubernetes-sigs/kubespray
 ### k6 (тесты)
 
 [[YouTube] Learn k6 Series [ENG, 2022]](https://www.youtube.com/watch?v=xJLABpaYllM&list=PLJ9A48W0kpRJKmVeurt7ltKfrOdr8ZBdt)
-
-<!-- <br/>
-
-### [Book][Alexander Shuiskov] Microservices with Go [ENG, 2022]
-
-<br/>
-
-Предлагаю коллективно почитать и обсудить, при необходимости.
-
-<br/>
-
-![Microservices with Go](/img/books/covers/microservices-with-go.jpg 'Microservices with Go'){: .center-image }
-
-<br/>
-
-https://github.com/PacktPublishing/microservices-with-go -->

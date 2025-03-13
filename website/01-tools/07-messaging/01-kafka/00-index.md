@@ -8,6 +8,11 @@ permalink: /tools/messaging/kafka/
 
 # Kafka
 
+Делаю:  
+2024.12.08
+
+Не отработало! Простые ошибки при запуске контейнера с помощью docker-compose.
+
 <br/>
 
 ## [That DevOps Guy] Running Kafka on Docker with Compose
