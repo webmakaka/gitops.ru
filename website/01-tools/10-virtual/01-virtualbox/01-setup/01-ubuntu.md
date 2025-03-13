@@ -225,18 +225,16 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 <br/>
 
 ```
-$ sudo apt-get install -y wget
-$ sudo apt-get install -y gcc make perl
-$ sudo apt-get install -y p7zip-full
+$ sudo apt install -y wget gcc make perl p7zip-full bzip2 tar
 
 $ mkdir -p ~/tmp
 $ cd ~/tmp
 
-$ wget http://download.virtualbox.org/virtualbox/7.0.20/VBoxGuestAdditions_7.0.20.iso
+$ wget http://download.virtualbox.org/virtualbox/7.0.24/VBoxGuestAdditions_7.0.24.iso
 
-$ 7z x ./VBoxGuestAdditions_7.0.20.iso -o./VBoxGuestAdditions_7.0.20/
+$ 7z x ./VBoxGuestAdditions_7.0.24.iso -o./VBoxGuestAdditions_7.0.24/
 
-$ cd VBoxGuestAdditions_7.0.20/
+$ cd VBoxGuestAdditions_7.0.24/
 
 $ chmod +x ./VBoxLinuxAdditions.run
 
