@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Запус Jekins в docker-compose
-description: Запус Jekins в docker-compose
+title: Запуск Jekins в docker-compose
+description: Запуск Jekins в docker-compose
 keywords: tools, ci-cd, jenkins, setup, docker-compose
 permalink: /tools/ci-cd/jenkins/setup/docker-compose/
 ---
 
 <br/>
 
-# Запус Jekins в docker-compose
+# Запуск Jekins в docker-compose
 
 <br/>
 
@@ -52,7 +52,7 @@ services:
     container_name: jenkins
     build:
       context: .
-      dockerfile: Dockerfile.jenkins
+      dockerfile: jenkins.dockerfile
     ports:
       - '8080:8080'
     environment:
@@ -99,10 +99,10 @@ $ docker-compose -f docker-compose.yaml config --quiet && printf "OK\n" || print
 
 <br/>
 
-**Dockerfile.jenkins**
+**jenkins.dockerfile**
 
 ```yaml
-$ cat << EOF > Dockerfile.jenkins
+$ cat << EOF > jenkins.dockerfile
 FROM jenkins/jenkins:lts
 USER root
 
@@ -113,11 +113,6 @@ RUN apt-get update && \
 
 # Add Jenkins user to the Docker group and systemd-journal group
 RUN usermod -aG docker,systemd-journal jenkins
-
-
-RUN apt-get update && \
-    apt-get install -y curl && \
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && mv kubectl /usr/local/bin/ && apt-get clean
 
 USER jenkins
 EOF
@@ -262,19 +257,19 @@ pipeline {
     agent any
     stages {
       stage('Clone Repository') {
-      steps {
-        git branch: 'main',
-        url: 'https://github.com/wildmakaka/cats-app.git',
-        credentialsId: 'GHA'
-        }
-      }
-    stage('Build Docker Image') {
-    steps {
-      script {
-            sh "docker build -t wildmakaka/cats-app:${env.BUILD_ID} ."
+        steps {
+          git branch: 'main',
+          url: 'https://github.com/wildmakaka/cats-app.git',
+          credentialsId: 'GHA'
           }
-        }
       }
+      stage('Build Docker Image') {
+        steps {
+          script {
+                sh "docker build -t wildmakaka/cats-app:${env.BUILD_ID} ."
+              }
+            }
+        }
     }
     post {
       always {
@@ -353,4 +348,264 @@ srw-rw---- 1 root 996 0 Mar  8 17:33 /var/run/docker.sock
 ```
 $ sudo usermod -aG docker $USER
 $ sudo chown $USER /var/run/docker.sock
+```
+
+<br/>
+
+**11. Continuous Delivery with Jenkins, Github, and K8s**
+
+<br/>
+
+```
+$ mkdir -p /var/lib/jenkins/.kube/config
+```
+
+<br/>
+
+Копируем kubeconfig -> /var/lib/jenkins/.kube/config
+
+<br/>
+
+```
+$ sudo chmod 777 /var/lib/jenkins/.kube/
+```
+
+<br/>
+
+**docker-compose.yaml**
+
+```yaml
+$ cat << EOF > docker-compose.yaml
+version: ‘3'
+services:
+  jenkins:
+    container_name: jenkins
+    build:
+      context: .
+      dockerfile: jenkins.dockerfile
+    ports:
+      - '8080:8080'
+    environment:
+      - JAVA_OPTS=-Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins_home:/var/jenkins_home
+      - /var/lib/jenkins/.kube/config:/var/jenkins_home/.kube/config
+    networks:
+      - proxy_net
+
+  nginx-proxy-manager:
+    container_name: nginx-proxy-manager
+    image: jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    environment:
+      DB_SQLITE_FILE: '/data/database.sqlite'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - proxy_net
+
+volumes:
+  jenkins_home:
+  data:
+  letsencrypt:
+
+networks:
+  proxy_net:
+    driver: bridge
+EOF
+```
+
+<br/>
+
+**jenkins.dockerfile**
+
+```yaml
+$ cat << EOF > jenkins.dockerfile
+FROM jenkins/jenkins:lts
+USER root
+
+# Install Docker in the Jenkins container
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    apt-get clean
+
+# Add Jenkins user to the Docker group and systemd-journal group
+RUN usermod -aG docker,systemd-journal jenkins
+
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
+    chmod +x kubectl && \
+    mv kubectl /usr/local/bin/ && \
+    apt-get clean
+
+ENV KUBECONFIG=/var/jenkins_home/.kube/config
+
+USER jenkins
+EOF
+```
+
+<br/>
+
+```
+$ docker-compose up -d
+```
+
+<br/>
+
+![Jenkins Pipeline](/img/tools/ci-cd/jenkins/setup/docker-compose/dockerhub1.png 'Jenkins Pipeline'){: .center-image }
+
+<br/>
+
+![Jenkins Pipeline](/img/tools/ci-cd/jenkins/setup/docker-compose/dockerhub2.png 'Jenkins Pipeline'){: .center-image }
+
+```
+Dashboard > Manage Jenkins > Credentials
+
+System > Global credentials (unrestricted) > Add Credentials
+
+Kind: Username with password
+
+Scope: Global (Jenkins, nodes, items, all child items, etc)
+
+Username: docker login
+
+Password: docker token
+
+ID: dockerhub-creds
+
+Description: Docker hub creds for private repo access
+```
+
+<br/>
+
+```
+$ kubectl create secret docker-registry my-dockerhub-secret \
+    --docker-username=${DOCKER_LOGIN} \
+    --docker-password=${DOCKER_TOKEN} \
+    --docker-email=${DOCKER_EMAIL}
+```
+
+<br/>
+
+**mywebapp-deployment.yaml**
+
+Положили в репо, рядом с jenkinsfile
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mywebapp-deployment
+  template:
+    metadata:
+      labels:
+        app: mywebapp
+    spec:
+      containers:
+        - name: mywebapp-container
+          image: webmakaka/mywebapp-ci:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+        imagePullSecrets:
+        - name: my-dockerhub-secret
+```
+
+<br/>
+
+**mywebapp-service.yaml**
+
+Положили в репо, рядом с jenkinsfile
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: mywebapp-service
+spec:
+  selector:
+    app: mywebapp
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30080
+EOF
+```
+
+<br/>
+
+**jenkinsfile**
+
+Не проверялось!!!
+
+```
+pipeline {
+    agent any
+    stages {
+      stage('Clone Repository') {
+        steps {
+          git branch: 'main',
+          url: 'https://github.com/wildmakaka/cats-app.git',
+          credentialsId: 'GHA'
+          }
+      }
+      stage('Build Final Production Image') {
+        steps {
+          script {
+                sh "docker build -t wildmakaka/cats-app:latest ."
+              }
+            }
+          }
+
+      stage('Build Docker Image') {
+        steps {
+          script {
+                // Log in to Docker Hub
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                  sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
+
+                }
+
+                  // Tag the image
+                  sh 'docker tag webmakaka/jenkinsci-demo:latest webmakaka/jenkinsci-demo:latest'
+
+                  // Push the image to Docker Hub
+                  sh 'docker push webmakaka/jenkinsci-demo:latest'
+              }
+            }
+          }
+
+      stage('Apply Deployment to Kubernetes') {
+        steps {
+          script {
+                  // Push the image to Docker Hub
+                  sh 'kubectl apply -f mywebapp-deployment.yaml'
+                  sh 'kubectl apply -f mywebapp-service.yaml'
+              }
+            }
+          }
+    }
+    post {
+      always {
+        cleanWs()
+      }
+  }
+}
 ```
