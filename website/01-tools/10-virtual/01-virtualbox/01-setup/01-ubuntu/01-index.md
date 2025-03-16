@@ -192,6 +192,66 @@ Why unusable:
 
 <br/>
 
+### Инсталляция Guest Additions в командной строке
+
+Делаю:  
+2024.10.05
+
+**Нужно устанавливать в виртуальной машине!**
+
+Я забыл об этом и долго тупил с ошибкой. **modprobe vboxguest failed**
+
+<br/>
+
+```
+# modprobe vboxguest
+modprobe: ERROR: could not insert 'vboxguest': No such device
+```
+
+<br/>
+
+Обычно виртуалки использую без GUI.
+
+Пакет Guest Additions как минимум нужен для того, чтобы мышка по экрану нормально перемещалась, работала copy+paste и может быть что-то еще. Нужно ли устанавливать guest additions, если предстоит работать только в командной строке, наверное нет.
+
+Installation guide
+
+http://www.virtualbox.org/manual/ch04.html#idp11277648
+
+<br/>
+
+**Пример в Ubuntu:**
+
+<br/>
+
+```
+$ sudo apt install -y wget gcc make perl p7zip-full bzip2 tar
+
+$ mkdir -p ~/tmp
+$ cd ~/tmp
+
+$ wget http://download.virtualbox.org/virtualbox/7.0.24/VBoxGuestAdditions_7.0.24.iso
+
+$ 7z x ./VBoxGuestAdditions_7.0.24.iso -o./VBoxGuestAdditions_7.0.24/
+
+$ cd VBoxGuestAdditions_7.0.24/
+
+$ chmod +x ./VBoxLinuxAdditions.run
+
+$ sudo ./VBoxLinuxAdditions.run
+
+$ sudo reboot
+
+
+Если черный экран.
+Накинуть в настройках VirtualBox видео памяти.
+Накидывал 128 MB.
+
+Settings -> Display -> Screen -> 128 MB
+```
+
+<br/>
+
 ### Дополнительные настройки
 
 <br/>
