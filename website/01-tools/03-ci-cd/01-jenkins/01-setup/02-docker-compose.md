@@ -17,11 +17,7 @@ permalink: /tools/ci-cd/jenkins/setup/docker-compose/
 
 <br/>
 
-Взято на основе
-
-<br/>
-
-### [Cbtnuggets] [Knox Hutchinson] DevOps Tools Engineer (Exam 701-100) Online Training [ENG, 2024]
+Взято за основу [Cbtnuggets] [Knox Hutchinson] DevOps Tools Engineer (Exam 701-100) Online Training [ENG, 2024]
 
 <br/>
 

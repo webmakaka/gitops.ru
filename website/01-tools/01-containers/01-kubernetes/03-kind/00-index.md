@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/kind/
 <br/>
 
 **Делаю:**  
-2024.12.21
+2025.04.27
 
 <br/>
 
@@ -20,7 +20,10 @@ https://kind.sigs.k8s.io/docs/user/quick-start/#installing-from-release-binaries
 <br/>
 
 ```
-$ [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.26.0/kind-linux-amd64
+// Если ошибка
+// curl: (35) error:0A00010B:SSL routines::wrong version number
+// Качай по http, а не по https
+$ [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
 $ chmod +x ./kind
 $ sudo mv ./kind /usr/local/bin/kind
 ```
@@ -29,7 +32,7 @@ $ sudo mv ./kind /usr/local/bin/kind
 
 ```
 $ kind --version
-kind version 0.26.0
+kind version 0.27.0
 ```
 
 <br/>
@@ -56,10 +59,10 @@ $ kubectl cluster-info --context kind-kind
 
 ```
 $ kubectl get nodes
-NAME                 STATUS   ROLES           AGE   VERSION
-kind-control-plane   Ready    control-plane   91s   v1.32.0
-kind-worker          Ready    <none>          81s   v1.32.0
-kind-worker2         Ready    <none>          81s   v1.32.0
+NAME                 STATUS     ROLES           AGE   VERSION
+kind-control-plane   NotReady   control-plane   20s   v1.32.2
+kind-worker          NotReady   <none>          9s    v1.32.2
+kind-worker2         NotReady   <none>          9s    v1.32.2
 ```
 
 <br/>

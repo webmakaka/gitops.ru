@@ -95,7 +95,9 @@ $ helm repo add prometheus-community https://prometheus-community.github.io/helm
 
 ### 01. Prometheus
 
-    $ vi prometheus-values.yml
+```
+$ vi prometheus-values.yml
+```
 
 ```
 alertmanager:
@@ -164,7 +166,6 @@ adminPassword: password
 ```
 
 ```
-
 $ kubectl create namespace loki
 
 $ helm upgrade --install loki \

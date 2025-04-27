@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/utils/metal-lb/
 <br/>
 
 **Делаю:**  
-11.11.2021
+2025.04.27
 
 <br/>
 
@@ -23,7 +23,10 @@ Metal LB позволит получить внешний IP в миникубе
 $ LATEST_VERSION=$(curl --silent "https://api.github.com/repos/metallb/metallb/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 
 
-// v0.11.0
+// v0.11.0 - обычно работал с этой версией
+// v0.12.1 - последняя с которой пробовал. В следующих версиях как-то по-другому нужно устанавливать.
+
+$ export LATEST_VERSION=v0.12.1
 $ echo ${LATEST_VERSION}
 ```
 
@@ -39,6 +42,8 @@ $ kubectl create secret generic -n metallb-system memberlist --from-literal=secr
 ```
 
 <br/>
+
+### Minikube
 
 ```
 $ minikube --profile ${PROFILE} ip
@@ -65,6 +70,36 @@ data:
       protocol: layer2
       addresses:
       - 192.168.49.20-192.168.49.30
+EOF
+```
+
+<br/>
+
+### Kind
+
+<br/>
+
+```
+$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' kind-worker
+172.18.0.3
+```
+
+<br/>
+
+```yaml
+$ cat << 'EOF' | kubectl apply -f -
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: custom-ip-space
+      protocol: layer2
+      addresses:
+      - 172.18.0.20-172.18.0.30
 EOF
 ```
 
