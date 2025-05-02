@@ -11,7 +11,7 @@ permalink: /tools/containers/docker/db/postgresql/
 <br/>
 
 **Делаю:**  
-2024.11.11
+2025.05.02
 
 <br/>
 
@@ -67,7 +67,7 @@ version: '3'
 services:
   postgres:
     container_name: postgres
-    image: postgres:15.2-alpine3.17
+    image: postgres:17.4-alpine3.21
     restart: always
     hostname: ${DATABASE_HOST}
     ports:
@@ -78,6 +78,15 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - ./PGDATA:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          "psql -U ${DATABASE_USER} -d ${DATABASE_NAME} -c 'SELECT 1' || exit 1",
+        ]
+      interval: 10s
+      retries: 5
+      start_period: 5s
 ```
 
 <br/>
