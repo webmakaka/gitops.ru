@@ -11,7 +11,7 @@ permalink: /tools/containers/kubernetes/kind/
 <br/>
 
 **Делаю:**  
-2025.04.27
+2025.06.28
 
 <br/>
 
@@ -40,7 +40,8 @@ kind version 0.27.0
 ### Download Cluster Configurations and Create a 3 Node Kubernetes Cluster as
 
 ```
-$ cd ~/tmp
+$ mkdir -p ~/projects/courses/kubernetes
+$ cd ~/projects/courses/kubernetes
 $ git clone https://github.com/initcron/k8s-code.git
 $ cd k8s-code/helper/kind/
 $ kind create cluster --config kind-three-node-cluster.yaml
@@ -63,6 +64,31 @@ NAME                 STATUS     ROLES           AGE   VERSION
 kind-control-plane   NotReady   control-plane   20s   v1.32.2
 kind-worker          NotReady   <none>          9s    v1.32.2
 kind-worker2         NotReady   <none>          9s    v1.32.2
+```
+
+<br/>
+
+### Визуализировать в UI контейнеры
+
+```
+$ cd ~/projects/courses/kubernetes/
+$ git clone https://github.com/schoolofdevops/kube-ops-view
+$ kubectl apply -f kube-ops-view/deploy/
+```
+
+<br/>
+
+```
+$ kubectl get pods
+NAME                             READY   STATUS    RESTARTS   AGE
+kube-ops-view-6ffb44dd6c-7qljz   1/1     Running   0          31s
+```
+
+<br/>
+
+```
+// OK!
+http://localhost:32000/
 ```
 
 <br/>
